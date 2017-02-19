@@ -12,7 +12,7 @@ var paths = {
   jq: 'node_modules/jquery/dist/jquery.min.js',
   styles: './app/styles/**/*.less',
   stylesVendors: './app/styles/vendor/@(*.less|*.css)',
-  mainLess: './app/styles/main.less',
+  mainLess: './app/styles/*.less',
   jade: './app/jade/**/*.jade',
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
