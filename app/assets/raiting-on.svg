@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/raiting-on</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-307.000000, -318.000000)" fill="#A4A8B3">
+            <g id="icon/raiting-on" transform="translate(307.000000, 318.000000)">
+                <path d="M9.81817527,0.590028573 L11.5731753,5.98902857 L17.1391753,5.98902857 C17.9811753,5.98902857 18.3201753,7.06302857 17.6271753,7.54602857 L13.1621753,10.6480286 L14.8911753,15.8780286 C15.1541753,16.6770286 14.2481753,17.3440286 13.5721753,16.8510286 L9.00217527,13.5150286 L4.43017527,16.8070286 C3.75217527,17.2950286 2.85117527,16.6210286 3.11617527,15.8250286 L4.84317527,10.6470286 L0.371175266,7.54502857 C-0.320824734,7.06102857 0.0191752659,5.98902857 0.860175266,5.98902857 L6.43217527,5.98902857 L8.18617527,0.601028573 C8.44517527,-0.192971427 9.55917527,-0.203971427 9.81817527,0.590028573" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
