@@ -3,9 +3,26 @@ html
   head
     meta(charset='utf-8')
     title molecules
-    
+    link(rel='stylesheet', href='css/normalize.css')
     link(rel='stylesheet', href='css/molecules-page.css')
   body
-    h1.head Организмы
+    h1.head Молекулы
     .block
       h2 Формы, чекбоксы, раскрывающиеся списки
+    .block
+      h2 Лента активности, главки
+      .activity.clearfix
+        .activity__likes
+          a.activity__like
+          span.activity__number 138
+        a.activity__share
+      .topic
+        span.topic__name chapter
+    .block
+      h2 Кнопки
+      .sticker-button
+        button.button.button_subscr.sticker-button__button Подписаться
+        span.sticker 667
+      .sticker-button
+        button.button.button_second.button_watch.sticker-button__button Следить
+        span.sticker 667

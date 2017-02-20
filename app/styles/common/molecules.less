@@ -1,0 +1,64 @@
+@import 'atoms.less';
+@import 'common.less';
+
+.activity {
+  padding: 19px 0;
+  border-top: 1px solid @border-color;
+
+  &__likes {
+    float: left;
+    font-size: 0;
+  }
+
+  &__like {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 20px;
+    height: 16px;
+    background: url(../assets/like.svg) no-repeat;
+    background-size: 20px 16px;
+  }
+
+  &__number {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+
+  &__share {
+    float: right;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: @icons-color;
+  }
+}
+
+.topic {
+  padding: 2px 0;
+  border-bottom: 1px solid @border-color;
+
+  &__name {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+    text-transform: uppercase;
+  }
+}
+
+.sticker-button {
+  font-size: 0;
+  &__button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
