@@ -16,6 +16,7 @@ var paths = {
   jade: './app/jade/**/*.jade',
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
+  fonts: './app/fonts/*.*',
   prod: './app/prod/'
 };
 
@@ -78,13 +79,15 @@ gulp.task('build', function() {
     .pipe(gulp.dest(paths.prod + 'js/vendor'));
   gulp.src(paths.stylesVendors)
     .pipe(gulp.dest(paths.prod + 'css/vendor'));
+  gulp.src(paths.fonts)
+    .pipe(gulp.dest(paths.prod + 'fonts/'));
   gulp.start('jade');
   gulp.start('less');
   gulp.start('js');
 });
 
 gulp.task('clean', function() {
-  del.sync(['./app/prod/**', '!./app/prod']);
+  del.sync('./app/prod/**');
 });
 
 gulp.task('default', ['build', 'server', 'watch']);
