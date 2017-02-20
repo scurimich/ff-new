@@ -92,7 +92,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('deploy', ['build'], function() {
-  gulp.src('./app/prod')
+  gulp.src('./app/prod/**/*')
     .pipe(deploy());
 })
 
