@@ -6,6 +6,7 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var del = require('del');
+var deploy = require('gulp-gh-pages');
 
 var paths = {
   normalize: 'node_modules/normalize.css/normalize.css',
@@ -89,5 +90,10 @@ gulp.task('build', function() {
 gulp.task('clean', function() {
   del.sync('./app/prod/**');
 });
+
+gulp.task('deploy', ['build'], function() {
+  gulp.src('./app/prod')
+    .pipe(deploy());
+})
 
 gulp.task('default', ['build', 'server', 'watch']);
