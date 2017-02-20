@@ -1,6 +1,120 @@
 @import 'atoms.less';
 @import 'common.less';
 
+.ta-box {
+  &__label {
+    padding-bottom: 4px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+
+    &_disabled {
+      opacity: .5;
+    }
+  }
+
+  &__ta {
+    display: block;
+  }
+}
+
+.input-box {
+  &__label {
+    padding-bottom: 4px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+
+    &_disabled {
+      opacity: .5;
+    }
+  }
+
+  &__input {
+    display: block;
+  }
+
+  &__error {
+    padding-top: 2px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @error-color;
+  }
+}
+
+.select-box {
+  &_disabled {
+    opacity: .5;
+  }
+
+  &__label {
+    padding-bottom: 4px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+
+  }
+
+  &__select {
+    display: block;
+  }
+}
+
+.radio-box {
+  &_disabled {
+    opacity: .5;
+  }
+
+  &__label {
+    .ib-mid;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+
+    &_disabled {
+      opacity: .5;
+    }
+  }
+
+  &__radio {
+    .ib-mid;
+  }
+}
+
+.checkbox-box {
+  &_disabled {
+    opacity: .5;
+  }
+
+  &__label {
+    .ib-mid;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+
+    &_disabled {
+      opacity: .5;
+    }
+  }
+
+  &__checkbox {
+    .ib-mid;
+  }
+}
+
 .activity {
   padding: 19px 0;
   border-top: 1px solid @border-color;
@@ -16,7 +130,7 @@
     margin-right: 8px;
     width: 20px;
     height: 16px;
-    background: url(../assets/like.svg) no-repeat;
+    background: url(../assets/like-disable.svg) no-repeat;
     background-size: 20px 16px;
   }
 

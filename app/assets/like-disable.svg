@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
     <title>icon/like-disable</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-112.000000, -280.000000)" fill="#A4A8B3">
-            <g id="icon/like-disable" transform="translate(112.000000, 280.000000)">
+    <g id="atimic_kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms" transform="translate(-63.000000, -1337.000000)" stroke="#888B94" stroke-width="2">
+            <g id="icon/like-disable" transform="translate(64.000000, 1338.000000)">
                 <path d="M10.3873186,2.31012032 C10.2893186,2.43107508 10.1413186,2.49205227 9.99431856,2.49205227 C9.85031856,2.49205227 9.70731856,2.43307433 9.61131856,2.31611808 C6.06831856,-2.01726114 -0.187681436,0.140931644 0.00431856424,5.47293736 C0.157318564,9.71635022 3.16531856,11.8195636 6.70731856,14.8034475 C7.65431856,15.6011492 8.83231856,16 10.0103186,16 C11.1913186,16 12.3713186,15.5991499 13.3163186,14.7954505 C16.8193186,11.8155651 19.7893186,9.72634649 19.9923186,5.59889025 C20.2623186,0.147929027 13.9213186,-2.04125217 10.3873186,2.31012032" id="love-[#1489]-copy-3"></path>
             </g>
         </g>

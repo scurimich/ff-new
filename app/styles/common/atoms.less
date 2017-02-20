@@ -381,7 +381,11 @@
     &:disabled+.checkbox__label {
       cursor: auto;
       position: relative;
+    }
+
+    &:checked:disabled+.checkbox__label {
       background-color: @checkbox-disabled-back;
+      border-color: @checkbox-disabled-back;
 
       &:before {
         content: '';
@@ -393,6 +397,7 @@
         background: url(../assets/check/check-FFFFFF.svg);
         background-size: 11px 8px;
         transform: translate(-50%, -50%);
+        background-color: @checkbox-disabled-back;
       }
     }
 
@@ -436,6 +441,8 @@
     }
 
     &:checked:disabled+.radio__label {
+      border-color: @radio-disabled-back;
+
       &:before {
         background-color: @radio-disabled-back;
       }
@@ -445,7 +452,8 @@
 
 .text-input {
   font-family: @font;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 20px;
   color: @input-color;
   box-sizing: border-box;
   outline: none;
@@ -464,7 +472,7 @@
     color: @input-active-color;
   }
 
-  &__error {
+  &_error {
     border-color: @input-error-border;
     color: @input-active-color;
   }
@@ -615,6 +623,10 @@
     font-size: 14px;
     line-height: 1;
     height: auto;
+    color: @select-placeholder;
+  }
+
+  &-open .label {
     color: @select-color;
   }
 
@@ -624,7 +636,7 @@
 
     &:after {
       border-width: 5px;
-      border-top-color: #000;
+      border-top-color: @select-arrow;
     }
   }
 
