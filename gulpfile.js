@@ -92,7 +92,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('deploy', ['build'], function() {
-  gulp.src('./app/prod/**/*')
+  return gulp.src('./app/prod/**/*')
     .pipe(deploy({
       branch: 'gh-pages',
       push: true
