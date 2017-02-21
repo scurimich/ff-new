@@ -14,16 +14,19 @@
   &_lg {
     font-size: 28px;
     line-height: 31px;
+    font-weight: 400;
   }
 
   &_md {
     font-size: 19px;
     line-height: 28px;
+    font-weight: 400;
   }
 
   &_sm {
     font-size: 15px;
     line-height: 21px;
+    font-weight: 400;
 
     &-semi {
       font-size: 15px;
@@ -35,6 +38,7 @@
   &_xs {
     font-size: 12px;
     line-height: 18px;
+    font-weight: 400;
   }
 }
 
@@ -85,7 +89,7 @@
   }
 
   &_subscr {
-    padding: 2px 8px 4px 8px;
+    padding: 3px 8px;
     font-size: 12px;
     line-height: 18px;
     color: @btn-first-color;
@@ -454,10 +458,9 @@
   font-family: @font;
   font-size: 13px;
   line-height: 20px;
-  color: @input-color;
   box-sizing: border-box;
   outline: none;
-  padding: 5px 8px 6px 8px;
+  padding: 5px 8px;
   border-radius: 2px;
   border: 1px solid @input-border;
 
@@ -469,6 +472,10 @@
 
   &:focus {
     border-color: @input-active-border;
+    color: @input-active-color;
+  }
+
+  &:valid {
     color: @input-active-color;
   }
 
@@ -611,7 +618,7 @@
 
 .selectric {
   box-sizing: border-box;
-  padding: 7px 10px 8px 10px;
+  padding: 8px 10px;
   background-color: @select-back;
   border-radius: 2px;
   border: 1px solid @select-border;
@@ -643,15 +650,15 @@
   &-items {
     border-radius: 2px;
     box-shadow: 0 1px 2px 0 @options-shadow;
-    top: 101%;
+    top: 102%;
 
     & li {
       min-height: auto;
-      padding: 6px 16px 7px 16px;
+      padding: 6px 16px;
       color: @option-color;
       font-family: @font;
-      font-size: 14px;
-      line-height: 1;
+      font-size: 13px;
+      line-height: 20px;
       background-color: @option-back;
       
       &:first-child {

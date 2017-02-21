@@ -1,135 +1,131 @@
-<!DOCTYPE>
-html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title atoms
-    link(rel='stylesheet', href='css/normalize.css')
-    link(rel='stylesheet', href='css/vendor/selectric.css')
-    link(rel='stylesheet', href='css/atoms-page.css')
-  body
-    h1.head Атомы
-    .block
-      h2 Типографика
-      span.title.title_lg В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(28pt)
-      span.title.title_md В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(19pt)
-      span.title.title_sm-semi В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Semibold)
-      span.title.title_sm В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Regular)
-      span.title.title_xs В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(12pt)
-      p.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (13pt)
-    .block.block_gray
-      span.title.title_white.title_lg В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(28pt)
-      span.title.title_white.title_md В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(19pt)
-      span.title.title_white.title_sm-semi В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Semibold)
-      span.title.title_white.title_sm В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Regular)
-      span.title.title_white.title_xs В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(12pt)
-      p.text.text_gray Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (13pt)
-    .block
-      h2 Кнопки
-      .buttons__item
-        button.button.button_first Действие
-        button.button.button_first(disabled) Действие
-        button.button.button_subscr Подписаться
-        button.button.button_subscr(disabled) Подписаться
-      .buttons__item
-        button.button.button_second Действие
-        button.button.button_second(disabled) Действие
-        button.button.button_second.button_watch Следить
-        button.button.button_second.button_watch(disabled) Следить
-        button.button.button_second.button_watch.button_watched Я слежу
-        button.button.button_subscr.button_check Я подписан
-        button.button.button_subscr.button_check(disabled) Я подписан
-      .buttons__item
-        button.button.button_main Действие
-        button.button.button_main(disabled) Действие
-      .buttons__item
-        span.sticker 667
-      .buttons__item
-        button.button.button_other К предыдущим записям
-        button.button.button_other(disabled) К предыдущим записям
-    .block
-      h2 Табы, теги, хлебные крошки
-      .tabs-box
-        ul.tabs
-          li.tabs__item
-            a.tabs__link.tabs__link_active Обзор
-          li.tabs__item
-            a.tabs__link Отзывы (118)
-          li.tabs__item
-            a.tabs__link Фотографии (34)
-          li.tabs__item
-            a.tabs__link События (1)
-          li.tabs__item
-            a.tabs__link Акции (8)
-      .tags
-        button.tag Тег
-          span.tag__number 17
-        button.tag.tag_active Тег
-          span.tag__number 17
-      .bread
-        ul.breadcrumbs
-          li.breadcrumbs__item
-            a.breadcrumbs__link Главная
-          li.breadcrumbs__item
-            a.breadcrumbs__link Кафе и рестораны Волгограда
-          li.breadcrumbs__item
-            a.breadcrumbs__link Ресторан Волгоград
-          li.breadcrumbs__item
-            a.breadcrumbs__link Отзывы
-    .block
-      h2 Формы, чекбоксы, радиокнопки
-      .forms
-        input.text-input(type='text', placeholder='Форма отключена 50%', disabled)
-        input.text-input(type='text', placeholder='Нормальное состояние')
-        input.text-input.text-input_error(type='text', placeholder='Ошибочное состояние')
-        textarea.textarea(placeholder='Ваш текст')
-      .radio-check
-        .checkbox
-          input.checkbox__input#checkbox1(type='checkbox')
-          label.checkbox__label(for='checkbox1')
-        .checkbox
-          input.checkbox__input#checkbox2(type='checkbox', checked)
-          label.checkbox__label(for='checkbox2')
-        .checkbox
-          input.checkbox__input#checkbox3(type='checkbox', disabled)
-          label.checkbox__label(for='checkbox3')
-        .radio
-          input.radio__input#radio1(type='radio', name='radio')
-          label.radio__label(for='radio1')
-        .radio
-          input.radio__input#radio2(type='radio', name='radio', checked)
-          label.radio__label(for='radio2')
-        .radio
-          input.radio__input#radio3(type='radio', name='radio1', disabled)
-          label.radio__label(for='radio3')
-        .radio
-          input.radio__input#radio4(type='radio', name='radio1', checked, disabled)
-          label.radio__label(for='radio4')
-    .block
-      h2 Раскрывающиеся списки и тултипы
-      .help-box
-        .help.help_light.help_down
-          span.help__title Заголовок
-          p.help__text В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
-        .help.help_dark.help_down
-          span.help__title Заголовок
-          p.help__text В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
-        .help.help_small.help_light.help_down
-          p.help__text В чащах юга жил
-        .help.help_small.help_light.help_up
-          p.help__text В чащах юга жил
-        .help.help_small.help_dark.help_down
-          p.help__text В чащах юга жил
-        .help.help_small.help_dark.help_up
-          p.help__text В чащах юга жил
-      .select-box
-        select.select
-          option(default) Раскрывающийся список
-          option(value='1') Пункт 1
-          option(value='2') Пункт 2
-          option(value='3') Пункт 3
-          option(value='4') Пункт 4
-          option(value='5') Пункт 5
-    script(src='js/vendor/jquery.min.js')
-    script(src='js/vendor/jquery.selectric.min.js')
-    script(src='js/main.js')
+extends ./templates/services.jade
+
+block title
+  | atoms
+
+block styleLinks
+  link(rel='stylesheet', href='css/atoms-page.css')
+
+block content
+  h1.head Атомы
+  .block
+    h2 Типографика
+    span.title.title_lg В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(28pt)
+    span.title.title_md В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(19pt)
+    span.title.title_sm-semi В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Semibold)
+    span.title.title_sm В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Regular)
+    span.title.title_xs В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(12pt)
+    p.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (13pt)
+  .block.block_gray
+    span.title.title_white.title_lg В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(28pt)
+    span.title.title_white.title_md В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(19pt)
+    span.title.title_white.title_sm-semi В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Semibold)
+    span.title.title_white.title_sm В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(15pt, Regular)
+    span.title.title_white.title_xs В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!(12pt)
+    p.text.text_gray Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (13pt)
+  .block
+    h2 Кнопки
+    .buttons__item
+      button.button.button_first Действие
+      button.button.button_first(disabled) Действие
+      button.button.button_subscr Подписаться
+      button.button.button_subscr(disabled) Подписаться
+    .buttons__item
+      button.button.button_second Действие
+      button.button.button_second(disabled) Действие
+      button.button.button_second.button_watch Следить
+      button.button.button_second.button_watch(disabled) Следить
+      button.button.button_second.button_watch.button_watched Я слежу
+      button.button.button_subscr.button_check Я подписан
+      button.button.button_subscr.button_check(disabled) Я подписан
+    .buttons__item
+      button.button.button_main Действие
+      button.button.button_main(disabled) Действие
+    .buttons__item
+      span.sticker 667
+    .buttons__item
+      button.button.button_other К предыдущим записям
+      button.button.button_other(disabled) К предыдущим записям
+  .block
+    h2 Табы, теги, хлебные крошки
+    .tabs-box
+      ul.tabs
+        li.tabs__item
+          a.tabs__link.tabs__link_active Обзор
+        li.tabs__item
+          a.tabs__link Отзывы (118)
+        li.tabs__item
+          a.tabs__link Фотографии (34)
+        li.tabs__item
+          a.tabs__link События (1)
+        li.tabs__item
+          a.tabs__link Акции (8)
+    .tags
+      button.tag Тег
+        span.tag__number 17
+      button.tag.tag_active Тег
+        span.tag__number 17
+    .bread
+      ul.breadcrumbs
+        li.breadcrumbs__item
+          a.breadcrumbs__link Главная
+        li.breadcrumbs__item
+          a.breadcrumbs__link Кафе и рестораны Волгограда
+        li.breadcrumbs__item
+          a.breadcrumbs__link Ресторан Волгоград
+        li.breadcrumbs__item
+          a.breadcrumbs__link Отзывы
+  .block
+    h2 Формы, чекбоксы, радиокнопки
+    .forms
+      input.text-input(type='text', placeholder='Форма отключена 50%', disabled, pattern=".*", required)
+      input.text-input(type='text', placeholder='Нормальное состояние', pattern=".*", required)
+      input.text-input.text-input_error(type='text', placeholder='Ошибочное состояние', pattern=".*", required)
+      textarea.textarea(placeholder='Ваш текст')
+    .radio-check
+      .checkbox
+        input.checkbox__input#checkbox1(type='checkbox')
+        label.checkbox__label(for='checkbox1')
+      .checkbox
+        input.checkbox__input#checkbox2(type='checkbox', checked)
+        label.checkbox__label(for='checkbox2')
+      .checkbox
+        input.checkbox__input#checkbox3(type='checkbox', disabled)
+        label.checkbox__label(for='checkbox3')
+      .radio
+        input.radio__input#radio1(type='radio', name='radio')
+        label.radio__label(for='radio1')
+      .radio
+        input.radio__input#radio2(type='radio', name='radio', checked)
+        label.radio__label(for='radio2')
+      .radio
+        input.radio__input#radio3(type='radio', name='radio1', disabled)
+        label.radio__label(for='radio3')
+      .radio
+        input.radio__input#radio4(type='radio', name='radio1', checked, disabled)
+        label.radio__label(for='radio4')
+  .block
+    h2 Раскрывающиеся списки и тултипы
+    .help-box
+      .help.help_light.help_down
+        span.help__title Заголовок
+        p.help__text В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+      .help.help_dark.help_down
+        span.help__title Заголовок
+        p.help__text В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
+      .help.help_small.help_light.help_down
+        p.help__text В чащах юга жил
+      .help.help_small.help_light.help_up
+        p.help__text В чащах юга жил
+      .help.help_small.help_dark.help_down
+        p.help__text В чащах юга жил
+      .help.help_small.help_dark.help_up
+        p.help__text В чащах юга жил
+    .select-box
+      select.select
+        option(default) Раскрывающийся список
+        option(value='1') Пункт 1
+        option(value='2') Пункт 2
+        option(value='3') Пункт 3
+        option(value='4') Пункт 4
+        option(value='5') Пункт 5

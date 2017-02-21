@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
@@ -64,14 +65,23 @@ gulp.task('watch', function() {
     paths.prod + '/**/*.js',
     paths.prod + '/**/*.css'
   ]).on('change', browserSync.reload);
-  gulp.watch(paths.styles, ['less']);
-  gulp.watch(paths.jade, ['jade']);
-  gulp.watch(paths.js, ['js']);
+  gulp.src(paths.styles)
+    .pipe(watch(paths.styles, function() {
+    gulp.start('less');
+  }));
+  gulp.src(paths.jade)
+    .pipe(watch(paths.jade, function() {
+    gulp.start('jade');
+  }));
+  gulp.src(paths.js)
+    .pipe(watch(paths.js, function() {
+    gulp.start('js');
+  }));
 });
 
 gulp.task('build', function() {
   gulp.src(paths.normalize)
-    .pipe(gulp.dest(paths.prod + 'css/'));
+    .pipe(gulp.dest(paths.prod + 'css/vendor/'));
   gulp.src(paths.jq)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
   gulp.src('./app/assets/**/*.svg')

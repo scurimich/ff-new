@@ -1,0 +1,679 @@
+@import 'molecules.less';
+
+.content-photo {
+  .organism-block;
+
+  &__header {
+    padding-left: 4px;
+    margin-bottom: 24px;
+  }
+
+  &__image-container {
+    float: left;
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__description {
+    float: left;
+    width: 320px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__link {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__subscribe {
+    float: right;
+  }
+
+  &__body {
+    padding-left: 4px;
+    margin: -4px -4px 20px -4px;
+    font-size: 0;
+  }
+
+  &__photo {
+    background-color: @icons-color;
+    width: 100%;
+    height: 100%;
+
+    &_other {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  &__photo-container {
+
+    &_1 {
+      margin: 4px;
+      width: 580px;
+      height: 272px;
+    }
+
+    &_2 {
+      .ib-top;
+      margin: 8px 4px;
+      width: 286px;
+      height: 272px;
+    }
+
+    &_3 {
+      .ib-top;
+      margin: 0 4px 8px 4px;
+      width: 284px;
+      height: 132px;
+    }
+
+    &_4 {
+      .ib-top;
+      margin: 0 8px 0 0;
+      width: 138px;
+      height: 132px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__photos-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__photos-other {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+.new-place {
+  .organism-block;
+
+  &__header {
+    margin-bottom: 24px;
+    font-size: 0;
+  }
+
+  &__avatar-container {
+    .ib-top;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__description {
+    .ib-top;
+    width: 520px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__author {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__body {
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  &__photo-container {
+    height: 96px;
+    margin-bottom: 56px;
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__place-type {
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    transform: translate(-50%);
+    background-color: @icons-color;
+  }
+
+  &__place {
+    display: block;
+    text-align: center;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: -.11px;
+    color: @links-color;
+    cursor: pointer;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__type {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__splitter {
+    .ib-mid;
+    width: 4px;
+    height: 4px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: @icons-color;
+  }
+
+  &__subscribe {
+    display: block;
+    text-align: center;
+  }
+
+  &__footer {
+
+  }
+}
+
+.new-review {
+  .organism-block;
+
+  &__header {
+    margin-bottom: 21px;
+    font-size: 0;
+  }
+
+  &__avatar-container {
+    .ib-top;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__description {
+    .ib-top;
+    width: 520px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__author {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__place {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__body {
+    margin-bottom: 24px;
+  }
+
+  &__review {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  &__more {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.09px;
+    color: @links-color;
+  }
+}
+
+.new-promo {
+  .organism-block;
+
+  &__header {
+    padding-left: 4px;
+    margin-bottom: 24px;
+  }
+
+  &__image-container {
+    float: left;
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__description {
+    float: left;
+    width: 320px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__link {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__subscribe {
+    float: right;
+  }
+
+  &__body {
+    padding-left: 4px;
+    margin-bottom: 24px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    color: @links-color;
+  }
+
+  &__promo-date {
+    display: block;
+    margin-bottom: 8px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__follow {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__photo-container {
+    width: 580px;
+    height: 576px;
+    overflow: hidden;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__footer {
+    margin-bottom: 20px;
+  }
+}
+
+.np-comments {
+  padding-left: 4px;
+
+  &__more {
+    display: block;
+    padding: 7px 200px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+    text-align: center;
+    background-color: @background-color;
+    cursor: pointer;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__write {
+    margin: 0 -20px;
+  }
+}
+
+.np-comment {
+  padding: 16px 0 15px 0;
+  font-size: 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__avatar-container {
+    .ib-top;
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__body {
+    .ib-top;
+    width: 548px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 3px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @links-color;
+  }
+
+  &__text {
+    margin-bottom: 3px;
+  }
+
+  &__time {
+    float: left;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__likes {
+    float: right;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+
+  &__like {
+    .ib-base;
+    width: 12px;
+    height: 10px;
+    background: url(../assets/like-disable.svg) no-repeat;
+    background-size: 12px 10px;
+  }
+
+}
+
+.np-write {
+  font-size: 0;
+  padding: 20px 20px 0px 20px;
+  border-top: 1px solid @border-color;
+
+  &__avatar-container {
+    .ib-top;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+  }
+
+  &__form {
+    .ib-top;
+    width: 548px;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 548px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+    border: none;
+    outline: none;
+  }
+
+  &__writing {
+    margin: -20px;
+    margin-top: 0;
+    padding: 16px 20px;
+    border-top: 1px solid @border-color;
+    background-color: @background-color;
+  }
+
+  &__char-counter {
+    float: left;
+    margin-top: 6px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.5;
+    color: @icons-color;
+  }
+
+  &__send {
+    float: right;
+  }
+}
+
+.new-places {
+  width: 620px;
+
+  &__topic {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 0;
+    margin: 0 -10px;
+  }
+
+  &__item {
+    .ib-top;
+    width: 193px;
+    height: 192px;
+    margin: 0 10px;
+    position: relative;
+  }
+
+  &__photo-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @border-color;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  &__body {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background-image: linear-gradient(-180deg, rgba(75,80,99,0.00) 0%, rgba(75,80,99,0.66) 76%);
+    z-index: 2;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 16px 13px 16px;
+  }
+
+  &__name {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @white;
+  }
+
+  &__rating {
+    
+  }
+}

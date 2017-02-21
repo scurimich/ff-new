@@ -1,119 +1,116 @@
-<!DOCTYPE>
-html
-  head
-    meta(charset='utf-8')
-    title molecules
-    link(rel='stylesheet', href='css/normalize.css')
-    link(rel='stylesheet', href='css/vendor/selectric.css')
-    link(rel='stylesheet', href='css/molecules-page.css')
-  body
-    h1.head Молекулы
-    .block
-      h2 Формы, чекбоксы, раскрывающиеся списки
-      .inputs
-        .ta-box
-          label.ta-box__label Заголовок
-          textarea.textarea.ta-box__ta(placeholder='Ваш текст')
-        .ta-box
-          label.ta-box__label.ta-box__label_disabled Заголовок
-          textarea.textarea.ta-box__ta(placeholder='Ваш текст', disabled)
+extends ./templates/services.jade
 
-        .ta-box
-          label.ta-box__label Заголовок
-          textarea.textarea.textarea_error.ta-box__ta(placeholder='Ваш текст')
-        .input-box
-          label.input-box__label Заголовок
-          input.text-input.text-input_error.input-box__input(type='text', placeholder='Нормальное состояние')
-          span.input-box__error Текст ошибки
-          
-        .input-box
-          label.input-box__label Имя
-          input.text-input.input-box__input(type='text', value='Катериночка мяуковская', placeholder='Нормальное состояние')
-        .input-box
-          label.input-box__label.input-box__label_disabled Заголовок
-          input.text-input.input-box__input(type='text', placeholder='Нормальное состояние', disabled)
-        .input-box
-          label.input-box__label Заголовок
-          input.text-input.input-box__input(type='text', placeholder='Нормальное состояние')
-        .input-box
-          label.input-box__label.input-box__label_disabled Заголовок
-          input.text-input.input-box__input(type='text', placeholder='Нормальное состояние', disabled)
-        .select-box
-          label.select-box__label Заголовок
-          select.select.select-box__select
-            option(default) Раскрывающийся список
-            option(value='1') Пункт 1
-            option(value='2') Пункт 2
-            option(value='3') Пункт 3
-            option(value='4') Пункт 4
-            option(value='5') Пункт 5
-        .select-box.select-box_disabled
-          label.select-box__label Заголовок
-          select.select.select-box__select
-            option(default) Раскрывающийся список
-            option(value='1') Пункт 1
-            option(value='2') Пункт 2
-            option(value='3') Пункт 3
-            option(value='4') Пункт 4
-            option(value='5') Пункт 5
-        .radio-box
-          .radio.radio-box__radio
-            input.radio__input#radio1(type='radio', name='radio', checked)
-            label.radio__label(for='radio1')
-          label.radio-box__label(for='radio1') Заголовок
-        .radio-box
-          .radio.radio-box__radio
-            input.radio__input#radio2(type='radio', name='radio')
-            label.radio__label(for='radio2')
-          label.radio-box__label(for='radio2') Заголовок
-        .radio-box.radio-box_disabled
-          .radio.radio-box__radio
-            input.radio__input#radio3(type='radio', name='radioo', checked, disabled)
-            label.radio__label(for='radio3')
-          label.radio-box__label(for='radio3') Заголовок
-        .radio-box.radio-box_disabled
-          .radio.radio-box__radio
-            input.radio__input#radio4(type='radio', name='radioo', disabled)
-            label.radio__label(for='radio4')
-          label.radio-box__label(for='radio4') Заголовок
+block title
+  | molecules
 
-        .checkbox-box
-          .checkbox.checkbox-box__checkbox
-            input.checkbox__input#checkbox1(type='checkbox', name='checkbox', checked)
-            label.checkbox__label(for='checkbox1')
-          label.checkbox-box__label(for='checkbox1') Заголовок
-        .checkbox-box
-          .checkbox.checkbox-box__checkbox
-            input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
-            label.checkbox__label(for='checkbox2')
-          label.checkbox-box__label(for='checkbox2') Заголовок
-        .checkbox-box.checkbox-box_disabled
-          .checkbox.checkbox-box__checkbox
-            input.checkbox__input#checkbox3(type='checkbox', name='checkboxo', checked, disabled)
-            label.checkbox__label(for='checkbox3')
-          label.checkbox-box__label(for='checkbox3') Заголовок
-        .checkbox-box.checkbox-box_disabled
-          .checkbox.checkbox-box__checkbox
-            input.checkbox__input#checkbox4(type='checkbox', name='checkboxo', disabled)
-            label.checkbox__label(for='checkbox4')
-          label.checkbox-box__label(for='checkbox4') Заголовок
-    .block
-      h2 Лента активности, главки
-      .activity.clearfix
-        .activity__likes
-          a.activity__like
-          span.activity__number 138
-        a.activity__share
-      .topic
-        span.topic__name chapter
-    .block
-      h2 Кнопки
-      .sticker-button
-        button.button.button_subscr.sticker-button__button Подписаться
-        span.sticker 667
-      .sticker-button
-        button.button.button_second.button_watch.sticker-button__button Следить
-        span.sticker 667
-    script(src='js/vendor/jquery.min.js')
-    script(src='js/vendor/jquery.selectric.min.js')
-    script(src='js/main.js')
+block styleLinks
+  link(rel='stylesheet', href='css/molecules-page.css')
+
+block content
+  h1.head Молекулы
+  .block
+    h2 Формы, чекбоксы, раскрывающиеся списки
+    .inputs
+      .ta-box
+        label.ta-box__label Заголовок
+        textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+      .ta-box
+        label.ta-box__label.ta-box__label_disabled Заголовок
+        textarea.textarea.ta-box__ta(placeholder='Ваш текст', disabled)
+
+      .ta-box
+        label.ta-box__label Заголовок
+        textarea.textarea.textarea_error.ta-box__ta(placeholder='Ваш текст')
+      .input-box
+        label.input-box__label Заголовок
+        input.text-input.text-input_error.input-box__input(type='text', placeholder='Нормальное состояние')
+        span.input-box__error Текст ошибки
+        
+      .input-box
+        label.input-box__label Имя
+        input.text-input.input-box__input(type='text', value='Катериночка мяуковская', placeholder='Нормальное состояние', pattern=".*", required)
+      .input-box
+        label.input-box__label.input-box__label_disabled Заголовок
+        input.text-input.input-box__input(type='text', placeholder='Нормальное состояние', disabled, pattern=".*", required)
+      .input-box
+        label.input-box__label Заголовок
+        input.text-input.input-box__input(type='text', placeholder='Нормальное состояние', pattern=".*", required)
+      .input-box
+        label.input-box__label.input-box__label_disabled Заголовок
+        input.text-input.input-box__input(type='text', placeholder='Нормальное состояние', disabled, pattern=".*", required)
+      .select-box
+        label.select-box__label Заголовок
+        select.select.select-box__select
+          option(default) Раскрывающийся список
+          option(value='1') Пункт 1
+          option(value='2') Пункт 2
+          option(value='3') Пункт 3
+          option(value='4') Пункт 4
+          option(value='5') Пункт 5
+      .select-box.select-box_disabled
+        label.select-box__label Заголовок
+        select.select.select-box__select
+          option(default) Раскрывающийся список
+          option(value='1') Пункт 1
+          option(value='2') Пункт 2
+          option(value='3') Пункт 3
+          option(value='4') Пункт 4
+          option(value='5') Пункт 5
+      .radio-box
+        .radio.radio-box__radio
+          input.radio__input#radio1(type='radio', name='radio', checked)
+          label.radio__label(for='radio1')
+        label.radio-box__label(for='radio1') Заголовок
+      .radio-box
+        .radio.radio-box__radio
+          input.radio__input#radio2(type='radio', name='radio')
+          label.radio__label(for='radio2')
+        label.radio-box__label(for='radio2') Заголовок
+      .radio-box.radio-box_disabled
+        .radio.radio-box__radio
+          input.radio__input#radio3(type='radio', name='radioo', checked, disabled)
+          label.radio__label(for='radio3')
+        label.radio-box__label(for='radio3') Заголовок
+      .radio-box.radio-box_disabled
+        .radio.radio-box__radio
+          input.radio__input#radio4(type='radio', name='radioo', disabled)
+          label.radio__label(for='radio4')
+        label.radio-box__label(for='radio4') Заголовок
+
+      .checkbox-box
+        .checkbox.checkbox-box__checkbox
+          input.checkbox__input#checkbox1(type='checkbox', name='checkbox', checked)
+          label.checkbox__label(for='checkbox1')
+        label.checkbox-box__label(for='checkbox1') Заголовок
+      .checkbox-box
+        .checkbox.checkbox-box__checkbox
+          input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+          label.checkbox__label(for='checkbox2')
+        label.checkbox-box__label(for='checkbox2') Заголовок
+      .checkbox-box.checkbox-box_disabled
+        .checkbox.checkbox-box__checkbox
+          input.checkbox__input#checkbox3(type='checkbox', name='checkboxo', checked, disabled)
+          label.checkbox__label(for='checkbox3')
+        label.checkbox-box__label(for='checkbox3') Заголовок
+      .checkbox-box.checkbox-box_disabled
+        .checkbox.checkbox-box__checkbox
+          input.checkbox__input#checkbox4(type='checkbox', name='checkboxo', disabled)
+          label.checkbox__label(for='checkbox4')
+        label.checkbox-box__label(for='checkbox4') Заголовок
+  .block
+    h2 Лента активности, главки
+    .activity.clearfix
+      .activity__likes
+        a.activity__like
+        span.activity__number 138
+      a.activity__share
+    .topic
+      span.topic__name chapter
+  .block
+    h2 Кнопки
+    .sticker-button
+      button.button.button_subscr.sticker-button__button Подписаться
+      span.sticker 667
+    .sticker-button
+      button.button.button_second.button_watch.sticker-button__button Следить
+      span.sticker 667

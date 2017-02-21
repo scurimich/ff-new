@@ -1,3 +1,13 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+
 .clearfix {
   &:before {
     content: '';
@@ -15,11 +25,28 @@
   display: inline-block;
   vertical-align: top;
 }
+
 .ib-mid() {
   display: inline-block;
   vertical-align: middle;
 }
+
 .ib-bot() {
   display: inline-block;
   vertical-align: bottom;
+}
+
+.ib-base() {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.organism-block() {
+  box-sizing: border-box;
+  width: 620px;
+  padding: 20px 20px 20px 16px;
+  background-color: @white;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+  overflow: hidden;
 }
