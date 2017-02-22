@@ -11,6 +11,7 @@ var deploy = require('gulp-gh-pages');
 
 var paths = {
   normalize: 'node_modules/normalize.css/normalize.css',
+  rateit: 'node_modules/jquery.rateit/scripts/@(jquery.rateit.min.js|rateit.css)',
   jq: 'node_modules/jquery/dist/jquery.min.js',
   styles: './app/styles/**/*.less',
   stylesVendors: './app/styles/vendor/@(*.less|*.css)',
@@ -82,6 +83,8 @@ gulp.task('watch', function() {
 gulp.task('build', function() {
   gulp.src(paths.normalize)
     .pipe(gulp.dest(paths.prod + 'css/vendor/'));
+  gulp.src(paths.rateit)
+    .pipe(gulp.dest(paths.prod + 'js/vendor/'));
   gulp.src(paths.jq)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
   gulp.src('./app/assets/**/*.svg')
