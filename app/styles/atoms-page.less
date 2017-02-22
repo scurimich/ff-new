@@ -1,10 +1,12 @@
 @import 'common/atoms.less';
+@import 'common/common.less';
 
 body {
   background-color: @background-color;
 }
 
 h2 {
+  margin-bottom: 16px;
   font-family: @font;
   font-weight: 400;
   font-size: 45px;
@@ -108,4 +110,10 @@ h2 {
 .avatar {
   display: inline-block;
   margin-right: 10px;
+}
+
+.image,
+.avatar {
+  .ib-top;
+  margin-right: 16px;
 }

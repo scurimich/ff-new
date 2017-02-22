@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "jquery": "^3.1.1",
+    "jquery.rateit": "^1.1.1",
     "normalize.css": "^5.0.0"
   }
 }

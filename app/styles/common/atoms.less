@@ -618,19 +618,24 @@
 
 .selectric {
   box-sizing: border-box;
-  padding: 8px 10px;
+  padding: 5px 10px;
   background-color: @select-back;
   border-radius: 2px;
   border: 1px solid @select-border;
+  box-shadow: 0 1px 0 0 @select-shadow;
 
   & .label {
     margin: 0;
     padding: 0;
     font-family: @font;
-    font-size: 14px;
-    line-height: 1;
+    font-size: 13px;
+    line-height: 20px;
     height: auto;
     color: @select-placeholder;
+
+    &.disabled {
+      color: @icons-color;
+    }
   }
 
   &-open .label {
@@ -660,14 +665,107 @@
       font-size: 13px;
       line-height: 20px;
       background-color: @option-back;
-      
-      &:first-child {
-        display: none;
-      }
 
       &:hover {
         background-color: @option-hover;
       }
     }
+  }
+}
+
+
+
+.image {
+  overflow: hidden;
+  border-radius: 4px;
+  background: @image-back url(../assets/place.svg) no-repeat;
+
+  &_24 {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
+
+  &_36 {
+    width: 36px;
+    height: 36px;
+    background-size: 36px 36px;
+  }
+
+  &_48 {
+    width: 48px;
+    height: 48px;
+    background-size: 48px 48px;
+  }
+
+  &_64 {
+    width: 64px;
+    height: 64px;
+    background-size: 40px 37px;
+  }
+
+  &_80 {
+    width: 80px;
+    height: 80px;
+    background-size: 41px 38px;
+  }
+
+  &_112 {
+    width: 112px;
+    height: 112px;
+    background-size: 112px 112px;
+  }
+
+  &_160 {
+    width: 160px;
+    height: 160px;
+    background-size: 83px 78px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  background: @image-back url(../assets/avatar.svg) no-repeat;
+
+  &_24 {
+    width: 24px;
+    height: 24px;
+    background-size: 10px 10px;
+  }
+
+  &_36 {
+    width: 36px;
+    height: 36px;
+    background-size: 16px 16px;
+  }
+
+  &_48 {
+    width: 48px;
+    height: 48px;
+    background-size: 24px 24px;
+  }
+
+  &_64 {
+    width: 64px;
+    height: 64px;
+    background-size: 32px 32px;
+  }
+
+  &_80 {
+    width: 80px;
+    height: 80px;
+    background-size: 42px 42px;
+  }
+
+  &_112 {
+    width: 112px;
+    height: 112px;
+    background-size: 59px 59px;
+  }
+
+  &_160 {
+    width: 160px;
+    height: 160px;
+    background-size: 84px 84px;
   }
 }
