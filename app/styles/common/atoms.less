@@ -252,6 +252,7 @@
     transform: rotate(45deg) translate(-50%);
   }
 }
+
 .tag {
   box-sizing: border-box;
   display: inline-block;
@@ -308,10 +309,12 @@
     font-size: 15px;
     color: @tab-color;
     text-decoration: none;
+    cursor: pointer;
 
     &_active {
       color: @tab-color-active;
       border-bottom: 3px solid @tab-border-bottom;
+      cursor: auto;
     }
   }
 }

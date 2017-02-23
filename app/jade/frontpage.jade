@@ -1,0 +1,454 @@
+extends ./templates/main.jade
+
+block title 
+  | Front page
+
+block styleLinks
+  link(rel='stylesheet', href='css/frontpage.css')
+
+block content
+  .container.front-container
+    main.front-main
+      .front-main__tabs
+        ul.tabs
+          li.tabs__item
+            a.tabs__link.tabs__link_active Все записи
+          li.tabs__item
+            a.tabs__link Моя лента
+
+      section.front-main__entry.content-photo
+        .content-photo__header.clearfix
+          .content-photo__image-container.place.place_48
+            img.content-photo__image
+          .content-photo__description
+            span.content-photo__title
+              a.content-photo__link Название места: 
+              | загружено @? фотографий
+            time.content-photo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .content-photo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .content-photo__body
+          .content-photo__photo-container.content-photo__photo-container_1
+            img.content-photo__photo
+        .content-photo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.new-review
+        .new-review__header
+          .new-review__avatar-container.avatar.avatar_48
+            img.new-review__avatar
+          .new-review__description
+            span.new-review__title
+              a.new-review__author Катериночка мяуковская 
+              | написала новый отзыв на 
+              a.new-review__place Pasta Uno
+            time.new-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
+        .new-review__body
+          p.new-review__review.text(data-expand='4')
+            span.new-review__rating.rating(
+              data-rateit-readonly='true'
+              data-rateit-value='3.5'
+              )
+            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк … Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк …
+          a.new-review__more.expand-text Показать полностью
+        .new-review__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.new-place
+        .new-place__header
+          .new-place__avatar-container.avatar.avatar_48
+            img.new-place__avatar
+          .new-place__description
+            span.new-place__title
+              a.new-place__author Катериночка мяуковская 
+              | добавила новое место
+            time.new-place__date(datetime='2017-01-04T18:31') 4 января в 18:31
+        .new-place__body
+          .new-place__photo-container
+            img.new-place__photo
+          span.new-place__place-type
+          a.new-place__place Pasta Uno
+          .new-place__info
+            | Кафе 
+            span.new-place__splitter
+            | Вогоград, Россия
+          .new-place__subscribe
+            button.button.button_subscr Подписаться
+        .new-place__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.new-promo
+        .new-promo__header.clearfix
+          .new-promo__image-container.place.place_48
+            img.new-promo__image
+          .new-promo__description
+            span.new-promo__title
+              a.new-promo__link Название места: 
+              | акция
+            time.new-promo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .new-promo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .new-promo__body
+          h3.new-promo__name.title_lg Второй кекс в подарок
+          time.new-promo__promo-date(datetime='2017-02-27T19:00') Воскресенье, 27 февраля 2017г, в 19:00
+          .new-promo__follow
+            .sticker-button
+              button.button.button_second.button_watch.sticker-button__button Следить
+              span.sticker 667
+          p.new-promo__text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)
+          .new-promo__photo-container
+            img.new-promo__photo
+        .new-promo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+        .new-promo__comments.np-comments
+          a.np-comments__more Показать все 18 комментариев
+          ul.np-comments__list
+            li.np-comments__item.np-comment
+              .np-comment__avatar-container.avatar.avatar_24
+                img.np-comment__avatar
+              .np-comment__body
+                .np-comment__name Катериночка Мяуковская
+                .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+                .np-comment__info.clearfix
+                  time.np-comment__time(datetime='2017-01-18') 18 января 2017
+                  .np-comment__likes
+                    | 42 
+                    span.np-comment__like
+            li.np-comments__item.np-comment
+              .np-comment__avatar-container.avatar.avatar_24
+                img.np-comment__avatar
+              .np-comment__body
+                .np-comment__name Катериночка Мяуковская
+                .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+                .np-comment__info.clearfix
+                  time.np-comment__time(datetime='2017-01-18') 18 января 2017
+                  .np-comment__likes
+                    | 42 
+                    span.np-comment__like
+            li.np-comments__item.np-comment
+              .np-comment__avatar-container.avatar.avatar_24
+                img.np-comment__avatar
+              .np-comment__body
+                a.np-comment__name Катериночка Мяуковская
+                .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+                .np-comment__info.clearfix
+                  time.np-comment__time(datetime='2017-01-18') 18 января 2017
+                  .np-comment__likes
+                    | 42 
+                    span.np-comment__like
+          .np-comments__write.np-write
+            .np-write__avatar-container.avatar.avatar_24
+              img.np-write__avatar
+            form.np-write__form
+              input.np-write__input(type='text', placeholder='Написать комментарий')
+            .np-write__writing.clearfix
+              span.np-write__char-counter 0 из 319 символов
+              button.button.button_first.np-write__send Отправить
+
+      section.front-main__entry.content-photo
+        .content-photo__header.clearfix
+          .content-photo__image-container.place.place_48
+            img.content-photo__image
+          .content-photo__description
+            span.content-photo__title
+              a.content-photo__link Название места: 
+              | загружено @? фотографий
+            time.content-photo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .content-photo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .content-photo__body
+          .content-photo__photo-container.content-photo__photo-container_2
+            img.content-photo__photo
+          .content-photo__photo-container.content-photo__photo-container_2
+            img.content-photo__photo
+        .content-photo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.content-photo
+        .content-photo__header.clearfix
+          .content-photo__image-container.place.place_48
+            img.content-photo__image
+          .content-photo__description
+            span.content-photo__title
+              a.content-photo__link Название места: 
+              | загружено @? фотографий
+            time.content-photo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .content-photo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .content-photo__body
+          .content-photo__photo-container.content-photo__photo-container_2
+            img.content-photo__photo
+          .content-photo__photo-container.content-photo__photo-container_2
+            .content-photo__photo-container.content-photo__photo-container_3
+              img.content-photo__photo
+            .content-photo__photo-container.content-photo__photo-container_3
+              img.content-photo__photo
+        .content-photo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.content-photo
+        .content-photo__header.clearfix
+          .content-photo__image-container.place.place_48
+            img.content-photo__image
+          .content-photo__description
+            span.content-photo__title
+              a.content-photo__link Название места: 
+              | загружено @? фотографий
+            time.content-photo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .content-photo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .content-photo__body
+          .content-photo__photo-container.content-photo__photo-container_2
+            img.content-photo__photo
+          .content-photo__photo-container.content-photo__photo-container_2
+            .content-photo__photo-container.content-photo__photo-container_3
+              .content-photo__photo-container.content-photo__photo-container_4
+                img.content-photo__photo
+              .content-photo__photo-container.content-photo__photo-container_4
+                img.content-photo__photo
+            .content-photo__photo-container.content-photo__photo-container_3
+              img.content-photo__photo
+        .content-photo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      section.front-main__entry.content-photo
+        .content-photo__header.clearfix
+          .content-photo__image-container.place.place_48
+            img.content-photo__image
+          .content-photo__description
+            span.content-photo__title
+              a.content-photo__link Название места: 
+              | загружено @? фотографий
+            time.content-photo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+          .content-photo__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .content-photo__body
+          .content-photo__photo-container.content-photo__photo-container_2
+            img.content-photo__photo
+          .content-photo__photo-container.content-photo__photo-container_2
+            .content-photo__photo-container.content-photo__photo-container_3
+              .content-photo__photo-container.content-photo__photo-container_4
+                img.content-photo__photo
+              .content-photo__photo-container.content-photo__photo-container_4
+                img.content-photo__photo
+            .content-photo__photo-container.content-photo__photo-container_3
+              .content-photo__photo-container.content-photo__photo-container_4
+                img.content-photo__photo
+              .content-photo__photo-container.content-photo__photo-container_4
+                a.content-photo__photos-link
+                  img.content-photo__photo.content-photo__photo_other
+                  span.content-photo__photos-other И еще 23 фото
+        .content-photo__footer
+          .activity.clearfix
+            .activity__likes
+              a.activity__like
+              span.activity__number 138
+            a.activity__share
+
+      .front-main__other
+        button.front-main__other-button.button.button_other К предыдущим записям
+
+      .front-main__entry.new-places
+        .new-places__topic.topic
+          span.topic__name новые места на foxy
+        ul.new-places__list
+          li.new-places__item
+            a.new-places__photo-container
+              img.new-places__photo
+            .new-places__body
+              .new-places__info
+                span.new-places__name Ресторан Волгоград
+                span.new-places__rating.rating(
+                  data-rateit-readonly='true'
+                  data-rateit-value='3.5'
+                  )
+          li.new-places__item
+            a.new-places__photo-container
+              img.new-places__photo
+            .new-places__body
+              .new-places__info
+                span.new-places__name Ресторан Волгоград
+                span.new-places__rating.rating(
+                  data-rateit-readonly='true'
+                  data-rateit-value='3.5'
+                  )
+          li.new-places__item
+            a.new-places__photo-container
+              img.new-places__photo
+            .new-places__body
+              .new-places__info
+                span.new-places__name Ресторан Волгоград
+                span.new-places__rating.rating(
+                  data-rateit-readonly='true'
+                  data-rateit-value='3.5'
+                  )
+
+    aside.front-sidebar
+      .front-sidebar__month-place.month-place
+        .month-place__topic.topic
+          span.topic__name заведение месяца
+        .month-place__body
+          a.month-place__photo-container
+            img.month-place__photo
+          .month-place__descr
+            .month-place__info
+              span.month-place__name Ресторан Волгоград
+              span.month-place__rating.rating(
+                data-rateit-readonly='true'
+                data-rateit-value='3.5'
+                )
+      .front-sidebar__day-review.day-review
+          .day-review__topic.topic
+            span.topic__name отзыв дня
+          .day-review__body
+            .day-review__avatar-container.avatar.avatar_48
+              img.day-review__avatar
+            .day-review__descr
+              span.day-review__name Катериночка Мяуковская
+              span.day-review__info написала новый отзыв на Bellevillecafe
+              span.day-review__rating.rating(
+                data-rateit-readonly='true'
+                data-rateit-value='3.5'
+                )
+              p.day-review__text.text 
+                | Итальянский кофе, по мне одна из самых вкусных кухонь нашего города, лето ... 
+                a.day-review__more.expand-text(data-expand='3') Читать полностью
+      .front-sidebar__city-events.city-events
+        .city-events__topic.topic
+          span.topic__name мероприятия волгограда
+        .city-events__body
+          ul.city-events__list
+            li.city-events__item.city-event
+              .city-event__image-container.place.place_48
+                img.city-event__image
+              .city-event__body
+                span.city-event__name Berkeley Restaurant Week
+                span.city-event__place Cinnabon
+                time.city-event__dates 26 сент 2017 — 28 окт 2018
+            li.city-events__item.city-event
+              .city-event__image-container.place.place_48
+                img.city-event__image
+              .city-event__body
+                span.city-event__name Berkeley Restaurant Week
+                span.city-event__place Cinnabon
+                time.city-event__dates 26 сент 2017 — 28 окт 2018
+            li.city-events__item.city-event
+              .city-event__image-container.place.place_48
+                img.city-event__image
+              .city-event__body
+                span.city-event__name Berkeley Restaurant Week
+                span.city-event__place Cinnabon
+                time.city-event__dates 26 сент 2017 — 28 окт 2018
+            li.city-events__item.city-event
+              .city-event__image-container.place.place_48
+                img.city-event__image
+              .city-event__body
+                span.city-event__name Berkeley Restaurant Week
+                span.city-event__place Cinnabon
+                time.city-event__dates 26 сент 2017 — 28 окт 2018
+            li.city-events__item.city-event
+              .city-event__image-container.place.place_48
+                img.city-event__image
+              .city-event__body
+                span.city-event__name Berkeley Restaurant Week
+                span.city-event__place Cinnabon
+                time.city-event__dates 26 сент 2017 — 28 окт 2018
+        .city-events__footer
+          a.city-events__more Все мероприятия
+      .front-sidebar__blog.blog
+        .blog__topic.topic
+          span.topic__name наш блог
+        ul.blog__list
+          li.blog__item
+            a.blog__photo-container
+              img.blog__photo
+            .blog__descr
+              .blog__info
+                time.blog__date 26 сент 2017
+                span.blog__text Тонкости выбора ботинок для горных лыж
+          li.blog__item
+            a.blog__photo-container
+              img.blog__photo
+            .blog__descr
+              .blog__info
+                time.blog__date 26 сент 2017
+                span.blog__text Тонкости выбора ботинок для горных лыж
+          li.blog__item
+            a.blog__photo-container
+              img.blog__photo
+            .blog__descr
+              .blog__info
+                time.blog__date 26 сент 2017
+                span.blog__text Тонкости выбора ботинок для горных лыж
+      .front-sidebar__discussions.discussions
+        .discussions__topic.topic
+          span.topic__name обсуждения
+        ul.discussions__list
+          li.discussions__item.discus-item
+            .discus-item__avatar-container.avatar.avatar_48
+              img.discus-item__avatar
+            .discus-item__body
+              span.discus-item__name Катериночка Мяуковская
+              span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+              p.discus-item__text.text(data-expand='3')
+                | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                a.discus-item__more.expand-text Читать полностью
+          li.discussions__item.discus-item
+            .discus-item__avatar-container.avatar.avatar_48
+              img.discus-item__avatar
+            .discus-item__body
+              span.discus-item__name Катериночка Мяуковская
+              span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+              p.discus-item__text.text(data-expand='3')
+                | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                a.discus-item__more.expand-text Читать полностью
+
+          li.discussions__item.discus-item
+            .discus-item__avatar-container.avatar.avatar_48
+              img.discus-item__avatar
+            .discus-item__body
+              span.discus-item__name Катериночка Мяуковская
+              span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+              p.discus-item__text.text(data-expand='3')
+                | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                a.discus-item__more.expand-text Читать полностью

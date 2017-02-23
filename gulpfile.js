@@ -16,7 +16,7 @@ var paths = {
   styles: './app/styles/**/*.less',
   stylesVendors: './app/styles/vendor/@(*.less|*.css)',
   mainLess: './app/styles/*.less',
-  jade: './app/jade/**/*.jade',
+  jade: './app/jade/*.jade',
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
   fonts: './app/fonts/*.*',
