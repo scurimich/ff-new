@@ -14,7 +14,7 @@ block content
 
   section.content-photo
     .content-photo__header.clearfix
-      .content-photo__image-container
+      .content-photo__image-container.place.place_48
         img.content-photo__image
       .content-photo__description
         span.content-photo__title
@@ -37,7 +37,7 @@ block content
 
   section.content-photo
     .content-photo__header.clearfix
-      .content-photo__image-container
+      .content-photo__image-container.place.place_48
         img.content-photo__image
       .content-photo__description
         span.content-photo__title
@@ -62,7 +62,7 @@ block content
 
   section.content-photo
     .content-photo__header.clearfix
-      .content-photo__image-container
+      .content-photo__image-container.place.place_48
         img.content-photo__image
       .content-photo__description
         span.content-photo__title
@@ -90,7 +90,7 @@ block content
 
   section.content-photo
     .content-photo__header.clearfix
-      .content-photo__image-container
+      .content-photo__image-container.place.place_48
         img.content-photo__image
       .content-photo__description
         span.content-photo__title
@@ -121,7 +121,7 @@ block content
 
   section.content-photo
     .content-photo__header.clearfix
-      .content-photo__image-container
+      .content-photo__image-container.place.place_48
         img.content-photo__image
       .content-photo__description
         span.content-photo__title
@@ -158,9 +158,10 @@ block content
   .block
     h2 Пользовательский контент в ленте активности
     span.block__descr Пользователь добавил место и новый отзыв. Карточки лежат на сером фоне
+
   section.new-place
     .new-place__header
-      .new-place__avatar-container
+      .new-place__avatar-container.avatar.avatar_48
         img.new-place__avatar
       .new-place__description
         span.new-place__title
@@ -184,9 +185,10 @@ block content
           a.activity__like
           span.activity__number 138
         a.activity__share
+
   section.new-review
     .new-review__header
-      .new-review__avatar-container
+      .new-review__avatar-container.avatar.avatar_48
         img.new-review__avatar
       .new-review__description
         span.new-review__title
@@ -195,18 +197,13 @@ block content
           a.new-review__place Pasta Uno
         time.new-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
     .new-review__body
-      p.new-review__review.text
-        span.new-review__rating.rateit(
-          data-rateit-starwidth='18',
-          data-rateit-starheight='18',
-          data-rateit-min='0',
-          data-rateit-max='5',
-          data-rateit-resetable="false"
+      p.new-review__review.text(data-expand='4')
+        span.new-review__rating.rating(
           data-rateit-readonly='true'
           data-rateit-value='3.5'
           )
-        | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк …
-      a.new-review__more Показать полностью
+        | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк … Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк …
+      a.new-review__more.expand-text Показать полностью
     .new-review__footer
       .activity.clearfix
         .activity__likes
@@ -220,7 +217,7 @@ block content
 
   .new-promo
     .new-promo__header.clearfix
-      .new-promo__image-container
+      .new-promo__image-container.place.place_48
         img.new-promo__image
       .new-promo__description
         span.new-promo__title
@@ -251,7 +248,7 @@ block content
       a.np-comments__more Показать все 18 комментариев
       ul.np-comments__list
         li.np-comments__item.np-comment
-          .np-comment__avatar-container
+          .np-comment__avatar-container.avatar.avatar_24
             img.np-comment__avatar
           .np-comment__body
             .np-comment__name Катериночка Мяуковская
@@ -262,7 +259,7 @@ block content
                 | 42 
                 span.np-comment__like
         li.np-comments__item.np-comment
-          .np-comment__avatar-container
+          .np-comment__avatar-container.avatar.avatar_24
             img.np-comment__avatar
           .np-comment__body
             .np-comment__name Катериночка Мяуковская
@@ -273,7 +270,7 @@ block content
                 | 42 
                 span.np-comment__like
         li.np-comments__item.np-comment
-          .np-comment__avatar-container
+          .np-comment__avatar-container.avatar.avatar_24
             img.np-comment__avatar
           .np-comment__body
             a.np-comment__name Катериночка Мяуковская
@@ -284,7 +281,7 @@ block content
                 | 42 
                 span.np-comment__like
       .np-comments__write.np-write
-        .np-write__avatar-container
+        .np-write__avatar-container.avatar.avatar_24
           img.np-write__avatar
         form.np-write__form
           input.np-write__input(type='text', placeholder='Написать комментарий')
@@ -309,12 +306,7 @@ block content
         .new-places__body
           .new-places__info
             span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rateit(
-              data-rateit-starwidth='18',
-              data-rateit-starheight='18',
-              data-rateit-min='0',
-              data-rateit-max='5',
-              data-rateit-resetable="false"
+            span.new-places__rating.rating(
               data-rateit-readonly='true'
               data-rateit-value='3.5'
               )
@@ -324,12 +316,7 @@ block content
         .new-places__body
           .new-places__info
             span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rateit(
-              data-rateit-starwidth='18',
-              data-rateit-starheight='18',
-              data-rateit-min='0',
-              data-rateit-max='5',
-              data-rateit-resetable="false"
+            span.new-places__rating.rating(
               data-rateit-readonly='true'
               data-rateit-value='3.5'
               )
@@ -339,12 +326,7 @@ block content
         .new-places__body
           .new-places__info
             span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rateit(
-              data-rateit-starwidth='18',
-              data-rateit-starheight='18',
-              data-rateit-min='0',
-              data-rateit-max='5',
-              data-rateit-resetable="false"
+            span.new-places__rating.rating(
               data-rateit-readonly='true'
               data-rateit-value='3.5'
               )
@@ -362,12 +344,7 @@ block content
       .month-place__descr
         .month-place__info
           span.month-place__name Ресторан Волгоград
-          span.month-place__rating.rateit(
-            data-rateit-starwidth='18',
-            data-rateit-starheight='18',
-            data-rateit-min='0',
-            data-rateit-max='5',
-            data-rateit-resetable="false"
+          span.month-place__rating.rating(
             data-rateit-readonly='true'
             data-rateit-value='3.5'
             )
@@ -376,23 +353,18 @@ block content
     .day-review__topic.topic
       span.topic__name отзыв дня
     .day-review__body
-      .day-review__avatar-container
+      .day-review__avatar-container.avatar.avatar_48
         img.day-review__avatar
       .day-review__descr
         span.day-review__name Катериночка Мяуковская
         span.day-review__info написала новый отзыв на Bellevillecafe
-        span.day-review__rating.rateit(
-          data-rateit-starwidth='18',
-          data-rateit-starheight='18',
-          data-rateit-min='0',
-          data-rateit-max='5',
-          data-rateit-resetable="false"
+        span.day-review__rating.rating(
           data-rateit-readonly='true'
           data-rateit-value='3.5'
           )
         p.day-review__text.text 
-          | Итальянский кофе, по мне одна из самых вкусных кухонь нашего города, лето ...
-          a.day-review__more Читать полностью
+          | Итальянский кофе, по мне одна из самых вкусных кухонь нашего города, лето ... 
+          a.day-review__more.expand-text(data-expand='3') Читать полностью
 
   .city-events
     .city-events__topic.topic
@@ -400,42 +372,42 @@ block content
     .city-events__body
       ul.city-events__list
         li.city-events__item.city-event
-          .city-event__avatar-container
-            img.city-event__avatar
+          .city-event__image-container.place.place_48
+            img.city-event__image
           .city-event__body
             span.city-event__name Berkeley Restaurant Week
             span.city-event__place Cinnabon
             time.city-event__dates 26 сент 2017 — 28 окт 2018
         li.city-events__item.city-event
-          .city-event__avatar-container
-            img.city-event__avatar
+          .city-event__image-container.place.place_48
+            img.city-event__image
           .city-event__body
             span.city-event__name Berkeley Restaurant Week
             span.city-event__place Cinnabon
             time.city-event__dates 26 сент 2017 — 28 окт 2018
         li.city-events__item.city-event
-          .city-event__avatar-container
-            img.city-event__avatar
+          .city-event__image-container.place.place_48
+            img.city-event__image
           .city-event__body
             span.city-event__name Berkeley Restaurant Week
             span.city-event__place Cinnabon
             time.city-event__dates 26 сент 2017 — 28 окт 2018
         li.city-events__item.city-event
-          .city-event__avatar-container
-            img.city-event__avatar
+          .city-event__image-container.place.place_48
+            img.city-event__image
           .city-event__body
             span.city-event__name Berkeley Restaurant Week
             span.city-event__place Cinnabon
             time.city-event__dates 26 сент 2017 — 28 окт 2018
         li.city-events__item.city-event
-          .city-event__avatar-container
-            img.city-event__avatar
+          .city-event__image-container.place.place_48
+            img.city-event__image
           .city-event__body
             span.city-event__name Berkeley Restaurant Week
             span.city-event__place Cinnabon
             time.city-event__dates 26 сент 2017 — 28 окт 2018
-      .city-events__footer
-        a.city-events__more Все мероприятия
+    .city-events__footer
+      a.city-events__more Все мероприятия
 
   .blog
     .blog__topic.topic
@@ -466,34 +438,34 @@ block content
   .discussions
     .discussions__topic.topic
       span.topic__name обсуждения
-  ul.discussions__list
-    li.discussions__item.discus-item
-      .discus-item__avatar-container
-        img.discus-item__avatar
-      .discus-item__body
-        span.discus-item__name Катериночка Мяуковская
-        span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-        p.discus-item__text.text
-          | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето …
-          a.discus-item__more Читать полностью
-    li.discussions__item.discus-item
-      .discus-item__avatar-container
-        img.discus-item__avatar
-      .discus-item__body
-        span.discus-item__name Катериночка Мяуковская
-        span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-        p.discus-item__text.text
-          | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето …
-          a.discus-item__more Читать полностью
+    ul.discussions__list
+      li.discussions__item.discus-item
+        .discus-item__avatar-container.avatar.avatar_48
+          img.discus-item__avatar
+        .discus-item__body
+          span.discus-item__name Катериночка Мяуковская
+          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+          p.discus-item__text.text(data-expand='3')
+            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+            a.discus-item__more.expand-text Читать полностью
+      li.discussions__item.discus-item
+        .discus-item__avatar-container.avatar.avatar_48
+          img.discus-item__avatar
+        .discus-item__body
+          span.discus-item__name Катериночка Мяуковская
+          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+          p.discus-item__text.text(data-expand='3')
+            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+            a.discus-item__more.expand-text Читать полностью
 
-    li.discussions__item.discus-item
-      .discus-item__avatar-container
-        img.discus-item__avatar
-      .discus-item__body
-        span.discus-item__name Катериночка Мяуковская
-        span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-        p.discus-item__text.text
-          | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето …
-          a.discus-item__more Читать полностью
+      li.discussions__item.discus-item
+        .discus-item__avatar-container.avatar.avatar_48
+          img.discus-item__avatar
+        .discus-item__body
+          span.discus-item__name Катериночка Мяуковская
+          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+          p.discus-item__text.text(data-expand='3')
+            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+            a.discus-item__more.expand-text Читать полностью
 
 

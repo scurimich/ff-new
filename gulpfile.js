@@ -11,7 +11,7 @@ var deploy = require('gulp-gh-pages');
 
 var paths = {
   normalize: 'node_modules/normalize.css/normalize.css',
-  rateit: 'node_modules/jquery.rateit/scripts/@(jquery.rateit.min.js|rateit.css)',
+  rateit: 'node_modules/jquery.rateit/scripts/@(jquery.rateit.min.js|rateit.css|star.gif|delete.gif)',
   jq: 'node_modules/jquery/dist/jquery.min.js',
   styles: './app/styles/**/*.less',
   stylesVendors: './app/styles/vendor/@(*.less|*.css)',
