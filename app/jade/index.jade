@@ -7,13 +7,8 @@ html
     link(rel='stylesheet', href='css/pages.css')
   body
     ul.pages
-      li.pages__item
-        a.pages__link(href='atoms.html') atoms
-      li.pages__item
-        a.pages__link(href='molecules.html') molecules
-      li.pages__item
-        a.pages__link(href='organisms.html') organisms
-      li.pages__item
-        a.pages__link(href='frontpage.html') front page
-      li.pages__item
-        a.pages__link(href='categories.html') categories
+      -
+        var pages = ["atoms", "molecules", "organisms", "frontpage", "categories", "place"];
+      each item in pages
+        li.pages__item
+          a.pages__link(href='#{item}.html')= item

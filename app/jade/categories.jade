@@ -3,8 +3,166 @@ extends ./templates/main.jade
 block title
   | Categories
 
-block styleLinks
-  link(rel='stylesheet', href='css/categories.css')
-
 block content
-  
+  .container
+    main.categories
+      .categories__breadcrumbs.bread
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Кафе и рестораны Волгограда
+      .categories__top-places.top-places
+        .top-places__item.top-places__item_left
+          .top-places__block
+            img.top-places__img
+            .top-places__info
+              span.top-places__name Ресторан Волгоград
+              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+        .top-places__item.top-places__item_center
+          .top-places__block
+            img.top-places__img
+            .top-places__info
+              span.top-places__name Ресторан Волгоград
+              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+        .top-places__item.top-places__item_right
+          .top-places__block.top-places__block_medium
+            img.top-places__img
+            .top-places__info
+              span.top-places__name Ресторан Волгоград
+              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+          .top-places__block.top-places__block_small
+            img.top-places__img
+            .top-places__info
+              span.top-places__name Ресторан Волгоград
+              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+          .top-places__block.top-places__block_small
+            img.top-places__img
+            .top-places__info
+              span.top-places__name Ресторан Волгоград
+              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+
+      .categories__categories.cat-filter
+        .cat-filter__title Кафе и рестораны Волгограда
+        ul.cat-filter__list
+          li.cat-filter__item
+            button.tag.tag_active Тег
+              span.tag__number 17
+          - for (var x = 0; x < 14; x++)
+            li.cat-filter__item
+              button.tag Тег
+                span.tag__number 17
+        .cat-filter__other все 18 категорий
+      .categories__body
+        section.categories__places
+        .categories__other
+          button.button.button_other К предыдущим записям
+        section.categories__new-places.new-places
+          .new-places__topic.topic
+            span.topic__name новые места на foxy
+          ul.new-places__list
+            - for (var x = 0; x < 3; x++)
+              li.new-places__item
+                a.new-places__photo-container
+                  img.new-places__photo
+                .new-places__body
+                  .new-places__info
+                    span.new-places__name Ресторан Волгоград
+                    span.new-places__rating.rating(
+                      data-rateit-readonly='true'
+                      data-rateit-value='3.5'
+                      )
+      aside.categories__sidebar
+        .categories__filters.filters
+          .filters__topic.topic
+            span.topic__name фильтры
+          ul.filters__list
+            li.filters__item
+              .select-box
+                label.select-box__label Услуги
+                select.select.select-box__select
+                  option(default, data-disabled) Не выбрано
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') Пункт #{X}
+            li.filters__item
+              .select-box
+                label.select-box__label Типы кухн
+                select.select.select-box__select
+                  option(default, data-disabled) Не выбрано
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') Пункт #{X}
+            li.filters__item
+              ul.filters__sublist
+                li.filters__subitem
+                  .checkbox-box
+                    .checkbox.checkbox-box__checkbox
+                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                      label.checkbox__label(for='checkbox2')
+                    label.checkbox-box__label(for='checkbox2') Работает круглосуточно
+                li.filters__subitem
+                  .checkbox-box
+                    .checkbox.checkbox-box__checkbox
+                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox', checked)
+                      label.checkbox__label(for='checkbox2')
+                    label.checkbox-box__label(for='checkbox2') Только новые места
+                li.filters__subitem
+                  .checkbox-box
+                    .checkbox.checkbox-box__checkbox
+                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                      label.checkbox__label(for='checkbox2')
+                    label.checkbox-box__label(for='checkbox2') Оплата картой
+                li.filters__subitem
+                  .checkbox-box
+                    .checkbox.checkbox-box__checkbox
+                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                      label.checkbox__label(for='checkbox2')
+                    label.checkbox-box__label(for='checkbox2') Парковка
+                li.filters__subitem
+                  .checkbox-box
+                    .checkbox.checkbox-box__checkbox
+                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                      label.checkbox__label(for='checkbox2')
+                    label.checkbox-box__label(for='checkbox2') Wi-fi
+        .categories__add
+          button.categories__add-button.button.button_main Добавить место
+        .categories__city-events.city-events
+          .city-events__topic.topic
+            span.topic__name мероприятия волгограда
+          .city-events__body
+            ul.city-events__list
+              - for (var x = 0; x < 5; x++)
+                li.city-events__item.city-event
+                  .city-event__image-container.place.place_48
+                    img.city-event__image
+                  .city-event__body
+                    span.city-event__name Berkeley Restaurant Week
+                    span.city-event__place Cinnabon
+                    time.city-event__dates 26 сент 2017 — 28 окт 2018
+          .city-events__footer
+            a.city-events__more Все мероприятия
+        .categories__blog.blog
+          .blog__topic.topic
+            span.topic__name наш блог
+          ul.blog__list
+            - for (var x = 0; x < 3; x++)
+              li.blog__item
+                a.blog__photo-container
+                  img.blog__photo
+                .blog__descr
+                  .blog__info
+                    time.blog__date 26 сент 2017
+                    span.blog__text Тонкости выбора ботинок для горных лыж
+        .categories__discussions.discussions
+          .discussions__topic.topic
+            span.topic__name обсуждения
+          ul.discussions__list
+            - for (var x = 0; x < 3; x++)
+              li.discussions__item.discus-item
+                .discus-item__avatar-container.avatar.avatar_48
+                  img.discus-item__avatar
+                .discus-item__body
+                  span.discus-item__name Катериночка Мяуковская
+                  span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+                  p.discus-item__text.text(data-expand='3')
+                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                    a.discus-item__more.expand-text Читать полностью

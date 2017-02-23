@@ -247,39 +247,18 @@ block content
     .new-promo__comments.np-comments
       a.np-comments__more Показать все 18 комментариев
       ul.np-comments__list
-        li.np-comments__item.np-comment
-          .np-comment__avatar-container.avatar.avatar_24
-            img.np-comment__avatar
-          .np-comment__body
-            .np-comment__name Катериночка Мяуковская
-            .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
-            .np-comment__info.clearfix
-              time.np-comment__time(datetime='2017-01-18') 18 января 2017
-              .np-comment__likes
-                | 42 
-                span.np-comment__like
-        li.np-comments__item.np-comment
-          .np-comment__avatar-container.avatar.avatar_24
-            img.np-comment__avatar
-          .np-comment__body
-            .np-comment__name Катериночка Мяуковская
-            .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
-            .np-comment__info.clearfix
-              time.np-comment__time(datetime='2017-01-18') 18 января 2017
-              .np-comment__likes
-                | 42 
-                span.np-comment__like
-        li.np-comments__item.np-comment
-          .np-comment__avatar-container.avatar.avatar_24
-            img.np-comment__avatar
-          .np-comment__body
-            a.np-comment__name Катериночка Мяуковская
-            .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
-            .np-comment__info.clearfix
-              time.np-comment__time(datetime='2017-01-18') 18 января 2017
-              .np-comment__likes
-                | 42 
-                span.np-comment__like
+        - for (var x = 0; x < 3; x++)
+          li.np-comments__item.np-comment
+            .np-comment__avatar-container.avatar.avatar_24
+              img.np-comment__avatar
+            .np-comment__body
+              .np-comment__name Катериночка Мяуковская
+              .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+              .np-comment__info.clearfix
+                time.np-comment__time(datetime='2017-01-18') 18 января 2017
+                .np-comment__likes
+                  | 42 
+                  span.np-comment__like
       .np-comments__write.np-write
         .np-write__avatar-container.avatar.avatar_24
           img.np-write__avatar
@@ -300,36 +279,17 @@ block content
     .new-places__topic.topic
       span.topic__name новые места на foxy
     ul.new-places__list
-      li.new-places__item
-        a.new-places__photo-container
-          img.new-places__photo
-        .new-places__body
-          .new-places__info
-            span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rating(
-              data-rateit-readonly='true'
-              data-rateit-value='3.5'
-              )
-      li.new-places__item
-        a.new-places__photo-container
-          img.new-places__photo
-        .new-places__body
-          .new-places__info
-            span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rating(
-              data-rateit-readonly='true'
-              data-rateit-value='3.5'
-              )
-      li.new-places__item
-        a.new-places__photo-container
-          img.new-places__photo
-        .new-places__body
-          .new-places__info
-            span.new-places__name Ресторан Волгоград
-            span.new-places__rating.rating(
-              data-rateit-readonly='true'
-              data-rateit-value='3.5'
-              )
+      - for (var x = 0; x < 3; x++)
+        li.new-places__item
+          a.new-places__photo-container
+            img.new-places__photo
+          .new-places__body
+            .new-places__info
+              span.new-places__name Ресторан Волгоград
+              span.new-places__rating.rating(
+                data-rateit-readonly='true'
+                data-rateit-value='3.5'
+                )
 
   .block
     h2 Сайдбар с перелинковками
@@ -371,41 +331,14 @@ block content
       span.topic__name мероприятия волгограда
     .city-events__body
       ul.city-events__list
-        li.city-events__item.city-event
-          .city-event__image-container.place.place_48
-            img.city-event__image
-          .city-event__body
-            span.city-event__name Berkeley Restaurant Week
-            span.city-event__place Cinnabon
-            time.city-event__dates 26 сент 2017 — 28 окт 2018
-        li.city-events__item.city-event
-          .city-event__image-container.place.place_48
-            img.city-event__image
-          .city-event__body
-            span.city-event__name Berkeley Restaurant Week
-            span.city-event__place Cinnabon
-            time.city-event__dates 26 сент 2017 — 28 окт 2018
-        li.city-events__item.city-event
-          .city-event__image-container.place.place_48
-            img.city-event__image
-          .city-event__body
-            span.city-event__name Berkeley Restaurant Week
-            span.city-event__place Cinnabon
-            time.city-event__dates 26 сент 2017 — 28 окт 2018
-        li.city-events__item.city-event
-          .city-event__image-container.place.place_48
-            img.city-event__image
-          .city-event__body
-            span.city-event__name Berkeley Restaurant Week
-            span.city-event__place Cinnabon
-            time.city-event__dates 26 сент 2017 — 28 окт 2018
-        li.city-events__item.city-event
-          .city-event__image-container.place.place_48
-            img.city-event__image
-          .city-event__body
-            span.city-event__name Berkeley Restaurant Week
-            span.city-event__place Cinnabon
-            time.city-event__dates 26 сент 2017 — 28 окт 2018
+        - for (var x = 0; x < 5; x++)
+          li.city-events__item.city-event
+            .city-event__image-container.place.place_48
+              img.city-event__image
+            .city-event__body
+              span.city-event__name Berkeley Restaurant Week
+              span.city-event__place Cinnabon
+              time.city-event__dates 26 сент 2017 — 28 окт 2018
     .city-events__footer
       a.city-events__more Все мероприятия
 
@@ -413,59 +346,27 @@ block content
     .blog__topic.topic
       span.topic__name наш блог
     ul.blog__list
-      li.blog__item
-        a.blog__photo-container
-          img.blog__photo
-        .blog__descr
-          .blog__info
-            time.blog__date 26 сент 2017
-            span.blog__text Тонкости выбора ботинок для горных лыж
-      li.blog__item
-        a.blog__photo-container
-          img.blog__photo
-        .blog__descr
-          .blog__info
-            time.blog__date 26 сент 2017
-            span.blog__text Тонкости выбора ботинок для горных лыж
-      li.blog__item
-        a.blog__photo-container
-          img.blog__photo
-        .blog__descr
-          .blog__info
-            time.blog__date 26 сент 2017
-            span.blog__text Тонкости выбора ботинок для горных лыж
+      - for (var x = 0; x < 3; x++)
+        li.blog__item
+          a.blog__photo-container
+            img.blog__photo
+          .blog__descr
+            .blog__info
+              time.blog__date 26 сент 2017
+              span.blog__text Тонкости выбора ботинок для горных лыж
 
   .discussions
     .discussions__topic.topic
       span.topic__name обсуждения
     ul.discussions__list
-      li.discussions__item.discus-item
-        .discus-item__avatar-container.avatar.avatar_48
-          img.discus-item__avatar
-        .discus-item__body
-          span.discus-item__name Катериночка Мяуковская
-          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-          p.discus-item__text.text(data-expand='3')
-            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-            a.discus-item__more.expand-text Читать полностью
-      li.discussions__item.discus-item
-        .discus-item__avatar-container.avatar.avatar_48
-          img.discus-item__avatar
-        .discus-item__body
-          span.discus-item__name Катериночка Мяуковская
-          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-          p.discus-item__text.text(data-expand='3')
-            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-            a.discus-item__more.expand-text Читать полностью
-
-      li.discussions__item.discus-item
-        .discus-item__avatar-container.avatar.avatar_48
-          img.discus-item__avatar
-        .discus-item__body
-          span.discus-item__name Катериночка Мяуковская
-          span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-          p.discus-item__text.text(data-expand='3')
-            | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-            a.discus-item__more.expand-text Читать полностью
-
+      - for (var x = 0; x < 3; x++)
+        li.discussions__item.discus-item
+          .discus-item__avatar-container.avatar.avatar_48
+            img.discus-item__avatar
+          .discus-item__body
+            span.discus-item__name Катериночка Мяуковская
+            span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+            p.discus-item__text.text(data-expand='3')
+              | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+              a.discus-item__more.expand-text Читать полностью
 

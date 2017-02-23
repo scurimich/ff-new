@@ -1,0 +1,148 @@
+@import '../common/organisms.less';
+
+.place-page {
+  padding-top: 24px;
+  font-size: 0;
+
+  &__breadcrumbs {
+    margin-bottom: 27px;
+  }
+
+  &__header {
+    margin-bottom: 16px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 620px;
+    margin-right: 20px;
+  }
+
+  &__gallery {
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    margin-bottom: 24px;
+  }
+
+  &__ad {
+    margin-bottom: 24px;
+  }
+
+  &__add-review {
+    margin-bottom: 20px;
+  }
+
+  &__reviews {
+    margin-bottom: 20px;
+  }
+
+  &__events {
+    margin-bottom: 24px;
+  }
+
+  &__sidebar {
+    width: 300px;
+  }
+}
+
+.place-descr {
+  padding: 23px 20px 0 20px;
+  background-color: @white;
+  box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+  overflow: hidden;
+
+  &__head {
+
+  }
+
+  &__tags {
+    float: left;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -.27px;
+    color: @lighter-text;
+  }
+
+  &__subscription {
+    float: right;
+  }
+
+  &__subs {
+    .ib-mid;
+    list-style: none;
+    font-size: 0;
+    margin-right: 15px;
+  }
+
+  &__sub {
+    .ib-top;
+    margin-right: -4px;
+
+    &-link {
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: @icons-color;
+    }
+  }
+
+  &__subscribe {
+    .ib-mid;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 15px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: -.41px;
+    color: @text-color;
+  }
+
+  &__rating {
+    margin-bottom: 18px;
+
+    &-stars {
+      .ib-mid;
+      margin-right: 10px;
+    }
+
+    &-text {
+      .ib-mid;
+      font-family: @font;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: -.31px;
+      color: @text-color;
+    }
+  }
+
+  &__menu {
+    margin: 0 -20px;
+    padding: 8px 20px 0 20px;
+    border-top: 1px solid @border-color;
+  }
+
+  &__tabs {
+    .ib-bot;
+    margin-bottom: -1px;
+    width: 646px;
+  }
+
+  &__favs {
+    .ib-top;
+    margin-bottom: 8px;
+    margin-right: 8px;
+  }
+
+  &__review {
+    .ib-top;
+    margin-bottom: 8px;
+  }
+}

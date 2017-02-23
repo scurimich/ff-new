@@ -1,0 +1,71 @@
+extends ./templates/main.jade
+
+block title
+  | Place
+
+block content
+  .container
+    main.place-page
+      .place-page__breadcrumbs.bread
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Кафе и рестораны Волгограда
+          li.breadcrumbs__item
+            a.breadcrumbs__link Ресторан Волгоград
+      .place-page__header.place-descr
+        .place-descr__head.clearfix
+          span.place-descr__tags Кафе, ресторан, бар, хинкальня
+          .place-descr__subscription
+            ul.place-descr__subs
+              - for (var i = 0; i < 6; i++)
+                li.place-descr__sub
+                  a.place-descr__sub-link
+            .place-descr__subscribe
+              .sticker-button
+                button.button.button_subscr.button_check.sticker-button__button(disabled) Я подписан
+                span.sticker 667
+        h2.place-descr__name Ресторан «Онегин»
+        .place-descr__rating
+          span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+          span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
+        .place-descr__menu
+          ul.place-descr__tabs.tabs
+            li.tabs__item
+              a.tabs__link.tabs__link_active Обзор
+            li.tabs__item
+              a.tabs__link Отзывы (118)
+            li.tabs__item
+              a.tabs__link Фотографии (34)
+            li.tabs__item
+              a.tabs__link События (1)
+            li.tabs__item
+              a.tabs__link Акции (8)
+          .place-descr__favs
+            button.button.button_second В закладки
+          .place-descr__review
+            button.button.button_first Оставить отзыв
+      main.place-page__body
+        .place-page__gallery
+        .place-page__info
+        .place-page__ad
+        .place-page__add-review
+        .place-page__reviews
+        .place-page__events
+        .place-page__new-places.new-places
+          .new-places__topic.topic
+            span.topic__name новые места на foxy
+          ul.new-places__list
+            - for (var x = 0; x < 3; x++)
+              li.new-places__item
+                a.new-places__photo-container
+                  img.new-places__photo
+                .new-places__body
+                  .new-places__info
+                    span.new-places__name Ресторан Волгоград
+                    span.new-places__rating.rating(
+                      data-rateit-readonly='true'
+                      data-rateit-value='3.5'
+                      )
+      aside.place-page__sidebar

@@ -1,0 +1,208 @@
+@import '../common/organisms.less';
+
+.categories {
+  padding-top: 24px;
+  font-size: 0;
+
+  &__breadcrumbs {
+    margin-bottom: 25px;
+  }
+
+  &__top-places {
+    margin-bottom: 20px;
+  }
+
+  &__categories {
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 620px;
+    margin-right: 20px;
+  }
+
+  &__other {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  &__sidebar {
+    .ib-top;
+    width: 300px;
+  }
+
+  &__filters {
+    margin-bottom: 24px;
+  }
+
+  &__add {
+    margin-bottom: 20px;
+
+    &-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__city-events {
+    margin-bottom: 13px;
+  }
+
+  &__blog {
+    margin-bottom: 20px;
+  }
+
+  &__discussions {
+    margin-bottom: 24px;
+  }
+}
+
+.top-places {
+  font-size: 0;
+
+  &__item {
+    .ib-top;
+    height: 288px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &_left {
+      width: 380px;
+    }
+
+    &_center {
+      width: 220px;
+    }
+
+    &_right {
+      width: 300px;
+    }
+  }
+
+  &__block {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &_small {
+      .ib-top;
+      width: 140px;
+      height: 134px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    &_medium {
+      height: 134px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @icons-color;
+    z-index: 0;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    padding: 14px 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @white;
+  }
+}
+
+.cat-filter {
+  box-sizing: border-box;
+  padding: 24px 20px 0 20px;
+  border-radius: 2px;
+  background-color: @white;
+  box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+  
+  &__title {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 0;
+    margin-right: -10px;
+    margin-bottom: 13px;
+  }
+
+  &__item {
+    .ib-top;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__other {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @secondary-color;
+    text-transform: uppercase;
+    border-top: 1px solid @border-color;
+  }
+}
+
+.filters {
+  padding: 20px 20px 36px 20px;
+  background-color: @white;
+
+  &__topic {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: -24px;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+  }
+
+  &__sublist {
+    list-style: none;
+    margin-bottom: -16px;
+  }
+
+  &__subitem {
+    margin-bottom: 16px;
+  }
+}
