@@ -19,7 +19,8 @@ var paths = {
   jade: './app/jade/*.jade',
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
-  fonts: './app/fonts/*.*',
+  fonts: './app/fonts/*',
+  svg: './app/assets/**/*',
   prod: './app/prod/'
 };
 
@@ -77,6 +78,10 @@ gulp.task('watch', function() {
   gulp.src(paths.js)
     .pipe(watch(paths.js, function() {
     gulp.start('js');
+  }));
+  gulp.src(paths.svg)
+    .pipe(watch(paths.svg, function() {
+    gulp.start('build');
   }));
 });
 

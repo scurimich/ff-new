@@ -26,7 +26,7 @@ block content
               .sticker-button
                 button.button.button_subscr.button_check.sticker-button__button(disabled) Я подписан
                 span.sticker 667
-        h2.place-descr__name Ресторан «Онегин»
+        .place-descr__name Ресторан «Онегин»
         .place-descr__rating
           span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
           span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
@@ -46,14 +46,97 @@ block content
             button.button.button_second В закладки
           .place-descr__review
             button.button.button_first Оставить отзыв
-      main.place-page__body
-        .place-page__gallery
-        .place-page__info
-        .place-page__ad
-        .place-page__add-review
-        .place-page__reviews
-        .place-page__events
-        .place-page__new-places.new-places
+      main.place-page__body.overview
+        section.overview__gallery.overview-gallery
+          .overview-gallery__back-container
+            img.overview-gallery__back
+          .overview-gallery__add-photo Добавить фото
+          ul.overview-gallery__photos
+            - for (var i = 0; i < 8; i++)
+              li.overview-gallery__photo-item
+                a.overview-gallery__photo-link
+                  img.overview-gallery__photo
+            li.overview-gallery__photo-item
+                a.overview-gallery__photo-link
+                  img.overview-gallery__photo
+                  span.overview-gallery__more + 289
+        section.overview__info.overview-info
+          h2.overview-info__title Информация
+          .overview-info__body
+            dl.overview-info__info
+              dt.overview-info__term Описание
+              dd.overview-info__descr.text
+                | Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt) 
+                a.overview-info__more.expand-text(data-expand='4') Показать полностью
+            dl.overview-info__info
+              dt.overview-info__term Кухня
+              dd.overview-info__descr.text Итальянская, русская, французская, азиатская, европейская
+            dl.overview-info__info
+              dt.overview-info__term Средний счёт
+              dd.overview-info__descr.text 700-1500 руб.
+            dl.overview-info__info
+              dt.overview-info__term Особенности
+              dd.overview-info__descr.text Парковка, wi-fi
+            dl.overview-info__info
+              dt.overview-info__term Меню
+              dd.overview-info__descr
+                ul.overview-info__menus
+                  - var menus = ['Барная карта', 'Основное меню', 'Коктейльная карта']
+                  each menu in menus
+                    li.overview-info__menu
+                      a.overview-info__menu-link= menu
+          ul.overview-info__socials
+            li.overview-info__social
+              a.overview-info__social-link.overview-info__social-link_vk ВКонтакте
+            li.overview-info__social
+              a.overview-info__social-link.overview-info__social-link_inst Instagram
+            li.overview-info__social
+              a.overview-info__social-link.overview-info__social-link_fb Facebook
+        section.overview__ad
+        section.overview__add-review.overview-add-review
+          h2.overview-add-review__title Оставьте отзыв
+          form.overview-add-review__form
+            .overview-add-review__rating
+              .overview-add-review__rating-text Оцените это место
+              span.overview-add-review__rating-stars.rating
+            textarea.overview-add-review__ta.textarea(placeholder='Вам понравилось? Напишите')
+        section.overview__reviews.overview-reviews
+          .overview-reviews__title Отзывы 
+            span.overview-reviews__number 189
+          .overview-reviews__body
+            ul.overview-reviews__list
+              - for (var i = 0; i < 5; i++)
+                li.overview-reviews__item.overview-review
+                  .overview-review__avatar-container.avatar.avatar_48
+                    img.overview-review__avatar
+                  .overview-review__body
+                    .overview-review__other
+                    .overview-review__name Катериночка Мяуковская
+                    .overview-review__info
+                      span.overview-review__subs 73 подписчика
+                      span.overview-review__point
+                      span.overview-review__reviews-number 183 отзыва
+                    span.overview-review__rating.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+                    p.overview-review__text.text Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …
+                    .overview-review__extra.clearfix
+                      time.overview-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
+                      .overview-review__actions
+                        .overview-review__like
+                        .overview-review__share
+            span.overview-reviews__more Показать ещё
+        section.overview__events.overview-events
+          .overview-events__title Мероприятия 
+            span.overview-events__number 189
+          .overview-events__body
+            ul.overview-events__list
+              - for (var i = 0; i < 3; i++)
+                li.overview-events__item
+                  .overview-events__image-container
+                    img.overview-events__image
+                  .overview-events__name Открытие памятника Пушкину в Онегине
+                  time.overview-events__date(datetime='2016-03-28') 28 мар 2016
+            .overview-events__more показать ещё
+        section.overview__new-places.new-places
           .new-places__topic.topic
             span.topic__name новые места на foxy
           ul.new-places__list
@@ -69,3 +152,54 @@ block content
                       data-rateit-value='3.5'
                       )
       aside.place-page__sidebar
+        .place-page__contacts.place-contacts
+          .place-contacts__map
+          .place-contacts__body
+            .place-contacts__address
+            .place-contacts__schedule
+              .place-contatcts__schedule-link Все расписание
+            .place-contacts__phone +7 988 025 14 61
+            .place-contacts__site datasite.ru
+          a.place-contacts__owners Для владельцев
+          a.place-contacts__fix Исправить неточность
+        .place-page__city-events.city-events
+          .city-events__topic.topic
+            span.topic__name мероприятия волгограда
+          .city-events__body
+            ul.city-events__list
+              - for (var x = 0; x < 5; x++)
+                li.city-events__item.city-event
+                  .city-event__image-container.place.place_48
+                    img.city-event__image
+                  .city-event__body
+                    span.city-event__name Berkeley Restaurant Week
+                    span.city-event__place Cinnabon
+                    time.city-event__dates 26 сент 2017 — 28 окт 2018
+          .city-events__footer
+            a.city-events__more Все мероприятия
+        .place-page__blog.blog
+          .blog__topic.topic
+            span.topic__name наш блог
+          ul.blog__list
+            - for (var x = 0; x < 3; x++)
+              li.blog__item
+                a.blog__photo-container
+                  img.blog__photo
+                .blog__descr
+                  .blog__info
+                    time.blog__date 26 сент 2017
+                    span.blog__text Тонкости выбора ботинок для горных лыж
+        .place-page__discussions.discussions
+          .discussions__topic.topic
+            span.topic__name обсуждения
+          ul.discussions__list
+            - for (var x = 0; x < 3; x++)
+              li.discussions__item.discus-item
+                .discus-item__avatar-container.avatar.avatar_48
+                  img.discus-item__avatar
+                .discus-item__body
+                  span.discus-item__name Катериночка Мяуковская
+                  span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+                  p.discus-item__text.text(data-expand='3')
+                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                    a.discus-item__more.expand-text Читать полностью

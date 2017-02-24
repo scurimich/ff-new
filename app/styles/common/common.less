@@ -4,9 +4,13 @@ body {
   background-color: @background-color;
 }
 
-h1, h2, h3, h4, h5, h6, ul, p {
+h1, h2, h3, h4, h5, h6, ul, p, dd {
   margin: 0;
   padding: 0;
+}
+
+textarea {
+  resize: none;
 }
 
 .clearfix {
@@ -42,14 +46,18 @@ h1, h2, h3, h4, h5, h6, ul, p {
   vertical-align: baseline;
 }
 
+.white-block() {
+  border-radius: 2px;
+  background-color: @white;
+  box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+  overflow: hidden;
+}
+
 .organism-block() {
+  .white-block;
   box-sizing: border-box;
   width: 620px;
   padding: 20px 20px 20px 16px;
-  background-color: @white;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
-  overflow: hidden;
 }
 
 
