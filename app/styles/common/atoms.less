@@ -1,4 +1,5 @@
 @import 'constants.less';
+@import '../common/common.less';
 
 
 .title {
@@ -771,4 +772,95 @@
     height: 160px;
     background-size: 84px 84px;
   }
+}
+
+.svg-icon(@width, @height, @url) {
+  width: @width;
+  height: @height;
+  background: url(@url) no-repeat;
+  background-size: @width @height;
+}
+
+.liked {
+  .svg-icon(22px, 17px, '../assets/like.svg');
+}
+
+.check {
+  .svg-icon(10px, 7px, '../assets/check.svg');
+}
+
+.plus {
+  .svg-icon(10px, 10px, '../assets/plus.svg');
+}
+
+.vk {
+  .svg-icon(18px, 10px, '../assets/vkontakte.svg');
+}
+
+.other {
+  .svg-icon(18px, 4px, '../assets/dots.svg');
+}
+
+.share {
+  .svg-icon(16px, 16px, '../assets/share.svg');
+}
+
+.like {
+  .svg-icon(22px, 17px, '../assets/like-disable.svg');
+}
+
+.message {
+  .svg-icon(16px, 16px, '../assets/icon_comment.svg');
+}
+
+.fb {
+  .svg-icon(10px, 18px, '../assets/facebook.svg');
+}
+
+.info {
+  .svg-icon(18px, 18px, '../assets/info.svg');
+}
+
+.subscribe {
+  .svg-icon(14px, 12px, '../assets/subscribe.svg');
+}
+
+.shape {
+  .svg-icon(18px, 16px, '../assets/shape.svg');
+}
+
+.upload {
+  .svg-icon(18px, 18px, '../assets/download.svg');
+}
+
+.warn {
+  .svg-icon(19px, 17px, '../assets/warning.svg');
+}
+
+.inst {
+  .svg-icon(18px, 18px, '../assets/instagram.svg');
+}
+
+.time {
+  .svg-icon(18px, 18px, '../assets/clock.svg');
+}
+
+.mark {
+  .svg-icon(14px, 18px, '../assets/map.svg');
+}
+
+.liked {
+  .svg-icon(22px, 17px, '../assets/like.svg');
+}
+
+.rating-on {
+  .svg-icon(18px, 18px, '../assets/raiting-on.svg');
+}
+
+.rating-off {
+  .svg-icon(18px, 18px, '../assets/raiting-off.svg');
+}
+
+.rating-half {
+  .svg-icon(18px, 18px, '../assets/raiting-half.svg');
 }
