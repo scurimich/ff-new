@@ -153,13 +153,16 @@ block content
                       )
       aside.place-page__sidebar
         .place-page__contacts.place-contacts
-          .place-contacts__map
+          .place-contacts__map#map
           .place-contacts__body
-            .place-contacts__address
-            .place-contacts__schedule
-              .place-contatcts__schedule-link Все расписание
+            .place-contacts__main
+              .place-contacts__name Ресторан Волгоград
+              p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
+            .place-contacts__schedule Пт-сб 08:00-24:00 
+              a.place-contacts__schedule-link Все расписание
             .place-contacts__phone +7 988 025 14 61
-            .place-contacts__site datasite.ru
+            .place-contacts__site 
+              a.place-contacts__site-link datasite.ru
           a.place-contacts__owners Для владельцев
           a.place-contacts__fix Исправить неточность
         .place-page__city-events.city-events
@@ -203,3 +206,4 @@ block content
                   p.discus-item__text.text(data-expand='3')
                     | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
                     a.discus-item__more.expand-text Читать полностью
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')

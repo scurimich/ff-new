@@ -8,6 +8,9 @@ var rateitOptions = {
 
 $(function() {
 
+  ymaps.ready(mapInit);
+  var myMap;
+
   $('.select').selectric({
     onChange: selectricDarken,
     onInit: selectricDarken
@@ -31,11 +34,16 @@ $(function() {
     else text = parent.find('.text');
 
     if(!text) return false;
-
   });
 
-
 });
+
+function mapInit() {
+  myMap = new ymaps.Map('map', {
+    center: [48.70, 44.51],
+    zoom: 9
+  });
+}
 
 function selectricDarken(select) {
   var $select = $(select);

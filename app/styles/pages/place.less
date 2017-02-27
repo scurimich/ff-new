@@ -22,6 +22,18 @@
     .ib-top;
     width: 300px;
   }
+
+  &__contacts {
+    margin-bottom: 25px;
+  }
+
+  &__city-events {
+    margin-bottom: 13px;
+  }
+
+  &__blog {
+    margin-bottom: 20px;
+  }
 }
 
 .place-descr {
@@ -645,4 +657,142 @@
 
 .place-contacts {
   .white-block;
+  padding: 8px;
+
+  &__map {
+    display: block;
+    height: 384px;
+    margin-bottom: 17px;
+  }
+
+  &__body {
+    margin-bottom: 8px;
+  }
+
+  &__main {
+    position: relative;
+    padding-bottom: 4px;
+    margin: 0 6px 8px 38px;
+    border-bottom: 1px solid @border-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 0;
+      .mark;
+    }
+  }
+
+  &__name {
+    font-family: @font;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+  }
+
+  &__address {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+  }
+
+  &__schedule {
+    position: relative;
+    padding-bottom: 6px;
+    margin: 0 6px 9px 38px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 0;
+      .time;
+    }
+
+    &-link {
+      font-family: @font;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: @links-color;
+      cursor: pointer;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    padding-bottom: 9px;
+    margin: 0 6px 9px 38px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 0;
+    }
+  }
+
+  &__site {
+    position: relative;
+    padding-bottom: 8px;
+    margin: 0 6px 8px 38px;
+    border-bottom: 1px solid @border-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 0;
+    }
+
+    &-link {
+      font-family: @font;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: @links-color;
+      cursor: pointer;
+    }
+  }
+
+  &__owners {
+    .ib-top;
+    margin: 0 0 5px 38px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.1px;
+    color: @links-color;
+    cursor: pointer;
+  }
+
+  &__fix {
+    .ib-top;
+    margin: 0 0 9px 38px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.1px;
+    color: @links-color;
+    cursor: pointer;
+  }
 }
