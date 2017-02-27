@@ -13,9 +13,13 @@
   }
 
   &__body {
-    .ib-top;
+    display: none;
     width: 620px;
     margin-right: 20px;
+
+    &.active {
+    .ib-top;
+    }
   }
 
   &__sidebar {
@@ -33,6 +37,14 @@
 
   &__blog {
     margin-bottom: 20px;
+  }
+
+  &__rating {
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 }
 

@@ -1,49 +1,17 @@
-var rateitOptions = {
-  min: 0,
-  max: 5,
-  resetable: false,
-  starwidth: 18,
-  starheight: 18
-};
-
 $(function() {
-
-  ymaps.ready(mapInit);
-  var myMap;
-
   $('.select').selectric({
     onChange: selectricDarken,
     onInit: selectricDarken
   });
 
-  $('.rating').rateit(rateitOptions);
-
-  $('.text').each(function() {
-    var text = $(this);
-    var strings = text.attr('data-expand');
-    var oneString = parseInt(text.css('line-height'));
-    var resultHeight = strings * oneString;
-
-    text.css('height', resultHeight + 'px');
+  $('.rating').rateit({
+    min: 0,
+    max: 5,
+    resetable: false,
+    starwidth: 18,
+    starheight: 18
   });
-
-  $('.expand-text').click(function() {
-    var parent = $(this).parent();
-    var text;
-    if (parent.is('.text')) text = parent;
-    else text = parent.find('.text');
-
-    if(!text) return false;
-  });
-
 });
-
-function mapInit() {
-  myMap = new ymaps.Map('map', {
-    center: [48.70, 44.51],
-    zoom: 9
-  });
-}
 
 function selectricDarken(select) {
   var $select = $(select);

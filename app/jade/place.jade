@@ -33,20 +33,20 @@ block content
         .place-descr__menu
           ul.place-descr__tabs.tabs
             li.tabs__item
-              a.tabs__link.tabs__link_active Обзор
+              a.tabs__link.tabs__link_active(href='#overview') Обзор
             li.tabs__item
-              a.tabs__link Отзывы (118)
+              a.tabs__link(href='#reviews') Отзывы (118)
             li.tabs__item
-              a.tabs__link Фотографии (34)
+              a.tabs__link(href='#photos') Фотографии (34)
             li.tabs__item
-              a.tabs__link События (1)
+              a.tabs__link(href='#events') События (1)
             li.tabs__item
-              a.tabs__link Акции (8)
+              a.tabs__link(href='#shares') Акции (8)
           .place-descr__favs
             button.button.button_second В закладки
           .place-descr__review
             button.button.button_first Оставить отзыв
-      main.place-page__body.overview
+      .place-page__body.overview.active#overview
         section.overview__gallery.overview-gallery
           .overview-gallery__back-container
             img.overview-gallery__back
@@ -151,7 +151,10 @@ block content
                       data-rateit-readonly='true'
                       data-rateit-value='3.5'
                       )
+      .place-page__body.reviews#reviews
+        section.reviews__add-review
       aside.place-page__sidebar
+        .place-page__rating#rating
         .place-page__contacts.place-contacts
           .place-contacts__map#map
           .place-contacts__body

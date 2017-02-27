@@ -48,7 +48,7 @@ block content
                 a.new-review__place Pasta Uno
               time.new-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
           .new-review__body
-            p.new-review__review.text(data-expand='4')
+            p.new-review__review.text(data-expand-strings='4')
               span.new-review__rating.rating(
                 data-rateit-readonly='true'
                 data-rateit-value='3.5'
@@ -308,9 +308,9 @@ block content
                   data-rateit-readonly='true'
                   data-rateit-value='3.5'
                   )
-                p.day-review__text.text 
-                  | Итальянский кофе, по мне одна из самых вкусных кухонь нашего города, лето ... 
-                  a.day-review__more.expand-text(data-expand='3') Читать полностью
+                p.day-review__text.text(data-expand-words='12') 
+                  | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! 
+                  a.day-review__more.expand-text Читать полностью
         .front-sidebar__city-events.city-events
           .city-events__topic.topic
             span.topic__name мероприятия волгограда
@@ -349,6 +349,6 @@ block content
                 .discus-item__body
                   span.discus-item__name Катериночка Мяуковская
                   span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                  p.discus-item__text.text(data-expand='3')
-                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                  p.discus-item__text.text(data-expand-words='12')
+                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! 
                     a.discus-item__more.expand-text Читать полностью
