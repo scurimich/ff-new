@@ -21,7 +21,7 @@ var paths = {
   jsVendors: './app/js/vendor/*.js',
   fonts: './app/fonts/*',
   svg: './app/assets/**/*',
-  prod: './app/prod/'
+  prod: 'app/prod/'
 };
 
 gulp.task('jade', function() {
@@ -53,8 +53,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('server', function() {
-  browserSync({
-    port: 9001,
+  return browserSync({
+    port: 9000,
     server: {
       baseDir: paths.prod
     }
@@ -67,22 +67,18 @@ gulp.task('watch', function() {
     paths.prod + '/**/*.js',
     paths.prod + '/**/*.css'
   ]).on('change', browserSync.reload);
-  gulp.src(paths.styles)
-    .pipe(watch(paths.styles, function() {
+  watch(paths.styles, function() {
     gulp.start('less');
-  }));
-  gulp.src(paths.jade)
-    .pipe(watch(paths.jade, function() {
+  });
+  watch(paths.jade, function() {
     gulp.start('jade');
-  }));
-  gulp.src(paths.js)
-    .pipe(watch(paths.js, function() {
+  });
+  watch(paths.js, function() {
     gulp.start('js');
-  }));
-  gulp.src(paths.svg)
-    .pipe(watch(paths.svg, function() {
+  });
+  watch(paths.svg, function() {
     gulp.start('build');
-  }));
+  });
 });
 
 gulp.task('build', function() {
