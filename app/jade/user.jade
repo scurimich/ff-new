@@ -27,8 +27,10 @@ block content
         .user-sidebar__menu.user-menu
           ul.user-menu__list
             li.user-menu__item
-              a.user-menu__link.user-menu__link_active Активность
-            - var menu = [ "Отзывы", "Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
+              a.user-menu__link Активность
+            li.user-menu__item
+              a.user-menu__link.user-menu__link_active Отзывы
+            - var menu = ["Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
             each item in menu
               li.user-menu__item
                 a.user-menu__link= item
@@ -36,27 +38,40 @@ block content
               a.user-menu__link 
                 | Уведомления 
                 span.user-menu__new +12 новых
-      .user-page__body.user-reviews#reviews
+      .user-page__body.user-reviews#reviews(style='display: none')
         .user-reviews__title Отзывы 
           span.user-reviews__number 189
         .user-reviews__body
           ul.user-reviews__list
             - for (var i = 0; i < 5; i++)
               li.user-reviews__item.user-review
-                .user-review__avatar-container.avatar.avatar_48
-                  img.user-review__avatar
+                .user-review__image-container.place.place_48
+                  img.user-review__image
                 .user-review__body
-                  .user-review__other
-                  .user-review__name Катериночка Мяуковская
-                  .user-review__info
-                    span.user-review__subs 73 подписчика
-                    span.user-review__point
-                    span.user-review__reviews-number 183 отзыва
+                  .user-review__name BellevileCafe
+                  time.user-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
                   span.user-review__rating.rating(data-rateit-readonly='true', data-rateit-value='3.5')
                   p.user-review__text.text Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …
-                  .user-review__extra.clearfix
-                    time.user-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
-                    .user-review__actions
-                      .user-review__like
-                      .user-review__share
+                  .user-review__actions.clearfix
+                    .user-review__like
+                    .user-review__share
+                    .user-review__other
           span.user-reviews__more Показать ещё
+      .user-page__body.user-photos#photos(style='display: none')
+        .user-photos__title Фотографии 
+          span.user-photos__number 189
+        .user-photos__body
+          ul.user-photos__list
+            - for (var i = 0; i < 15; i++)
+              li.user-photos__item.user-photo-item
+                a.user-photo-item__link
+                  img.user-photo-item__photo
+          .user-photos__more показать еще
+      .user-page__body.user-follow#follow
+        .user-follow__title Я подписан
+          span.user-follow__number 189
+        ul.user-follow__tabs.tabs
+          li.tabs__item
+            a.tabs__link Пользователи
+          li.tabs__item
+            a.tabs__link.tabs__link_active Бизнес
