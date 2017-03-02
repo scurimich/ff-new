@@ -29,7 +29,7 @@ $(function() {
         min: 0,
         max: 5,
         resetable: false,
-        starwidth: 18,
+        starwidth: 22,
         starheight: 18
       });
     },
@@ -49,7 +49,7 @@ $(function() {
       if (href === '#reviews') $('#rating').addClass('active');
 
       this.activeTab = link;
-    }
+    },
 
 
     selectricDarken: function(select) {

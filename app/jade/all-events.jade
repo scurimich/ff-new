@@ -1,0 +1,57 @@
+extends ./templates/main.jade
+
+block title
+  | All events
+
+block content
+  .container
+    main.all-events
+      .all-events__bread
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Акции и события Волгограда
+      .all-events__categories.cat-filter
+        .cat-filter__title Акции и события Волгограда
+        ul.cat-filter__list
+          li.cat-filter__item
+            button.tag.tag_active Все
+              span.tag__number 17
+          - for (var x = 0; x < 14; x++)
+            li.cat-filter__item
+              button.tag Тег
+                span.tag__number 17
+        .cat-filter__other все 18 категорий
+      .all-events__tabs-block
+        ul.all-events__tabs.tabs
+          li.tabs__item
+            a.tabs__link.tabs__link_active Акции и события
+          li.tabs__item
+            a.tabs__link Только акции
+          li.tabs__item
+            a.tabs__link Только события
+        .all-events__sort
+          select.select
+            option(default, data-disabled) По дате
+            - for (var x = 1; x <= 5; x++)
+              option(value='#{x}') Пункт #{x}
+      ul.all-events__list
+        - for (var i = 0; i < 6; i++)
+          li.all-events__item.ae-event
+            .ae-event__photo-container
+              img.ae-event__photo
+            a.ae-event__link
+              h3.ae-event__title Открытие памятника Пушкину в Онегине
+            .ae-event__descr
+              a.ae-event__sublink Гуакамоле, 
+              time.ae-event__date 23 февраля 2016, сб 18:00
+            .ae-event__footer.clearfix
+              .ae-event__number
+                span.ae-event__type Событие
+                span.ae-event__sticker.sticker 667
+              .ae-event__likes
+                | 42 
+                a.ae-event__like
+      .all-events__more
+        button.all-events__more-button.button.button_other Показать еще

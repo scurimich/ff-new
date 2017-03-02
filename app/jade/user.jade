@@ -1,0 +1,62 @@
+extends ./templates/main.jade
+
+block title
+  | User
+
+block content
+  .container 
+    main.user-page
+      .user-page__bread
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Мероприятия Волгограда
+      aside.user-page__sidebar.user-sidebar
+        .user-sidebar__head
+          .user-sidebar__status Эксперт
+          .user-sidebar__avatar-container.avatar.avatar_120
+            img.user-sidebar__avatar
+        .user-sidebar__body
+          .user-sidebar__user Катериночка Мяуковская
+          .user-sidebar__city Россия, Волгоград
+          .user-sidebar__subscribe
+            .sticker-button
+              button.button.button_subscr.sticker-button__button Подписаться
+              span.sticker 667
+        .user-sidebar__menu.user-menu
+          ul.user-menu__list
+            li.user-menu__item
+              a.user-menu__link.user-menu__link_active Активность
+            - var menu = [ "Отзывы", "Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
+            each item in menu
+              li.user-menu__item
+                a.user-menu__link= item
+            li.user-menu__item
+              a.user-menu__link 
+                | Уведомления 
+                span.user-menu__new +12 новых
+      .user-page__body.user-reviews#reviews
+        .user-reviews__title Отзывы 
+          span.user-reviews__number 189
+        .user-reviews__body
+          ul.user-reviews__list
+            - for (var i = 0; i < 5; i++)
+              li.user-reviews__item.user-review
+                .user-review__avatar-container.avatar.avatar_48
+                  img.user-review__avatar
+                .user-review__body
+                  .user-review__other
+                  .user-review__name Катериночка Мяуковская
+                  .user-review__info
+                    span.user-review__subs 73 подписчика
+                    span.user-review__point
+                    span.user-review__reviews-number 183 отзыва
+                  span.user-review__rating.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+                  p.user-review__text.text Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …
+                  .user-review__extra.clearfix
+                    time.user-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
+                    .user-review__actions
+                      .user-review__like
+                      .user-review__share
+          span.user-reviews__more Показать ещё

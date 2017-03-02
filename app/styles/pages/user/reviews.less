@@ -1,0 +1,151 @@
+.user-reviews {
+  .white-block;
+
+  &__title {
+    display: block;
+    padding: 24px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: -.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__number {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__body {
+    padding: 0 20px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding: 24px 0 29px 0;
+  }
+
+  &__more {
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @secondary-color;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+.user-review {
+  position: relative;
+  border-bottom: 1px solid @border-color;
+  font-size: 0;
+
+  &__avatar-container {
+    .ib-top;
+    margin-right: 15px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 516px;
+  }
+
+  &__other {
+    position: absolute;
+    right: 20px;
+    top: 44px;
+    width: 18px;
+    height: 4px;
+    background: url(../assets/dots.svg) no-repeat;
+    background-size: 18px 4px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__info {
+    margin-bottom: 15px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.05px;
+    color: @lighter-text;
+  }
+
+  &__subs {
+    .ib-mid;
+  }
+
+  &__point {
+    .ib-mid;
+    margin: 0 4px;
+    width: 2px;
+    height: 2px;
+    background-color: @lighter-text;
+  }
+
+  &__reviews-number {
+    .ib-mid;
+  }
+
+  &__rating {
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+
+  &__actions {
+    float: right;
+    margin-right: 20px;
+    font-size: 0;
+  }
+
+  &__like {
+    .ib-top;
+    margin-right: 20px;
+    width: 17px;
+    height: 14px;
+    background: url(../assets/like-disable.svg) no-repeat;
+    background-size: 17px 14px;
+  }
+
+  &__share {
+    .ib-top;
+    width: 13px;
+    height: 13px;
+    background: url(../assets/share.svg) no-repeat;
+    background-size: 13px 13px;
+  }
+}

@@ -1,0 +1,140 @@
+@import '../common/organisms.less';
+
+.all-events {
+
+  &__bread {
+    margin-bottom: 21px;
+  }
+
+  &__categories {
+    margin-bottom: 32px;
+  }
+
+  &__tabs-block {
+    .white-block;
+    padding: 8px 12px 0 20px;
+    margin-bottom: 32px;
+    font-size: 0;
+  }
+
+  &__tabs {
+    .ib-bot;
+    width: 738px;
+    margin-bottom: -1px;
+  }
+
+  &__sort {
+    .ib-bot;
+    width: 170px;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 0;
+    margin-right: -20px;
+    margin-bottom: 4px;
+  }
+
+  &__more {
+    text-align: center;
+  }
+
+  &__more-button{
+    display: inline-block;
+    width: 460px;
+  }
+}
+
+.ae-event {
+  .ib-top;
+  .white-block;
+  border-radius: 0 0 2px 2px;
+  margin: 0 20px 21px 0;
+  width: 300px;
+
+  &__photo-container {
+    margin-bottom: 16px;
+    width: 100%;
+    height: 200px;
+    background-color: @icons-color;
+  }
+
+  &__link {
+    display: block;
+    padding: 0 20px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -.21px;
+    color: @links-color;
+  }
+
+  &__descr {
+    opacity: .9;
+    padding: 0 20px;
+    margin-bottom: 16px;
+  }
+
+  &__sublink {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: @links-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: @text-color;
+  }
+
+  &__footer {
+    padding: 5px 14px 6px 20px;
+    border-top: 1px solid @border-color;
+  }
+
+  &__number {
+    float: left;
+  }
+
+  &__type {
+    .ib-mid;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+    opacity: .9;
+  }
+
+  &__sticker {
+    .ib-mid;
+  }
+
+  &__likes {
+    float: right;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+
+  &__like {
+    .ib-mid;
+    width: 11px;
+    height: 11px;
+    background: url(../assets/like-disable.svg) no-repeat;
+    background-size: 11px 9px;
+  }
+}

@@ -1,0 +1,125 @@
+@import '../common/organisms.less';
+@import 'user/reviews.less';
+
+.user-page {
+  font-size: 0;
+
+  &__bread {
+    margin-bottom: 24px;
+  }
+
+  &__sidebar {
+    .ib-top;
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 620px;
+  }
+}
+
+.user-sidebar {
+  .white-block;
+
+  &__head {
+    padding: 40px 20px 0 20px;
+    height: 120px;
+    margin-bottom: 24px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__status {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0 3px;
+    font-family: @font;
+    font-weight: 800;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: @white;
+    opacity: .9;
+    background-color: @primary-green;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  &__avatar-container {
+    .ib-top;
+  }
+
+  &__body {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  &__user {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: -.07px;
+    color: @text-color;
+  }
+
+  &__city {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @text-color;
+  }
+
+  &__subscribe {
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+.user-menu {
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    
+  }
+
+  &__link {
+    display: block;
+    padding: 6px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @secondary-color;
+    cursor: pointer;
+
+    &_active {
+      background-color: @background-color;
+      border-left: 2px solid @secondary-color;
+      color: @text-color;
+    }
+  }
+
+  &__new {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @primary-green;
+  }
+
+
+}
