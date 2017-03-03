@@ -1,0 +1,102 @@
+.user-events {
+  .white-block;
+
+  &__title {
+    display: block;
+    padding: 24px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: -.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__number {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 20px;
+  }
+}
+
+.user-event {
+  padding: 25px 0 24px 0;
+  font-size: 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__photo-container {
+    .ib-top;
+    width: 187px;
+    height: 122px;
+    margin-right: 16px;
+    background-color: @icons-color;
+  }
+
+  &__body {
+    .ib-top;
+    width: 377px;
+  }
+
+  &__title {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.21px;
+    color: @links-color;
+    cursor: pointer;
+  }
+
+  &__address {
+    opacity: .9;
+    font-family: @font;
+    font-size: 13px;
+    color: @lighter-text;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+
+  &__type {
+    display: block;
+    margin-bottom: 10px;
+    opacity: .9;
+    font-family: @font;
+    font-size: 12px;
+    color: @lighter-text;
+    line-height: 18px;
+  }
+
+  &__follow {
+    float: left;
+  }
+
+  &__likes {
+    float: right;
+    font-family: @font;
+    font-size: 12px;
+    color: @lighter-text;
+    letter-spacing: -.11px;
+    line-height: 18px;
+  }
+
+  &__like {
+    .ib-base;
+    width: 11px;
+    height: 9px;
+    background: url(../assets/like-disable.svg) no-repeat;
+    background-size: 11px 9px;
+  }
+}

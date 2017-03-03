@@ -29,8 +29,24 @@ $(function() {
         min: 0,
         max: 5,
         resetable: false,
-        starwidth: 22,
+        starwidth: 20,
         starheight: 18
+      });
+
+      $('.rating_12').rateit({
+        min: 0,
+        max: 5,
+        resetable: false,
+        starwidth: 14,
+        starheight: 12
+      });
+
+      $('.rating_13').rateit({
+        min: 0,
+        max: 5,
+        resetable: false,
+        starwidth: 15,
+        starheight: 13
       });
     },
 

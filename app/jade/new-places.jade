@@ -1,120 +1,32 @@
 extends ./templates/main.jade
 
 block title
-  | Categories
+  | New places
 
 block content
   .container
-    main.categories
-      .categories__breadcrumbs
+    main.newplaces-page
+      .newplaces-page__bread
         ul.breadcrumbs
           li.breadcrumbs__item
             a.breadcrumbs__link Главная
           li.breadcrumbs__item
-            a.breadcrumbs__link Кафе и рестораны Волгограда
-      .categories__top-places.top-places
-        .top-places__item.top-places__item_left
-          .top-places__block
-            img.top-places__img
-            .top-places__info
-              span.top-places__name Ресторан Волгоград
-              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-        .top-places__item.top-places__item_center
-          .top-places__block
-            img.top-places__img
-            .top-places__info
-              span.top-places__name Ресторан Волгоград
-              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-        .top-places__item.top-places__item_right
-          .top-places__block.top-places__block_medium
-            img.top-places__img
-            .top-places__info
-              span.top-places__name Ресторан Волгоград
-              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-          .top-places__block.top-places__block_small
-            img.top-places__img
-            .top-places__info
-              span.top-places__name Ресторан Волгоград
-              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-          .top-places__block.top-places__block_small
-            img.top-places__img
-            .top-places__info
-              span.top-places__name Ресторан Волгоград
-              span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-
-      .categories__categories.cat-filter
-        .cat-filter__title Кафе и рестораны Волгограда
+            a.breadcrumbs__link Акции и события Волгограда
+      .newplaces-page__categories.cat-filter
+        .cat-filter__title Акции и события Волгограда
         ul.cat-filter__list
           li.cat-filter__item
-            button.tag.tag_active Тег
+            button.tag.tag_active Все
               span.tag__number 17
           - for (var x = 0; x < 14; x++)
             li.cat-filter__item
               button.tag Тег
                 span.tag__number 17
         .cat-filter__other все 18 категорий
-      .categories__body
-
-        section.categories__places.places
-          ul.places__list
-            li.places__item.placecart
-              .placecart__photo-container
-                img.placecart__photo
-              .placecart__body
-                .placecart__title BellevilleCafe
-                .placecart__info
-                  span.placecart__type Ресторан, кафе, бар 
-                  span.placecart__address Волгоград, ул. Мира, 12
-                .placecart__offers
-                  span.placecart__prices 500-800 руб
-                  span.placecart__menu Европейская, азиатская, русская, украинская ...
-                .placecart__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
-                .placecart__footer.clearfix
-                  .placecart__social
-                    span.placecart__rating-text 17 из 238
-                    span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                    a.placecart__reviews 18 отзывов
-                  span.placecart__schedule Ежедневно с 08:00 до 23:00
-            li.places__item.placecart
-              .placecart__photo-container
-                img.placecart__photo
-              .placecart__body
-                .placecart__title Spa-салон «Веселые каркульки»
-                .placecart__info
-                  span.placecart__type Ресторан, кафе, бар 
-                  span.placecart__address Волгоград, ул. Мира, 12
-                .placecart__offers
-                .placecart__review
-                  button.button.button_second.button_watch Написать первый отзыв
-                .placecart__footer.clearfix
-                  .placecart__social
-                    span.placecart__rating-text 17 из 238
-                    span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                    a.placecart__reviews 0 отзывов
-                  span.placecart__schedule Круглосуточно
-            - for (var i = 0; i < 4; i++)
-              li.places__item.placecart
-                .placecart__photo-container
-                  img.placecart__photo
-                .placecart__body
-                  .placecart__title BellevilleCafe
-                  .placecart__info
-                    span.placecart__type Ресторан, кафе, бар 
-                    span.placecart__address Волгоград, ул. Мира, 12
-                  .placecart__offers
-                    span.placecart__prices 500-800 руб
-                    span.placecart__menu Европейская, азиатская, русская, украинская ...
-                  .placecart__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
-                  .placecart__footer.clearfix
-                    .placecart__social
-                      span.placecart__rating-text 17 из 238
-                      span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                      a.placecart__reviews 18 отзывов
-                    span.placecart__schedule Ежедневно с 08:00 до 23:00
-
-        .categories__other
+      .newplaces-page__body
+        .newplaces-page__other
           button.button.button_other К предыдущим записям
-        section.categories__new-places.new-places
+        section.newplaces-page__new-places.new-places
           .new-places__topic.topic
             span.topic__name новые места на foxy
           ul.new-places__list
@@ -129,8 +41,8 @@ block content
                       data-rateit-readonly='true'
                       data-rateit-value='3.5'
                       )
-      aside.categories__sidebar
-        .categories__filters.filters
+      aside.newplaces-page__sidebar
+        .newplaces-page__filters.filters
           .filters__topic.topic
             span.topic__name фильтры
           ul.filters__list
@@ -180,9 +92,9 @@ block content
                       input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
                       label.checkbox__label(for='checkbox2')
                     label.checkbox-box__label(for='checkbox2') Wi-fi
-        .categories__add
-          button.categories__add-button.button.button_main Добавить место
-        .categories__city-events.city-events
+        .newplaces-page__add
+          button.newplaces-page__add-button.button.button_main Добавить место
+        .newplaces-page__city-events.city-events
           .city-events__topic.topic
             span.topic__name мероприятия волгограда
           .city-events__body
@@ -197,7 +109,7 @@ block content
                     time.city-event__dates 26 сент 2017 — 28 окт 2018
           .city-events__footer
             a.city-events__more Все мероприятия
-        .categories__blog.blog
+        .newplaces-page__blog.blog
           .blog__topic.topic
             span.topic__name наш блог
           ul.blog__list
@@ -209,7 +121,7 @@ block content
                   .blog__info
                     time.blog__date 26 сент 2017
                     span.blog__text Тонкости выбора ботинок для горных лыж
-        .categories__discussions.discussions
+        .newplaces-page__discussions.discussions
           .discussions__topic.topic
             span.topic__name обсуждения
           ul.discussions__list

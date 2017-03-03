@@ -1,6 +1,6 @@
-.user-follow {
+.user-favs {
   .white-block;
-
+  
   &__title {
     display: block;
     padding: 24px 20px;
@@ -10,6 +10,7 @@
     line-height: 21px;
     letter-spacing: -.14px;
     color: @text-color;
+    border-bottom: 1px solid @border-color;
   }
 
   &__number {
@@ -21,39 +22,21 @@
     color: @secondary-color;
   }
 
-  &__body {
-    padding: 0 20px;
-  }
-
   &__list {
     list-style: none;
-  }
-
-  &__more {
-    display: block;
-    padding: 8px 0;
-    text-align: center;
-    font-family: @font;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
-    color: @secondary-color;
-    text-transform: uppercase;
-    cursor: pointer;
+    padding: 0 20px;
   }
 }
 
-.uf-item {
+.ufav-item {
   padding: 25px 0 24px 0;
   font-size: 0;
-  border-bottom: 1px solid @border-color;
 
-  &__place-container {
-    .ib-top;
-    margin-right: 17px;
+  &:not(:last-child) {
+    border-bottom: 1px solid @border-color;
   }
 
-  &__avatar-container {
+  &__place-container {
     .ib-top;
     margin-right: 17px;
   }
@@ -93,28 +76,4 @@
     color: @lighter-text;
   }
 
-  &__name {
-    font-family: @font;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.4;
-    letter-spacing: -.05px;
-    color: @text-color;
-  }
-
-  &__social {
-    font-family: @font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: @lighter-text;
-  }
-
-  &__break {
-    .ib-base;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    background-color: @lighter-text;
-  }
 }

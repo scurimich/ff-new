@@ -1,0 +1,84 @@
+.user-notifs {
+  .white-block;
+
+  &__title {
+    display: block;
+    padding: 24px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: -.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 20px;
+  }
+}
+
+.user-notif {
+  padding: 16px 0;
+  font-size: 0;
+  position: relative;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__avatar-container {
+    .ib-top;
+    margin-right: 16px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 516px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 4px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -.05px;
+    color: @text-color;
+  }
+
+  &__action {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @text-color;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.05px;
+    color: @lighter-text;
+  }
+
+  &__status {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    tranform: translate(0, -50%);
+    background-color: @primary-green;
+
+    &_off {
+      background-color: @error-color;
+    }
+  }
+}

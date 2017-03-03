@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="11px" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>kitchen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+        <g id="categories" transform="translate(-547.000000, -727.000000)">
+            <g id="placesnippet" transform="translate(250.000000, 660.000000)">
+                <g id="kitchen" transform="translate(297.000000, 67.000000)">
+                    <rect id="Rectangle" fill="#1C1A18" x="0" y="9" width="16" height="2"></rect>
+                    <path d="M1,10 L2,10 C2,6.21290457 4.6862915,3.14285714 8,3.14285714 C11.3137085,3.14285714 14,6.21290457 14,10 L15,10 C15,5.581722 11.8659932,2 8,2 C4.13400675,2 1,5.581722 1,10 Z" id="Oval" fill="#1C1A18"></path>
+                    <path d="M1,10 L2,10 C2,6.21290457 4.6862915,3.14285714 8,3.14285714 C11.3137085,3.14285714 14,6.21290457 14,10 L15,10 C15,5.581722 11.8659932,2 8,2 C4.13400675,2 1,5.581722 1,10 Z" id="Oval" fill="#1C1A18"></path>
+                    <path d="M8,3 C6.8954305,3 6,2.32842712 6,1.5 C6,0.671572875 6.8954305,0 8,0 C9.1045695,0 10,0.671572875 10,1.5 C10,2.32842712 9.1045695,3 8,3 Z" id="Oval-2" fill="#1C1A18"></path>
+                    <path d="M8,2 C8.6045695,2 9,1.70342712 9,1.5 C9,1.29657288 8.6045695,1 8,1 C7.3954305,1 7,1.29657288 7,1.5 C7,1.70342712 7.3954305,2 8,2 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

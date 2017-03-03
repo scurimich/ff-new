@@ -67,7 +67,7 @@ block content
                 a.user-photo-item__link
                   img.user-photo-item__photo
           .user-photos__more показать еще
-      .user-page__body.user-follow#follow
+      .user-page__body.user-follow#follow(style='display: none')
         .user-follow__title Я подписан
           span.user-follow__number 189
         ul.user-follow__tabs.tabs
@@ -75,3 +75,72 @@ block content
             a.tabs__link Пользователи
           li.tabs__item
             a.tabs__link.tabs__link_active Бизнес
+        .user-follow__body
+          ul.user-follow__list
+            - for (var i = 0; i < 7; i++)
+              li.user-follow__item.uf-item
+                .uf-item__place-container.place.place_80
+                  img.uf-item__place
+                .uf-item__body
+                  .uf-item__title BellevilleCafe
+                  span.uf-item__rating.rating_small(data-rateit-readonly='true', data-rateit-value='3.5')
+                  .uf-item__type Ресторан, кафе, бар
+                  .uf-item__address Волгоград, ул. Симбирцева, 2
+            - for (var i = 0; i < 7; i++)
+              li.user-follow__item.uf-item
+                  .uf-item__avatar-container.avatar.avatar_80
+                    img.uf-item__avatar
+                  .uf-item__body
+                    .uf-item__name Эдуард Пирожков
+                    .uf-item__type Ресторан, кафе, бар
+                    .uf-item__social
+                      |  73 подписчика 
+                      span.uf-item__break
+                      |  3 отзыва
+          .user-follow__more показать еще
+      .user-page__body.user-events#events(style='display: none')
+        .user-events__title События и акции 
+          span.user-events__number 189
+        ul.user-events__list
+          - for (var i = 0; i < 2; i++)
+            li.user-events__item.user-event
+              .user-event__photo-container
+                img.user-event__photo
+              .user-event__body
+                a.user-event__title Открытие памятника Пушкину в Огенине
+                .user-event__address Гуакамоле, 23 февраля 2016, сб 18:00
+                .user-event__type Событие
+                .user-event__social.clearfix
+                  .user-event__follow.sticker-button
+                    button.button.button_second.button_watch.sticker-button__button Следить
+                    span.sticker 667
+                  a.user-event__likes
+                    | 42
+                    .user-event__like
+      .user-page__body.user-favs#favorites(style='display: none')
+        .user-favs__title Закладки 
+          span.user-favs__number 2
+        ul.user-favs__list
+          - for (var i = 0; i < 2; i++)
+            li.user-favs__item.ufav-item
+              .ufav-item__place-container.place.place_80
+                img.ufav-item__place
+              .ufav-item__body
+                .ufav-item__title BellevilleCafe
+                span.ufav-item__rating.rating_small(data-rateit-readonly='true', data-rateit-value='3.5')
+                .ufav-item__type Ресторан, кафе, бар
+                .ufav-item__address Волгоград, ул. Симбирцева, 2
+      .user-page__body.user-notifs#norifs
+        .user-notifs__title Уведомления
+        ul.user-notifs__list
+          - for (var i = 0; i < 4; i++)
+            li.user-notifs__item.user-notif
+              .user-notif__avatar-container.avatar.avatar_48
+                img.user-notif__avatar
+              .user-notif__body
+                .user-notif__title
+                  | Эдуард Пирожков 
+                  span.user-notif__action оценил ваш отзыв о 
+                  | BellevilleCafe
+                time.user-notif__date(datetime='2017-01-17') 17 января 2017
+                .user-notif__status

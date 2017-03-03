@@ -6,11 +6,11 @@
 @import 'place/sales.less';
 
 .place-page {
-  padding-top: 24px;
+  padding-top: 16px;
   font-size: 0;
 
   &__breadcrumbs {
-    margin-bottom: 27px;
+    margin-bottom: 21px;
   }
 
   &__header {
@@ -63,6 +63,7 @@
 
   &__tags {
     float: left;
+    margin-top: 1px;
     font-family: @font;
     font-weight: 400;
     font-size: 13px;
@@ -78,7 +79,7 @@
     .ib-mid;
     list-style: none;
     font-size: 0;
-    margin-right: 15px;
+    margin-right: 14px;
   }
 
   &__sub {
@@ -87,8 +88,8 @@
 
     &-link {
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background-color: @icons-color;
       border: 1px solid @white;
@@ -101,7 +102,8 @@
 
   &__name {
     display: block;
-    margin-bottom: 15px;
+    margin-top: -1px;
+    margin-bottom: 14px;
     font-family: @font;
     font-weight: 400;
     font-size: 28px;
@@ -111,7 +113,7 @@
   }
 
   &__rating {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 
     &-stars {
       .ib-mid;
@@ -136,29 +138,33 @@
 
   &__tabs {
     .ib-bot;
+    margin-top: 12px;
     margin-bottom: -1px;
     width: 646px;
   }
 
+  &__actions {
+    float: right;
+    margin-bottom: 9px;
+  }
+
   &__favs {
     .ib-top;
-    margin-bottom: 8px;
     margin-right: 8px;
   }
 
   &__review {
     .ib-top;
-    margin-bottom: 8px;
   }
 }
 
 .placepage-add-review {
   .white-block;
-  padding: 24px 20px 25px 20px;
+  padding: 27px 20px 24px 20px;
 
   &__title {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-family: @font;
     font-weight: 400;
     font-size: 19px;
@@ -169,7 +175,7 @@
 
   &__rating {
     font-size: 0;
-    padding: 8px;
+    padding: 7px 7px 8px 7px;
     border: 1px solid @border-color;
     border-bottom: none;
     border-radius: 2px 2px 0 0;
@@ -193,6 +199,7 @@
   &__ta {
     display: block;
     width: 100%;
+    height: 77px;
     border-radius: 0 0 2px 2px;
   }
 }
@@ -202,7 +209,7 @@
 
   &__title {
     display: block;
-    padding: 24px 20px;
+    padding: 27px 20px 22px 20px;
     font-family: @font;
     font-weight: 400;
     font-size: 19px;
@@ -213,6 +220,7 @@
   }
 
   &__number {
+    margin-left: 4px;
     font-family: @font;
     font-weight: 400;
     font-size: 15px;
@@ -230,12 +238,12 @@
   }
 
   &__item {
-    padding: 24px 0 29px 0;
+    padding: 24px 0;
   }
 
   &__more {
     display: block;
-    padding: 8px 0;
+    padding: 10px 0 7px 0;
     text-align: center;
     font-family: @font;
     font-weight: 600;
@@ -264,8 +272,8 @@
 
   &__other {
     position: absolute;
-    right: 20px;
-    top: 44px;
+    right: 21px;
+    top: 46px;
     width: 18px;
     height: 4px;
     background: url(../assets/dots.svg) no-repeat;
@@ -274,7 +282,8 @@
 
   &__name {
     display: block;
-    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-bottom: 1px;
     font-family: @font;
     font-weight: 600;
     font-size: 15px;
@@ -313,7 +322,7 @@
   }
 
   &__text {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   &__date {
@@ -333,7 +342,7 @@
 
   &__like {
     .ib-top;
-    margin-right: 20px;
+    margin-right: 19px;
     width: 17px;
     height: 14px;
     background: url(../assets/like-disable.svg) no-repeat;

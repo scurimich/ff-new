@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="15px" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>check</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 9.73136787 0 13 0 13 3.48108502 13 14.0625 11.375 13.4461911 9.75 15 8.125 13.75 6.5 15 4.875 13.75 3.24955919 15 1.625 13.4352775 0 14.0625"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="13" height="15" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="0 0 9.73136787 0 13 0 13 3.48108502 13 14.0625 11.375 13.4461911 9.75 15 8.125 13.75 6.5 15 4.875 13.75 3.24955919 15 1.625 13.4352775 0 14.0625"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="13" height="15" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+        <g id="categories" transform="translate(-450.000000, -726.000000)">
+            <g id="placesnippet" transform="translate(250.000000, 660.000000)">
+                <g id="check" transform="translate(200.000000, 66.000000)">
+                    <rect id="Rectangle-2" fill="#1C1A18" x="2" y="5" width="8" height="1"></rect>
+                    <rect id="Rectangle-2" fill="#1C1A18" x="2" y="7" width="5" height="1"></rect>
+                    <rect id="Rectangle-2" fill="#1C1A18" x="2" y="3" width="7" height="1"></rect>
+                    <use id="Combined-Shape" stroke="#1C1A18" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    <use id="Combined-Shape" stroke="#1C1A18" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

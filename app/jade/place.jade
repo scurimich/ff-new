@@ -16,7 +16,7 @@ block content
             a.breadcrumbs__link Ресторан Волгоград
       .place-page__header.place-descr
         .place-descr__head.clearfix
-          span.place-descr__tags Кафе, ресторан, бар, хинкальня
+          span.place-descr__tags Кафе, ресторан, бар, хинкальная
           .place-descr__subscription
             ul.place-descr__subs.clearfix
               - for (var i = 0; i < 6; i++)
@@ -30,22 +30,27 @@ block content
         .place-descr__rating
           span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
           span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
-        .place-descr__menu
+        .place-descr__menu.clearfix
           ul.place-descr__tabs.tabs
             li.tabs__item
               a.tabs__link.tabs__link_active(href='#overview') Обзор
             li.tabs__item
-              a.tabs__link(href='#reviews') Отзывы (118)
+              a.tabs__link(href='#reviews') Отзывы 
+                span.tabs__number 118
             li.tabs__item
-              a.tabs__link(href='#photos') Фотографии (34)
+              a.tabs__link(href='#photos') Фотографии 
+                span.tabs__number 34
             li.tabs__item
-              a.tabs__link(href='#events') События (1)
+              a.tabs__link(href='#events') События 
+                span.tabs__number 1
             li.tabs__item
-              a.tabs__link(href='#sales') Акции (8)
-          .place-descr__favs
-            button.button.button_second В закладки
-          .place-descr__review
-            button.button.button_first Оставить отзыв
+              a.tabs__link(href='#sales') Акции 
+                span.tabs__number 8
+          .place-descr__actions
+            .place-descr__favs
+              button.button.button_second В закладки
+            .place-descr__review
+              button.button.button_first Оставить отзыв
       .place-page__body.place-overview.active#overview
         section.place-overview__gallery.place-overview-gallery
           .place-overview-gallery__back-container

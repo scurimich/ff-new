@@ -22,6 +22,10 @@
     margin-right: 20px;
   }
 
+  &__places {
+    margin-bottom: 40px;
+  }
+
   &__other {
     margin-bottom: 48px;
     text-align: center;
@@ -179,6 +183,152 @@
     border-top: 1px solid @border-color;
   }
 }
+
+.places {
+
+  &__list {
+    margin-bottom: -16px;
+  }
+}
+
+.placecart {
+  .white-block;
+  width: 620px;
+  height: 176px;
+  margin-bottom: 16px;
+  font-size: 0;
+
+  &__photo-container {
+    .ib-top;
+    width: 184px;
+    height: 176px;
+    background-color: @icons-color;
+  }
+
+  &__body {
+    .ib-top;
+    box-sizing: border-box;
+    width: 436px;
+    padding: 16px 20px 15px 16px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 2px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.4;
+    letter-spacing: -.07px;
+    color: @text-color;
+  }
+
+  &__info {
+    display: block;
+    height: 18px;
+    margin-bottom: 1px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -.31px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__offers {
+    display: block;
+    margin-bottom: 8px;
+    height: 18px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__prices {
+    margin-right: 10px;
+
+    &:before {
+      content: '';
+      .ib-mid;
+      width: 13px;
+      height: 15px;
+      margin-right: 3px;
+      background: url(../assets/price.svg) no-repeat;
+      background-size: 13px 15px;
+    }
+  }
+
+  &__menu {
+    &:before {
+      content: '';
+      .ib-mid;
+      width: 16px;
+      height: 11px;
+      margin-right: 2px;
+      background: url(../assets/menu.svg) no-repeat;
+      background-size: 16px 11px;
+    }
+  }
+
+  &__review {
+    display: block;
+    height: 30px;
+    margin-bottom: 24px;
+    font-family: @font;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 15px;
+    color: @lighter-text;
+  }
+
+  &__social {
+    float: left;
+  }
+
+  &__rating-text {
+    .ib-mid;
+    margin-right: 3px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -.35px;
+    color: @primary-orange;
+  }
+
+  &__rating {
+    .ib-mid;
+    margin-right: 6px;
+  }
+
+  &__reviews {
+    .ib-mid;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: @links-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__schedule {
+    float: right;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: @primary-green;
+  }
+}
+
+
+
 
 .filters {
   padding: 20px 20px 36px 20px;
