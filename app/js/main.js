@@ -48,6 +48,14 @@ $(function() {
         starwidth: 15,
         starheight: 13
       });
+
+      $('.rating_14').rateit({
+        min: 0,
+        max: 5,
+        resetable: false,
+        starwidth: 16,
+        starheight: 14
+      });
     },
 
     tabClick: function(e) {

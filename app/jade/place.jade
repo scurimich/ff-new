@@ -97,7 +97,17 @@ block content
               a.place-overview-info__social-link.place-overview-info__social-link_inst Instagram
             li.place-overview-info__social
               a.place-overview-info__social-link.place-overview-info__social-link_fb Facebook
-        section.place-overview__ad
+        section.place-overview__ad.placepage-ad
+          .placepage-ad__photo-container
+            img.placepage-ad__photo
+          .placepage-ad__body
+            h3.placepage-ad__title BellevilleCafe
+            span.placepage-ad__plate Реклама
+            span.placepage-ad__rating.rating_14(data-rateit-value='3.5', data-rateit-readonly='true')
+            span.placepage-ad__rating-number (118)
+            span.placepage-ad__type Кафе, ресторан, бар, хинкальная
+            span.placepage-ad__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
+            p.placepage-ad__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу … 
         section.place-overview__add-review.placepage-add-review
           h2.placepage-add-review__title Оставьте отзыв
           form.placepage-add-review__form
@@ -141,6 +151,18 @@ block content
                   .place-overview-events__name Открытие памятника Пушкину в Онегине
                   time.place-overview-events__date(datetime='2016-03-28') 28 мар 2016
             .place-overview-events__more показать ещё
+        section.place-overview__stocks.place-overview-stocks
+          .place-overview-stocks__title Акции 
+            span.place-overview-stocks__number 189
+          .place-overview-stocks__body
+            ul.place-overview-stocks__list
+              - for (var i = 0; i < 3; i++)
+                li.place-overview-stocks__item
+                  .place-overview-stocks__image-container
+                    img.place-overview-stocks__image
+                  .place-overview-stocks__name Открытие памятника Пушкину в Онегине
+                  time.place-overview-stocks__date(datetime='2016-03-28') 28 мар 2016
+            .place-overview-stocks__more показать ещё
         section.place-overview__new-places.new-places
           .new-places__topic.topic
             span.topic__name новые места на foxy

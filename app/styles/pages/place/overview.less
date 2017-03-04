@@ -20,7 +20,11 @@
   }
 
   &__events {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__stocks {
+    margin-bottom: 51px;
   }
 }
 
@@ -244,7 +248,7 @@
 
   &__title {
     display: block;
-    padding: 24px 20px;
+    padding: 27px 20px 22px 20px;
     font-family: @font;
     font-weight: 400;
     font-size: 19px;
@@ -264,15 +268,14 @@
   }
 
   &__body {
-    padding: 20px 20px 0 20px;
+    padding: 16px 20px 0 20px;
   }
 
   &__list {
-    padding-bottom: 22px;
+    margin-bottom: 23px;
     list-style: none;
     font-size: 0;
     margin-right: -20px;
-    border-bottom: 1px solid @border-color;
   }
 
   &__item {
@@ -282,9 +285,9 @@
   }
 
   &__image-container {
-    height: 118px;
+    height: 120px;
     background-color: @icons-color;
-    margin-bottom: 9px;
+    margin-bottom: 6px;
   }
 
   &__name {
@@ -295,7 +298,7 @@
     line-height: 17px;
     letter-spacing: -.19px;
     color: @text-color;
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
 
   &__date {
@@ -310,7 +313,7 @@
 
   &__more {
     display: block;
-    padding: 8px;
+    padding: 10px 8px 7px 8px;
     text-align: center;
     font-family: @font;
     font-weight: 600;
@@ -319,5 +322,90 @@
     color: @secondary-color;
     text-transform: uppercase;
     cursor: pointer;
+    border-top: 1px solid @border-color;
+  }
+}
+
+
+.place-overview-stocks {
+  .white-block;
+
+  &__title {
+    display: block;
+    padding: 27px 20px 22px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: 0.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__number {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+  }
+
+  &__body {
+    padding: 16px 20px 0 20px;
+  }
+
+  &__list {
+    margin-bottom: 23px;
+    list-style: none;
+    font-size: 0;
+    margin-right: -20px;
+  }
+
+  &__item {
+    .ib-top;
+    width: 180px;
+    margin-right: 20px;
+  }
+
+  &__image-container {
+    height: 120px;
+    background-color: @icons-color;
+    margin-bottom: 6px;
+  }
+
+  &__name {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: -.19px;
+    color: @text-color;
+    margin-bottom: 6px;
+  }
+
+  &__date {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+
+  &__more {
+    display: block;
+    padding: 10px 8px 7px 8px;
+    text-align: center;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @secondary-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top: 1px solid @border-color;
   }
 }
