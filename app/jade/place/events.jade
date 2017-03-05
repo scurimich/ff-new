@@ -1,0 +1,37 @@
+extends ../templates/place.jade
+
+block title
+  | События
+
+block content
+  .place-page__body.place-events
+    section.place-events__main
+      .place-events__title События 
+        span.place-events__number 9
+      ul.place-events__list
+        - for (var i = 0; i < 3; i++)
+          li.place-events__item.place-event
+            .place-event__photo-container
+              img.place-event__photo
+            .place-event__body
+              a.place-event__link
+                h3.place-event__title Готовим сырный завтрак в Гуакамоле
+              .place-event__descr
+                a.place-event__sublink Гуакамоле,
+                time.place-event__date(datetime='2016-02-23T18:00') 23 февраля 2016, сб 18:00
+              .place-event__type Событие
+    section.place-events__new-places.new-places
+      .new-places__topic.topic
+        span.topic__name новые места на foxy
+      ul.new-places__list
+        - for (var x = 0; x < 3; x++)
+          li.new-places__item
+            a.new-places__photo-container
+              img.new-places__photo
+            .new-places__body
+              .new-places__info
+                span.new-places__name Ресторан Волгоград
+                span.new-places__rating.rating(
+                  data-rateit-readonly='true'
+                  data-rateit-value='3.5'
+                  )

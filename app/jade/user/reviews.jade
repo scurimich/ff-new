@@ -1,0 +1,25 @@
+extends ../templates/user.jade
+
+block title
+  | User reviews
+
+block content
+  .user-page__body.user-reviews#reviews
+    .user-reviews__title Отзывы 
+      span.user-reviews__number 189
+    .user-reviews__body
+      ul.user-reviews__list
+        - for (var i = 0; i < 5; i++)
+          li.user-reviews__item.user-review
+            .user-review__image-container.place.place_48
+              img.user-review__image
+            .user-review__body
+              .user-review__name BellevileCafe
+              time.user-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
+              span.user-review__rating.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+              p.user-review__text.text Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …
+              .user-review__actions.clearfix
+                .user-review__like
+                .user-review__share
+                .user-review__other
+      span.user-reviews__more Показать ещё

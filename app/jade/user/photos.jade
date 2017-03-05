@@ -1,0 +1,16 @@
+extends ../templates/user.jade
+
+block title
+  | User photos
+
+block content
+  .user-page__body.user-photos#photos
+    .user-photos__title Фотографии 
+      span.user-photos__number 189
+    .user-photos__body
+      ul.user-photos__list
+        - for (var i = 0; i < 15; i++)
+          li.user-photos__item.user-photo-item
+            a.user-photo-item__link
+              img.user-photo-item__photo
+      .user-photos__more показать еще

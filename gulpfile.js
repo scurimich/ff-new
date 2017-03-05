@@ -16,7 +16,7 @@ var paths = {
   styles: './app/styles/**/*.less',
   stylesVendors: './app/styles/vendor/@(*.less|*.css)',
   mainLess: './app/styles/*.less',
-  jade: './app/jade/*.jade',
+  jade: ['./app/jade/**/*.jade', '!./app/jade/templates/*'],
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
   fonts: './app/fonts/*',
@@ -101,7 +101,7 @@ gulp.task('build', function() {
   gulp.start('js');
 });
 
-gulp.task('clean', function() {
+gulp.task('clear', function() {
   del.sync('./app/prod/**');
 });
 
