@@ -1,0 +1,136 @@
+extends ./templates/main.jade
+
+block title
+  | Search results
+
+block content
+  .container
+    main.search
+      .search__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Результаты поиска
+      .search__head
+        .search__title Вы искали: «Ресторан онегин»
+        .search__found Найдено 3 места в Днепрокуранса-на-ирне
+      .search__body
+        section.search__places.places
+          ul.places__list
+            li.places__item.placecart
+                .placecart__photo-container
+                  img.placecart__photo
+                .placecart__body
+                  .placecart__title BellevilleCafe
+                  .placecart__info
+                    span.placecart__type Ресторан, кафе, бар 
+                    span.placecart__address Волгоград, ул. Мира, 12
+                  .placecart__offers
+                    span.placecart__prices 500-800 руб
+                    span.placecart__menu Европейская, азиатская, русская, украинская ...
+                  .placecart__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                  .placecart__footer.clearfix
+                    .placecart__social
+                      span.placecart__rating-text 17 из 238
+                      span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                      a.placecart__reviews 18 отзывов
+                    span.placecart__schedule Ежедневно с 08:00 до 23:00
+              li.places__item.placecart
+                .placecart__photo-container
+                  img.placecart__photo
+                .placecart__body
+                  .placecart__title Spa-салон «Веселые каркульки»
+                  .placecart__info
+                    span.placecart__type Ресторан, кафе, бар 
+                    span.placecart__address Волгоград, ул. Мира, 12
+                  .placecart__offers
+                  .placecart__review
+                    button.button.button_second.button_watch Написать первый отзыв
+                  .placecart__footer.clearfix
+                    .placecart__social
+                      span.placecart__rating-text 17 из 238
+                      span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                      a.placecart__reviews 0 отзывов
+                    span.placecart__schedule Круглосуточно
+              - for (var i = 0; i < 4; i++)
+                li.places__item.placecart
+                  .placecart__photo-container
+                    img.placecart__photo
+                  .placecart__body
+                    .placecart__title BellevilleCafe
+                    .placecart__info
+                      span.placecart__type Ресторан, кафе, бар 
+                      span.placecart__address Волгоград, ул. Мира, 12
+                    .placecart__offers
+                      span.placecart__prices 500-800 руб
+                      span.placecart__menu Европейская, азиатская, русская, украинская ...
+                    .placecart__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                    .placecart__footer.clearfix
+                      .placecart__social
+                        span.placecart__rating-text 17 из 238
+                        span.placecart__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                        a.placecart__reviews 18 отзывов
+                      span.placecart__schedule Ежедневно с 08:00 до 23:00
+        .search__more
+          button.button.button_other Показать больше мест
+        section.search__new-places.new-places
+          .new-places__topic.topic
+            span.topic__name новые места на foxy
+          ul.new-places__list
+            - for (var x = 0; x < 3; x++)
+              li.new-places__item
+                a.new-places__photo-container
+                  img.new-places__photo
+                .new-places__body
+                  .new-places__info
+                    span.new-places__name Ресторан Волгоград
+                    span.new-places__rating.rating(
+                      data-rateit-readonly='true'
+                      data-rateit-value='3.5'
+                      )
+      aside.search__sidebar
+        .search__map
+        .search__city-events.city-events
+          .city-events__topic.topic
+            span.topic__name мероприятия волгограда
+          .city-events__body
+            ul.city-events__list
+              - for (var x = 0; x < 5; x++)
+                li.city-events__item.city-event
+                  .city-event__image-container.place.place_48
+                    img.city-event__image
+                  .city-event__body
+                    span.city-event__name Berkeley Restaurant Week
+                    span.city-event__place Cinnabon
+                    time.city-event__dates 26 сент 2017 — 28 окт 2018
+          .city-events__footer
+            a.city-events__more Все мероприятия
+        .search__blog.blog
+          .blog__topic.topic
+            span.topic__name наш блог
+          ul.blog__list
+            - for (var x = 0; x < 3; x++)
+              li.blog__item
+                a.blog__photo-container
+                  img.blog__photo
+                .blog__descr
+                  .blog__info
+                    time.blog__date 26 сент 2017
+                    span.blog__text Тонкости выбора ботинок для горных лыж
+        .search__discussions.discussions
+          .discussions__topic.topic
+            span.topic__name обсуждения
+          ul.discussions__list
+            - for (var x = 0; x < 3; x++)
+              li.discussions__item.discus-item
+                .discus-item__avatar-container.avatar.avatar_48
+                  img.discus-item__avatar
+                .discus-item__body
+                  span.discus-item__name Катериночка Мяуковская
+                  span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+                  p.discus-item__text.text(data-expand='3')
+                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                    a.discus-item__more.expand-text Читать полностью
+
+

@@ -20,7 +20,7 @@ var paths = {
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',
   fonts: './app/fonts/*',
-  svg: './app/assets/**/*',
+  img: './app/assets/**/*',
   prod: 'app/prod/'
 };
 
@@ -76,7 +76,7 @@ gulp.task('watch', function() {
   watch(paths.js, function() {
     gulp.start('js');
   });
-  watch(paths.svg, function() {
+  watch(paths.img, function() {
     gulp.start('build');
   });
 });
@@ -88,7 +88,7 @@ gulp.task('build', function() {
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
   gulp.src(paths.jq)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
-  gulp.src('./app/assets/**/*.svg')
+  gulp.src('./app/assets/**/*')
     .pipe(gulp.dest(paths.prod + 'assets/'));
   gulp.src(paths.jsVendors)
     .pipe(gulp.dest(paths.prod + 'js/vendor'));
