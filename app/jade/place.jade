@@ -33,18 +33,18 @@ block content
         .place-descr__menu.clearfix
           ul.place-descr__tabs.tabs
             li.tabs__item
-              a.tabs__link(href='/place/overview.html') Обзор
+              a.tabs__link(href='place/overview.html') Обзор
             li.tabs__item
-              a.tabs__link(href='/place/reviews.html') Отзывы 
+              a.tabs__link(href='place/reviews.html') Отзывы 
                 span.tabs__number 118
             li.tabs__item
-              a.tabs__link(href='/place/photos.html') Фотографии 
+              a.tabs__link(href='place/photos.html') Фотографии 
                 span.tabs__number 34
             li.tabs__item
-              a.tabs__link(href='/place/events.html') События 
+              a.tabs__link(href='place/events.html') События 
                 span.tabs__number 1
             li.tabs__item
-              a.tabs__link(href='/place/sales.html') Акции 
+              a.tabs__link(href='place/sales.html') Акции 
                 span.tabs__number 8
           .place-descr__actions
             .place-descr__favs
@@ -53,15 +53,7 @@ block content
               button.button.button_first Оставить отзыв
       .place-page__body
       aside.place-page__sidebar
-        .place-page__rating.place-rating#rating
-          .place-rating__topic.topic
-            span.topic__name отзывы с оценкой
-          ul.place-rating__list
-            - for (var i = 5; i > 0; i--)
-              li.place-rating__item
-                span.place-rating__stars.rating(data-rateit-readonly='true', data-rateit-value='#{i}')
-                span.place-rating__number= i
-                  |  отзыва
+        block sidebar
         .place-page__contacts.place-contacts
           .place-contacts__map#map
           .place-contacts__body

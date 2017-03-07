@@ -30,8 +30,8 @@ block content
               - var menuLink = ["activity", "reviews", "photos", "follow", "follow", "events", "favorites"]
               - for (var i = 0; i < 7; i++)
                 li.user-menu__item
-                  a.user-menu__link(href='/user/#{menuLink[i]}.html')= menuItem[i]
+                  a.user-menu__link(href='user/#{menuLink[i]}.html')= menuItem[i]
               li.user-menu__item
-                a.user-menu__link(href='/user/notifications.html')
+                a.user-menu__link(href='user/notifications.html')
                   | Уведомления 
                   span.user-menu__new +12 новых

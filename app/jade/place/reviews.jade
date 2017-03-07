@@ -51,3 +51,14 @@ block content
                   data-rateit-readonly='true'
                   data-rateit-value='3.5'
                   )
+
+block sidebar
+  .place-page__rating.place-rating#rating
+    .place-rating__topic.topic
+      span.topic__name отзывы с оценкой
+    ul.place-rating__list
+      - for (var i = 5; i > 0; i--)
+        li.place-rating__item
+          span.place-rating__stars.rating(data-rateit-readonly='true', data-rateit-value='#{i}')
+          span.place-rating__number= i
+            |  отзыва
