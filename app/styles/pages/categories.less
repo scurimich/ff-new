@@ -1,15 +1,15 @@
 @import '../common/organisms.less';
 
 .categories {
-  padding-top: 24px;
   font-size: 0;
 
   &__breadcrumbs {
-    margin-bottom: 25px;
+    margin-top: 18px;
+    margin-bottom: 21px;
   }
 
   &__top-places {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &__categories {
@@ -27,7 +27,7 @@
   }
 
   &__other {
-    margin-bottom: 48px;
+    margin-bottom: 47px;
     text-align: center;
   }
 
@@ -36,12 +36,18 @@
     width: 300px;
   }
 
+  &__map {
+    .white-block;
+    height: 400px;
+    margin-bottom: 16px;
+  }
+
   &__filters {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   &__add {
-    margin-bottom: 20px;
+    margin-bottom: 34px;
 
     &-button {
       width: 100%;
@@ -94,6 +100,7 @@
     box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
     border-radius: 3px;
     overflow: hidden;
+    background-color: @icons-color;
 
     &_small {
       .ib-top;
@@ -115,9 +122,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: @icons-color;
     z-index: 0;
   }
 
@@ -132,11 +136,11 @@
 
   &__name {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     font-family: @font;
     font-weight: 600;
     font-size: 15px;
-    line-height: 21px;
+    line-height: 18px;
     letter-spacing: -.11px;
     color: @white;
   }
@@ -145,10 +149,10 @@
 .cat-filter {
   .white-block;
   box-sizing: border-box;
-  padding: 24px 20px 0 20px;
+  padding: 26px 22px 0 18px;
   
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
     font-family: @font;
     font-weight: 400;
     font-size: 28px;
@@ -161,19 +165,19 @@
     list-style: none;
     font-size: 0;
     margin-right: -10px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 
   &__item {
     .ib-top;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   &__other {
     display: block;
     text-align: center;
-    padding: 8px;
+    padding: 10px 8px 7px 8px;
     font-family: @font;
     font-weight: 600;
     font-size: 12px;
@@ -189,13 +193,16 @@
   &__list {
     margin-bottom: -16px;
   }
+
+  &__item {
+    margin-bottom: 20px;
+  }
 }
 
-.placecart {
+.placecard {
   .white-block;
   width: 620px;
   height: 176px;
-  margin-bottom: 16px;
   font-size: 0;
 
   &__photo-container {
@@ -249,7 +256,7 @@
   }
 
   &__prices {
-    margin-right: 10px;
+    margin-right: 12px;
 
     &:before {
       content: '';
@@ -277,13 +284,17 @@
   &__review {
     display: block;
     height: 30px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     font-family: @font;
     font-weight: 400;
     font-style: italic;
     font-size: 12px;
     line-height: 15px;
     color: @lighter-text;
+
+    &-button {
+      margin-top: 2px;
+    }
   }
 
   &__social {
@@ -303,11 +314,13 @@
 
   &__rating {
     .ib-mid;
-    margin-right: 6px;
+    margin-top: -1px;
+    margin-right: 2px;
   }
 
   &__reviews {
     .ib-mid;
+    margin-top: 1px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -319,6 +332,7 @@
 
   &__schedule {
     float: right;
+    margin-top: 3px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -331,27 +345,28 @@
 
 
 .filters {
-  padding: 20px 20px 36px 20px;
+  padding: 23px 20px 17px 20px;
   background-color: @white;
 
   &__topic {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 
   &__list {
-    margin-bottom: -24px;
+    margin-bottom: -30px;
   }
 
   &__item {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   &__sublist {
     list-style: none;
-    margin-bottom: -16px;
+    padding-top: 1px;
+    margin-bottom: -15px;
   }
 
   &__subitem {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 }
