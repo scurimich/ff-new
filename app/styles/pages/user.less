@@ -10,7 +10,8 @@
   font-size: 0;
 
   &__bread {
-    margin-bottom: 24px;
+    margin-top: 18px;
+    margin-bottom: 21px;
   }
 
   &__sidebar {
@@ -40,7 +41,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 0 3px;
+    padding: 1px 3px 0 3px;
     font-family: @font;
     font-weight: 800;
     font-size: 10.5px;
@@ -65,7 +66,7 @@
     font-family: @font;
     font-weight: 600;
     font-size: 19px;
-    line-height: 1.5;
+    line-height: 1.4;
     letter-spacing: -.07px;
     color: @text-color;
   }
@@ -73,7 +74,7 @@
   &__city {
     display: block;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-family: @font;
     font-weight: 400;
     font-size: 13px;
@@ -93,15 +94,12 @@
 
   &__list {
     list-style: none;
-  }
-
-  &__item {
-    
+    margin-bottom: 6px;
   }
 
   &__link {
     display: block;
-    padding: 6px 20px;
+    padding: 6px 22px;
     font-family: @font;
     font-weight: 400;
     font-size: 13px;
@@ -111,6 +109,7 @@
     cursor: pointer;
 
     &_active {
+      padding-left: 20px;
       background-color: @background-color;
       border-left: 2px solid @secondary-color;
       color: @text-color;
