@@ -11,9 +11,9 @@ block content
           li.breadcrumbs__item
             a.breadcrumbs__link Главная
           li.breadcrumbs__item
-            a.breadcrumbs__link Акции и события Волгограда
+            a.breadcrumbs__link Кафе и рестораны Волгограда
       .newplaces-page__categories.cat-filter
-        .cat-filter__title Акции и события Волгограда
+        .cat-filter__title Новые места на Foxy
         ul.cat-filter__list
           li.cat-filter__item
             button.tag.tag_active Все
@@ -24,6 +24,65 @@ block content
                 span.tag__number 17
         .cat-filter__other все 18 категорий
       .newplaces-page__body
+        section.newplaces-page__places.places
+          ul.places__list
+            li.places__item.placecard
+              .placecard__photo-container
+                img.placecard__photo
+              .placecard__body
+                .placecard__title BellevilleCafe
+                span.placecard__plate открылся 19 фев 2017
+                .placecard__info
+                  span.placecard__type Ресторан, кафе, бар 
+                  span.placecard__address Волгоград, ул. Мира, 12
+                .placecard__offers
+                  span.placecard__prices 500-800 руб
+                  span.placecard__menu Европейская, азиатская, русская, украинская ...
+                .placecard__review.placecard__review_np … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                .placecard__footer.clearfix
+                  .placecard__social
+                    span.placecard__rating-text 17 из 238
+                    span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                    a.placecard__reviews 18 отзывов
+                  span.placecard__schedule Ежедневно с 08:00 до 23:00
+            li.places__item.placecard
+              .placecard__photo-container
+                img.placecard__photo
+              .placecard__body
+                .placecard__title.placecard__title_np Spa-салон «Веселые каркульки»
+                span.placecard__plate.placecard__plate_soon открытие 19 фев 2017 в 19:30
+                .placecard__info
+                  span.placecard__type Ресторан, кафе, бар 
+                  span.placecard__address Волгоград, ул. Мира, 12
+                .placecard__offers.placecard__offers_soon
+                .placecard__review
+                  button.placecard__review-button.placecard__review-button_soon.button.button_second.button_watch Написать первый отзыв
+                .placecard__footer.clearfix
+                  .placecard__social
+                    span.placecard__rating-text 17 из 238
+                    span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                    a.placecard__reviews 0 отзывов
+                  span.placecard__schedule Круглосуточно
+            - for (var i = 0; i < 4; i++)
+              li.places__item.placecard
+                .placecard__photo-container
+                  img.placecard__photo
+                .placecard__body
+                  .placecard__title BellevilleCafe
+                  span.placecard__plate открылся 19 фев 2017
+                  .placecard__info
+                    span.placecard__type Ресторан, кафе, бар 
+                    span.placecard__address Волгоград, ул. Мира, 12
+                  .placecard__offers
+                    span.placecard__prices 500-800 руб
+                    span.placecard__menu Европейская, азиатская, русская, украинская ...
+                  .placecard__review.placecard__review_np … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                  .placecard__footer.clearfix
+                    .placecard__social
+                      span.placecard__rating-text 17 из 238
+                      span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                      a.placecard__reviews 18 отзывов
+                    span.placecard__schedule Ежедневно с 08:00 до 23:00
         .newplaces-page__other
           button.button.button_other К предыдущим записям
         section.newplaces-page__new-places.new-places
