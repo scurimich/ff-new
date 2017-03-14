@@ -1,3 +1,5 @@
+@import '../../sprites/socials-sprite.less';
+
 .place-overview {
   &__gallery {
     margin-bottom: 16px;
@@ -231,22 +233,21 @@
       &:before {
         content: '';
         .ib-top;
-        width: 17px;
-        height: 17px;
-        margin-right: 5px;
+        margin-right: 3px;
       }
 
       &_vk:before {
-        background: url(../assets/vk-logo.png) no-repeat;
+        margn-left: 3px;
+        .sprite(@vk-logo);
       }
 
       &_inst:before {
-        background: url(../assets/insta-logo.png) no-repeat;
+        .sprite(@insta-logo);
       }
 
       &_fb:before {
-        margin-left: 3px;
-        background: url(../assets/facebook-logo.png) no-repeat;
+        margin-left: 5px;
+        .sprite(@facebook-logo);
       }
     }
   }

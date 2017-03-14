@@ -16,11 +16,13 @@ block content
       ul.user-follow__list
         - for (var i = 0; i < 7; i++)
           li.user-follow__item.uf-item
-            .uf-item__place-container.place.place_80
-              img.uf-item__place
-            .uf-item__body
-              .uf-item__title BellevilleCafe
-              span.uf-item__rating.rating_small(data-rateit-readonly='true', data-rateit-value='3.5')
-              .uf-item__type Ресторан, кафе, бар
-              .uf-item__address Волгоград, ул. Симбирцева, 2
+              .uf-item__avatar-container.avatar.avatar_80
+                img.uf-item__avatar
+              .uf-item__body
+                .uf-item__name Эдуард Пирожков
+                .uf-item__type Ресторан, кафе, бар
+                .uf-item__social
+                  |  73 подписчика 
+                  span.uf-item__break
+                  |  3 отзыва
       .user-follow__more показать еще

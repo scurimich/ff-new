@@ -26,6 +26,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.3.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-svg-sprites": "^4.0.2",
     "gulp-watch": "^4.3.11",
     "gulp.spritesmith": "^6.3.0"
   },

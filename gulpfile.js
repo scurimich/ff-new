@@ -9,6 +9,9 @@ var concat = require('gulp-concat');
 var del = require('del');
 var deploy = require('gulp-gh-pages');
 
+var sprites = require('./gulpfiles/sprites.js');
+
+
 var paths = {
   normalize: 'node_modules/normalize.css/normalize.css',
   rateit: 'node_modules/jquery.rateit/scripts/@(jquery.rateit.min.js|rateit.css|star.gif|delete.gif)',
@@ -21,8 +24,12 @@ var paths = {
   jsVendors: './app/js/vendor/*.js',
   fonts: './app/fonts/*',
   img: './app/assets/**/*',
-  prod: 'app/prod/'
+  prod: 'app/prod/',
+  watch: {
+    jade: './app/jade/**/*.jade'
+  }
 };
+
 
 gulp.task('jade', function() {
   var locals = {};
@@ -35,6 +42,7 @@ gulp.task('jade', function() {
     .pipe(gulp.dest(paths.prod));
 });
 
+
 gulp.task('less', function() {
   gulp.src(paths.mainLess)
     .pipe(plumber())
@@ -45,12 +53,14 @@ gulp.task('less', function() {
     .pipe(gulp.dest(paths.prod + 'css/'))
 });
 
+
 gulp.task('js', function() {
   gulp.src([paths.js, '!'.concat(paths.jsVendors)])
     .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.prod + 'js/'));
 });
+
 
 gulp.task('server', function() {
   return browserSync({
@@ -61,6 +71,7 @@ gulp.task('server', function() {
   });
 });
 
+
 gulp.task('watch', function() {
   gulp.watch([
     paths.prod + '/**/*.html',
@@ -70,7 +81,7 @@ gulp.task('watch', function() {
   watch(paths.styles, function() {
     gulp.start('less');
   });
-  watch(paths.jade, function() {
+  watch(paths.watch.jade, function() {
     gulp.start('jade');
   });
   watch(paths.js, function() {
@@ -81,6 +92,7 @@ gulp.task('watch', function() {
   });
 });
 
+
 gulp.task('build', function() {
   gulp.src(paths.normalize)
     .pipe(gulp.dest(paths.prod + 'css/vendor/'));
@@ -88,8 +100,10 @@ gulp.task('build', function() {
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
   gulp.src(paths.jq)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
-  gulp.src('./app/assets/**/*')
+  gulp.src('./app/assets/**/*.svg')
     .pipe(gulp.dest(paths.prod + 'assets/'));
+  gulp.src('./app/img/**/*')
+    .pipe(gulp.dest(paths.prod + 'img/'));
   gulp.src(paths.jsVendors)
     .pipe(gulp.dest(paths.prod + 'js/vendor'));
   gulp.src(paths.stylesVendors)
@@ -101,9 +115,11 @@ gulp.task('build', function() {
   gulp.start('js');
 });
 
+
 gulp.task('clear', function() {
   del.sync('./app/prod/**');
 });
+
 
 gulp.task('deploy', ['build'], function() {
   return gulp.src('./app/prod/**/*')
@@ -111,6 +127,7 @@ gulp.task('deploy', ['build'], function() {
       branch: 'gh-pages',
       push: true
     }));
-})
+});
+
 
 gulp.task('default', ['build', 'server', 'watch']);
