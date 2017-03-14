@@ -100,10 +100,6 @@
     }
   }
 
-  &__categories {
-
-  }
-
   &__social {
     .ib-top;
   }
@@ -521,6 +517,7 @@
   &__popup {
     position: absolute;
     display: none;
+    opacity: 0;
     top: 28px;
     right: -23px;
     width: 620px;
@@ -528,6 +525,7 @@
     background-color: @background-color;
     box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
     z-index: 10;
+    transition: opacity .5s;
 
     &.active {
       display: block;
