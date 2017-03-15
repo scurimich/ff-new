@@ -1,0 +1,65 @@
+extends ../templates/user-edit.jade
+
+block title
+  | Edit profile
+
+block content
+  form.user-edit__profile
+    h1.user-edit__title Основная информация
+    .user-edit__body.clearfix
+      .user-edit__info
+        .user-edit__name.input-box
+          label.input-box__label Имя
+          input.text-input.input-box__input(type='text', value='Алексей', placeholder='Имя', pattern=".*", required)
+        .user-edit__email.input-box
+          label.input-box__label Электронная почта
+          input.text-input.input-box__input(type='text', value='belitsky.aleksey@gmail.com', placeholder='Электронная почта', pattern=".*", required)
+        .user-edit__address.select-box
+          label.select-box__label Страна и город, в которых вы находитесь
+          select.select.select-box__select
+            option(default, data-disabled) Не выбрано
+            - for (var x = 1; x <= 5; x++)
+              option(value='#{x}') Пункт #{X}
+        .user-edit__city.select-box
+          select.select
+            option(default, data-disabled) Не выбрано
+            - for (var x = 1; x <= 5; x++)
+              option(value='#{x}') Пункт #{x}
+        span.user-edit__birth Дата рождения
+        .user-edit__date
+          .select-box
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .user-edit__month
+          .select-box
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .user-edit__year
+          .select-box
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        span.user-edit__gender Ваш пол
+        .user-edit__radio.radio-box
+          .radio.radio-box__radio
+            input.radio__input#radio1(type='radio', name='radio')
+            label.radio__label(for='radio1')
+          label.radio-box__label(for='radio1') Мужской
+        .user-edit__radio.radio-box
+          .radio.radio-box__radio
+            input.radio__input#radio2(type='radio', name='radio')
+            label.radio__label(for='radio2')
+          label.radio-box__label(for='radio2') Женский
+      .user-edit__photo
+        .user-edit__img-container.avatar.avatar_112
+          img.user-edit__img
+        .user-edit__photo-actions
+          button.button.button_second.button_watch.user-edit__change Изменить
+          button.user-edit__delete Удалить
+    .user-edit__foot
+      button.button.button_first.user-edit__save Сохранить изменения

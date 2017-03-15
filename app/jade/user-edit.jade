@@ -1,0 +1,21 @@
+extends ./templates/main.jade
+
+block title
+  | User edit
+
+block content
+  .container
+    main.user-edit
+      .user-edit__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Редактирование профиля
+      .user-edit__main
+      aside.user-edit__sidebar.ue-menu
+        ul.ue-menu__list
+          li.ue-menu__item
+            a.ue-menu__link(href='user-edit/profile.html') Основная информация
+          li.ue-menu__item
+            a.ue-menu__link(href='user-edit/password.html') Безопасность
