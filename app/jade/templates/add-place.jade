@@ -1,0 +1,18 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+      block title
+    link(rel='stylesheet', href='../css/vendor/normalize.css')
+    link(rel='stylesheet', href='../css/vendor/selectric.css')
+    link(rel='stylesheet', href='../js/vendor/rateit.css')
+    link(rel='stylesheet', href='../css/main.css')
+  body
+    include ../_common/special-header.jade
+    block content
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/vendor/jquery.rateit.min.js')
+    script(src='../js/vendor/jquery.selectric.min.js')
+    script(src='../js/main.js')

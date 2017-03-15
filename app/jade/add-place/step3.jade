@@ -1,0 +1,40 @@
+extends ../templates/add-place.jade
+
+block title
+  | Add place step 3
+
+block content
+  .container
+    main.add-place
+      .add-place__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Добавление нового места на followfoxy
+      .add-place__main
+        h1.add-place__head Добавление нового места на followfoxy
+        ul.add-place__steps
+            li.add-place__step.add-place__step_passed Название
+            li.add-place__step.add-place__step_passed Адрес
+            li.add-place__step.add-place__step_active Категория
+            li.add-place__step Информация и фото
+            li.add-place__step Завершение
+        form.add-place__form
+          .add-place__main-category
+            .select-box
+              label.select-box__label Главная категория
+              select.select.select-box__select
+                option(default, data-disabled) Не выбрано
+                - for (var x = 1; x <= 5; x++)
+                  option(value='#{x}') Пункт #{X}
+          .add-place__subcategory
+            .select-box.select-box_disabled
+              label.select-box__label Подкатегория
+              select.select.select-box__select
+                option(default, data-disabled) Не выбрано
+                - for (var x = 1; x <= 5; x++)
+                  option(value='#{x}') Пункт #{X}
+        .add-place__actions.clearfix
+          a.add-place__terms Пользовательское соглашение
+          a.add-place__next.button.button_first(href='step4.html') Следующий шаг

@@ -1,0 +1,124 @@
+@import 'add-place/step2.less';
+@import 'add-place/step3.less';
+@import 'add-place/step4.less';
+@import 'add-place/step5.less';
+
+.add-place {
+  padding-top: 19px;
+
+  &__breadcrumbs {
+    margin-bottom: 15px;
+  }
+
+  &__main {
+    .white-block;
+    padding: 36px 24px 26px 24px;
+  }
+
+  &__head {
+    display: block;
+    margin-bottom: 31px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: -.4px;
+    color: @text-color;
+  }
+
+  &__steps {
+    list-style: none;
+    font-size: 0;
+    margin-left: -30px;
+    margin-right: -5px;
+    margin-bottom: 35px;
+  }
+
+  &__step {
+    .ib-top;
+    padding: 9px 30px 0 30px;
+    position: relative;
+    margin-right: 10px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: -.1px;
+    color: rgba(28, 26, 24, .2);
+    border-top: 6px solid @background-color;
+
+    &:before {
+      position: absolute;
+      top: -6px;
+      left: -4px;
+      content: '';
+      border-left: 4px solid transparent;
+      border-top: 3px solid @background-color;
+      border-bottom: 3px solid @background-color;
+    }
+
+    &:after {
+      position: absolute;
+      top: -6px;
+      right: -5px;
+      content: '';
+      border-left: 5px solid @background-color;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+    }
+
+    &_active {
+      color: rgba(28, 26, 24, 1);
+      border-color: @primary-orange;
+
+      &:before {
+        border-top-color: @primary-orange;
+        border-bottom-color: @primary-orange;
+      }
+
+      &:after {
+        border-left-color: @primary-orange;
+      }
+    }
+
+    &_passed {
+      color: rgba(28, 26, 24, 1);
+      border-color: rgba(245, 139, 0, .3);
+      
+      &:before {
+        border-top-color: rgba(245, 139, 0, .3);
+        border-bottom-color: rgba(245, 139, 0, .3);
+      }
+
+      &:after {
+        border-left-color: rgba(245, 139, 0, .3);
+      }
+    }
+  }
+
+  &__form {
+    font-size: 0;
+    margin-bottom: 64px;
+
+    &_add-photo {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__terms {
+    float: left;
+    margin-top: 6px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.1px;
+    color: @lighter-text;
+    text-decoration: underline;
+  }
+
+  &__next {
+    float: right;
+    text-decoration: none;
+  }
+}

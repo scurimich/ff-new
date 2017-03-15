@@ -4,7 +4,7 @@ body {
   background-color: @background-color;
 }
 
-h1, h2, h3, h4, h5, h6, ul, p, dd {
+h1, h2, h3, h4, h5, h6, ul, p, dl, dd, dt {
   margin: 0;
   padding: 0;
 }
@@ -154,4 +154,30 @@ textarea {
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+.add-photos {
+  box-sizing: border-box;
+  padding-top: 116px;
+  text-align: center;
+  border: 1px dashed @border-color;
+  
+  &__add {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__add-button {
+    display: inline-block;
+  }
+
+  &__add-string {
+    display: inline-block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: -.09px;
+    color: @text-color;
+  }
 }

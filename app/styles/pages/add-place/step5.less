@@ -1,0 +1,75 @@
+.add-place {
+  &__done-text {
+    margin-bottom: 19px;
+  }
+}
+
+.added-place {
+  padding: 14px 28px 23px 28px;
+  background-color: @background-color;
+
+  &__title {
+    display: block;
+    margin-bottom: 14px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: @text-color;
+    opacity: .3;
+  }
+
+  &__photos {
+    list-style: none;
+    font-family: 0;
+    margin-right: -11px;
+    margin-bottom: 20px;
+  }
+
+  &__photo {
+    .ib-top;
+    width: 110px;
+    height: 104px;
+    margin-right: 11px;
+    background-color: @icons-color;
+  }
+
+  &__name {
+    display: block;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.4;
+    letter-spacing: -.07px;
+    color: @text-color;
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -.3px;
+    color: @text-color;
+  }
+
+  &__features {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__termine {
+    .ib-top;
+    color: @lighter-text;
+  }
+
+  &__description {
+    .ib-top;
+    color: @text-color;
+  }
+}
