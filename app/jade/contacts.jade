@@ -1,0 +1,25 @@
+extends ./templates/main.jade
+
+block title
+  | Contacts
+
+block content
+  .container
+    main.contacts
+      .contacts__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Контакты
+      .contacts__window
+        .contacts__map#map
+        .contacts__body
+          h1.contacts__title Наш адрес и контакты
+          span.contacts__text ООО «М7р» ИНН 3443096610
+          span.contacts__text Россия, Москва, улица Земляной Вал, 33. Метро Курская. Здание Атриума, 2 этаж.
+          span.contacts__text Email: info@followfoxy.ru
+
+
+block scripts
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
