@@ -10,9 +10,11 @@ html
     link(rel='stylesheet', href='js/vendor/rateit.css')
     link(rel='stylesheet', href='css/main.css')
   body
-    include ../_common/header.jade
-    block content
-    include ../_common/footer.jade
+    .wrapper
+        include ../_common/header.jade
+        .main
+            block content
+        include ../_common/footer.jade
     script(src='js/vendor/jquery.min.js')
     script(src='js/vendor/jquery.rateit.min.js')
     script(src='js/vendor/jquery.selectric.min.js')
