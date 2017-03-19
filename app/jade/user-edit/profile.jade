@@ -29,19 +29,19 @@ block content
         .user-edit__date
           .select-box
             select.select
-              option(default, data-disabled) Не выбрано
+              option(default, data-disabled) День
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         .user-edit__month
           .select-box
             select.select
-              option(default, data-disabled) Не выбрано
+              option(default, data-disabled) Месяц
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         .user-edit__year
           .select-box
             select.select
-              option(default, data-disabled) Не выбрано
+              option(default, data-disabled) Год
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         span.user-edit__gender Ваш пол

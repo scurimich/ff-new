@@ -1,0 +1,28 @@
+extends ./templates/main.jade
+
+block title
+  | Reset password
+
+block content
+  .container
+    main.auth
+      .auth__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link Сброс пароля
+      .auth__window.auth__window_md
+        .auth__info
+          .auth__head
+            h1.auth__title Сброс пароля
+            span.auth__description.auth__description_reset Введите новый пароль к вашему аккаунту
+          .auth__body
+            form.auth__reset-password.reset-password
+              .reset-password__input.input-box
+                input.text-input.input-box__input(type='text', placeholder='Придумайте пароль', pattern=".*", required)
+              .reset-password__input.input-box
+                input.text-input.input-box__input(type='text', placeholder='Подтвердите пароль введя его еще раз', pattern=".*", required)
+              button.button.button_first.reset-password__reset Сбросить пароль
+              .reset-password__extra.clearfix
+                a.reset-password__back Обратно на страницу авторизации
