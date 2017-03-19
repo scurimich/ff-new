@@ -1,0 +1,17 @@
+footer.footer
+  .container
+    .footer__top.clearfix
+      .footer__content
+        ul.footer__menu
+          - var menu = ["О сервисе", "Бонусная программа", "Для бизнеса", "Добавить место", "Блог фоллоуфокси"];
+          each item in menu
+            li.footer__menu-item
+              a.footer__menu-link= item
+        ul.footer__submenu
+          - var submenu = ["Конфиденциальность", "Условия использования", "Как написать отзыв?", "Контакты", "Карта сайта"];
+          each item in submenu
+            li.footer__submenu-item
+              a.footer__submenu-link= item
+      button.footer__support.button.button_first Написать в поддержку
+    .footer__bottom
+      span.footer__copyright Авторское право © 2017, Followfoxy. Design by MADE
