@@ -3,6 +3,7 @@ var watch = require('gulp-watch');
 var browserSync = require('browser-sync');
 var jade = require('gulp-jade');
 var less = require('gulp-less');
+var cleanCss = require('gulp-clean-css');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
@@ -50,6 +51,7 @@ gulp.task('less', function() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
+    .pipe(cleanCss())
     .pipe(gulp.dest(paths.prod + 'css/'))
 });
 
@@ -95,21 +97,31 @@ gulp.task('watch', function() {
 
 gulp.task('build', function() {
   gulp.src(paths.normalize)
+    .pipe(cleanCss())
     .pipe(gulp.dest(paths.prod + 'css/vendor/'));
+
   gulp.src(paths.rateit)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
+
   gulp.src(paths.jq)
     .pipe(gulp.dest(paths.prod + 'js/vendor/'));
+
   gulp.src('./app/assets/**/*.svg')
     .pipe(gulp.dest(paths.prod + 'assets/'));
+
   gulp.src('./app/img/**/*')
     .pipe(gulp.dest(paths.prod + 'img/'));
+
   gulp.src(paths.jsVendors)
     .pipe(gulp.dest(paths.prod + 'js/vendor'));
+
   gulp.src(paths.stylesVendors)
+    .pipe(cleanCss())
     .pipe(gulp.dest(paths.prod + 'css/vendor'));
+
   gulp.src(paths.fonts)
     .pipe(gulp.dest(paths.prod + 'fonts/'));
+
   gulp.start('jade');
   gulp.start('less');
   gulp.start('js');
