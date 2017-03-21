@@ -1,0 +1,122 @@
+.photogallery {
+  padding-top: 30px;
+  .ib-top;
+
+  &__window {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__view {
+   min-width: 600px;
+   flex-grow: 1;
+  }
+
+  &__photo-container {
+    box-sizing: border-box;
+    padding: 31px 128px 27px;
+    background-color: @text-color;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    height: 74px;
+    padding: 17px 34px;
+    font-size: 0;
+    background-color: @text-color;
+  }
+
+  &__category {
+    .ib-top;
+    margin-right: 12px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.09px;
+    color: @background-color;
+  }
+
+  &__count {
+    .ib-top;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.09px;
+    color: @icons-color;
+  }
+
+  &__report {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.09px;
+    color: @icons-color;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    background-color: @white;
+  }
+
+  &__head {
+    font-size: 0;
+    padding: 20px;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__avatar-container {
+    .ib-top;
+    margin-right: 16px;
+  }
+
+  &__author {
+    .ib-top;
+    width: 206px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 3px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: -.1px;
+    color: @links-color;
+  }
+
+  &__date {
+    display: block;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -.1px;
+    color: @secondary-color;
+  }
+
+  &__body {
+    flex-grow: 1;
+    padding: 20px 18px 20px 20px;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__foot {
+    padding: 14px 24px 16px;
+  }
+
+  &__like-text {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @lighter-text;
+  }
+}
