@@ -24,6 +24,15 @@ gulp.task('png-sprites', function() {
     }))
     .pipe(gulp.dest('./app/'));
 
+  gulp.src('./app/assets/avatars/*.png')
+    .pipe(plumber())
+    .pipe(spritesmith({
+      imgName: 'img/avatars.png',
+      cssName: 'styles/sprites/avatars-sprite.less',
+      padding:10
+    }))
+    .pipe(gulp.dest('./app/'));
+
 });
 
 gulp.task('svg-sprites', function() {

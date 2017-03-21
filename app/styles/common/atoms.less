@@ -1,5 +1,6 @@
 @import 'constants.less';
 @import 'common.less';
+@import '../sprites/avatars-sprite.less';
 
 
 .title {
@@ -699,102 +700,201 @@
 
 .place {
   overflow: hidden;
+  position: relative;
   border-radius: 4px;
-  background: @image-back url(../assets/place/place-FFFFFF.svg) 50% 50% no-repeat;
+  background: @background-color;
+
+  &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
 
   &_24 {
     width: 24px;
     height: 24px;
-    background-size: 11px 10px;
+
+    &:before {
+      .sprite(@place-avatar-for24x24);
+    }
   }
 
   &_36 {
     width: 36px;
     height: 36px;
-    background-size: 19px 18px;
+
+    &:before {
+      .sprite(@place-avatar-for36x36);
+    }
   }
 
   &_48 {
     width: 48px;
     height: 48px;
-    background-size: 27px 26px;
+
+    &:before {
+      .sprite(@place-avatar-for48x48);
+    }
   }
 
   &_64 {
     width: 64px;
     height: 64px;
-    background-size: 39px 37px;
+
+    &:before {
+      .sprite(@place-avatar-for63x63);
+    }
   }
 
   &_80 {
     width: 80px;
     height: 80px;
-    background-size: 50px 47px;
+
+    &:before {
+      .sprite(@place-avatar-for80x80);
+    }
   }
 
   &_112 {
     width: 112px;
     height: 112px;
-    background-size: 70px 66px;
+
+    &:before {
+      .sprite(@place-avatar-for112x112);
+    }
   }
 
   &_160 {
     width: 160px;
     height: 160px;
-    background-size: 83px 78px;
+
+    &:before {
+      .sprite(@place-avatar-for160x160);
+    }
   }
 }
 
 .avatar {
+  position: relative;
   border-radius: 50%;
-  background: @image-back url(../assets/user/user-FFFFFF.svg) 50% 50% no-repeat;
+  background: @background-color;
 
-  &_24 {
+  &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  &_24_man {
     width: 24px;
     height: 24px;
-    background-size: 10px 10px;
+
+    &:before {
+      .sprite(@man-avatar-for24x24);
+    }
   }
 
-  &_36 {
+  &_36_man {
     width: 36px;
     height: 36px;
-    background-size: 16px 16px;
+
+    &:before {
+      .sprite(@man-avatar-for36x36-copy);
+    }
   }
 
-  &_48 {
+  &_48_man {
     width: 48px;
     height: 48px;
-    background-size: 24px 24px;
+
+    &:before {
+      .sprite(@man-avatar-for48x48);
+    }
   }
 
-  &_64 {
+  &_64_man {
     width: 64px;
     height: 64px;
-    background-size: 32px 32px;
+
+    &:before {
+      .sprite(@man-avatar-for64x64);
+    }
   }
 
-  &_80 {
+  &_80_man {
     width: 80px;
     height: 80px;
-    background-size: 42px 42px;
+
+    &:before {
+      .sprite(@man-avatar-for80x80);
+    }
   }
 
-  &_112 {
+  &_112_man {
     width: 112px;
     height: 112px;
-    background-size: 59px 59px;
+
+    &:before {
+      .sprite(@man-avatar-for112x112);
+    }
   }
 
-  &_120 {
-    width: 120px;
-    height: 120px;
-    background-size: 63px 63px;
-  }
-
-  &_160 {
+  &_160_man {
     width: 160px;
     height: 160px;
-    background-size: 84px 84px;
+
+    &:before {
+      .sprite(@man-avatar-for160x160);
+    }
+  }
+
+  &_24_woman {
+    width: 24px;
+    height: 24px;
+
+    &:before {
+      .sprite(@woman-avatar-for24x24);
+    }
+  }
+
+  &_36_woman {
+    width: 36px;
+    height: 36px;
+
+    &:before {
+      .sprite(@woman-avatar-for36x36);
+    }
+  }
+
+  &_48_woman {
+    width: 48px;
+    height: 48px;
+
+    &:before {
+      .sprite(@woman-avatar-for48x48);
+    }
+  }
+
+  &_64_woman {
+    width: 64px;
+    height: 64px;
+
+    &:before {
+      .sprite(@woman-avatar-for64x64);
+    }
+  }
+
+  &_80_woman {
+    width: 80px;
+    height: 80px;
+
+    &:before {
+      .sprite(@woman-avatar-for80x80);
+    }
   }
 }
 
@@ -834,7 +934,7 @@
 }
 
 .message {
-  .svg-icon(16px, 16px, '../assets/icon_comment.svg');
+  .svg-icon(16px, 16px, '../assets/message.svg');
 }
 
 .fb {
