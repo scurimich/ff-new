@@ -6,6 +6,7 @@ var less = require('gulp-less');
 var cleanCss = require('gulp-clean-css');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var del = require('del');
 var deploy = require('gulp-gh-pages');
@@ -14,11 +15,7 @@ var sprites = require('./gulpfiles/sprites.js');
 
 
 var paths = {
-  normalize: 'node_modules/normalize.css/normalize.css',
-  rateit: 'node_modules/jquery.rateit/scripts/@(jquery.rateit.min.js|rateit.css|star.gif|delete.gif)',
-  jq: 'node_modules/jquery/dist/jquery.min.js',
   styles: './app/styles/**/*.less',
-  stylesVendors: './app/styles/vendor/@(*.less|*.css)',
   mainLess: './app/styles/*.less',
   jade: ['./app/jade/**/*.jade', '!./app/jade/templates/*'],
   js: './app/js/**/*.js',
@@ -59,6 +56,7 @@ gulp.task('less', function() {
 gulp.task('js', function() {
   gulp.src([paths.js, '!'.concat(paths.jsVendors)])
     .pipe(plumber())
+    .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.prod + 'js/'));
 });
@@ -96,16 +94,6 @@ gulp.task('watch', function() {
 
 
 gulp.task('build', function() {
-  gulp.src(paths.normalize)
-    .pipe(cleanCss())
-    .pipe(gulp.dest(paths.prod + 'css/vendor/'));
-
-  gulp.src(paths.rateit)
-    .pipe(gulp.dest(paths.prod + 'js/vendor/'));
-
-  gulp.src(paths.jq)
-    .pipe(gulp.dest(paths.prod + 'js/vendor/'));
-
   gulp.src('./app/assets/**/*.svg')
     .pipe(gulp.dest(paths.prod + 'assets/'));
 
@@ -113,11 +101,9 @@ gulp.task('build', function() {
     .pipe(gulp.dest(paths.prod + 'img/'));
 
   gulp.src(paths.jsVendors)
+    .pipe(plumber())
+    .pipe(uglify())
     .pipe(gulp.dest(paths.prod + 'js/vendor'));
-
-  gulp.src(paths.stylesVendors)
-    .pipe(cleanCss())
-    .pipe(gulp.dest(paths.prod + 'css/vendor'));
 
   gulp.src(paths.fonts)
     .pipe(gulp.dest(paths.prod + 'fonts/'));

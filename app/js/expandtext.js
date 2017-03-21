@@ -17,7 +17,7 @@ function hideText() {
 
     if (expand.type === 'words') {
       var ref = text.find('.expand-text');
-      var find = new RegExp(`([а-яА-Яa-zA-Z,]+\\s){${expand.number-1}}[а-яА-Яa-zA-Z]+`, 'mi');
+      var find = new RegExp('([а-яА-Яa-zA-Z,]+\\s){'+(expand.number-1)+'}[а-яА-Яa-zA-Z]+', 'mi');
       var removedText = text.text().trim().replace(find, '');
       text.attr('data-text', removedText);
       text.text(text.text().trim().match(find) + ' ... ');

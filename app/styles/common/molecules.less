@@ -1,6 +1,8 @@
 @import 'atoms.less';
 
 .ta-box {
+  padding-bottom: 22px;
+  
   &__label {
     display: block;
     margin-bottom: 4px;
@@ -17,6 +19,30 @@
 
   &__ta {
     display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__error {
+    .ib-top;
+    padding-top: 4px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @error-color;
+  }
+
+  &__count {
+    .ib-top;
+    padding-top: 4px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.11px;
+    color: @icons-color;
   }
 }
 

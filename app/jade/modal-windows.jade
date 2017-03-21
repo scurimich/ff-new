@@ -1,0 +1,73 @@
+extends ./templates/services.jade
+
+block title
+  | Modal windows
+
+block styleLinks
+  link(rel='stylesheet', href='css/main.css')
+  link(rel='stylesheet', href='css/modal-page.css')
+
+block content
+  .modal
+    .modal__head.clearfix
+      span.modal__title Вход
+      .modal__close
+    .modal__body
+      span.text Войдите в фоллоуфокси чтобы оценивать фотографии
+    .modal__foot.clearfix
+      .modal__actions
+        button.modal__subaction Зарегистрироваться
+        button.button.button_first.modal__main-action Войти
+
+  .modal
+    .modal__head.clearfix
+      span.modal__title Обращение в техподдержку
+      .modal__close
+    .modal__body
+      .modal__select.select-box
+        label.select-box__label Выберите причину нарушения
+        select.select.select-box__select
+          option(default, data-disabled) Не выбрано
+          - for (var x = 1; x <= 5; x++)
+            option(value='#{x}') Пункт #{X}
+      .modal__ta.ta-box
+        label.ta-box__label Текст обращения
+        textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+    .modal__foot.clearfix
+      .modal__actions
+        button.modal__subaction Отмена
+        button.button.button_first.modal__main-action Отправить
+
+  .modal
+    .modal__head.clearfix
+      span.modal__title Восстановление пароля
+      .modal__close
+    .modal__body
+      span.text Информация по сбросу пароля отправлена на почту
+    .modal__foot.clearfix
+      .modal__actions
+        button.button.button_first.modal__main-action Закрыть
+
+  .modal
+    .modal__head.clearfix
+      span.modal__title Неточность в описании
+      .modal__close
+    .modal__body
+      .modal__ta.ta-box
+        label.ta-box__label Что нужно исправить
+        textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+    .modal__foot.clearfix
+      .modal__actions
+        button.modal__subaction Отмена
+        button.button.button_first.modal__main-action Отправить
+
+  .modal
+    .modal__head.clearfix
+      span.modal__title Загрузка фотографий
+      .modal__close
+    .modal__body
+      span.text Вы хотите удалить добавленные фотографии
+    .modal__foot.clearfix
+      .modal__actions
+        button.modal__subaction Отмена
+        button.button.button_first.modal__main-action Удалить
