@@ -1,6 +1,15 @@
 .photogallery {
   padding-top: 30px;
+  position: relative;
   .ib-top;
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    .svg-icon(14px, 14px, '../assets/close/close-EEEFF0.svg');
+  }
 
   &__window {
     display: flex;
@@ -8,20 +17,66 @@
   }
 
   &__view {
-   min-width: 600px;
-   flex-grow: 1;
+    min-width: 600px;
+    flex-grow: 1;
+    padding-right: 310px;
+    position: relative;
   }
 
   &__photo-container {
+    position: relative;
     box-sizing: border-box;
     padding: 31px 128px 27px;
     background-color: @text-color;
   }
 
+  &__arrow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      .svg-icon(14px, 25px, '../assets/arrow.svg');
+    }
+
+    &_left {
+      width: 20%;
+      left: 0;
+
+      &:after {
+        left: 32px;
+        transform: rotate(180deg);
+      }
+    }
+
+    &_right {
+      width: 80%;
+      right: 0;
+
+      &:after {
+        right: 32px;
+      }
+    }
+  }
+
+  &__photo-container:hover &__arrow {
+    opacity: .4;
+  }
+
+  &__photo-container &__arrow:hover {
+    opacity: 1;
+  }
+
   &__info {
     box-sizing: border-box;
-    height: 74px;
-    padding: 17px 34px;
+    height: 68px;
+    padding: 13px 34px;
     font-size: 0;
     background-color: @text-color;
   }
@@ -55,9 +110,14 @@
     line-height: 20px;
     letter-spacing: -.09px;
     color: @icons-color;
+    cursor: pointer;
   }
 
   &__main {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     width: 310px;
@@ -78,6 +138,7 @@
   &__author {
     .ib-top;
     width: 206px;
+    padding-top: 6px;
   }
 
   &__name {
@@ -102,13 +163,52 @@
   }
 
   &__body {
+    overflow: hidden;
     flex-grow: 1;
-    padding: 20px 18px 20px 20px;
     border-bottom: 1px solid @border-color;
+
+    & .mCSB_inside>.mCSB_container {
+      margin-right: 10px;
+    }
+
+    & .mCSB_scrollTools {
+      width: 10px;
+    }
+
+    & .mCSB_scrollTools .mCSB_draggerContainer {
+      top: 5px;
+      bottom: 5px;
+    }
+
+    & .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+      background-color: @icons-color;
+      width: 5px;
+    }
+
+    & .mCSB_scrollTools .mCSB_draggerRail {
+      background-color: @icons-color;
+      width: 5px;
+      opacity: .3;
+    }
+  }
+
+  &__description {
+    padding: 20px 18px 20px 20px;
   }
 
   &__foot {
-    padding: 14px 24px 16px;
+    padding: 13px 23px 16px;
+  }
+
+  &__like {
+    .ib-top;
+    cursor: pointer;
+  }
+
+  &__like-icon {
+    .ib-mid;
+    .like;
+    margin-right: 8px;
   }
 
   &__like-text {

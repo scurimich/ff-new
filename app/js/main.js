@@ -56,6 +56,8 @@ $(function() {
         starwidth: 16,
         starheight: 14
       });
+
+      $('.photogallery__body').mCustomScrollbar();
     },
     
     selectricDarken: function(select) {

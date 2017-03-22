@@ -1,9 +1,27 @@
 .modal {
-  .white-block;
-  width: 460px;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
 
-  &_wd {
-    width: 620px;
+  &.active {
+    display: block;
+  }
+
+  &__window {
+    .white-block;
+    width: 460px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &_wd {
+      width: 620px;
+    }
   }
 
   &__head {
@@ -53,6 +71,7 @@
     color: @secondary-color;
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
 
   &__main-action {
