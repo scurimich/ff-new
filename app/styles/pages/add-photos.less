@@ -1,15 +1,30 @@
 .upload-photos {
   padding-top: 30px;
+  padding-bottom: 20px;
   width: 708px;
 
+  &_small {
+    width: 619px;
+  }
+
   &__window {
-    .white-block;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(69,69,69,.41);
   }
 
   &__top {
     position: relative;
     padding: 24px 24px 24px 20px;
     border-bottom: 1px solid @border-color;
+  }
+
+  &__close {
+    position: absolute;
+    top: -26px;
+    right: 0;
+    .svg-icon(14px, 14px, '../assets/close/close-FFFFFF.svg');
+    opacity: .7;
   }
 
   &__title {
@@ -24,6 +39,7 @@
 
   &__count {
     float: right;
+    margni-top: 4px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -38,7 +54,7 @@
   }
 
   &__dnd {
-    padding: 105px 0 46px 0;
+    padding: 105px 0 44px 0;
   }
 
   &__list {
@@ -49,7 +65,7 @@
 
   &__item {
     display: block;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     font-size: 0;
   }
 
@@ -105,6 +121,7 @@
 
   &__actions {
     float: right;
+    margin-top: 2px;
     font-size: 0;
   }
 
@@ -126,7 +143,14 @@
   }
 
   &__animation {
-
+    position: absolute;
+    top: 64px;
+    left: 45%;
+    .svg-icon(50px, 50px, '../assets/spinner.svg');
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   &__wait {
@@ -139,4 +163,12 @@
     letter-spacing: -.09px;
     color: @text-color;
   }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(45deg);}
+  50% { transform: rotate(90deg);}
+  75% { transform: rotate(135deg);}
+  100% { transform: rotate(180deg);}
 }

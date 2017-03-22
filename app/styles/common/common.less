@@ -172,6 +172,7 @@ textarea {
 
 .add-photos {
   box-sizing: border-box;
+  position: relative;
   padding-top: 116px;
   text-align: center;
   border: 1px dashed @border-color;
@@ -183,6 +184,18 @@ textarea {
 
   &__add-button {
     display: inline-block;
+  }
+
+  &__add-back {
+    position: absolute;
+    display: block;
+    top: 56px;
+    left: 50%;
+    width: 48px;
+    height: 35px;
+    background: url(../assets/photo.svg) no-repeat;
+    background-size: 48px 35px;
+    transform: translate(-50%);
   }
 
   &__title {

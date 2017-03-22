@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="25px" viewBox="0 0 14 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="photo-slider" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="place_photos-about" transform="translate(-819.000000, -432.000000)" fill="#FFFFFF">
+            <path d="M819.415429,456.584925 C818.861524,456.03102 818.861524,455.135706 819.415429,454.5818 L829.497052,444.500177 L819.415429,434.418554 C818.861524,433.864649 818.861524,432.969334 819.415429,432.415429 C819.969334,431.861524 820.864649,431.861524 821.418554,432.415429 L832.50174,443.498615 C833.055645,444.05252 833.055645,444.947834 832.50174,445.50174 L821.418554,456.584925 C821.14231,456.86117 820.77965,457 820.416991,457 C820.054332,457 819.691673,456.86117 819.415429,456.584925 Z" id="arrow-right"></path>
+        </g>
+    </g>
+</svg>

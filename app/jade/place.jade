@@ -65,7 +65,7 @@ block content
             .place-contacts__site 
               a.place-contacts__site-link datasite.ru
           a.place-contacts__owners Для владельцев
-          a.place-contacts__fix Исправить неточность
+          a.place-contacts__fix(data-popup='modal-error') Исправить неточность
         .place-page__city-events.city-events
           .city-events__topic.topic
             span.topic__name мероприятия волгограда
@@ -96,17 +96,31 @@ block content
         .place-page__discussions.discussions
           .discussions__topic.topic
             span.topic__name обсуждения
+          a.discussions__more Все обсуждения
           ul.discussions__list
             - for (var x = 0; x < 3; x++)
               li.discussions__item.discus-item
-                .discus-item__avatar-container.avatar.avatar_48
+                .discus-item__avatar-container.avatar.avatar_48_man
                   img.discus-item__avatar
                 .discus-item__body
                   span.discus-item__name Катериночка Мяуковская
                   span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                  p.discus-item__text.text(data-expand='3')
+                  p.discus-item__text.text(data-expand-words='12')
                     | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
                     a.discus-item__more.expand-text Читать полностью
+      .place-page__back#modal(data-id='modal-error')
+        .place-page__popup.modal
+          .modal__head.clearfix
+            span.modal__title Неточность в описании
+            .modal__close#modal-close
+          .modal__body
+            .modal__ta.ta-box
+              label.ta-box__label Что нужно исправить
+              textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+          .modal__foot.clearfix
+            .modal__actions
+              button.modal__subaction Отмена
+              button.button.button_first.modal__main-action Отправить
 
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', async)

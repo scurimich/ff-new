@@ -13,6 +13,10 @@ $(function() {
       $('.head-notifs').click(this.notifs);
       $('.head-user').click(this.profile);
       $('.head-cats__item_more').click(this.more);
+      $('#commenting-input').focus(this.npWrite);
+      $('#commenting-input').on('keydown keyup', this.npWriting);
+      $('[data-popup*="modal"]').click(this.openModal);
+      $(document).on('click', this.closeModal);
     },
 
     plugins: function() {
@@ -94,6 +98,32 @@ $(function() {
         return;
       }
       hidden.addClass('active').animate({'opacity': '1'}, time);
+    },
+
+    npWrite: function() {
+      var input = $(this);
+      var footer = input.parents('#commenting-parent').find('#commenting-foot');
+      footer.slideDown(100, function() {
+        footer.addClass('active');
+      });
+    },
+
+    npWriting: function() {
+      var input = $(this);
+      var value = input.val().length;
+      var span = input.parents('#commenting-parent').find('#commenting-count');
+      span.text(span.text().trim().replace(/^\d+\s/i, value + ' '));
+    },
+
+    openModal: function(e) {
+      e.preventDefault();
+      var popup = $(this).attr('data-popup');
+      $('[data-id=' + popup + ']').addClass('active');
+    },
+
+    closeModal: function(e) {
+      if($(e.target).is('#modal-close') || ($(e.target).is('#modal')))
+        $('#modal').removeClass('active');
     }
 
   };

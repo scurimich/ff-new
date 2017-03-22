@@ -27,6 +27,7 @@
 
   &__list {
     list-style: none;
+    padding: 2px 0;
   }
 
   &__more {
@@ -44,7 +45,7 @@
 }
 
 .uf-item {
-  padding: 25px 0 24px 0;
+  padding: 24px 0 24px 0;
   font-size: 0;
   border-bottom: 1px solid @border-color;
 
@@ -61,11 +62,16 @@
   &__body {
     .ib-top;
     width: 480px;
+    padding-top: 2px;
+
+    &_follows {
+      padding-top: 10px;
+    }
   }
 
   &__title {
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     font-family: @font;
     font-weight: 600;
     font-size: 13px;
@@ -78,6 +84,8 @@
   }
 
   &__type {
+    display: block;
+    margin-bottom: 2px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -86,6 +94,8 @@
   }
 
   &__address {
+    display: block;
+    margn-top: -4px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -94,6 +104,8 @@
   }
 
   &__name {
+    display: block;
+    margin-bottom: 2px;
     font-family: @font;
     font-weight: 600;
     font-size: 13px;

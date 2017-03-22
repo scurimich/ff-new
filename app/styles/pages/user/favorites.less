@@ -31,6 +31,11 @@
 .ufav-item {
   padding: 25px 0 24px 0;
   font-size: 0;
+  position: relative;
+
+  &:hover &__close {
+    display: block;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid @border-color;
@@ -45,6 +50,15 @@
     .ib-top;
     padding-top: 3px;
     width: 480px;
+  }
+
+  &__close {
+    display: none;
+    .close;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    cursor: pointer;
   }
 
   &__title {

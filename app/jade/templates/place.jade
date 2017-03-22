@@ -8,111 +8,128 @@ html
     link(rel='preload', href='../css/vendor.css', as='style', onload="this.rel='stylesheet'")
     link(rel='preload', href='../css/main.css', as='style', onload="this.rel='stylesheet'")
   body
-    include ../_common/special-header.jade
-    .container
-      main.place-page
-        .place-page__breadcrumbs
-          ul.breadcrumbs
-            li.breadcrumbs__item
-              a.breadcrumbs__link Главная
-            li.breadcrumbs__item
-              a.breadcrumbs__link Кафе и рестораны Волгограда
-            li.breadcrumbs__item
-              a.breadcrumbs__link Ресторан Волгоград
-        .place-page__header.place-descr
-          .place-descr__head.clearfix
-            span.place-descr__tags Кафе, ресторан, бар, хинкальная
-            .place-descr__subscription
-              ul.place-descr__subs.clearfix
-                - for (var i = 0; i < 6; i++)
-                  li.place-descr__sub
-                    a.place-descr__sub-link
-              .place-descr__subscribe
-                .sticker-button
-                  button.button.button_subscr.button_check.sticker-button__button(disabled) Я подписан
-                  span.sticker 667
-          .place-descr__name Ресторан «Онегин»
-          .place-descr__rating
-            span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-            span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
-          .place-descr__menu.clearfix
-            ul.place-descr__tabs.tabs
-              li.tabs__item
-                a.tabs__link.tabs__link_active(href='overview.html') Обзор
-              li.tabs__item
-                a.tabs__link(href='reviews.html') Отзывы 
-                  span.tabs__number 118
-              li.tabs__item
-                a.tabs__link(href='photos.html') Фотографии 
-                  span.tabs__number 34
-              li.tabs__item
-                a.tabs__link(href='events.html') События 
-                  span.tabs__number 1
-              li.tabs__item
-                a.tabs__link(href='sales.html') Акции 
-                  span.tabs__number 8
-            .place-descr__actions
-              .place-descr__favs
-                button.button.button_second В закладки
-              .place-descr__review
-                button.button.button_first Оставить отзыв
-        block content
-        aside.place-page__sidebar
-          block sidebar
-          .place-page__contacts.place-contacts
-            .place-contacts__map#map
-            .place-contacts__body
-              .place-contacts__main
-                .place-contacts__name Ресторан Волгоград
-                p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
-              .place-contacts__schedule Пт-сб 08:00-24:00 
-                a.place-contacts__schedule-link Все расписание
-              .place-contacts__phone +7 988 025 14 61
-              .place-contacts__site 
-                a.place-contacts__site-link datasite.ru
-            a.place-contacts__owners Для владельцев
-            a.place-contacts__fix Исправить неточность
-          .place-page__city-events.city-events
-            .city-events__topic.topic
-              span.topic__name мероприятия волгограда
-            .city-events__body
-              ul.city-events__list
-                - for (var x = 0; x < 5; x++)
-                  li.city-events__item.city-event
-                    .city-event__image-container.place.place_48
-                      img.city-event__image
-                    .city-event__body
-                      span.city-event__name Berkeley Restaurant Week
-                      span.city-event__place Cinnabon
-                      time.city-event__dates 26 сент 2017 — 28 окт 2018
-            .city-events__footer
-              a.city-events__more Все мероприятия
-          .place-page__blog.blog
-            .blog__topic.topic
-              span.topic__name наш блог
-            ul.blog__list
-              - for (var x = 0; x < 3; x++)
-                li.blog__item
-                  a.blog__photo-container
-                    img.blog__photo
-                  .blog__descr
-                    .blog__info
-                      time.blog__date 26 сент 2017
-                      span.blog__text Тонкости выбора ботинок для горных лыж
-          .place-page__discussions.discussions
-            .discussions__topic.topic
-              span.topic__name обсуждения
-            ul.discussions__list
-              - for (var x = 0; x < 3; x++)
-                li.discussions__item.discus-item
-                  .discus-item__avatar-container.avatar.avatar_48
-                    img.discus-item__avatar
-                  .discus-item__body
-                    span.discus-item__name Катериночка Мяуковская
-                    span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                    p.discus-item__text.text(data-expand='3')
-                      | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-                      a.discus-item__more.expand-text Читать полностью
+    .wrapper
+      include ../_common/special-header.jade
+      .main
+        .container
+          main.place-page
+            .place-page__breadcrumbs
+              ul.breadcrumbs
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Главная
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Кафе и рестораны Волгограда
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Ресторан Волгоград
+            .place-page__header.place-descr
+              .place-descr__head.clearfix
+                span.place-descr__tags Кафе, ресторан, бар, хинкальная
+                .place-descr__subscription
+                  ul.place-descr__subs.clearfix
+                    - for (var i = 0; i < 6; i++)
+                      li.place-descr__sub
+                        a.place-descr__sub-link
+                  .place-descr__subscribe
+                    .sticker-button
+                      button.button.button_subscr.button_check.sticker-button__button(disabled) Я подписан
+                      span.sticker 667
+              .place-descr__name Ресторан «Онегин»
+              .place-descr__rating
+                span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
+                span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
+              .place-descr__menu.clearfix
+                ul.place-descr__tabs.tabs
+                  li.tabs__item
+                    a.tabs__link.tabs__link_active(href='overview.html') Обзор
+                  li.tabs__item
+                    a.tabs__link(href='reviews.html') Отзывы 
+                      span.tabs__number 118
+                  li.tabs__item
+                    a.tabs__link(href='photos.html') Фотографии 
+                      span.tabs__number 34
+                  li.tabs__item
+                    a.tabs__link(href='events.html') События 
+                      span.tabs__number 1
+                  li.tabs__item
+                    a.tabs__link(href='sales.html') Акции 
+                      span.tabs__number 8
+                .place-descr__actions
+                  .place-descr__favs
+                    button.button.button_second В закладки
+                  .place-descr__review
+                    button.button.button_first Оставить отзыв
+            block content
+            aside.place-page__sidebar
+              block sidebar
+              .place-page__contacts.place-contacts
+                .place-contacts__map#map
+                .place-contacts__body
+                  .place-contacts__main
+                    .place-contacts__name Ресторан Волгоград
+                    p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
+                  .place-contacts__schedule Пт-сб 08:00-24:00 
+                    a.place-contacts__schedule-link Все расписание
+                  .place-contacts__phone +7 988 025 14 61
+                  .place-contacts__site 
+                    a.place-contacts__site-link datasite.ru
+                a.place-contacts__owners Для владельцев
+                a.place-contacts__fix(data-popup='modal-error') Исправить неточность
+              .place-page__city-events.city-events
+                .city-events__topic.topic
+                  span.topic__name мероприятия волгограда
+                .city-events__body
+                  ul.city-events__list
+                    - for (var x = 0; x < 5; x++)
+                      li.city-events__item.city-event
+                        .city-event__image-container.place.place_48
+                          img.city-event__image
+                        .city-event__body
+                          span.city-event__name Berkeley Restaurant Week
+                          span.city-event__place Cinnabon
+                          time.city-event__dates 26 сент 2017 — 28 окт 2018
+                .city-events__footer
+                  a.city-events__more Все мероприятия
+              .place-page__blog.blog
+                .blog__topic.topic
+                  span.topic__name наш блог
+                ul.blog__list
+                  - for (var x = 0; x < 3; x++)
+                    li.blog__item
+                      a.blog__photo-container
+                        img.blog__photo
+                      .blog__descr
+                        .blog__info
+                          time.blog__date 26 сент 2017
+                          span.blog__text Тонкости выбора ботинок для горных лыж
+              .place-page__discussions.discussions
+                .discussions__topic.topic
+                  span.topic__name обсуждения
+                a.discussions__more Все обсуждения
+                ul.discussions__list
+                  - for (var x = 0; x < 3; x++)
+                    li.discussions__item.discus-item
+                      .discus-item__avatar-container.avatar.avatar_48_man
+                        img.discus-item__avatar
+                      .discus-item__body
+                        span.discus-item__name Катериночка Мяуковская
+                        span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
+                        p.discus-item__text.text(data-expand-words='12')
+                          | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
+                          a.discus-item__more.expand-text Читать полностью
+            .place-page__back#modal(data-id='modal-error')
+              .place-page__popup.modal
+                .modal__head.clearfix
+                  span.modal__title Неточность в описании
+                  .modal__close#modal-close
+                .modal__body
+                  .modal__ta.ta-box
+                    label.ta-box__label Что нужно исправить
+                    textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+                .modal__foot.clearfix
+                  .modal__actions
+                    button.modal__subaction Отмена
+                    button.button.button_first.modal__main-action Отправить
+      include ../_common/footer.jade
     script(src='../js/vendor/loadCSS.js', async)
     script(src='../js/vendor/loadCSS.polyfill.js', async)
     script(src='../js/vendor/jquery.min.js', async)

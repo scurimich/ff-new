@@ -229,6 +229,12 @@
   &__info {
     text-align: center;
     margin-bottom: 8px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -.1px;
+    color: @text-color;
   }
 
   &__type {
@@ -343,6 +349,7 @@
 
 .new-promo {
   .organism-block;
+  padding-bottom: 0;
 
   &__header {
     margin-bottom: 25px;
@@ -566,11 +573,15 @@
   }
 
   &__writing {
-    margin: -20px;
-    margin-top: 0;
+    display: none;
+    margin: 0 -20px;
     padding: 16px 20px;
     border-top: 1px solid @border-color;
     background-color: @background-color;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__char-counter {

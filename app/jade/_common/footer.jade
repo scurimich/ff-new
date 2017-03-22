@@ -12,6 +12,25 @@ footer.footer
           each item in submenu
             li.footer__submenu-item
               a.footer__submenu-link= item
-      button.footer__support.button.button_first Написать в поддержку
+      button.footer__support.button.button_first(data-popup='modal-support') Написать в поддержку
     .footer__bottom
       span.footer__copyright Авторское право © 2017, Followfoxy. Design by MADE
+    .footer__back#modal(data-id='modal-support')
+      .footer__modal.modal
+        .modal__head.clearfix
+          span.modal__title Обращение в техподдержку
+          .modal__close#modal-close
+        .modal__body
+          .modal__select.select-box
+            label.select-box__label Выберите причину нарушения
+            select.select.select-box__select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{X}
+          .modal__ta.ta-box
+            label.ta-box__label Текст обращения
+            textarea.textarea.ta-box__ta(placeholder='Ваш текст')
+        .modal__foot.clearfix
+          .modal__actions
+            button.modal__subaction Отмена
+            button.button.button_first.modal__main-action Отправить

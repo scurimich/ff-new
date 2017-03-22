@@ -1,10 +1,11 @@
 @import '../common/organisms.less';
 
 .event-page {
+  padding-top: 18px;
+  padding-bottom: 20px;
   font-size: 0;
 
   &__bread {
-    margin-top: 18px;
     margin-bottom: 22px;
   }
 
@@ -17,6 +18,18 @@
   &__sidebar {
     .ib-top;
     width: 300px;
+  }
+
+  &__city-events {
+    margin-bottom: 30px;
+  }
+
+  &__blog {
+    margin-bottom: 19px;
+  }
+
+  &__discussions {
+    margin-bottom: 20px;
   }
 }
 
@@ -63,6 +76,7 @@
 
   &__body {
     padding: 21px 20px 24px 20px;
+    margin-bottom: 20px;
   }
 
   &__when {
@@ -253,11 +267,16 @@
   }
 
   &__writing {
+    display: none;
     margin: 0 -20px;
     margin-top: 0;
     padding: 16px 20px;
     border-top: 1px solid @border-color;
     background-color: @background-color;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__char-counter {

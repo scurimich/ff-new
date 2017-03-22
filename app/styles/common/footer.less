@@ -64,11 +64,33 @@
   }
 
   &__copyright {
-      font-family: @font;
-      font-weight: 600;
-      font-size: 10px;
-      line-height: 18px;
-      color: @white;
-      opacity: .5;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    color: @white;
+    opacity: .5;
+  }
+
+  &__back {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

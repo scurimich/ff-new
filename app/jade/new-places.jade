@@ -55,7 +55,7 @@ block content
                   span.placecard__type Ресторан, кафе, бар 
                   span.placecard__address Волгоград, ул. Мира, 12
                 .placecard__offers.placecard__offers_soon
-                .placecard__review
+                .placecard__review.placecard__review_first
                   button.placecard__review-button.placecard__review-button_soon.button.button_second.button_watch Написать первый отзыв
                 .placecard__footer.clearfix
                   .placecard__social
@@ -183,14 +183,15 @@ block content
         .newplaces-page__discussions.discussions
           .discussions__topic.topic
             span.topic__name обсуждения
+          a.discussions__more Все обсуждения
           ul.discussions__list
             - for (var x = 0; x < 3; x++)
               li.discussions__item.discus-item
-                .discus-item__avatar-container.avatar.avatar_48
+                .discus-item__avatar-container.avatar.avatar_48_man
                   img.discus-item__avatar
                 .discus-item__body
                   span.discus-item__name Катериночка Мяуковская
                   span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                  p.discus-item__text.text(data-expand='3')
+                  p.discus-item__text.text(data-expand-words='12')
                     | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
                     a.discus-item__more.expand-text Читать полностью

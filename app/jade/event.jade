@@ -55,13 +55,13 @@ block content
                     .event-comment__likes
                       | 42 
                       span.event-comment__like
-          .event-comments__write.event-write
+          .event-comments__write.event-write#commenting-parent
             .event-write__avatar-container.avatar.avatar_24
               img.event-write__avatar
             form.event-write__form
-              input.event-write__input(type='text', placeholder='Написать комментарий')
-            .event-write__writing.clearfix
-              span.event-write__char-counter 0 из 319 символов
+              input.event-write__input#commenting-input(type='text', placeholder='Написать комментарий')
+            .event-write__writing.clearfix#commenting-foot
+              span.event-write__char-counter#commenting-count 0 из 319 символов
               button.button.button_first.event-write__send Отправить
 
       aside.event-page__sidebar
@@ -99,7 +99,7 @@ block content
           ul.discussions__list
             - for (var x = 0; x < 3; x++)
               li.discussions__item.discus-item
-                .discus-item__avatar-container.avatar.avatar_48
+                .discus-item__avatar-container.avatar.avatar_48_man
                   img.discus-item__avatar
                 .discus-item__body
                   span.discus-item__name Катериночка Мяуковская

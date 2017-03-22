@@ -15,7 +15,7 @@ block content
         aside.user-page__sidebar.user-sidebar
           .user-sidebar__head
             .user-sidebar__status Эксперт
-            .user-sidebar__avatar-container.avatar.avatar_120
+            .user-sidebar__avatar-container.avatar.avatar_120_man
               img.user-sidebar__avatar
           .user-sidebar__body
             .user-sidebar__user Катериночка Мяуковская
@@ -27,7 +27,7 @@ block content
           .user-sidebar__menu.user-menu
             ul.user-menu__list
               - var menuItem = ["Активность", "Отзыв", "Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
-              - var menuLink = ["activity", "reviews", "photos", "follow", "follow", "events", "favorites"]
+              - var menuLink = ["activity", "reviews", "photos", "follow", "ifollow", "events", "favorites"]
               - for (var i = 0; i < 7; i++)
                 li.user-menu__item
                   a.user-menu__link(href='user/#{menuLink[i]}.html')= menuItem[i]

@@ -23,9 +23,11 @@ block content
             form.auth__login.login
               h2.login__title Вход через электронную почту
               .login__email.input-box
-                input.text-input.input-box__input(type='text', placeholder='Придумайте пароль', pattern=".*", required)
+                .login__help.help.help_small.help_light.help_right
+                  p.help__text Введите электронную почту
+                input.text-input.input-box__input(type='text', placeholder='e-mail', pattern=".*", required)
               .login__password.input-box
-                input.text-input.input-box__input(type='text', placeholder='Подтвердите пароль введя его еще раз', pattern=".*", required)
+                input.text-input.input-box__input(type='text', placeholder='Пароль', pattern=".*", required)
               a.login__forgot Забыли пароль?
               button.button.button_first.login__in Войти
               span.login__extra.clearfix

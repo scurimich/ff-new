@@ -10,7 +10,7 @@ gulp.task('png-sprites', function() {
     .pipe(plumber())
     .pipe(spritesmith({
       imgName: 'img/categories.png',
-      cssName: 'styles/sprites/categories-sprite.less',
+      cssName: 'sprites/categories-sprite.less',
       padding: 10
     }))
     .pipe(gulp.dest('./app/'));
@@ -19,7 +19,7 @@ gulp.task('png-sprites', function() {
     .pipe(plumber())
     .pipe(spritesmith({
       imgName: 'img/socials.png',
-      cssName: 'styles/sprites/socials-sprite.less',
+      cssName: 'sprites/socials-sprite.less',
       padding: 10
     }))
     .pipe(gulp.dest('./app/'));
@@ -28,7 +28,7 @@ gulp.task('png-sprites', function() {
     .pipe(plumber())
     .pipe(spritesmith({
       imgName: 'img/avatars.png',
-      cssName: 'styles/sprites/avatars-sprite.less',
+      cssName: 'sprites/avatars-sprite.less',
       padding:10
     }))
     .pipe(gulp.dest('./app/'));

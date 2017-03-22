@@ -1,6 +1,6 @@
 @import 'constants.less';
 @import 'common.less';
-@import '../sprites/avatars-sprite.less';
+@import '../../sprites/avatars-sprite.less';
 
 
 .title {
@@ -593,8 +593,20 @@
     }
   }
 
+  &_right {
+    &:before {
+      background-color: @white;
+      content: '';
+      position: absolute;
+      top: 48%;
+      left: -2px;
+      transform: rotate(135deg) translate(-25%, 25%);
+    }
+  }
+
   &_light {
     color: @help-light-color;
+    background-color: @white;
     box-shadow: 0 1px 3px 0 @help-light-shadow;
     
     &.help_down {
@@ -608,6 +620,13 @@
       &:before {
         border: 4px solid @help-light-back;
         box-shadow: 2px 2px 3px -1px @help-light-shadow;
+      }
+    }
+
+    &.help_right {
+      &:before {
+        border: 4px solid @help-light-back;
+        box-shadow: 1px 1px 3px -1px @help-light-shadow;
       }
     }
   }
@@ -702,7 +721,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 4px;
-  background: @background-color;
+  background-color: #E7E8EA;
 
   &:before {
       content: '';
@@ -779,7 +798,7 @@
 .avatar {
   position: relative;
   border-radius: 50%;
-  background: @background-color;
+  background-color: #E7E8EA;
 
   &:before {
       content: '';
@@ -1006,5 +1025,9 @@
 }
 
 .loupe {
-  .svg-icon(18px, 18px, '../assets/search.svg')
+  .svg-icon(18px, 18px, '../assets/search.svg');
+}
+
+.close {
+  .svg-icon(10px, 10px, '../assets/close.svg');
 }

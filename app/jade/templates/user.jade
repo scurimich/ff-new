@@ -8,41 +8,44 @@ html
     link(rel='preload', href='../css/vendor.css', as='style', onload="this.rel='stylesheet'")
     link(rel='preload', href='../css/main.css', as='style', onload="this.rel='stylesheet'")
   body
-    include ../_common/special-header.jade
-    .container 
-      main.user-page
-        .user-page__bread
-          ul.breadcrumbs
-            li.breadcrumbs__item
-              a.breadcrumbs__link Главная
-            li.breadcrumbs__item
-              a.breadcrumbs__link Мероприятия Волгограда
-        aside.user-page__sidebar.user-sidebar
-          .user-sidebar__head
-            .user-sidebar__status Эксперт
-            .user-sidebar__avatar-container.avatar.avatar_120
-              img.user-sidebar__avatar
-          .user-sidebar__body
-            .user-sidebar__user Катериночка Мяуковская
-            .user-sidebar__city Россия, Волгоград
-            .user-sidebar__subscribe
-              .sticker-button
-                button.button.button_subscr.sticker-button__button Подписаться
-                span.sticker 667
-          .user-sidebar__menu.user-menu
-            ul.user-menu__list
-              li.user-menu__item
-                a.user-menu__link.user-menu__link_active Активность
-              - var menuItem = ["Отзыв", "Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
-              - var menuLink = ["reviews", "photos", "follow", "follow", "events", "favorites"]
-              - for (var i = 0; i < 6; i++)
-                li.user-menu__item
-                  a.user-menu__link(href='#{menuLink[i]}.html')= menuItem[i]
-              li.user-menu__item
-                a.user-menu__link(href='notifications.html')
-                  | Уведомления 
-                  span.user-menu__new +12 новых
-        block content
+    .wrapper
+      include ../_common/special-header.jade
+      .main
+        .container 
+          main.user-page
+            .user-page__bread
+              ul.breadcrumbs
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Главная
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Мероприятия Волгограда
+            aside.user-page__sidebar.user-sidebar
+              .user-sidebar__head
+                .user-sidebar__status Эксперт
+                .user-sidebar__avatar-container.avatar.avatar_120_man
+                  img.user-sidebar__avatar
+              .user-sidebar__body
+                .user-sidebar__user Катериночка Мяуковская
+                .user-sidebar__city Россия, Волгоград
+                .user-sidebar__subscribe
+                  .sticker-button
+                    button.button.button_subscr.sticker-button__button Подписаться
+                    span.sticker 667
+              .user-sidebar__menu.user-menu
+                ul.user-menu__list
+                  li.user-menu__item
+                    a.user-menu__link.user-menu__link_active Активность
+                  - var menuItem = ["Отзыв", "Фотографии", "Подписчики", "Я подписан", "События и акции", "Закладки"]
+                  - var menuLink = ["reviews", "photos", "follow", "ifollow", "events", "favorites"]
+                  - for (var i = 0; i < 6; i++)
+                    li.user-menu__item
+                      a.user-menu__link(href='#{menuLink[i]}.html')= menuItem[i]
+                  li.user-menu__item
+                    a.user-menu__link(href='notifications.html')
+                      | Уведомления 
+                      span.user-menu__new +12 новых
+            block content
+      include ../_common/footer.jade
     script(src='../js/vendor/loadCSS.js', async)
     script(src='../js/vendor/loadCSS.polyfill.js', async)
     script(src='../js/vendor/jquery.min.js', async)

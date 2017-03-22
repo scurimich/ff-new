@@ -176,7 +176,7 @@ block content
 
   section.new-place
     .new-place__header
-      .new-place__avatar-container.avatar.avatar_48
+      .new-place__avatar-container.avatar.avatar_48_man
         img.new-place__avatar
       .new-place__description
         span.new-place__title
@@ -203,7 +203,7 @@ block content
 
   section.new-review
     .new-review__header
-      .new-review__avatar-container.avatar.avatar_48
+      .new-review__avatar-container.avatar.avatar_48_man
         img.new-review__avatar
       .new-review__description
         span.new-review__title
@@ -264,7 +264,7 @@ block content
       ul.np-comments__list
         - for (var x = 0; x < 3; x++)
           li.np-comments__item.np-comment
-            .np-comment__avatar-container.avatar.avatar_24
+            .np-comment__avatar-container.avatar.avatar_24_man
               img.np-comment__avatar
             .np-comment__body
               .np-comment__name Катериночка Мяуковская
@@ -274,13 +274,13 @@ block content
                 .np-comment__likes
                   | 42 
                   span.np-comment__like
-      .np-comments__write.np-write
-        .np-write__avatar-container.avatar.avatar_24
+      .np-comments__write.np-write#commenting-parent
+        .np-write__avatar-container.avatar.avatar_24_man
           img.np-write__avatar
         form.np-write__form
-          input.np-write__input(type='text', placeholder='Написать комментарий')
-        .np-write__writing.clearfix
-          span.np-write__char-counter 0 из 319 символов
+          input.np-write__input#commenting-input(type='text', placeholder='Написать комментарий', maxlength='319')
+        .np-write__writing.clearfix#commenting-foot
+          span.np-write__char-counter#commenting-count 0 из 319 символов
           button.button.button_first.np-write__send Отправить
 
   .block
@@ -328,7 +328,7 @@ block content
     .day-review__topic.topic
       span.topic__name отзыв дня
     .day-review__body
-      .day-review__avatar-container.avatar.avatar_48
+      .day-review__avatar-container.avatar.avatar_48_man
         img.day-review__avatar
       .day-review__descr
         span.day-review__name Катериночка Мяуковская
@@ -377,7 +377,7 @@ block content
     ul.discussions__list
       - for (var x = 0; x < 3; x++)
         li.discussions__item.discus-item
-          .discus-item__avatar-container.avatar.avatar_48
+          .discus-item__avatar-container.avatar.avatar_48_man
             img.discus-item__avatar
           .discus-item__body
             span.discus-item__name Катериночка Мяуковская

@@ -8,23 +8,26 @@ html
     link(rel='preload', href='../css/vendor.css', as='style', onload="this.rel='stylesheet'")
     link(rel='preload', href='../css/main.css', as='style', onload="this.rel='stylesheet'")
   body
-    include ../_common/special-header.jade
-  .container
-    main.user-edit
-      .user-edit__breadcrumbs
-        ul.breadcrumbs
-          li.breadcrumbs__item
-            a.breadcrumbs__link Главная
-          li.breadcrumbs__item
-            a.breadcrumbs__link Редактирование профиля
-      .user-edit__main
-        block content
-      aside.user-edit__sidebar.ue-menu
-        ul.ue-menu__list
-          li.ue-menu__item
-            a.ue-menu__link(href='profile.html') Основная информация
-          li.ue-menu__item
-            a.ue-menu__link(href='password.html') Безопасность
+    .wrapper
+      include ../_common/special-header.jade
+      .main
+        .container
+          main.user-edit
+            .user-edit__breadcrumbs
+              ul.breadcrumbs
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Главная
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Редактирование профиля
+            .user-edit__main
+              block content
+            aside.user-edit__sidebar.ue-menu
+              ul.ue-menu__list
+                li.ue-menu__item
+                  a.ue-menu__link(href='profile.html') Основная информация
+                li.ue-menu__item
+                  a.ue-menu__link(href='password.html') Безопасность
+      include ../_common/footer.jade
     script(src='../js/vendor/loadCSS.js', async)
     script(src='../js/vendor/loadCSS.polyfill.js', async)
     script(src='../js/vendor/jquery.min.js', async)

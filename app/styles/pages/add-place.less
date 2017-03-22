@@ -5,13 +5,16 @@
 
 .add-place {
   padding-top: 19px;
+  padding-bottom: 20px;
 
   &__breadcrumbs {
     margin-bottom: 15px;
   }
 
   &__main {
-    .white-block;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(69, 69, 69, .41);
+    background-color: @white;
     padding: 36px 24px 26px 24px;
   }
 
@@ -29,7 +32,7 @@
   &__steps {
     list-style: none;
     font-size: 0;
-    margin-left: -30px;
+    margin-left: -24px;
     margin-right: -5px;
     margin-bottom: 35px;
   }
@@ -47,7 +50,11 @@
     color: rgba(28, 26, 24, .2);
     border-top: 6px solid @background-color;
 
-    &:before {
+    &:first-child {
+      padding-left: 20px;
+    }
+
+    &:not(:first-child):before {
       position: absolute;
       top: -6px;
       left: -4px;
@@ -115,6 +122,7 @@
     letter-spacing: -.1px;
     color: @lighter-text;
     text-decoration: underline;
+    cursor: pointer;
   }
 
   &__next {
