@@ -124,8 +124,9 @@ $(function() {
     },
 
     closeModal: function(e) {
-      if($(e.target).is('#modal-close') || ($(e.target).is('#modal')))
-        $('#modal').removeClass('active');
+      if(($(e.target).is('#modal-close') || $(e.target).is('#modal-sub')) ||
+        ($(e.target).is('#modal')) && !$(e.target).find('#modal-sub').length)
+        return $('#modal').removeClass('active');
     }
 
   };

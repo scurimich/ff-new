@@ -60,7 +60,7 @@ block content
                 .photogallery__like-icon
                 span.photogallery__like-text Мне нравится
 
-    .modal.active#modal(data-id='modal-report')
+    .modal#modal(data-id='modal-report')
       .modal__window.modal__window_wd
         .modal__head.clearfix
           span.modal__title Обращение в техподдержку
@@ -79,5 +79,5 @@ block content
             textarea.textarea.ta-box__ta(placeholder='Ваш текст')
         .modal__foot.clearfix
           .modal__actions
-            button.modal__subaction Отмена
+            button.modal__subaction#modal-sub Отмена
             button.button.button_first.modal__main-action Отправить

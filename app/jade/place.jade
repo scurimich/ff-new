@@ -108,8 +108,8 @@ block content
                   p.discus-item__text.text(data-expand-words='12')
                     | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
                     a.discus-item__more.expand-text Читать полностью
-      .place-page__back#modal(data-id='modal-error')
-        .place-page__popup.modal
+      .modal#modal(data-id='modal-error')
+        .modal__window
           .modal__head.clearfix
             span.modal__title Неточность в описании
             .modal__close#modal-close
@@ -119,7 +119,7 @@ block content
               textarea.textarea.ta-box__ta(placeholder='Ваш текст')
           .modal__foot.clearfix
             .modal__actions
-              button.modal__subaction Отмена
+              button.modal__subaction#modal-sub Отмена
               button.button.button_first.modal__main-action Отправить
 
 block scripts
