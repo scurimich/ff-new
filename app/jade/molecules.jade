@@ -93,11 +93,7 @@ block content
         label.checkbox-box__label(for='checkbox4') Заголовок
   .block
     h2 Лента активности, главки
-    .activity.clearfix
-      .activity__likes
-        a.activity__like
-        span.activity__number 138
-      a.activity__share
+    include molecules/activity.jade
     .topic
       span.topic__name chapter
   .block

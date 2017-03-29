@@ -15,7 +15,7 @@ header.front-header
       .front-header__logo.logo
         a.logo__link
           img.logo__img(src='img/logo-foxy.svg', width='180')
-      span.front-header__title Поиск компаний и услуг в @cityname
+      h1.front-header__title Поиск компаний и услуг в @cityname
       form.front-header__search.clearfix
         input.front-header__input(type='text', value="Кафе, хинкальная или spa-салон")
         ul.front-header__input-popup.search-popup
@@ -25,10 +25,5 @@ header.front-header
               a.search-popup__link
                 span.search-popup__name= item
                 span.search-popup__address Волгоград, ул. Мира, 2
-        .front-header__select
-          select.select
-            option Днепрокуранск-на-Ирне
-            option Ростов
-            option Россия
-            option Рукавишниково
+        input.front-header__city
         button.front-header__button Поиск

@@ -1,0 +1,52 @@
+.new-promo
+  .new-promo__header.clearfix
+    .new-promo__image-container.place.place_48
+      img.new-promo__image
+    .new-promo__description
+      span.new-promo__title
+        a.new-promo__link Название места: 
+        | акция
+      time.new-promo__date(datetime='2017-01-04T18:31') 4 января в 18:31
+    .new-promo__subscribe
+      .sticker-button
+        button.button.button_subscr.sticker-button__button Подписаться
+        span.sticker 667
+  .new-promo__body
+    h3.new-promo__name.title_lg Второй кекс в подарок
+    time.new-promo__promo-date(datetime='2017-02-27T19:00') Воскресенье, 27 февраля 2017г, в 19:00
+    .new-promo__follow
+      .sticker-button
+        button.button.button_second.button_watch.sticker-button__button Следить
+        span.sticker 667
+    p.new-promo__text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)
+    .new-promo__photo-container
+      img.new-promo__photo
+  .new-promo__footer
+    .activity.clearfix
+      .activity__likes
+        a.activity__like
+        span.activity__number 138
+      a.activity__share
+  .new-promo__comments.np-comments
+    a.np-comments__more Показать все 18 комментариев
+    ul.np-comments__list
+      - for (var x = 0; x < 3; x++)
+        li.np-comments__item.np-comment
+          .np-comment__avatar-container.avatar.avatar_24_man
+            img.np-comment__avatar
+          .np-comment__body
+            .np-comment__name Катериночка Мяуковская
+            .np-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+            .np-comment__info.clearfix
+              time.np-comment__time(datetime='2017-01-18') 18 января 2017
+              .np-comment__likes
+                | 42 
+                span.np-comment__like
+    .np-comments__write.np-write#commenting-parent
+      .np-write__avatar-container.avatar.avatar_24_man
+        img.np-write__avatar
+      form.np-write__form
+        input.np-write__input#commenting-input(type='text', placeholder='Написать комментарий', maxlength='319')
+      .np-write__writing.clearfix#commenting-foot
+        span.np-write__char-counter#commenting-count 0 из 319 символов
+        button.button.button_first.np-write__send Отправить

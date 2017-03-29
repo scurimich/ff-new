@@ -14,6 +14,7 @@ $(function() {
       $('.head-user').click(this.profile);
       $('.head-cats__item_more').click(this.more);
       $('#commenting-input').focus(this.npWrite);
+      $('#commenting-input').focusout(this.npClose);
       $('#commenting-input').on('keydown keyup', this.npWriting);
       $('[data-popup*="modal"]').click(this.openModal);
       $(document).on('click', this.closeModal);
@@ -103,10 +104,20 @@ $(function() {
     },
 
     npWrite: function() {
+      console.log('+')
       var input = $(this);
       var footer = input.parents('#commenting-parent').find('#commenting-foot');
       footer.slideDown(100, function() {
         footer.addClass('active');
+      });
+    },
+
+    npClose: function() {
+      console.log('-')
+      var input = $(this);
+      var footer = input.parents('#commenting-parent').find('#commenting-foot');
+      footer.slideUp(200, function() {
+        footer.removeClass('active');
       });
     },
 

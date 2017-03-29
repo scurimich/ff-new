@@ -1,6 +1,7 @@
 @import 'constants.less';
 @import 'common.less';
 @import '../../sprites/avatars-sprite.less';
+@import '../../sprites/socials-sprite.less';
 
 
 .title {
@@ -655,6 +656,38 @@
     font-size: 12px;
     line-height: 18px;
     color: inherit;
+  }
+
+  &__socials {
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__social {
+    .ib-top;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__social-link {
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    &_g {
+      .sprite(@google);
+    }
+
+    &_fb {
+      .sprite(@facebook);
+    }
+
+    &_vk {
+      .sprite(@vkontakte);
+    }
   }
 }
 

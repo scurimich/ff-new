@@ -1,0 +1,13 @@
+.blog
+  .blog__topic.topic
+    span.topic__name наш блог
+  a.blog__more Другие записи в блоге
+  ul.blog__list
+    - for (var x = 0; x < 3; x++)
+      li.blog__item
+        a.blog__photo-container
+          img.blog__photo
+        .blog__descr
+          .blog__info
+            time.blog__date 26 сент 2017
+            span.blog__text Тонкости выбора ботинок для горных лыж
