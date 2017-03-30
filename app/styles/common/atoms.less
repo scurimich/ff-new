@@ -320,14 +320,15 @@
     color: @tab-color;
     text-decoration: none;
     cursor: pointer;
+    border-bottom: 3px solid @white;
 
     &:hover:not(&_active) {
-      border-bottom: 3px solid rgba(245, 139, 0, .4);
+      border-color: rgba(245, 139, 0, .4);
     }
 
     &_active {
       color: @tab-color-active;
-      border-bottom: 3px solid @tab-border-bottom;
+      border-color: @tab-border-bottom;
       cursor: auto;
 
     }
