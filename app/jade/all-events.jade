@@ -12,17 +12,8 @@ block content
             a.breadcrumbs__link Главная
           li.breadcrumbs__item
             a.breadcrumbs__link Акции и события Волгограда
-      .all-events__categories.cat-filter
-        h1.cat-filter__title Акции и события Волгограда
-        ul.cat-filter__list
-          li.cat-filter__item
-            button.tag.tag_active Все
-              span.tag__number 17
-          - for (var x = 0; x < 14; x++)
-            li.cat-filter__item
-              button.tag Тег
-                span.tag__number 17
-        .cat-filter__other все 18 категорий
+      .all-events__categories
+        include ./organisms/categories
       .all-events__tabs-block
         ul.all-events__tabs.tabs
           li.tabs__item

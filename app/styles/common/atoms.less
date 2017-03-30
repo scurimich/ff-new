@@ -321,10 +321,15 @@
     text-decoration: none;
     cursor: pointer;
 
+    &:hover:not(&_active) {
+      border-bottom: 3px solid rgba(245, 139, 0, .4);
+    }
+
     &_active {
       color: @tab-color-active;
       border-bottom: 3px solid @tab-border-bottom;
       cursor: auto;
+
     }
   }
 
@@ -332,7 +337,7 @@
     font-family: @font;
     font-weight: 400;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 16px;
     letter-spacing: -.4px;
     color: @lighter-text;
     opacity: .5;

@@ -29,6 +29,8 @@ $(function() {
 
       $('[id=activity-share]').click(this.showShare);
       $(document).click(this.hideShare);
+
+      $('#catfilter-switcher').click(this.switchCats);
     },
 
     plugins: function() {
@@ -172,6 +174,14 @@ $(function() {
     hideShare: function(e) {
       if (!$(e.target).is('#activity-share') && !$(e.target).is('#activity-socials'))
         $('[id=activity-socials]').removeClass('active');
+    },
+
+    switchCats: function() {
+      var button = $(this);
+      var text = button.text();
+      var filter = button.parents('#cat-filter');
+      filter.find('ul.active').removeClass('active').siblings('ul').addClass('active');
+      button.text(button.attr('data-alt')).attr('data-alt', text);
     }
 
   };

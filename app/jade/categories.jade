@@ -42,19 +42,10 @@ block content
               span.top-places__name Ресторан Волгоград
               span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
 
-      .categories__categories.cat-filter
-        h1.cat-filter__title Кафе и рестораны Волгограда
-        ul.cat-filter__list
-          li.cat-filter__item
-            button.tag.tag_active Тег
-              span.tag__number 17
-          - for (var x = 0; x < 14; x++)
-            li.cat-filter__item
-              button.tag Тег
-                span.tag__number 17
-        .cat-filter__other все 18 категорий
-      .categories__body
+      .categories__categories
+        include ./organisms/categories
 
+      .categories__body
         section.categories__places.places
           ul.places__list
             li.places__item.placecard

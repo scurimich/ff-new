@@ -739,6 +739,7 @@
 
 .day-review {
   width: 300px;
+  position: relative;
 
   &__topic {
     margin-bottom: 16px;
@@ -1027,5 +1028,87 @@
     letter-spacing: -.09px;
     color: @links-color;
     cursor: pointer;
+  }
+}
+
+.cat-filter {
+  .white-block;
+  box-sizing: border-box;
+  padding: 26px 22px 0 18px;
+  
+  &__title {
+    margin-bottom: 23px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    font-size: 0;
+    margin-right: -10px;
+    margin-bottom: 12px;
+
+    &.active {
+      display: block;
+    }
+
+    &_all {
+      columns: 4;
+    }
+  }
+
+  &__item {
+    .ib-top;
+    margin-right: 10px;
+    margin-bottom: 12px;
+
+    &_all {
+      display: block;
+    }
+  }
+
+  &__other {
+    display: block;
+    text-align: center;
+    padding: 10px 8px 7px 8px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @secondary-color;
+    text-transform: uppercase;
+    border-top: 1px solid @border-color;
+    cursor: pointer;
+  }
+
+  &__link {
+    display: block;
+    padding-left: 12px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @lighter-text;
+    cursor: pointer;
+
+    &_active, &:hover {
+      padding-left: 0;
+      color: @text-color;
+
+      &:before {
+        content: '';
+        .ib-mid;
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: @text-color;
+      }
+    }
   }
 }
