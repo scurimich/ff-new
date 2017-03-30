@@ -30,8 +30,8 @@ header.header
           li.head-cats__item
             a.head-cats__link.head-cats__link_ease Развлечения и досуг
           li.head-cats__item.head-cats__item_more
-            a.head-cats__link.head-cats__link_more  Еще
-            ul.head-cats__sublist
+            a.head-cats__link.head-cats__link_more(data-popup = 'click', data-href='#head-subcats')  Еще
+            ul.head-cats__sublist#head-subcats(data-popup = 'window')
               li.head-cats__subitem.head-subitem
                 a.head-subitem__link.head-subitem__link_delivery Доставка
               li.head-cats__subitem.head-subitem
@@ -47,9 +47,9 @@ header.header
               li.head-cats__subitem.head-subitem
                 a.head-subitem__link.head-subitem__link_animals Животные
     .header__social
-      .header__notifications.head-notifs
+      .header__notifications.head-notifs(data-popup = 'click', data-href='#head-notifs')
         span.head-notifs__number 5
-        .head-notifs__popup
+        .head-notifs__popup#head-notifs(data-popup = 'window')
           h5.head-notifs__title Уведомления
           ul.head-notifs__list
             - for (var i = 0; i < 5; i++)
@@ -64,10 +64,10 @@ header.header
                   time.user-notif__date(datetime='2017-01-17') 17 января 2017
                   span.user-notif__status.user-notif__status_popup
           .head-notifs__more Показать всё
-      .header__user.head-user
+      .header__user.head-user(data-popup = 'click', data-href='#head-profile')
         .head-user__photo-container.avatar.avatar_36_man
           img.head-user__photo
-        .head-user__profile
+        .head-user__profile#head-profile(data-popup = 'window')
           .head-user__user
             .head-user__photo-container.avatar.avatar_48_man
               img.head-user__photo

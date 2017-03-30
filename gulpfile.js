@@ -17,7 +17,7 @@ var sprites = require('./gulpfiles/sprites.js');
 var paths = {
   styles: './app/styles/**/*.less',
   mainLess: './app/styles/*.less',
-  jade: ['./app/jade/*.jade', './app/jade/add-place/*', './app/jade/place/*', './app/jade/user/*', './app/jade/user-edit/*'],
+  jade: ['./app/jade/**/*.jade', '!./app/jade/organisms/*', '!./app/jade/_common/*', '!./app/jade/atoms/*', '!./app/jade/molecules/*', '!./app/jade/templates/*'],
   jadeWatch: './app/jade/**/*.jade',
   js: './app/js/**/*.js',
   jsVendors: './app/js/vendor/*.js',

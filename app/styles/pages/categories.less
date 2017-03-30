@@ -28,7 +28,7 @@
   }
 
   &__other {
-    margin-bottom: 47px;
+    margin-bottom: 43px;
     text-align: center;
   }
 
@@ -66,6 +66,25 @@
 
   &__discussions {
     margin-bottom: 24px;
+  }
+
+  &__info {
+    margin-bottom: 42px;
+
+    &-title {
+      display: block;
+      margin-bottom: 10px;
+      font-family: @font;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 28px;
+      letter-spacing: -.1px;
+      color: @text-color;
+    }
+
+    &-text {
+
+    }
   }
 }
 
@@ -229,6 +248,8 @@
     line-height: 1.4;
     letter-spacing: -.07px;
     color: @text-color;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__info {
@@ -242,6 +263,15 @@
     letter-spacing: -.31px;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  &__address {
+    &:before {
+      content: '(';
+    }
+    &:after {
+      content: ')';
+    }
   }
 
   &__offers {
@@ -264,6 +294,7 @@
       .ib-mid;
       width: 13px;
       height: 15px;
+      margin-bottom: 2px;
       margin-right: 3px;
       background: url(../assets/price.svg) no-repeat;
       background-size: 13px 15px;
@@ -276,6 +307,7 @@
       .ib-mid;
       width: 16px;
       height: 11px;
+      margin-bottom: 2px;
       margin-right: 2px;
       background: url(../assets/menu.svg) no-repeat;
       background-size: 16px 11px;
@@ -284,7 +316,7 @@
 
   &__review {
     display: block;
-    height: 30px;
+    height: 31px;
     margin-bottom: 22px;
     font-family: @font;
     font-weight: 400;
@@ -298,7 +330,7 @@
     }
 
     &_first {
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
   }
 
@@ -325,7 +357,6 @@
 
   &__reviews {
     .ib-mid;
-    margin-top: 1px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -337,7 +368,7 @@
 
   &__schedule {
     float: right;
-    margin-top: 3px;
+    margin-top: 2px;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -350,8 +381,8 @@
 
 
 .filters {
+  .white-block;
   padding: 23px 20px 24px 20px;
-  background-color: @white;
 
   &__topic {
     margin-bottom: 26px;

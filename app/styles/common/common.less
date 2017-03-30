@@ -77,6 +77,10 @@ textarea {
 
 .rating {
 
+  &:not([data-rateit-readonly=true]) {
+    cursor: pointer;
+  }
+
   &_12 {
     .rateit-range {
       background: url(../assets/raiting-off.svg);
