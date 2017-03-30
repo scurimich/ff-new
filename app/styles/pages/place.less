@@ -281,6 +281,10 @@
     border-bottom: none;
     border-radius: 2px 2px 0 0;
 
+    &.active {
+      border-color: @icons-color;
+    }
+
 
     &-text {
       .ib-top;
@@ -302,6 +306,16 @@
     width: 100%;
     height: 77px;
     border-radius: 0 0 2px 2px;
+  }
+
+  &__button {
+    float: right;
+    display: none;
+    margin-top: 12px;
+
+    &.active {
+      .ib-top;
+    }
   }
 }
 
@@ -380,6 +394,18 @@
     height: 4px;
     background: url(../assets/dots.svg) no-repeat;
     background-size: 18px 4px;
+    cursor: pointer;
+  }
+
+  &__support {
+    position: absolute;
+    display: none;
+    top: 12px;
+    right: -21px;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__name {

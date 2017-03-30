@@ -20,6 +20,12 @@ $(function() {
 
       $('[data-popup*="modal"]').click(this.openModal);
       $(document).on('click', this.closeModal);
+
+      $('[id=review-other]').click(this.showReviewTooltip);
+      $(document).click(this.hideReviewTooltip);
+
+      $('#add-review textarea').focus(this.showAddReview);
+      $('#add-review textarea').focusout(this.hideAddReview);
     },
 
     plugins: function() {
@@ -128,7 +134,32 @@ $(function() {
     closeModal: function(e) {
       if(($(e.target).is('#modal-close') || $(e.target).is('#modal-sub')) ||
         ($(e.target).is('#modal')) && !$(e.target).find('#modal-sub').length)
-        return $('#modal').removeClass('active');
+        $('[id=modal]').removeClass('active');
+    },
+
+    showReviewTooltip: function() {
+      $(this).find('#review-tooltip').toggleClass('active');
+    },
+
+    hideReviewTooltip: function(e) {
+      if (!$(e.target).is('[id=review-tooltip]') && !$(e.target).is('[id=review-other]'))
+        $('[id=review-tooltip]').removeClass('active');
+    },
+
+    showAddReview: function() {
+      var ta = $(this);
+      ta.addClass('active');
+      ta.prev().addClass('active');
+      ta.next().addClass('active');
+    },
+
+    hideAddReview: function() {
+      var ta = $(this);
+      if (!ta.val().length) {
+        ta.removeClass('active');
+        ta.prev().removeClass('active');
+        ta.next().removeClass('active');
+      }
     }
 
   };

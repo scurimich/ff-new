@@ -63,11 +63,12 @@ block content
         p.placepage-ad__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу … 
     section.place-overview__add-review.placepage-add-review
       h2.placepage-add-review__title Оставьте отзыв
-      form.placepage-add-review__form
+      form.placepage-add-review__form.clearfix#add-review
         .placepage-add-review__rating
           .placepage-add-review__rating-text Оцените это место
           span.placepage-add-review__rating-stars.rating
         textarea.placepage-add-review__ta.textarea(placeholder='Вам понравилось? Напишите')
+        button.placepage-add-review__button.button.button_first#add-review-button Отправить
     section.place-overview__reviews.placepage-reviews
       .placepage-reviews__title Отзывы 
         span.placepage-reviews__number 189
@@ -78,7 +79,9 @@ block content
               .placepage-review__avatar-container.avatar.avatar_48_woman
                 img.placepage-review__avatar
               .placepage-review__body
-                .placepage-review__other
+                .placepage-review__other#review-other
+                  .placepage-review__support.help.help_small.help_light.help_down.help_support#review-tooltip
+                    a.help__link(data-popup='modal-support') Пожаловаться
                 .placepage-review__name Катериночка Мяуковская
                 .placepage-review__info
                   span.placepage-review__subs 73 подписчика

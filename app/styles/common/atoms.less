@@ -531,13 +531,14 @@
   border-radius: 2px;
   border: 1px solid @ta-border;
 
+
   &:disabled {
     opacity: .5;
     color: @ta-disabled-color;
     background-color: @ta-disabled-back;
   }
 
-  &:focus {
+  &:focus, &.active {
     border-color: @ta-active-border;
     color: @ta-active-color;
   }
@@ -639,6 +640,13 @@
     }
   }
 
+  &_support {
+    &:before {
+      left: initial;
+      right: 24px;
+    }
+  }
+
   &__title {
     display: block;
     margin: 0 0 6px;
@@ -655,6 +663,22 @@
     font-size: 12px;
     line-height: 18px;
     color: inherit;
+  }
+
+  &__link {
+    display: block;
+    padding: 7px 40px 10px 8px;
+    margin: -2px 0 -3px 0;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    color: @text-color;
+    letter-spacing: -.3px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @background-color;
+    }
   }
 
   &__socials {
