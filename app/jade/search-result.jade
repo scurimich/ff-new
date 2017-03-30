@@ -13,7 +13,7 @@ block content
           li.breadcrumbs__item
             a.breadcrumbs__link Результаты поиска
       .search__head
-        .search__title Вы искали: «Ресторан онегин»
+        h1.search__title Вы искали: «Ресторан онегин»
         .search__found Найдено 3 места в Днепрокуранса-на-ирне
       .search__body
         section.search__places.places
@@ -74,65 +74,16 @@ block content
                       span.placecard__schedule Ежедневно с 08:00 до 23:00
         .search__more
           button.button.button_other Показать больше мест
-        section.search__new-places.new-places
-          .new-places__topic.topic
-            span.topic__name новые места на foxy
-          ul.new-places__list
-            - for (var x = 0; x < 3; x++)
-              li.new-places__item
-                a.new-places__photo-container
-                  img.new-places__photo
-                .new-places__body
-                  .new-places__info
-                    span.new-places__name Ресторан Волгоград
-                    span.new-places__rating.rating(
-                      data-rateit-readonly='true'
-                      data-rateit-value='3.5'
-                      )
+        section.search__new-places
+          include ./organisms/new-places
       aside.search__sidebar
         .search__map#map
-        .search__city-events.city-events
-          .city-events__topic.topic
-            span.topic__name мероприятия волгограда
-          .city-events__body
-            ul.city-events__list
-              - for (var x = 0; x < 5; x++)
-                li.city-events__item.city-event
-                  .city-event__image-container.place.place_48
-                    img.city-event__image
-                  .city-event__body
-                    span.city-event__name Berkeley Restaurant Week
-                    span.city-event__place Cinnabon
-                    time.city-event__dates 26 сент 2017 — 28 окт 2018
-          .city-events__footer
-            a.city-events__more Все мероприятия
-        .search__blog.blog
-          .blog__topic.topic
-            span.topic__name наш блог
-          ul.blog__list
-            - for (var x = 0; x < 3; x++)
-              li.blog__item
-                a.blog__photo-container
-                  img.blog__photo
-                .blog__descr
-                  .blog__info
-                    time.blog__date 26 сент 2017
-                    span.blog__text Тонкости выбора ботинок для горных лыж
-        .search__discussions.discussions
-          .discussions__topic.topic
-            span.topic__name обсуждения
-          a.discussions__more Все обсуждения
-          ul.discussions__list
-            - for (var x = 0; x < 3; x++)
-              li.discussions__item.discus-item
-                .discus-item__avatar-container.avatar.avatar_48_man
-                  img.discus-item__avatar
-                .discus-item__body
-                  span.discus-item__name Катериночка Мяуковская
-                  span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                  p.discus-item__text.text(data-expand-words='12')
-                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-                    a.discus-item__more.expand-text Читать полностью
+        .search__city-events
+          include ./organisms/city-events
+        .search__blog
+          include ./organisms/blog
+        .search__discussions
+          include ./organisms/discussions
 
 
 block scripts

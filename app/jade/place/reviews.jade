@@ -36,21 +36,8 @@ block content
                     .placepage-review__like
                     .placepage-review__share
         span.placepage-reviews__more Показать ещё
-    section.place-reviews__new-places.new-places
-      .new-places__topic.topic
-        span.topic__name новые места на foxy
-      ul.new-places__list
-        - for (var x = 0; x < 3; x++)
-          li.new-places__item
-            a.new-places__photo-container
-              img.new-places__photo
-            .new-places__body
-              .new-places__info
-                span.new-places__name Ресторан Волгоград
-                span.new-places__rating.rating(
-                  data-rateit-readonly='true'
-                  data-rateit-value='3.5'
-                  )
+    section.place-reviews__new-places
+      include ./organisms/new-places
 
 block sidebar
   .place-page__rating.place-rating#rating

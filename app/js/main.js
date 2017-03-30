@@ -14,9 +14,9 @@ $(function() {
       $('[data-popup=click]').click(this.popupShow);
       $(document).click(this.popupClose);
 
-      $('#commenting-input').focus(this.npWrite);
-      $('#commenting-input').focusout(this.npClose);
-      $('#commenting-input').on('keydown keyup', this.npWriting);
+      $('[id=commenting-input]').focus(this.npWrite);
+      $('[id=commenting-input]').focusout(this.npClose);
+      $('[id=commenting-input]').on('keydown keyup', this.npWriting);
 
       $('[data-popup*="modal"]').click(this.openModal);
       $(document).on('click', this.closeModal);
@@ -24,8 +24,11 @@ $(function() {
       $('[id=review-other]').click(this.showReviewTooltip);
       $(document).click(this.hideReviewTooltip);
 
-      $('#add-review textarea').focus(this.showAddReview);
-      $('#add-review textarea').focusout(this.hideAddReview);
+      $('[id=add-review] textarea').focus(this.showAddReview);
+      $('[id=add-review] textarea').focusout(this.hideAddReview);
+
+      $('[id=activity-share]').click(this.showShare);
+      $(document).click(this.hideShare);
     },
 
     plugins: function() {
@@ -160,6 +163,15 @@ $(function() {
         ta.prev().removeClass('active');
         ta.next().removeClass('active');
       }
+    },
+
+    showShare: function() {
+      $(this).siblings('#activity-socials').toggleClass('active');
+    },
+
+    hideShare: function(e) {
+      if (!$(e.target).is('#activity-share') && !$(e.target).is('#activity-socials'))
+        $('[id=activity-socials]').removeClass('active');
     }
 
   };

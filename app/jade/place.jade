@@ -66,48 +66,12 @@ block content
               a.place-contacts__site-link datasite.ru
           a.place-contacts__owners Для владельцев
           a.place-contacts__fix(data-popup='modal-error') Исправить неточность
-        .place-page__city-events.city-events
-          .city-events__topic.topic
-            span.topic__name мероприятия волгограда
-          .city-events__body
-            ul.city-events__list
-              - for (var x = 0; x < 5; x++)
-                li.city-events__item.city-event
-                  .city-event__image-container.place.place_48
-                    img.city-event__image
-                  .city-event__body
-                    span.city-event__name Berkeley Restaurant Week
-                    span.city-event__place Cinnabon
-                    time.city-event__dates 26 сент 2017 — 28 окт 2018
-          .city-events__footer
-            a.city-events__more Все мероприятия
-        .place-page__blog.blog
-          .blog__topic.topic
-            span.topic__name наш блог
-          ul.blog__list
-            - for (var x = 0; x < 3; x++)
-              li.blog__item
-                a.blog__photo-container
-                  img.blog__photo
-                .blog__descr
-                  .blog__info
-                    time.blog__date 26 сент 2017
-                    span.blog__text Тонкости выбора ботинок для горных лыж
-        .place-page__discussions.discussions
-          .discussions__topic.topic
-            span.topic__name обсуждения
-          a.discussions__more Все обсуждения
-          ul.discussions__list
-            - for (var x = 0; x < 3; x++)
-              li.discussions__item.discus-item
-                .discus-item__avatar-container.avatar.avatar_48_man
-                  img.discus-item__avatar
-                .discus-item__body
-                  span.discus-item__name Катериночка Мяуковская
-                  span.discus-item__info Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename
-                  p.discus-item__text.text(data-expand-words='12')
-                    | Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … 
-                    a.discus-item__more.expand-text Читать полностью
+        .place-page__city-events
+          include ./organisms/city-events
+        .place-page__blog
+          include ./organisms/blog
+        .place-page__discussions
+          include ./organisms/discussions
       .modal#modal(data-id='modal-error')
         .modal__window
           .modal__head.clearfix
