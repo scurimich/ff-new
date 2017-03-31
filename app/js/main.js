@@ -9,11 +9,13 @@ $(function() {
     },
 
     startValues: {
-      sideOffset: $('aside').offset().top
+      // sideOffset: $('aside').offset().top
     },
 
     listeners: function() {
       $('.expand-text').click(expandText);
+
+      $('.select-box_multiple').on('click', '.cancel', this.clearMultiselect);
 
       $('[data-popup=click]').click(this.popupShow);
       $(document).click(this.popupClose);
@@ -41,8 +43,13 @@ $(function() {
 
     plugins: function() {
       $('.select').selectric({
-        onChange: this.selectricDarken,
-        onInit: this.selectricDarken
+        onChange: this.selectricOnChange,
+        onInit: this.selectricOnChange,
+        multiple: {
+          separator: ', ',
+          keepMenuOpen: true,
+          maxLabelEntries: false
+        }
       });
 
       $('.rating').rateit({
@@ -82,13 +89,33 @@ $(function() {
       });
     },
     
-    selectricDarken: function(select) {
+    selectricOnChange: function(select) {
       var $select = $(select);
       var disabled = $select.find('option[data-disabled]').text();
       var selectric = $select.parents('.selectric-select');
+      var labelParent = selectric.find('.selectric');
       var label = selectric.find('.selectric .label');
       label.removeClass('disabled');
       if(label.text() === disabled) label.addClass('disabled');
+      if($select.attr('multiple') && $select.val().length) {
+        labelParent.find('.button').addClass('active');
+        if (!labelParent.find('.cancel').length) {
+          labelParent.append('<div class="cancel"><span></span></div>');
+        }
+      } else {
+        labelParent.find('.button').removeClass('active');
+        labelParent.find('.cancel').remove();
+      }
+    },
+
+    clearMultiselect: function(e) {
+      e.preventDefault();
+      var button = $(this);
+      var select = button.parents('.selectric-select').find('.selectric-items li.selected');
+      select.each(function() {
+        $(this).click();
+      });
+      $(this).remove();
     },
 
     popupShow: function() {
@@ -191,16 +218,16 @@ $(function() {
     },
 
     sidebarBehavior: function(e) {
-      var sidebar = $('aside');
-      var windowHeight = +window.innerHeight;
-      var windowPosition = +window.pageYOffset;
-      var sideStartOffset = this.startValues.sideOffset;
-      var sideHeight = +$('aside').height();
-      var sideOffset = +$('aside').offset().top;
-      var footerOffset = $('.footer').offset().top;
-      var footerHeight = $('.footer').outerHeight();
-      if (sideHeight >= windowHeight) {
-      }
+      // var sidebar = $('aside');
+      // var windowHeight = +window.innerHeight;
+      // var windowPosition = +window.pageYOffset;
+      // var sideStartOffset = this.startValues.sideOffset;
+      // var sideHeight = +$('aside').height();
+      // var sideOffset = +$('aside').offset().top;
+      // var footerOffset = $('.footer').offset().top;
+      // var footerHeight = $('.footer').outerHeight();
+      // if (sideHeight >= windowHeight) {
+      // }
 
       // if (sideHeight < windowHeight) {
       //   if (windowPosition > sideOffset) {

@@ -50,6 +50,12 @@ block content
           option(default, data-disabled) Не выбрано
           - for (var x = 1; x <= 5; x++)
             option(value='#{x}') Пункт #{X}
+      .select-box.select-box_multiple
+        label.select-box__label Заголовок
+        select.select-box__select.select(multiple)
+          option(default, data-disabled) Не выбрано
+          - for (var x = 1; x <= 5; x++)
+            option(value='#{x}') Пункт #{X}
       .radio-box
         .radio.radio-box__radio
           input.radio__input#radio1(type='radio', name='radio', checked)
