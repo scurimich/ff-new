@@ -119,13 +119,13 @@ $(function() {
     },
 
     popupShow: function() {
-      $('[data-popup=window].active').css('opacity', 0).removeClass('active');
       var time = 100;
       var href = $(this).attr('data-href')
       var hidden = $(href);
+      $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active');
       if (hidden.is('.active')) {
-        hidden.animate({'opacity': '0'}, time);
-        setTimeout(function() {hidden.removeClass('active');}, time * 5);
+        hidden.animate({'opacity': '0'}, 'fast');
+        setTimeout(function() {hidden.removeClass('active');}, time);
         return;
       }
       hidden.addClass('active').animate({'opacity': '1'}, time);
