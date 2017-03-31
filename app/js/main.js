@@ -22,7 +22,7 @@ $(function() {
       $('[id=commenting-input]').focusout(this.npClose);
       $('[id=commenting-input]').on('keydown keyup', this.npWriting);
 
-      $('[data-popup*="modal"]').click(this.openModal);
+      $('[data-modal*="modal"]').click(this.openModal);
       $(document).on('click', this.closeModal);
 
       $('[id=review-other]').click(this.showReviewTooltip);
@@ -138,7 +138,7 @@ $(function() {
 
     openModal: function(e) {
       e.preventDefault();
-      var popup = $(this).attr('data-popup');
+      var popup = $(this).attr('data-modal');
       $('[data-id=' + popup + ']').addClass('active');
     },
 
