@@ -202,31 +202,31 @@ $(function() {
       if (sideHeight >= windowHeight) {
       }
 
-      if (sideHeight < windowHeight) {
-        if (windowPosition > sideOffset) {
-          sidebar.addClass('fixed');
-          sidebar.removeClass('absolute');
-        }
-        if (windowPosition <= sideStartOffset) {
-          sidebar.removeClass('fixed');
-          sidebar.removeClass('absolute');
-        }
-        if (sideOffset + sideHeight >= footerOffset) {
-          sidebar.removeClass('fixed');
-          sidebar.addClass('absolute');
-          sidebar.css({
-            'bottom': footerHeight
-          });
-        }
-        if (windowPosition + sideHeight < footerOffset &&
-          windowPosition > sideStartOffset) {
-          sidebar.removeClass('absolute');
-          sidebar.addClass('fixed');
-          sidebar.css({
-            'bottom': 'initial'
-          });
-        }
-      }
+      // if (sideHeight < windowHeight) {
+      //   if (windowPosition > sideOffset) {
+      //     sidebar.addClass('fixed');
+      //     sidebar.removeClass('absolute');
+      //   }
+      //   if (windowPosition <= sideStartOffset) {
+      //     sidebar.removeClass('fixed');
+      //     sidebar.removeClass('absolute');
+      //   }
+      //   if (sideOffset + sideHeight >= footerOffset) {
+      //     sidebar.removeClass('fixed');
+      //     sidebar.addClass('absolute');
+      //     sidebar.css({
+      //       'bottom': footerHeight
+      //     });
+      //   }
+      //   if (windowPosition + sideHeight < footerOffset &&
+      //     windowPosition > sideStartOffset) {
+      //     sidebar.removeClass('absolute');
+      //     sidebar.addClass('fixed');
+      //     sidebar.css({
+      //       'bottom': 'initial'
+      //     });
+      //   }
+      // }
 
       // console.log(windowHeight, windowPosition);
       // console.log(sideStartOffset, sideHeight, sideOffset);

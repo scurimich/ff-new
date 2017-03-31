@@ -780,7 +780,26 @@
   }
 }
 
+.notif {
+  width: 849px;
+  padding: 16px 23px 14px 18px;
+  border-radius: 3px;
+  border: 1px solid @error-color;
 
+  
+  &__text {
+    float: left;
+    font-family: @font;
+    font-size: 14px;
+    letter-spacing: .45px;
+    color: @error-color;
+  }
+
+  &__close {
+    float: right;
+    .svg-icon(14px, 14px, '../assets/close/close-EB433D.svg');
+  }
+}
 
 .place {
   overflow: hidden;
