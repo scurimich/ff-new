@@ -98,12 +98,12 @@ $(function() {
       label.removeClass('disabled');
       if(label.text() === disabled) label.addClass('disabled');
       if($select.attr('multiple') && $select.val().length) {
-        labelParent.find('.button').addClass('active');
+        labelParent.addClass('active');
         if (!labelParent.find('.cancel').length) {
           labelParent.append('<div class="cancel"><span></span></div>');
         }
       } else {
-        labelParent.find('.button').removeClass('active');
+        labelParent.removeClass('active');
         labelParent.find('.cancel').remove();
       }
     },
