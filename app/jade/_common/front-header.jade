@@ -25,5 +25,40 @@ header.front-header
               a.search-popup__link
                 span.search-popup__name= item
                 span.search-popup__address Волгоград, ул. Мира, 2
-        input.front-header__city
+        .front-header__city-container
+          span.front-header__world
+          input.front-header__city(type='text', value="Днепрокуранск-на-Ирне")
         button.front-header__button Поиск
+        ul.front-header__city-popup.city-popup
+          - var search = ['Слиffки Общества', 'Онегин', 'Маруся'];
+          each item in search
+            li.city-popup__item
+              a.city-popup__link
+                span.city-popup__name= item
+      .front-header__categories.head-cats
+        ul.head-cats__list
+          li.head-cats__item
+            a.head-cats__link.head-cats__link_rests Кафе и рестораны
+          li.head-cats__item
+            a.head-cats__link.head-cats__link_night Ночная жизнь
+          li.head-cats__item
+            a.head-cats__link.head-cats__link_hotels Отели
+          li.head-cats__item
+            a.head-cats__link.head-cats__link_ease Развлечения и досуг
+          li.head-cats__item.head-cats__item_more
+            a.head-cats__link.head-cats__link_more(data-popup = 'click', data-href='#head-subcats')  Еще
+            ul.head-cats__sublist#head-subcats(data-popup = 'window')
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_delivery Доставка
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_stores Магазины
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_presents Торжество и подарки
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_fitness Фитнес
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_beauty Красота и СПА
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_medicine Медицина
+              li.head-cats__subitem.head-subitem
+                a.head-subitem__link.head-subitem__link_animals Животные
