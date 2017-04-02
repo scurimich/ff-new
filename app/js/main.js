@@ -17,8 +17,7 @@ $(function() {
 
       $('.select-box_multiple').on('click', '.cancel', this.clearMultiselect);
 
-      $('[data-popup=click]').click(this.popupShow);
-      $(document).click(this.popupClose);
+      $(document).click(this.popup);
 
       $('[id=commenting-input]').focus(this.npWrite);
       $('[id=commenting-input]').focusout(this.npClose);
@@ -118,25 +117,28 @@ $(function() {
       $(this).remove();
     },
 
-    popupShow: function() {
+    popup: function(e) {
+      var click = $(e.target);
       var time = 100;
-      var href = $(this).attr('data-href')
-      var hidden = $(href);
-      $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active');
-      if (hidden.is('.active')) {
-        hidden.animate({'opacity': '0'}, 'fast');
-        setTimeout(function() {hidden.removeClass('active');}, time);
+      if (click.is('[data-popup=click]') || click.parents('[data-popup=click]').length) {
+        var href = click.attr('data-href') || click.parents('[data-popup=click]').attr('data-href');
+        $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active');
+        var hidden = $(href);
+        if (hidden.is('.active')) {
+          hidden.stop().animate({'opacity': '0'}, time, function() {
+            hidden.removeClass('active');
+          });
+        } else {
+          hidden.addClass('active').stop().animate({'opacity': '1'}, time);
+        }
         return;
       }
-      hidden.addClass('active').animate({'opacity': '1'}, time);
-    },
-
-    popupClose: function(e) {
-      if (!$(e.target).is('[data-popup=window], [data-popup=click]') && !$(e.target).parents('[data-popup=window]').length && !$(e.target).parents('[data-popup=click]').length) {
+      if (!click.is('[data-popup=window]') && !click.parents('[data-popup=window]').length) {
+        console.log('-')
         var more = $('[data-popup=window]');
         var time = 100;
-        more.animate({'opacity': '0'}, time);
-        setTimeout(function() {more.removeClass('active');}, time * 5);
+        more.stop().animate({'opacity': '0'}, time);
+        setTimeout(function() {more.removeClass('active');}, time * 2);
       }
     },
 
