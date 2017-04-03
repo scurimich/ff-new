@@ -8,10 +8,6 @@ $(function() {
       hideText();
     },
 
-    startValues: {
-      // sideOffset: $('aside').offset().top
-    },
-
     listeners: function() {
       $('.expand-text').click(expandText);
 
@@ -36,8 +32,6 @@ $(function() {
       $(document).click(this.hideShare);
 
       $('#catfilter-switcher').click(this.switchCats);
-
-      $(window).scroll(this.sidebarBehavior.bind(this));
     },
 
     plugins: function() {
@@ -134,7 +128,6 @@ $(function() {
         return;
       }
       if (!click.is('[data-popup=window]') && !click.parents('[data-popup=window]').length) {
-        console.log('-')
         var more = $('[data-popup=window]');
         var time = 100;
         more.stop().animate({'opacity': '0'}, time);
@@ -217,49 +210,6 @@ $(function() {
       var filter = button.parents('#cat-filter');
       filter.find('ul.active').removeClass('active').siblings('ul').addClass('active');
       button.text(button.attr('data-alt')).attr('data-alt', text);
-    },
-
-    sidebarBehavior: function(e) {
-      // var sidebar = $('aside');
-      // var windowHeight = +window.innerHeight;
-      // var windowPosition = +window.pageYOffset;
-      // var sideStartOffset = this.startValues.sideOffset;
-      // var sideHeight = +$('aside').height();
-      // var sideOffset = +$('aside').offset().top;
-      // var footerOffset = $('.footer').offset().top;
-      // var footerHeight = $('.footer').outerHeight();
-      // if (sideHeight >= windowHeight) {
-      // }
-
-      // if (sideHeight < windowHeight) {
-      //   if (windowPosition > sideOffset) {
-      //     sidebar.addClass('fixed');
-      //     sidebar.removeClass('absolute');
-      //   }
-      //   if (windowPosition <= sideStartOffset) {
-      //     sidebar.removeClass('fixed');
-      //     sidebar.removeClass('absolute');
-      //   }
-      //   if (sideOffset + sideHeight >= footerOffset) {
-      //     sidebar.removeClass('fixed');
-      //     sidebar.addClass('absolute');
-      //     sidebar.css({
-      //       'bottom': footerHeight
-      //     });
-      //   }
-      //   if (windowPosition + sideHeight < footerOffset &&
-      //     windowPosition > sideStartOffset) {
-      //     sidebar.removeClass('absolute');
-      //     sidebar.addClass('fixed');
-      //     sidebar.css({
-      //       'bottom': 'initial'
-      //     });
-      //   }
-      // }
-
-      // console.log(windowHeight, windowPosition);
-      // console.log(sideStartOffset, sideHeight, sideOffset);
-      // console.log(footerHeight, footerOffset);
     }
 
   };
