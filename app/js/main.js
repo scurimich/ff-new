@@ -6,6 +6,13 @@ $(function() {
       this.listeners();
       this.plugins();
       hideText();
+      this.sidebarBehavior();
+    },
+
+    startValues: {
+      sideOffset: $('aside').offset().top,
+      sideHeight: $('aside').height(),
+      windowPrevPosition: $(window).scrollTop()
     },
 
     listeners: function() {
@@ -32,6 +39,8 @@ $(function() {
       $(document).click(this.hideShare);
 
       $('#catfilter-switcher').click(this.switchCats);
+
+      $(window).scroll(this.sidebarBehavior.bind(this));
     },
 
     plugins: function() {
@@ -210,6 +219,80 @@ $(function() {
       var filter = button.parents('#cat-filter');
       filter.find('ul.active').removeClass('active').siblings('ul').addClass('active');
       button.text(button.attr('data-alt')).attr('data-alt', text);
+    },
+
+    sidebarBehavior: function(e) {
+      var sidebar = $('aside');
+      var next = sidebar.next();
+      var footer = $('.footer');
+      var windowHeight = +$(window).height();
+      var windowPrevPosition = this.startValues.windowPrevPosition;
+      var windowPosition = +$(window).scrollTop();
+      var windowDiffPositions = windowPosition - windowPrevPosition;
+      var sideStartOffset = this.startValues.sideOffset;
+      var sideHeight = this.startValues.sideHeight;
+      var sideWidth = +sidebar.outerWidth() + parseInt(sidebar.css('margin-right'));
+      var sideOffset = +sidebar.offset().top;
+      var footerOffset = footer.offset().top;
+      var footerHeight = footer.outerHeight();
+
+      if (sideHeight < windowHeight) {
+        if (windowPosition > sideStartOffset && windowPosition + sideHeight < footerOffset) {
+          if (next.length) next.css('margin-left', sideWidth);
+          sidebar.addClass('fixed');
+          sidebar.removeClass('absolute');
+        }
+        if (windowPosition <= sideStartOffset) {
+          sidebar.removeClass('fixed');
+          sidebar.removeClass('absolute');
+          next.attr('style', '');
+        }
+        if (windowPosition > sideStartOffset && windowPosition + sideHeight >= footerOffset) {
+          if (next.length) next.css('margin-left', sideWidth);
+          sidebar.removeClass('fixed');
+          sidebar.addClass('absolute');
+          sidebar.css('bottom', footerHeight);
+        }
+      } else {
+        if (windowDiffPositions > 0) {
+          if ((windowPosition + windowHeight) >= footerOffset) {
+            sidebar.removeClass('fixed fixed_tall');
+            sidebar.addClass('absolute');
+            sidebar.css('bottom', footerHeight);
+          } else if (windowPosition + windowHeight >= sideOffset + sideHeight) {
+            if (next.length) next.css('margin-left', sideWidth);
+            sidebar.addClass('fixed fixed_tall');
+            sidebar.removeClass('absolute');
+            sidebar.css('top', '');
+            sidebar.css('bottom', 0);
+          } else if ((windowPosition + windowHeight) > sideOffset) {
+            sidebar.removeClass('fixed');
+            sidebar.addClass('absolute');
+            sidebar.css('bottom', '');
+            sidebar.css('top', sideOffset);
+          }
+        }
+        if (windowDiffPositions < 0) {
+          if (windowPosition <= sideStartOffset) {
+            sidebar.removeClass('fixed fixed_tall');
+            sidebar.removeClass('absolute');
+            next.attr('style', '');
+            sidebar.attr('style', '');
+          } else if (windowPosition <= sideOffset) {
+            if (next.length) next.css('margin-left', sideWidth);
+            sidebar.addClass('fixed fixed_tall');
+            sidebar.removeClass('absolute');
+            sidebar.css('bottom', '');
+            sidebar.css('top', 0);
+          } else if (windowPosition < sideOffset + sideHeight) {
+            sidebar.removeClass('fixed fixed_tall');
+            sidebar.addClass('absolute');
+            sidebar.css('bottom', '');
+            sidebar.css('top', sideOffset);
+          }
+        }
+      }
+      this.startValues.windowPrevPosition = windowPosition;
     }
 
   };
