@@ -51,27 +51,28 @@ block content
               button.button.button_second В закладки
             .place-descr__review
               button.button.button_first Оставить отзыв
-      .place-page__body
-      aside.place-page__sidebar
-        .place-page__contacts.place-contacts
-          .place-contacts__map#map
-          .place-contacts__body
-            .place-contacts__main
-              .place-contacts__name Ресторан Волгоград
-              p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
-            .place-contacts__schedule Пт-сб 08:00-24:00 
-              a.place-contacts__schedule-link Все расписание
-            .place-contacts__phone +7 988 025 14 61
-            .place-contacts__site 
-              a.place-contacts__site-link datasite.ru
-          a.place-contacts__owners Для владельцев
-          a.place-contacts__fix(data-modal='modal-error') Исправить неточность
-        .place-page__city-events
-          include ./organisms/city-events
-        .place-page__blog
-          include ./organisms/blog
-        .place-page__discussions
-          include ./organisms/discussions
+      .place-page__main
+        .place-page__body
+        aside.place-page__sidebar
+          .place-page__contacts.place-contacts
+            .place-contacts__map#map
+            .place-contacts__body
+              .place-contacts__main
+                .place-contacts__name Ресторан Волгоград
+                p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
+              .place-contacts__schedule Пт-сб 08:00-24:00 
+                a.place-contacts__schedule-link Все расписание
+              .place-contacts__phone +7 988 025 14 61
+              .place-contacts__site 
+                a.place-contacts__site-link datasite.ru
+            a.place-contacts__owners Для владельцев
+            a.place-contacts__fix(data-modal='modal-error') Исправить неточность
+          .place-page__city-events
+            include ./organisms/city-events
+          .place-page__blog
+            include ./organisms/blog
+          .place-page__discussions
+            include ./organisms/discussions
       .modal#modal(data-id='modal-error')
         .modal__window
           .modal__head.clearfix

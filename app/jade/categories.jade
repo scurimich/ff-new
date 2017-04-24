@@ -44,46 +44,10 @@ block content
 
       .categories__categories
         include ./organisms/categories
-
-      .categories__body
-        section.categories__places.places
-          ul.places__list
-            li.places__item.placecard
-              .placecard__photo-container
-                img.placecard__photo
-              .placecard__body
-                .placecard__title BellevilleCafe
-                .placecard__info
-                  span.placecard__type Ресторан, кафе, бар 
-                  span.placecard__address Волгоград, ул. Мира, 12
-                .placecard__offers
-                  span.placecard__prices 500-800 руб
-                  span.placecard__menu Европейская, азиатская, русская, украинская ...
-                .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
-                .placecard__footer.clearfix
-                  .placecard__social
-                    span.placecard__rating-text 17 из 238
-                    span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                    a.placecard__reviews 18 отзывов
-                  span.placecard__schedule Ежедневно с 08:00 до 23:00
-            li.places__item.placecard
-              .placecard__photo-container
-                img.placecard__photo
-              .placecard__body
-                .placecard__title Spa-салон «Веселые каркульки»
-                .placecard__info
-                  span.placecard__type Ресторан, кафе, бар 
-                  span.placecard__address Волгоград, ул. Мира, 12
-                .placecard__offers
-                .placecard__review
-                  button.placecard__review-button.button.button_second.button_watch Написать первый отзыв
-                .placecard__footer.clearfix
-                  .placecard__social
-                    span.placecard__rating-text 17 из 238
-                    span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                    a.placecard__reviews 0 отзывов
-                  span.placecard__schedule Круглосуточно
-            - for (var i = 0; i < 4; i++)
+      .categories__main
+        .categories__body
+          section.categories__places.places
+            ul.places__list
               li.places__item.placecard
                 .placecard__photo-container
                   img.placecard__photo
@@ -102,73 +66,109 @@ block content
                       span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
                       a.placecard__reviews 18 отзывов
                     span.placecard__schedule Ежедневно с 08:00 до 23:00
-        .categories__other
-          button.button.button_other Показать больше мест
-        .categories__info
-          h2.categories__info-title Заголовок
-          p.categories__info-text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа».
-        section.categories__new-places
-          include ./organisms/new-places
-      aside.categories__sidebar
-        .categories__map#map
-        .categories__filters.filters
-          .filters__topic.topic
-            span.topic__name фильтры
-          ul.filters__list
-            li.filters__item
-              .select-box
-                label.select-box__label Услуги
-                select.select.select-box__select
-                  option(default, data-disabled) Не выбрано
-                  - for (var x = 1; x <= 5; x++)
-                    option(value='#{x}') Пункт #{X}
-            li.filters__item
-              .select-box
-                label.select-box__label Типы кухн
-                select.select.select-box__select
-                  option(default, data-disabled) Не выбрано
-                  - for (var x = 1; x <= 5; x++)
-                    option(value='#{x}') Пункт #{X}
-            li.filters__item
-              ul.filters__sublist
-                li.filters__subitem
-                  .checkbox-box
-                    .checkbox.checkbox-box__checkbox
-                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
-                      label.checkbox__label(for='checkbox2')
-                    label.checkbox-box__label(for='checkbox2') Работает круглосуточно
-                li.filters__subitem
-                  .checkbox-box
-                    .checkbox.checkbox-box__checkbox
-                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox', checked)
-                      label.checkbox__label(for='checkbox2')
-                    label.checkbox-box__label(for='checkbox2') Только новые места
-                li.filters__subitem
-                  .checkbox-box
-                    .checkbox.checkbox-box__checkbox
-                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
-                      label.checkbox__label(for='checkbox2')
-                    label.checkbox-box__label(for='checkbox2') Оплата картой
-                li.filters__subitem
-                  .checkbox-box
-                    .checkbox.checkbox-box__checkbox
-                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
-                      label.checkbox__label(for='checkbox2')
-                    label.checkbox-box__label(for='checkbox2') Парковка
-                li.filters__subitem
-                  .checkbox-box
-                    .checkbox.checkbox-box__checkbox
-                      input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
-                      label.checkbox__label(for='checkbox2')
-                    label.checkbox-box__label(for='checkbox2') Wi-fi
-        .categories__add
-          button.categories__add-button.button.button_main Добавить место
-        .categories__city-events
-          include ./organisms/city-events
-        .categories__blog
-          include ./organisms/blog
-        .categories__discussions
-          include ./organisms/discussions
+              li.places__item.placecard
+                .placecard__photo-container
+                  img.placecard__photo
+                .placecard__body
+                  .placecard__title Spa-салон «Веселые каркульки»
+                  .placecard__info
+                    span.placecard__type Ресторан, кафе, бар 
+                    span.placecard__address Волгоград, ул. Мира, 12
+                  .placecard__offers
+                  .placecard__review
+                    button.placecard__review-button.button.button_second.button_watch Написать первый отзыв
+                  .placecard__footer.clearfix
+                    .placecard__social
+                      span.placecard__rating-text 17 из 238
+                      span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                      a.placecard__reviews 0 отзывов
+                    span.placecard__schedule Круглосуточно
+              - for (var i = 0; i < 4; i++)
+                li.places__item.placecard
+                  .placecard__photo-container
+                    img.placecard__photo
+                  .placecard__body
+                    .placecard__title BellevilleCafe
+                    .placecard__info
+                      span.placecard__type Ресторан, кафе, бар 
+                      span.placecard__address Волгоград, ул. Мира, 12
+                    .placecard__offers
+                      span.placecard__prices 500-800 руб
+                      span.placecard__menu Европейская, азиатская, русская, украинская ...
+                    .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                    .placecard__footer.clearfix
+                      .placecard__social
+                        span.placecard__rating-text 17 из 238
+                        span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                        a.placecard__reviews 18 отзывов
+                      span.placecard__schedule Ежедневно с 08:00 до 23:00
+          .categories__other
+            button.button.button_other Показать больше мест
+          .categories__info
+            h2.categories__info-title Заголовок
+            p.categories__info-text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа».
+          section.categories__new-places
+            include ./organisms/new-places
+        aside.categories__sidebar
+          .categories__map#map
+          .categories__filters.filters
+            .filters__topic.topic
+              span.topic__name фильтры
+            ul.filters__list
+              li.filters__item
+                .select-box
+                  label.select-box__label Услуги
+                  select.select.select-box__select
+                    option(default, data-disabled) Не выбрано
+                    - for (var x = 1; x <= 5; x++)
+                      option(value='#{x}') Пункт #{X}
+              li.filters__item
+                .select-box
+                  label.select-box__label Типы кухн
+                  select.select.select-box__select
+                    option(default, data-disabled) Не выбрано
+                    - for (var x = 1; x <= 5; x++)
+                      option(value='#{x}') Пункт #{X}
+              li.filters__item
+                ul.filters__sublist
+                  li.filters__subitem
+                    .checkbox-box
+                      .checkbox.checkbox-box__checkbox
+                        input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                        label.checkbox__label(for='checkbox2')
+                      label.checkbox-box__label(for='checkbox2') Работает круглосуточно
+                  li.filters__subitem
+                    .checkbox-box
+                      .checkbox.checkbox-box__checkbox
+                        input.checkbox__input#checkbox2(type='checkbox', name='checkbox', checked)
+                        label.checkbox__label(for='checkbox2')
+                      label.checkbox-box__label(for='checkbox2') Только новые места
+                  li.filters__subitem
+                    .checkbox-box
+                      .checkbox.checkbox-box__checkbox
+                        input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                        label.checkbox__label(for='checkbox2')
+                      label.checkbox-box__label(for='checkbox2') Оплата картой
+                  li.filters__subitem
+                    .checkbox-box
+                      .checkbox.checkbox-box__checkbox
+                        input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                        label.checkbox__label(for='checkbox2')
+                      label.checkbox-box__label(for='checkbox2') Парковка
+                  li.filters__subitem
+                    .checkbox-box
+                      .checkbox.checkbox-box__checkbox
+                        input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                        label.checkbox__label(for='checkbox2')
+                      label.checkbox-box__label(for='checkbox2') Wi-fi
+          .categories__add
+            button.categories__add-button.button.button_main Добавить место
+          .categories__city-events
+            include ./organisms/city-events
+          .categories__blog
+            include ./organisms/blog
+          .categories__discussions
+            include ./organisms/discussions
 
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', async)

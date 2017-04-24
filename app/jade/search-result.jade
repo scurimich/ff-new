@@ -15,46 +15,11 @@ block content
       .search__head
         h1.search__title Вы искали: «Ресторан онегин»
         .search__found Найдено 3 места в Днепрокуранса-на-ирне
-      .search__body
-        section.search__places.places
-          ul.places__list
-            li.places__item.placecard
-                .placecard__photo-container
-                  img.placecard__photo
-                .placecard__body
-                  .placecard__title BellevilleCafe
-                  .placecard__info
-                    span.placecard__type Ресторан, кафе, бар 
-                    span.placecard__address Волгоград, ул. Мира, 12
-                  .placecard__offers
-                    span.placecard__prices 500-800 руб
-                    span.placecard__menu Европейская, азиатская, русская, украинская ...
-                  .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
-                  .placecard__footer.clearfix
-                    .placecard__social
-                      span.placecard__rating-text 17 из 238
-                      span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                      a.placecard__reviews 18 отзывов
-                    span.placecard__schedule Ежедневно с 08:00 до 23:00
+      .search__main
+        .search__body
+          section.search__places.places
+            ul.places__list
               li.places__item.placecard
-                .placecard__photo-container
-                  img.placecard__photo
-                .placecard__body
-                  .placecard__title Spa-салон «Веселые каркульки»
-                  .placecard__info
-                    span.placecard__type Ресторан, кафе, бар 
-                    span.placecard__address Волгоград, ул. Мира, 12
-                  .placecard__offers
-                  .placecard__review
-                    button.button.button_second.button_watch Написать первый отзыв
-                  .placecard__footer.clearfix
-                    .placecard__social
-                      span.placecard__rating-text 17 из 238
-                      span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                      a.placecard__reviews 0 отзывов
-                    span.placecard__schedule Круглосуточно
-              - for (var i = 0; i < 4; i++)
-                li.places__item.placecard
                   .placecard__photo-container
                     img.placecard__photo
                   .placecard__body
@@ -72,18 +37,54 @@ block content
                         span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
                         a.placecard__reviews 18 отзывов
                       span.placecard__schedule Ежедневно с 08:00 до 23:00
-        .search__more
-          button.button.button_other Показать больше мест
-        section.search__new-places
-          include ./organisms/new-places
-      aside.search__sidebar
-        .search__map#map
-        .search__city-events
-          include ./organisms/city-events
-        .search__blog
-          include ./organisms/blog
-        .search__discussions
-          include ./organisms/discussions
+                li.places__item.placecard
+                  .placecard__photo-container
+                    img.placecard__photo
+                  .placecard__body
+                    .placecard__title Spa-салон «Веселые каркульки»
+                    .placecard__info
+                      span.placecard__type Ресторан, кафе, бар 
+                      span.placecard__address Волгоград, ул. Мира, 12
+                    .placecard__offers
+                    .placecard__review
+                      button.button.button_second.button_watch Написать первый отзыв
+                    .placecard__footer.clearfix
+                      .placecard__social
+                        span.placecard__rating-text 17 из 238
+                        span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                        a.placecard__reviews 0 отзывов
+                      span.placecard__schedule Круглосуточно
+                - for (var i = 0; i < 4; i++)
+                  li.places__item.placecard
+                    .placecard__photo-container
+                      img.placecard__photo
+                    .placecard__body
+                      .placecard__title BellevilleCafe
+                      .placecard__info
+                        span.placecard__type Ресторан, кафе, бар 
+                        span.placecard__address Волгоград, ул. Мира, 12
+                      .placecard__offers
+                        span.placecard__prices 500-800 руб
+                        span.placecard__menu Европейская, азиатская, русская, украинская ...
+                      .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                      .placecard__footer.clearfix
+                        .placecard__social
+                          span.placecard__rating-text 17 из 238
+                          span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
+                          a.placecard__reviews 18 отзывов
+                        span.placecard__schedule Ежедневно с 08:00 до 23:00
+          .search__more
+            button.button.button_other Показать больше мест
+          section.search__new-places
+            include ./organisms/new-places
+        aside.search__sidebar
+          .search__map#map
+          .search__city-events
+            include ./organisms/city-events
+          .search__blog
+            include ./organisms/blog
+          .search__discussions
+            include ./organisms/discussions
 
 
 block scripts

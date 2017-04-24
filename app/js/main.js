@@ -11,7 +11,7 @@ $(function() {
 
     startValues: {
       sideOffset: $('aside').offset().top,
-      sideHeight: $('aside').height(),
+      sideParentHeight: $('aside').parent().height(),
       windowPrevPosition: $(window).scrollTop()
     },
 
@@ -225,47 +225,55 @@ $(function() {
       var sidebar = $('aside');
       var next = sidebar.next();
       var footer = $('.footer');
-      var windowHeight = +$(window).height();
+      var windowHeight = $(window).height();
       var windowPrevPosition = this.startValues.windowPrevPosition;
-      var windowPosition = +$(window).scrollTop();
+      var windowPosition = $(window).scrollTop();
       var windowDiffPositions = windowPosition - windowPrevPosition;
       var sideStartOffset = this.startValues.sideOffset;
-      var sideHeight = this.startValues.sideHeight;
-      var sideWidth = +sidebar.outerWidth() + parseInt(sidebar.css('margin-right'));
-      var sideOffset = +sidebar.offset().top;
+      var sideHeight = sidebar.height();
+      var sideWidth = sidebar.outerWidth() + parseInt(sidebar.css('margin-right'));
+      var sideOffset = sidebar.offset().top;
+      var sidePaddingTop = sidebar.css('padding-top');
+      var sidePaddingBottom = sidebar.css('padding-bottom');
       var footerOffset = footer.offset().top;
       var footerHeight = footer.outerHeight();
+      var parentHeight = this.startValues.sideParentHeight;
+      var padding = 40;
+      if (parentHeight <= sideHeight) return false;
 
-      if (sideHeight < windowHeight) {
-        if (windowPosition > sideStartOffset && windowPosition + sideHeight < footerOffset) {
+      if (sideHeight + padding * 2 < windowHeight) {
+        if (windowPosition > (sideStartOffset - padding / 2) &&
+          windowPosition + (sideHeight + padding * 1.5) < footerOffset) {
           if (next.length) next.css('margin-left', sideWidth);
           sidebar.addClass('fixed');
           sidebar.removeClass('absolute');
         }
-        if (windowPosition <= sideStartOffset) {
+        if (windowPosition <= (sideStartOffset - padding / 2)) {
           sidebar.removeClass('fixed');
           sidebar.removeClass('absolute');
           next.attr('style', '');
         }
-        if (windowPosition > sideStartOffset && windowPosition + sideHeight >= footerOffset) {
+        if (windowPosition > (sideStartOffset - padding / 2) &&
+          windowPosition + (sideHeight + padding * 1.5) >= footerOffset) {
           if (next.length) next.css('margin-left', sideWidth);
           sidebar.removeClass('fixed');
           sidebar.addClass('absolute');
-          sidebar.css('bottom', footerHeight);
+          sidebar.css('bottom', footerHeight + padding);
         }
       } else {
         if (windowDiffPositions > 0) {
           if ((windowPosition + windowHeight) >= footerOffset) {
             sidebar.removeClass('fixed fixed_tall');
             sidebar.addClass('absolute');
-            sidebar.css('bottom', footerHeight);
-          } else if (windowPosition + windowHeight >= sideOffset + sideHeight) {
+            sidebar.css('bottom', footerHeight + padding);
+          } else if (windowPosition + windowHeight >= sideOffset + sideHeight + padding) {
             if (next.length) next.css('margin-left', sideWidth);
             sidebar.addClass('fixed fixed_tall');
             sidebar.removeClass('absolute');
             sidebar.css('top', '');
-            sidebar.css('bottom', 0);
+            sidebar.css('bottom', padding);
           } else if ((windowPosition + windowHeight) > sideOffset) {
+            if (next.length) next.css('margin-left', sideWidth);
             sidebar.removeClass('fixed');
             sidebar.addClass('absolute');
             sidebar.css('bottom', '');
@@ -273,18 +281,19 @@ $(function() {
           }
         }
         if (windowDiffPositions < 0) {
-          if (windowPosition <= sideStartOffset) {
+          if (windowPosition <= sideStartOffset - padding / 2) {
             sidebar.removeClass('fixed fixed_tall');
             sidebar.removeClass('absolute');
             next.attr('style', '');
             sidebar.attr('style', '');
-          } else if (windowPosition <= sideOffset) {
+          } else if (windowPosition <= sideOffset - padding / 2) {
             if (next.length) next.css('margin-left', sideWidth);
             sidebar.addClass('fixed fixed_tall');
             sidebar.removeClass('absolute');
             sidebar.css('bottom', '');
-            sidebar.css('top', 0);
+            sidebar.css('top', padding / 2);
           } else if (windowPosition < sideOffset + sideHeight) {
+            if (next.length) next.css('margin-left', sideWidth);
             sidebar.removeClass('fixed fixed_tall');
             sidebar.addClass('absolute');
             sidebar.css('bottom', '');

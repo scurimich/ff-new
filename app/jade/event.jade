@@ -14,59 +14,60 @@ block content
             a.breadcrumbs__link Мероприятия Волгограда
           li.breadcrumbs__item
             a.breadcrumbs__link Второй кекс в подарок
-      .event-page__body.event
-        .event__map#map
-        .event__header.clearfix
-          .event__title-block
-            h1.event__title Второй кекс в подарок
-            span.event__type Мероприятие
-          .event__follow.sticker-button
-            button.button.button_second.button_watch.sticker-button__button Следить
-            span.sticker 667
-        .event__body
-          .event__when
-            | Дата проведения: 
-            time.event__date(datetime='2017-03-23') 23 марта 2017
-          .event__where
-            | Место: 
-            a.event__sublink Гуакамоле
-            span.event__address — Глубокоовражная ул., 6, Волгоград, Волгоградская обл., 400087
-          p.event__text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)
-          .event__photo-container
-            img.event__photo
-        .event__footer
-          include molecules/activity
-        .event__comments.event-comments
-          a.event-comments__more Показать все 18 комментариев
-          ul.event-comments__list
-            - for (var x = 0; x < 3; x++)
-              li.event-comments__item.event-comment
-                .event-comment__avatar-container.avatar.avatar_24
-                  img.event-comment__avatar
-                .event-comment__body
-                  .event-comment__name Катериночка Мяуковская
-                  .event-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
-                  .event-comment__info.clearfix
-                    time.event-comment__time(datetime='2017-01-18') 18 января 2017
-                    .event-comment__likes
-                      | 42 
-                      span.event-comment__like
-          .event-comments__write.event-write#commenting-parent
-            .event-write__avatar-container.avatar.avatar_24
-              img.event-write__avatar
-            form.event-write__form
-              input.event-write__input#commenting-input(type='text', placeholder='Написать комментарий')
-            .event-write__writing.clearfix#commenting-foot
-              span.event-write__char-counter#commenting-count 0 из 319 символов
-              button.button.button_first.event-write__send Отправить
+      .event-page__main
+        .event-page__body.event
+          .event__map#map
+          .event__header.clearfix
+            .event__title-block
+              h1.event__title Второй кекс в подарок
+              span.event__type Мероприятие
+            .event__follow.sticker-button
+              button.button.button_second.button_watch.sticker-button__button Следить
+              span.sticker 667
+          .event__body
+            .event__when
+              | Дата проведения: 
+              time.event__date(datetime='2017-03-23') 23 марта 2017
+            .event__where
+              | Место: 
+              a.event__sublink Гуакамоле
+              span.event__address — Глубокоовражная ул., 6, Волгоград, Волгоградская обл., 400087
+            p.event__text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)
+            .event__photo-container
+              img.event__photo
+          .event__footer
+            include molecules/activity
+          .event__comments.event-comments
+            a.event-comments__more Показать все 18 комментариев
+            ul.event-comments__list
+              - for (var x = 0; x < 3; x++)
+                li.event-comments__item.event-comment
+                  .event-comment__avatar-container.avatar.avatar_24
+                    img.event-comment__avatar
+                  .event-comment__body
+                    .event-comment__name Катериночка Мяуковская
+                    .event-comment__text.text В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)
+                    .event-comment__info.clearfix
+                      time.event-comment__time(datetime='2017-01-18') 18 января 2017
+                      .event-comment__likes
+                        | 42 
+                        span.event-comment__like
+            .event-comments__write.event-write#commenting-parent
+              .event-write__avatar-container.avatar.avatar_24
+                img.event-write__avatar
+              form.event-write__form
+                input.event-write__input#commenting-input(type='text', placeholder='Написать комментарий')
+              .event-write__writing.clearfix#commenting-foot
+                span.event-write__char-counter#commenting-count 0 из 319 символов
+                button.button.button_first.event-write__send Отправить
 
-      aside.event-page__sidebar
-        .event-page__city-events
-          include ./organisms/city-events
-        .event-page__blog
-          include ./organisms/blog
-        .event-page__discussions
-          include ./organisms/discussions
+        aside.event-page__sidebar
+          .event-page__city-events
+            include ./organisms/city-events
+          .event-page__blog
+            include ./organisms/blog
+          .event-page__discussions
+            include ./organisms/discussions
 
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', async)
