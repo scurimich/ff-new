@@ -3,6 +3,7 @@
 
   &__top {
     padding-bottom: 15px;
+    position: relative;
   }
 
   &__status {
@@ -33,7 +34,7 @@
 
   &__points {
     float: right;
-    margin-tight: 2px;
+    margin-right: 2px;
     padding: 0 12px 0 8px;
     font-family: @font;
     font-weight: 700;
@@ -42,6 +43,8 @@
     color: @white;
     border-radius: 100px;
     background-color: @primary-green;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   &__bottom {
@@ -70,6 +73,7 @@
     line-height: 27px;
     letter-spacing: -.11px;
     color: @primary-orange;
+    text-decoration: none;
   }
 
   &__type {
@@ -346,5 +350,92 @@
     line-height: 18px;
     letter-spacing: -.11px;
     color: @lighter-text;
+  }
+}
+
+.how-popup {
+  width: 395px;
+  display: none;
+  position: absolute;
+  top: -34px;
+  left: 0;
+  padding: 36px 29px 35px 29px;
+  border-radius: 6px;
+  background-color: @white;
+  box-shadow: 3px 5.196px 32px -6px @black;
+  z-index: 200;
+
+  &.active {
+    display: block;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    width: 11px;
+    height: 0;
+    border-left: 14px solid #fff;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
+
+  &__head {
+    margin-bottom: 25px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+    letter-spacing: .2px;
+  }
+
+  &__body {
+    padding-top: 3px;
+  }
+
+  &__list {
+    margin-top: -20px;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 21px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #d2d2d2;
+    }
+  }
+
+  &__title {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 23.52px;
+    color: #262626;
+  }
+
+  &__points {
+    position: absolute;
+    display: inline-block;
+    top: -3px;
+    right: 7px;
+    text-align: right;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25.77px;
+    letter-spacing: .15px;
+    color: #9eb12d;
+  }
+
+  &__points-text {
+    margin-top: -3px;
+    font-size: 10px;
+    line-height: 25.77px;
+    letter-spacing: .15px;
+    color: #9eb12d;
   }
 }
