@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Add photos</title>
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/windows.css">
+	</head>
+	<body>
+		<div class="upload-photos">
+			<div class="upload-photos__window">
+				<div class="upload-photos__top clearfix">
+					<div class="upload-photos__close"></div><span class="upload-photos__title">Добавление новых фотографий</span><span class="upload-photos__count">Загружено 4 из 5</span>
+				</div>
+				<div class="upload-photos__mid">
+					<div class="upload-photos__dnd add-photos"><span class="add-photos__add-back"></span>
+						<div class="add-photos__add add-photos__add_upload">
+							<button class="button button_second">Загрузите файлы</button>
+						</div><span class="add-photos__title">Перетащите сюда ваши gif-, jpg- или png-фотографии</span><span class="add-photos__weight">До 5 фотографий. Вес каждого файла не больше 7 мегабайт</span>
+					</div>
+					<ul class="upload-photos__list">
+						<li class="upload-photos__item">
+							<div class="upload-photos__photo-container"><img class="upload-photos__photo"></div>
+							<div class="upload-photos__description">
+								<div class="upload-photos__ta ta-box clearfix">
+									<textarea placeholder="Добавьте короткое описание, не больше 100 символов. Это поможет понять что изображено на фотографии. Чтобы все фотографии на фоллоуфокси были подписаны, мы сделали это поле обязательным." class="textarea ta-box__ta"></textarea><span class="upload-photos__delete">Удалить фотографию</span>
+								</div>
+							</div>
+						</li>
+						<li class="upload-photos__item">
+							<div class="upload-photos__photo-container"><img class="upload-photos__photo"></div>
+							<div class="upload-photos__description">
+								<div class="upload-photos__ta ta-box clearfix">
+									<textarea placeholder="Добавьте короткое описание, не больше 100 символов. Это поможет понять что изображено на фотографии. Чтобы все фотографии на фоллоуфокси были подписаны, мы сделали это поле обязательным." value="На фотографии чудесный пай" class="textarea ta-box__ta"></textarea><span class="ta-box__count">27 из 100 символов</span><span class="upload-photos__delete">Удалить фотографию</span>
+								</div>
+							</div>
+						</li>
+						<li class="upload-photos__item">
+							<div class="upload-photos__photo-container"><img class="upload-photos__photo"></div>
+							<div class="upload-photos__description">
+								<div class="upload-photos__ta ta-box clearfix">
+									<textarea placeholder="Добавьте короткое описание, не больше 100 символов. Это поможет понять что изображено на фотографии. Чтобы все фотографии на фоллоуфокси были подписаны, мы сделали это поле обязательным." class="textarea textarea_error ta-box__ta"></textarea><span class="ta-box__error">107 символов - длинно. Сократите текст</span><span class="upload-photos__delete">Удалить фотографию</span>
+								</div>
+							</div>
+						</li>
+						<li class="upload-photos__item">
+							<div class="upload-photos__photo-container"><img class="upload-photos__photo"></div>
+							<div class="upload-photos__description">
+								<div class="upload-photos__ta ta-box clearfix">
+									<textarea placeholder="Добавьте короткое описание, не больше 100 символов. Это поможет понять что изображено на фотографии. Чтобы все фотографии на фоллоуфокси были подписаны, мы сделали это поле обязательным." class="textarea textarea_error ta-box__ta"></textarea><span class="ta-box__error">Добавьте описание, до 100 символов</span><span class="upload-photos__delete">Удалить фотографию</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="upload-photos__bot clearfix">
+					<div class="upload-photos__condits">Загружая фотографии вы принимаете <a class="upload-photos__terms">условия использования</a> Followfoxy</div>
+					<div class="upload-photos__actions">
+						<button class="upload-photos__cancel button button_second">Отменить</button>
+						<button class="upload-photos__add button button_first">Добавить фотографии</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="upload-photos upload-photos_small">
+			<div class="upload-photos__window">
+				<div class="upload-photos__upload">
+					<div class="upload-photos__upload-container">
+						<div class="upload-photos__animation"></div><span class="upload-photos__wait">Фотографии загружаются. Подождите немного</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="upload-photos upload-photos_small">
+			<div class="upload-photos__window">
+				<div class="upload-photos__upload">
+					<div class="upload-photos__dnd add-photos"><span class="add-photos__add-back"></span>
+						<div class="add-photos__add add-photos__add_upload">
+							<button class="button button_second">Загрузите файлы</button>
+						</div><span class="add-photos__title">Перетащите сюда ваши gif-, jpg- или png-фотографии</span><span class="add-photos__weight">До 5 фотографий. Вес каждого файла не больше 7 мегабайт</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/loadCSS.js"></script>
+		<script src="js/vendor/loadCSS.polyfill.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/jquery.rateit.min.js"></script>
+		<script src="js/vendor/jquery.selectric.min.js"></script>
+		<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

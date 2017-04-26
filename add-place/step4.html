@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Add place step 4</title>
+		<link rel="preload" href="../css/vendor.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="../css/main.css" as="style" onload="this.rel='stylesheet'">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__logo logo"><a class="logo__link"><img src="../img/logo-foxy.svg" class="logo__img"></a></div>
+					<div class="header__body">
+						<form class="header__search">
+							<input type="text" value="Кафе, хинкальная или spa-салон" class="header__input">
+							<ul class="header__input-popup search-popup">
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+							</ul><span class="header__world"></span>
+							<input type="text" value="Днепропетровск" class="header__city">
+							<ul class="header__city-popup city-popup">
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Ростов</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Россия</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Рукавишниково</span></a></li>
+							</ul>
+							<button class="header__button"></button>
+						</form>
+						<div class="header__categories head-cats">
+							<ul class="head-cats__list">
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
+								<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
+									<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__social">
+						<div data-popup="click" data-href="#head-notifs" class="header__notifications head-notifs"><span class="head-notifs__number">5</span>
+							<div id="head-notifs" data-popup="window" class="head-notifs__popup">
+								<h5 class="head-notifs__title">Уведомления</h5>
+								<ul class="head-notifs__list">
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="head-notifs__more">Показать всё</div>
+							</div>
+						</div>
+						<div data-popup="click" data-href="#head-profile" class="header__user head-user">
+							<div class="head-user__photo-container avatar avatar_36_man"><img class="head-user__photo"></div>
+							<div id="head-profile" data-popup="window" class="head-user__profile">
+								<div class="head-user__user">
+									<div class="head-user__photo-container avatar avatar_48_man"><img class="head-user__photo"></div>
+									<div class="head-user__info">
+										<div class="head-user__title">Алексей</div>
+										<div class="head-user__address">Волгоград, Россия</div>
+									</div>
+								</div>
+								<ul class="head-user__menu">
+									<li class="head-user__menu-item"><a class="head-user__action">Моя страница</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Закладки</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Редактировать</a></li>
+								</ul><a class="head-user__quit">Выйти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main">
+				<div class="container">
+					<main class="add-place">
+						<div class="add-place__breadcrumbs">
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Добавление нового места на followfoxy</a></li>
+							</ul>
+						</div>
+						<div class="add-place__main">
+							<h1 class="add-place__head">Добавление нового места на followfoxy</h1>
+							<ul class="add-place__steps">
+								<li class="add-place__step add-place__step_passed">Название</li>
+								<li class="add-place__step add-place__step_passed">Адрес</li>
+								<li class="add-place__step add-place__step_passed">Категория</li>
+								<li class="add-place__step add-place__step_active">Информация и фото</li>
+								<li class="add-place__step">Завершение</li>
+							</ul>
+							<form class="add-place__form add-place__form_add-photo">
+								<p class="add-place__detail text"><span class="text text_bold">Укажите более подробную информацию: есть ли wi-fi, парковка? </span>Эта информация ценна для людей, которые собираются посетить место. Они заранее будут знать, смогут ли припарковать автомобиль или расплатиться банковской картой.</p>
+								<div class="add-place__checkboxes">
+									<div class="checkbox-box add-place__checkbox">
+										<div class="checkbox checkbox-box__checkbox">
+											<input id="checkbox1" type="checkbox" name="checkbox" class="checkbox__input">
+											<label for="checkbox1" class="checkbox__label"></label>
+										</div>
+										<label for="checkbox1" class="checkbox-box__label">Оплата картой</label>
+									</div>
+									<div class="checkbox-box add-place__checkbox">
+										<div class="checkbox checkbox-box__checkbox">
+											<input id="checkbox2" type="checkbox" name="checkbox" class="checkbox__input">
+											<label for="checkbox2" class="checkbox__label"></label>
+										</div>
+										<label for="checkbox2" class="checkbox-box__label">Страховка</label>
+									</div>
+									<div class="checkbox-box add-place__checkbox">
+										<div class="checkbox checkbox-box__checkbox">
+											<input id="checkbox3" type="checkbox" name="checkbox" class="checkbox__input">
+											<label for="checkbox3" class="checkbox__label"></label>
+										</div>
+										<label for="checkbox3" class="checkbox-box__label">Wi-fi</label>
+									</div>
+								</div>
+								<p class="add-place__photo-info text"><span class="text text_bold">Загрузите от 1 до 7 фото. </span>Вес каждого файла до 7мб. Подойдут фотографии снятые на камеру мобильного телефона. </p>
+								<div class="add-place__add add-photos"><span class="add-photos__add-back"></span>
+									<div class="add-photos__add">
+										<button class="button button_second">Загрузите файлы</button>
+									</div><span class="add-photos__add-string">или перетащите их мышью</span>
+								</div>
+								<ul class="add-place__added added-photos">
+									<li class="added-photos__item">
+										<div class="added-photos__img-container"><img class="added-photos__img"></div><span class="added-photos__delete">Удалить</span>
+									</li>
+									<li class="added-photos__item">
+										<div class="added-photos__img-container"><img class="added-photos__img"></div><span class="added-photos__delete">Удалить</span>
+									</li>
+								</ul>
+							</form>
+							<div class="add-place__actions clearfix"><a class="add-place__terms">Пользовательское соглашение</a><a href="step5.html" class="add-place__next button button_first">Следующий шаг</a></div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top clearfix">
+						<div class="footer__content">
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
+							</ul>
+							<ul class="footer__submenu">
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
+							</ul>
+						</div>
+						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+					</div>
+					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
+				</div>
+				<div id="modal" data-id="modal-support" class="modal">
+					<div class="modal__window">
+						<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+							<div id="modal-close" class="modal__close"></div>
+						</div>
+						<div class="modal__body">
+							<div class="modal__select select-box">
+								<label class="select-box__label">Выберите причину нарушения</label>
+								<select class="select select-box__select">
+									<option default data-disabled>Не выбрано</option>
+									<option value="1">Пункт </option>
+									<option value="2">Пункт </option>
+									<option value="3">Пункт </option>
+									<option value="4">Пункт </option>
+									<option value="5">Пункт </option>
+								</select>
+							</div>
+							<div class="modal__ta ta-box">
+								<label class="ta-box__label">Текст обращения</label>
+								<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+							</div>
+						</div>
+						<div class="modal__foot clearfix">
+							<div class="modal__actions">
+								<button id="modal-sub" class="modal__subaction">Отмена</button>
+								<button class="button button_first modal__main-action">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="../js/vendor/loadCSS.js" async></script>
+		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
+		<script src="../js/vendor/jquery.min.js" async></script>
+		<script src="../js/vendor/jquery.rateit.min.js" async></script>
+		<script src="../js/vendor/jquery.selectric.min.js" async></script>
+		<script src="../js/vendor/jquery.mCustomScrollbar.concat.min.js" async></script>
+		<script src="../js/main.js" async></script>
+	</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Front page</title>
+		<link rel="preload" href="css/vendor.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="front-header">
+				<div class="front-header__back-container"><img src="img/frontback.jpg" class="front-header__back"></div>
+				<div class="container">
+					<div class="front-header__top clearfix">
+						<ul class="front-header__menu">
+							<li class="front-header__menu-item"><a class="front-header__menu-link">События и акции</a></li>
+							<li class="front-header__menu-item"><a class="front-header__menu-link">Обсуждения</a></li>
+							<li class="front-header__menu-item"><a class="front-header__menu-link">Добавить место</a></li>
+						</ul><a class="front-header__login">Войти</a>
+					</div>
+					<div class="front-header__body">
+						<div class="front-header__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="180" class="logo__img"></a></div>
+						<h1 class="front-header__title">Поиск компаний и услуг в @cityname</h1>
+						<form class="front-header__search clearfix">
+							<input type="text" value="Кафе, хинкальная или spa-салон" class="front-header__input">
+							<ul class="front-header__input-popup search-popup">
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+							</ul>
+							<div class="front-header__city-container"><span class="front-header__world"></span>
+								<input type="text" value="Днепрокуранск-на-Ирне" class="front-header__city">
+							</div>
+							<button class="front-header__button">Поиск</button>
+							<ul class="front-header__city-popup city-popup">
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Слиffки Общества</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Онегин</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Маруся</span></a></li>
+							</ul>
+						</form>
+						<div class="front-header__categories head-cats">
+							<ul class="head-cats__list">
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
+								<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
+									<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main">
+				<div class="container">
+					<main class="front-main">
+						<div class="front-main__body">
+							<div class="front-main__tabs-box">
+								<ul class="front-main__tabs tabs">
+									<li class="tabs__item"><a class="tabs__link tabs__link_active">Все записи</a></li>
+									<li class="tabs__item"><a class="tabs__link">Моя лента</a></li>
+								</ul>
+							</div>
+							<section class="front-main__entry">
+								<div class="content-photo">
+									<div class="content-photo__header clearfix">
+										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
+										</div>
+										<div class="content-photo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__body">
+										<div class="content-photo__photo-block content-photo__photo-block_1">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+									</div>
+									<div class="content-photo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="new-review">
+									<div class="new-review__header">
+										<div class="new-review__avatar-container avatar avatar_48_man"><img class="new-review__avatar"></div>
+										<div class="new-review__description"><span class="new-review__title"><a class="new-review__author">Катериночка мяуковская </a>написала новый отзыв на <a class="new-review__place">Pasta Uno</a></span>
+											<time datetime="2017-01-04T18:31" class="new-review__date">4 января в 18:31</time>
+										</div>
+									</div>
+									<div class="new-review__body">
+										<p data-expand-strings="4" class="new-review__review text"><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-review__rating rating"></span>Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк … Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение! А так в целом круто! Заведение красные десерты и выпечк …</p><a class="new-review__more expand-text">Показать полностью</a>
+									</div>
+									<div class="new-review__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="new-place">
+									<div class="new-place__header">
+										<div class="new-place__avatar-container avatar avatar_48_man"><img class="new-place__avatar"></div>
+										<div class="new-place__description"><span class="new-place__title"><a class="new-place__author">Катериночка мяуковская </a>добавила новое место</span>
+											<time datetime="2017-01-04T18:31" class="new-place__date">4 января в 18:31</time>
+										</div>
+									</div>
+									<div class="new-place__body">
+										<div class="new-place__photo-container"><img class="new-place__photo"></div>
+										<div class="new-place__place-type"><img src="img/categories/restaurant-48x48.png" class="new-place__type-img"></div><a class="new-place__place">Pasta Uno</a>
+										<div class="new-place__info">Кафе <span class="new-place__splitter"></span> Волгоград, Россия</div>
+										<div class="new-place__subscribe">
+											<button class="button button_subscr">Подписаться</button>
+										</div>
+									</div>
+									<div class="new-place__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="new-promo">
+									<div class="new-promo__header clearfix">
+										<div class="new-promo__image-container place place_48"><img class="new-promo__image"></div>
+										<div class="new-promo__description"><span class="new-promo__title"><a class="new-promo__link">Название места: </a>акция</span>
+											<time datetime="2017-01-04T18:31" class="new-promo__date">4 января в 18:31</time>
+										</div>
+										<div class="new-promo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="new-promo__body">
+										<h3 class="new-promo__name title_lg">Второй кекс в подарок</h3>
+										<time datetime="2017-02-27T19:00" class="new-promo__promo-date">Воскресенье, 27 февраля 2017г, в 19:00</time>
+										<div class="new-promo__follow">
+											<div class="sticker-button">
+												<button class="button button_second button_watch sticker-button__button">Следить</button><span class="sticker">667</span>
+											</div>
+										</div>
+										<p class="new-promo__text text">Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)</p>
+										<div class="new-promo__photo-container"><img class="new-promo__photo"></div>
+									</div>
+									<div class="new-promo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="new-promo__comments np-comments"><a class="np-comments__more">Показать все 18 комментариев</a>
+										<ul class="np-comments__list">
+											<li class="np-comments__item np-comment">
+												<div class="np-comment__avatar-container avatar avatar_24_man"><img class="np-comment__avatar"></div>
+												<div class="np-comment__body">
+													<div class="np-comment__name">Катериночка Мяуковская</div>
+													<div class="np-comment__text text">В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)</div>
+													<div class="np-comment__info clearfix">
+														<time datetime="2017-01-18" class="np-comment__time">18 января 2017</time>
+														<div class="np-comment__likes">42 <span class="np-comment__like"></span></div>
+													</div>
+												</div>
+											</li>
+											<li class="np-comments__item np-comment">
+												<div class="np-comment__avatar-container avatar avatar_24_man"><img class="np-comment__avatar"></div>
+												<div class="np-comment__body">
+													<div class="np-comment__name">Катериночка Мяуковская</div>
+													<div class="np-comment__text text">В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)</div>
+													<div class="np-comment__info clearfix">
+														<time datetime="2017-01-18" class="np-comment__time">18 января 2017</time>
+														<div class="np-comment__likes">42 <span class="np-comment__like"></span></div>
+													</div>
+												</div>
+											</li>
+											<li class="np-comments__item np-comment">
+												<div class="np-comment__avatar-container avatar avatar_24_man"><img class="np-comment__avatar"></div>
+												<div class="np-comment__body">
+													<div class="np-comment__name">Катериночка Мяуковская</div>
+													<div class="np-comment__text text">В чащах юга жил был цитрус? Да, но фальшивый экземпляр! (12pt)</div>
+													<div class="np-comment__info clearfix">
+														<time datetime="2017-01-18" class="np-comment__time">18 января 2017</time>
+														<div class="np-comment__likes">42 <span class="np-comment__like"></span></div>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div id="commenting-parent" class="np-comments__write np-write">
+											<div class="np-write__avatar-container avatar avatar_24_man"><img class="np-write__avatar"></div>
+											<form class="np-write__form">
+												<input id="commenting-input" type="text" placeholder="Написать комментарий" maxlength="319" class="np-write__input">
+											</form>
+											<div id="commenting-foot" class="np-write__writing clearfix"><span id="commenting-count" class="np-write__char-counter">0 из 319 символов</span>
+												<button class="button button_first np-write__send">Отправить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="content-photo">
+									<div class="content-photo__header clearfix">
+										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
+										</div>
+										<div class="content-photo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__body">
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+									</div>
+									<div class="content-photo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="content-photo">
+									<div class="content-photo__header clearfix">
+										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
+										</div>
+										<div class="content-photo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__body">
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+											</div>
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="content-photo">
+									<div class="content-photo__header clearfix">
+										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
+										</div>
+										<div class="content-photo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__body">
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-block content-photo__photo-block_4">
+													<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+												</div>
+												<div class="content-photo__photo-block content-photo__photo-block_4">
+													<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+												</div>
+											</div>
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="front-main__entry">
+								<div class="content-photo">
+									<div class="content-photo__header clearfix">
+										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
+										</div>
+										<div class="content-photo__subscribe">
+											<div class="sticker-button">
+												<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__body">
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+										</div>
+										<div class="content-photo__photo-block content-photo__photo-block_2">
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-block content-photo__photo-block_4">
+													<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+												</div>
+												<div class="content-photo__photo-block content-photo__photo-block_4">
+													<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+												</div>
+											</div>
+											<div class="content-photo__photo-block content-photo__photo-block_3">
+												<div class="content-photo__photo-block content-photo__photo-block_4">
+													<div class="content-photo__photo-container"><img class="content-photo__photo"></div>
+												</div>
+												<div class="content-photo__photo-block content-photo__photo-block_4"><a class="content-photo__photos-link">
+														<div class="content-photo__photo-container"><img class="content-photo__photo content-photo__photo_other"></div><span class="content-photo__photos-other">И еще 23 фото</span></a></div>
+											</div>
+										</div>
+									</div>
+									<div class="content-photo__footer">
+										<div class="activity clearfix">
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
+											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+												<ul class="help__socials">
+													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
+													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<div class="front-main__other">
+								<button class="front-main__other-button button button_other">К предыдущим записям</button>
+							</div>
+							<section class="front-main__entry new-places">
+								<div class="new-places__topic topic"><span class="topic__name">новые места на foxy</span></div>
+								<ul class="new-places__list">
+									<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+										<div class="new-places__body">
+											<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+										</div>
+									</li>
+									<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+										<div class="new-places__body">
+											<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+										</div>
+									</li>
+									<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+										<div class="new-places__body">
+											<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+										</div>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<aside class="front-sidebar">
+							<div class="front-sidebar__month-place">
+								<div class="month-place">
+									<div class="month-place__topic topic"><span class="topic__name">заведение месяца</span></div>
+									<div class="month-place__body"><a class="month-place__photo-container"><img class="month-place__photo"></a>
+										<div class="month-place__descr">
+											<div class="month-place__info"><span class="month-place__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="month-place__rating rating"></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="front-sidebar__day-review">
+								<div class="day-review">
+									<div class="day-review__topic topic"><span class="topic__name">отзыв дня</span></div><a class="city-events__more">Eще</a>
+									<div class="day-review__body">
+										<div class="day-review__avatar-container avatar avatar_48_man"><img class="day-review__avatar"></div>
+										<div class="day-review__descr"><span class="day-review__name">Катериночка Мяуковская</span><span class="day-review__info">написала новый отзыв на Bellevillecafe</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="day-review__rating rating"></span>
+											<p data-expand-words="12" class="day-review__text text">
+												 
+												Итальянский кофе, по мне одна из самых вкусных кухонь нашего города, лето ... <a class="day-review__more expand-text">Читать полностью</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="front-sidebar__city-events">
+								<div class="city-events">
+									<div class="city-events__topic topic"><span class="topic__name">мероприятия волгоградаa</span></div><a class="city-events__more">Eще</a>
+									<div class="city-events__body">
+										<ul class="city-events__list">
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="front-sidebar__blog">
+								<div class="blog">
+									<div class="blog__topic topic"><span class="topic__name">наш блог</span></div><a class="blog__more">Другие записи в блоге</a>
+									<ul class="blog__list">
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="front-sidebar__discussions">
+								<div class="discussions">
+									<div class="discussions__topic topic"><span class="topic__name">обсуждения</span></div><a class="discussions__more">Все обсуждения</a>
+									<ul class="discussions__list">
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+					</main>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top clearfix">
+						<div class="footer__content">
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
+							</ul>
+							<ul class="footer__submenu">
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
+							</ul>
+						</div>
+						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+					</div>
+					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
+				</div>
+				<div id="modal" data-id="modal-support" class="modal">
+					<div class="modal__window">
+						<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+							<div id="modal-close" class="modal__close"></div>
+						</div>
+						<div class="modal__body">
+							<div class="modal__select select-box">
+								<label class="select-box__label">Выберите причину нарушения</label>
+								<select class="select select-box__select">
+									<option default data-disabled>Не выбрано</option>
+									<option value="1">Пункт </option>
+									<option value="2">Пункт </option>
+									<option value="3">Пункт </option>
+									<option value="4">Пункт </option>
+									<option value="5">Пункт </option>
+								</select>
+							</div>
+							<div class="modal__ta ta-box">
+								<label class="ta-box__label">Текст обращения</label>
+								<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+							</div>
+						</div>
+						<div class="modal__foot clearfix">
+							<div class="modal__actions">
+								<button id="modal-sub" class="modal__subaction">Отмена</button>
+								<button class="button button_first modal__main-action">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/vendor/loadCSS.js" async></script>
+		<script src="js/vendor/loadCSS.polyfill.js" async></script>
+		<script src="js/vendor/jquery.min.js" async></script>
+		<script src="js/vendor/jquery.rateit.min.js" async></script>
+		<script src="js/vendor/jquery.selectric.min.js" async></script>
+		<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js" async></script>
+		<script src="js/main.js" async></script>
+	</body>
+</html>

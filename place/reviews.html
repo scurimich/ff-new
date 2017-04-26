@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Отзывы</title>
+		<link rel="preload" href="../css/vendor.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="../css/main.css" as="style" onload="this.rel='stylesheet'">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__logo logo"><a class="logo__link"><img src="../img/logo-foxy.svg" class="logo__img"></a></div>
+					<div class="header__body">
+						<form class="header__search">
+							<input type="text" value="Кафе, хинкальная или spa-салон" class="header__input">
+							<ul class="header__input-popup search-popup">
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+							</ul><span class="header__world"></span>
+							<input type="text" value="Днепропетровск" class="header__city">
+							<ul class="header__city-popup city-popup">
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Ростов</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Россия</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Рукавишниково</span></a></li>
+							</ul>
+							<button class="header__button"></button>
+						</form>
+						<div class="header__categories head-cats">
+							<ul class="head-cats__list">
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
+								<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
+									<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__social">
+						<div data-popup="click" data-href="#head-notifs" class="header__notifications head-notifs"><span class="head-notifs__number">5</span>
+							<div id="head-notifs" data-popup="window" class="head-notifs__popup">
+								<h5 class="head-notifs__title">Уведомления</h5>
+								<ul class="head-notifs__list">
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="head-notifs__more">Показать всё</div>
+							</div>
+						</div>
+						<div data-popup="click" data-href="#head-profile" class="header__user head-user">
+							<div class="head-user__photo-container avatar avatar_36_man"><img class="head-user__photo"></div>
+							<div id="head-profile" data-popup="window" class="head-user__profile">
+								<div class="head-user__user">
+									<div class="head-user__photo-container avatar avatar_48_man"><img class="head-user__photo"></div>
+									<div class="head-user__info">
+										<div class="head-user__title">Алексей</div>
+										<div class="head-user__address">Волгоград, Россия</div>
+									</div>
+								</div>
+								<ul class="head-user__menu">
+									<li class="head-user__menu-item"><a class="head-user__action">Моя страница</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Закладки</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Редактировать</a></li>
+								</ul><a class="head-user__quit">Выйти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main">
+				<div class="container">
+					<main class="place-page">
+						<div class="place-page__breadcrumbs">
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Кафе и рестораны Волгограда</a></li>
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Ресторан Волгоград</a></li>
+							</ul>
+						</div>
+						<div class="place-page__header place-descr">
+							<div class="place-descr__head clearfix"><span class="place-descr__tags">Кафе, ресторан, бар, хинкальная</span>
+								<div class="place-descr__subscription">
+									<div class="place-descr__subscribe">
+										<div class="sticker-button">
+											<button disabled class="button button_subscr button_check sticker-button__button">Я подписан</button><span class="sticker">667</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h1 class="place-descr__name">Ресторан «Онегин»</h1>
+							<div class="place-descr__rating"><span data-rateit-readonly="true" data-rateit-value="3.5" class="place-descr__rating-stars rating"></span><span class="place-descr__rating-text">№13 из 289 в категории Кафе и рестораны Волгограда</span></div>
+							<div class="place-descr__menu clearfix">
+								<ul class="place-descr__tabs tabs">
+									<li class="tabs__item"><a href="overview.html" class="tabs__link tabs__link_active">Обзор</a></li>
+									<li class="tabs__item"><a href="reviews.html" class="tabs__link">Отзывы <span class="tabs__number">118</span></a></li>
+									<li class="tabs__item"><a href="photos.html" class="tabs__link">Фотографии <span class="tabs__number">34</span></a></li>
+									<li class="tabs__item"><a href="events.html" class="tabs__link">События <span class="tabs__number">1</span></a></li>
+									<li class="tabs__item"><a href="sales.html" class="tabs__link">Акции <span class="tabs__number">8</span></a></li>
+								</ul>
+								<div class="place-descr__actions">
+									<div class="place-descr__favs">
+										<button class="button button_second">В закладки</button>
+									</div>
+									<div class="place-descr__review">
+										<button class="button button_first">Оставить отзыв</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="place-page__body place-reviews">
+							<section class="place-reviews__add-review placepage-add-review">
+								<h2 class="placepage-add-review__title">Оставьте отзыв</h2>
+								<form class="placepage-add-review__form">
+									<div class="placepage-add-review__rating">
+										<div class="placepage-add-review__rating-text">Оцените это место</div><span class="placepage-add-review__rating-stars rating"></span>
+									</div>
+									<textarea placeholder="Вам понравилось? Напишите" class="placepage-add-review__ta textarea"></textarea>
+								</form>
+							</section>
+							<section class="place-reviews__reviews placepage-reviews">
+								<div class="placepage-reviews__title">Отзывы <span class="placepage-reviews__number">189</span></div>
+								<div class="placepage-reviews__body">
+									<ul class="placepage-reviews__list">
+										<li class="placepage-reviews__item placepage-review">
+											<div class="placepage-review__avatar-container avatar avatar_48"><img class="placepage-review__avatar"></div>
+											<div class="placepage-review__body">
+												<div class="placepage-review__other"></div>
+												<div class="placepage-review__name">Катериночка Мяуковская</div>
+												<div class="placepage-review__info"><span class="placepage-review__subs">73 подписчика</span><span class="placepage-review__point"></span><span class="placepage-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="3.5" class="placepage-review__rating rating"></span>
+												<p class="placepage-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
+												<div class="placepage-review__extra clearfix">
+													<time datetime="2017-01-04T18:31" class="placepage-review__date">4 января в 18:31</time>
+													<div class="placepage-review__actions">
+														<div class="placepage-review__like"></div>
+														<div class="placepage-review__share"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="placepage-reviews__item placepage-review">
+											<div class="placepage-review__avatar-container avatar avatar_48"><img class="placepage-review__avatar"></div>
+											<div class="placepage-review__body">
+												<div class="placepage-review__other"></div>
+												<div class="placepage-review__name">Катериночка Мяуковская</div>
+												<div class="placepage-review__info"><span class="placepage-review__subs">73 подписчика</span><span class="placepage-review__point"></span><span class="placepage-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="3.5" class="placepage-review__rating rating"></span>
+												<p class="placepage-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
+												<div class="placepage-review__extra clearfix">
+													<time datetime="2017-01-04T18:31" class="placepage-review__date">4 января в 18:31</time>
+													<div class="placepage-review__actions">
+														<div class="placepage-review__like"></div>
+														<div class="placepage-review__share"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="placepage-reviews__item placepage-review">
+											<div class="placepage-review__avatar-container avatar avatar_48"><img class="placepage-review__avatar"></div>
+											<div class="placepage-review__body">
+												<div class="placepage-review__other"></div>
+												<div class="placepage-review__name">Катериночка Мяуковская</div>
+												<div class="placepage-review__info"><span class="placepage-review__subs">73 подписчика</span><span class="placepage-review__point"></span><span class="placepage-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="3.5" class="placepage-review__rating rating"></span>
+												<p class="placepage-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
+												<div class="placepage-review__extra clearfix">
+													<time datetime="2017-01-04T18:31" class="placepage-review__date">4 января в 18:31</time>
+													<div class="placepage-review__actions">
+														<div class="placepage-review__like"></div>
+														<div class="placepage-review__share"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="placepage-reviews__item placepage-review">
+											<div class="placepage-review__avatar-container avatar avatar_48"><img class="placepage-review__avatar"></div>
+											<div class="placepage-review__body">
+												<div class="placepage-review__other"></div>
+												<div class="placepage-review__name">Катериночка Мяуковская</div>
+												<div class="placepage-review__info"><span class="placepage-review__subs">73 подписчика</span><span class="placepage-review__point"></span><span class="placepage-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="3.5" class="placepage-review__rating rating"></span>
+												<p class="placepage-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
+												<div class="placepage-review__extra clearfix">
+													<time datetime="2017-01-04T18:31" class="placepage-review__date">4 января в 18:31</time>
+													<div class="placepage-review__actions">
+														<div class="placepage-review__like"></div>
+														<div class="placepage-review__share"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="placepage-reviews__item placepage-review">
+											<div class="placepage-review__avatar-container avatar avatar_48"><img class="placepage-review__avatar"></div>
+											<div class="placepage-review__body">
+												<div class="placepage-review__other"></div>
+												<div class="placepage-review__name">Катериночка Мяуковская</div>
+												<div class="placepage-review__info"><span class="placepage-review__subs">73 подписчика</span><span class="placepage-review__point"></span><span class="placepage-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="3.5" class="placepage-review__rating rating"></span>
+												<p class="placepage-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
+												<div class="placepage-review__extra clearfix">
+													<time datetime="2017-01-04T18:31" class="placepage-review__date">4 января в 18:31</time>
+													<div class="placepage-review__actions">
+														<div class="placepage-review__like"></div>
+														<div class="placepage-review__share"></div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul><span class="placepage-reviews__more">Показать ещё</span>
+								</div>
+							</section>
+							<section class="place-reviews__new-places">
+								<div class="new-places">
+									<div class="new-places__topic topic"><span class="topic__name">новые места на foxy</span></div><a class="new-places__more">Смотреть весь список</a>
+									<ul class="new-places__list">
+										<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+											<div class="new-places__body">
+												<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+											</div>
+										</li>
+										<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+											<div class="new-places__body">
+												<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+											</div>
+										</li>
+										<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
+											<div class="new-places__body">
+												<div class="new-places__info"><span class="new-places__name">Ресторан Волгоград</span><span data-rateit-readonly="true" data-rateit-value="3.5" class="new-places__rating rating"></span></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+						</div>
+						<aside class="place-page__sidebar">
+							<div id="rating" class="place-page__rating place-rating">
+								<div class="place-rating__topic topic"><span class="topic__name">отзывы с оценкой</span></div>
+								<ul class="place-rating__list">
+									<li class="place-rating__item"><span data-rateit-readonly="true" data-rateit-value="5" class="place-rating__stars rating"></span><span class="place-rating__number">5 отзыва</span></li>
+									<li class="place-rating__item"><span data-rateit-readonly="true" data-rateit-value="4" class="place-rating__stars rating"></span><span class="place-rating__number">4 отзыва</span></li>
+									<li class="place-rating__item"><span data-rateit-readonly="true" data-rateit-value="3" class="place-rating__stars rating"></span><span class="place-rating__number">3 отзыва</span></li>
+									<li class="place-rating__item"><span data-rateit-readonly="true" data-rateit-value="2" class="place-rating__stars rating"></span><span class="place-rating__number">2 отзыва</span></li>
+									<li class="place-rating__item"><span data-rateit-readonly="true" data-rateit-value="1" class="place-rating__stars rating"></span><span class="place-rating__number">1 отзыва</span></li>
+								</ul>
+							</div>
+							<div class="place-page__contacts place-contacts">
+								<div id="map" class="place-contacts__map"></div>
+								<div class="place-contacts__body">
+									<div class="place-contacts__main">
+										<div class="place-contacts__name">Ресторан Волгоград</div>
+										<p class="place-contacts__address">Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.</p>
+									</div>
+									<div class="place-contacts__schedule">Пт-сб 08:00-24:00 <a class="place-contacts__schedule-link">Все расписание</a></div>
+									<div class="place-contacts__phone">+7 988 025 14 61</div>
+									<div class="place-contacts__site"> <a class="place-contacts__site-link">datasite.ru</a></div>
+								</div><a class="place-contacts__owners">Для владельцев</a><a data-modal="modal-error" class="place-contacts__fix">Исправить неточность</a>
+							</div>
+							<div class="place-page__city-events">
+								<div class="city-events">
+									<div class="city-events__topic topic"><span class="topic__name">мероприятия волгоградаa</span></div><a class="city-events__more">Eще</a>
+									<div class="city-events__body">
+										<ul class="city-events__list">
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+											<li class="city-events__item city-event">
+												<div class="city-event__image-container place place_48"><img class="city-event__image"></div>
+												<div class="city-event__body"><span class="city-event__name">Berkeley Restaurant Week</span><span class="city-event__place">Cinnabon</span>
+													<time class="city-event__dates">26 сент 2017 — 28 окт 2018</time>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="place-page__blog">
+								<div class="blog">
+									<div class="blog__topic topic"><span class="topic__name">наш блог</span></div><a class="blog__more">Другие записи в блоге</a>
+									<ul class="blog__list">
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+										<li class="blog__item"><a class="blog__photo-container"><img class="blog__photo"></a>
+											<div class="blog__descr">
+												<div class="blog__info">
+													<time class="blog__date">26 сент 2017</time><span class="blog__text">Тонкости выбора ботинок для горных лыж</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="place-page__discussions">
+								<div class="discussions">
+									<div class="discussions__topic topic"><span class="topic__name">обсуждения</span></div><a class="discussions__more">Все обсуждения</a>
+									<ul class="discussions__list">
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+										<li class="discussions__item discus-item">
+											<div class="discus-item__avatar-container avatar avatar_48_man"><img class="discus-item__avatar"></div>
+											<div class="discus-item__body"><span class="discus-item__name">Катериночка Мяуковская</span><span class="discus-item__info">Сегодня в 19:30 к «Доставка вкусностей в любой район города» в @placename</span>
+												<p data-expand-words="12" class="discus-item__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, лето … <a class="discus-item__more expand-text">Читать полностью</a></p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+						<div id="modal" data-id="modal-error" class="modal">
+							<div class="modal__window">
+								<div class="modal__head clearfix"><span class="modal__title">Неточность в описании</span>
+									<div id="modal-close" class="modal__close"></div>
+								</div>
+								<div class="modal__body">
+									<div class="modal__ta ta-box">
+										<label class="ta-box__label">Что нужно исправить</label>
+										<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+									</div>
+								</div>
+								<div class="modal__foot clearfix">
+									<div class="modal__actions">
+										<button id="modal-sub" class="modal__subaction">Отмена</button>
+										<button class="button button_first modal__main-action">Отправить</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top clearfix">
+						<div class="footer__content">
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
+							</ul>
+							<ul class="footer__submenu">
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
+							</ul>
+						</div>
+						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+					</div>
+					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
+				</div>
+				<div id="modal" data-id="modal-support" class="modal">
+					<div class="modal__window">
+						<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+							<div id="modal-close" class="modal__close"></div>
+						</div>
+						<div class="modal__body">
+							<div class="modal__select select-box">
+								<label class="select-box__label">Выберите причину нарушения</label>
+								<select class="select select-box__select">
+									<option default data-disabled>Не выбрано</option>
+									<option value="1">Пункт </option>
+									<option value="2">Пункт </option>
+									<option value="3">Пункт </option>
+									<option value="4">Пункт </option>
+									<option value="5">Пункт </option>
+								</select>
+							</div>
+							<div class="modal__ta ta-box">
+								<label class="ta-box__label">Текст обращения</label>
+								<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+							</div>
+						</div>
+						<div class="modal__foot clearfix">
+							<div class="modal__actions">
+								<button id="modal-sub" class="modal__subaction">Отмена</button>
+								<button class="button button_first modal__main-action">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="../js/vendor/loadCSS.js" async></script>
+		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
+		<script src="../js/vendor/jquery.min.js" async></script>
+		<script src="../js/vendor/jquery.rateit.min.js" async></script>
+		<script src="../js/vendor/jquery.selectric.min.js" async></script>
+		<script src="../js/vendor/jquery.mCustomScrollbar.concat.min.js" async></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" async></script>
+		<script src="../js/main.js" async></script>
+	</body>
+</html>

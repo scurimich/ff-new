@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Activity</title>
+		<link rel="preload" href="../css/vendor.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="../css/main.css" as="style" onload="this.rel='stylesheet'">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__logo logo"><a class="logo__link"><img src="../img/logo-foxy.svg" class="logo__img"></a></div>
+					<div class="header__body">
+						<form class="header__search">
+							<input type="text" value="Кафе, хинкальная или spa-салон" class="header__input">
+							<ul class="header__input-popup search-popup">
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+							</ul><span class="header__world"></span>
+							<input type="text" value="Днепропетровск" class="header__city">
+							<ul class="header__city-popup city-popup">
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Ростов</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Россия</span></a></li>
+								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Рукавишниково</span></a></li>
+							</ul>
+							<button class="header__button"></button>
+						</form>
+						<div class="header__categories head-cats">
+							<ul class="head-cats__list">
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
+								<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
+								<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
+									<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
+										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__social">
+						<div data-popup="click" data-href="#head-notifs" class="header__notifications head-notifs"><span class="head-notifs__number">5</span>
+							<div id="head-notifs" data-popup="window" class="head-notifs__popup">
+								<h5 class="head-notifs__title">Уведомления</h5>
+								<ul class="head-notifs__list">
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+									<li class="head-notifs__item user-notif user-notif_popup">
+										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+										<div class="user-notif__body">
+											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="head-notifs__more">Показать всё</div>
+							</div>
+						</div>
+						<div data-popup="click" data-href="#head-profile" class="header__user head-user">
+							<div class="head-user__photo-container avatar avatar_36_man"><img class="head-user__photo"></div>
+							<div id="head-profile" data-popup="window" class="head-user__profile">
+								<div class="head-user__user">
+									<div class="head-user__photo-container avatar avatar_48_man"><img class="head-user__photo"></div>
+									<div class="head-user__info">
+										<div class="head-user__title">Алексей</div>
+										<div class="head-user__address">Волгоград, Россия</div>
+									</div>
+								</div>
+								<ul class="head-user__menu">
+									<li class="head-user__menu-item"><a class="head-user__action">Моя страница</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Закладки</a></li>
+									<li class="head-user__menu-item"><a class="head-user__action">Редактировать</a></li>
+								</ul><a class="head-user__quit">Выйти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main">
+				<div class="container"> 
+					<main class="user-page">
+						<div class="user-page__bread">
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
+								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Мероприятия Волгограда</a></li>
+							</ul>
+						</div>
+						<aside class="user-page__sidebar user-sidebar">
+							<div class="user-sidebar__head">
+								<div class="user-sidebar__status">Эксперт</div>
+								<div class="user-sidebar__avatar-container avatar avatar_120_man"><img class="user-sidebar__avatar"></div>
+							</div>
+							<div class="user-sidebar__body">
+								<h1 class="user-sidebar__user">Катериночка Мяуковская</h1>
+								<div class="user-sidebar__city">Россия, Волгоград</div>
+								<div class="user-sidebar__subscribe">
+									<div class="sticker-button">
+										<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+									</div>
+								</div>
+							</div>
+							<div class="user-sidebar__menu user-menu">
+								<ul class="user-menu__list">
+									<li class="user-menu__item"><a href="activity.html" class="user-menu__link user-menu__link_active">Активность</a></li>
+									<li class="user-menu__item"><a href="reviews.html" class="user-menu__link">Отзыв</a></li>
+									<li class="user-menu__item"><a href="photos.html" class="user-menu__link">Фотографии</a></li>
+									<li class="user-menu__item"><a href="follow.html" class="user-menu__link">Подписчики</a></li>
+									<li class="user-menu__item"><a href="ifollow.html" class="user-menu__link">Я подписан</a></li>
+									<li class="user-menu__item"><a href="events.html" class="user-menu__link">События и акции</a></li>
+									<li class="user-menu__item"><a href="favorites.html" class="user-menu__link">Закладки</a></li>
+									<li class="user-menu__item"><a href="notifications.html" class="user-menu__link">Уведомления <span class="user-menu__new">+12 новых</span></a></li>
+								</ul>
+							</div>
+						</aside>
+						<div id="activity" class="user-page__body user-activity">
+							<div class="user-page__activity-block activity-block">
+								<div class="activity-block__top clearfix">
+									<div class="activity-block__status">
+										<div class="activity-block__lvl">Уровень — новичок</div><span class="activity-block__register">Зарегистрирована 3 дня</span>
+									</div>
+									<div class="activity-block__points">150 баллов</div>
+								</div>
+								<div class="activity-block__bottom">
+									<ul class="activity-block__activities">
+										<li class="activity-block__activity"><span class="activity-block__count">7 </span><span class="activity-block__type">фотографии</span></li>
+										<li class="activity-block__activity"><span class="activity-block__count">3 </span><span class="activity-block__type">подписчика</span></li>
+										<li class="activity-block__activity"><span class="activity-block__count">7 </span><span class="activity-block__type">закладок</span></li>
+										<li class="activity-block__activity"><span class="activity-block__count">13 </span><span class="activity-block__type">отзывов</span></li>
+										<li class="activity-block__activity"><span class="activity-block__count">108 </span><span class="activity-block__type">подписок</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="user-page__activity-block tasks">
+								<div class="tasks__title">Выполните задания от фокси и станьте экспертом</div>
+								<p class="tasks__descr">Избранным экспертам будет доверено написание полных обзоров заведений для нашего блога с компенсацией счета за ужин.</p>
+								<ul class="tasks__list">
+									<li class="tasks__item task">
+										<div class="task__title">Напишите 20 отзывов</div>
+										<div class="task__progress">
+											<div data-statusbar="20" data-complete="12" class="task__statusbar">
+												<div class="task__complete"></div>
+											</div>
+											<div class="task__status">12 из 20 отзывов</div>
+										</div>
+									</li>
+									<li class="tasks__item task">
+										<div class="task__title">Добавьте 5 мест</div>
+										<div class="task__progress">
+											<div data-statusbar="5" data-complete="5" class="task__statusbar">
+												<div class="task__complete"></div>
+											</div>
+											<div class="task__status">5 из 5 мест</div>
+										</div>
+									</li>
+									<li class="tasks__item task">
+										<div class="task__title">Наберите 4000 баллов</div>
+										<div class="task__progress">
+											<div data-statusbar="4000" data-complete="150" class="task__statusbar">
+												<div class="task__complete"></div>
+											</div>
+											<div class="task__status">150 из 4000 баллов</div>
+										</div>
+									</li>
+									<li class="tasks__item task">
+										<div class="task__title">Один из ваших отзывов должен стать отзывом недели</div>
+										<div class="task__progress">
+											<div data-statusbar="1" data-complete="0" class="task__statusbar">
+												<div class="task__complete"></div>
+											</div>
+											<div class="task__status">0 из 1 отзывов</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="user-page__activity-block greeting-points">
+								<div class="greeting-points__title">Приветственные баллы</div>
+								<ul class="greeting-points__list">
+									<li class="greeting-points__item greeting-points__item_done clearfix"><span class="greeting-points__name">Фокси дарит вам баллы</span><span class="greeting-points__points">100 баллов</span></li>
+									<li class="greeting-points__item clearfix"><span class="greeting-points__name">Напишите первый отзыв</span><span class="greeting-points__points">50 баллов</span></li>
+								</ul>
+							</div>
+							<div class="user-page__activity-block achievements">
+								<div class="achievements__title">Достижение</div>
+								<div class="achievements__body"><span class="achievements__descr">Когда откроете все бейджи, вы получите бонус — 500 баллов</span>
+									<ul class="achievements__list">
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/akula-pera.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Акула пера</div>
+												<p class="achievement__descr">Ты спешишь дать пользователям как можно больше полезной информации о разных заведениях, чтобы помочь с выбором</p>
+												<div class="achievement__progress">
+													<div data-statusbar="100" data-complete="7" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">7/100 отзывов</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/kolumb.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Колумб</div>
+												<p class="achievement__descr">Добавляя новые заведения на сайт, ты вносишь вклад в развитие нашего сообщества и помогаешь другим пользователям узнавать об интересных проектах</p>
+												<div class="achievement__progress">
+													<div data-statusbar="5" data-complete="1" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">1/5 проектов</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/pervoprohodec.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Первопроходец</div>
+												<p class="achievement__descr">Пиши отзывы к местам, которые никто не оценил до тебя. Будь первым!</p>
+												<div class="achievement__progress">
+													<div data-statusbar="15" data-complete="2" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">2/15 отзывов</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/paparazzi.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Папарацци</div>
+												<p class="achievement__descr">Добавляя фотографии к проектам, ты помогаешь пользователям нарисовать реальную картину происходящего в этом месте</p>
+												<div class="achievement__progress">
+													<div data-statusbar="70" data-complete="15" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">15/70 фото</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/blogger.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Блогер</div>
+												<p class="achievement__descr">Чем интереснее ты пишешь, тем больше человек подписывается на тебя. Собери свою аудиторию.</p>
+												<div class="achievement__progress">
+													<div data-statusbar="25" data-complete="7" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">7/25 подписчиков</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/superphotographer.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Суперфотограф</div>
+												<p class="achievement__descr">Ты умеешь подбирать свет и удачные ракурсы. Твои фотографии нравятся другим</p>
+												<div class="achievement__progress">
+													<div data-statusbar="100" data-complete="7" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">7/100 лайков фото</span>
+												</div>
+											</div>
+										</li>
+										<li class="achievements__item achievement">
+											<div class="achievement__pic-container"><img src="../img/achievements/master-slova.png" class="achievement__pic"></div>
+											<div class="achievement__body">
+												<div class="achievement__title">Мастер слова</div>
+												<p class="achievement__descr">Твои отзывы полезны! Продолжай в том же духе!</p>
+												<div class="achievement__progress">
+													<div data-statusbar="50" data-complete="7" class="achievement__statusbar">
+														<div class="achievement__complete"></div>
+													</div><span class="achievement__status">7/50 лайков отзфвов</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top clearfix">
+						<div class="footer__content">
+							<ul class="footer__menu">
+								<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
+								<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
+							</ul>
+							<ul class="footer__submenu">
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
+								<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
+							</ul>
+						</div>
+						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+					</div>
+					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
+				</div>
+				<div id="modal" data-id="modal-support" class="modal">
+					<div class="modal__window">
+						<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+							<div id="modal-close" class="modal__close"></div>
+						</div>
+						<div class="modal__body">
+							<div class="modal__select select-box">
+								<label class="select-box__label">Выберите причину нарушения</label>
+								<select class="select select-box__select">
+									<option default data-disabled>Не выбрано</option>
+									<option value="1">Пункт </option>
+									<option value="2">Пункт </option>
+									<option value="3">Пункт </option>
+									<option value="4">Пункт </option>
+									<option value="5">Пункт </option>
+								</select>
+							</div>
+							<div class="modal__ta ta-box">
+								<label class="ta-box__label">Текст обращения</label>
+								<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+							</div>
+						</div>
+						<div class="modal__foot clearfix">
+							<div class="modal__actions">
+								<button id="modal-sub" class="modal__subaction">Отмена</button>
+								<button class="button button_first modal__main-action">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="../js/vendor/loadCSS.js" async></script>
+		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
+		<script src="../js/vendor/jquery.min.js" async></script>
+		<script src="../js/vendor/jquery.rateit.min.js" async></script>
+		<script src="../js/vendor/jquery.selectric.min.js" async></script>
+		<script src="../js/vendor/jquery.mCustomScrollbar.concat.min.js" async></script>
+		<script src="../js/main.js" async></script>
+	</body>
+</html>

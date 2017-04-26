@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Modal windows</title>
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/modal-page.css">
+	</head>
+	<body>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__head clearfix"><span class="modal__title">Вход</span>
+					<div class="modal__close"></div>
+				</div>
+				<div class="modal__body"><span class="text">Войдите в фоллоуфокси чтобы оценивать фотографии</span></div>
+				<div class="modal__foot clearfix">
+					<div class="modal__actions">
+						<button class="modal__subaction">Зарегистрироваться</button>
+						<button class="button button_first modal__main-action">Войти</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+					<div class="modal__close"></div>
+				</div>
+				<div class="modal__body">
+					<div class="modal__select select-box">
+						<label class="select-box__label">Выберите причину нарушения</label>
+						<select class="select select-box__select">
+							<option default data-disabled>Не выбрано</option>
+							<option value="1">Пункт </option>
+							<option value="2">Пункт </option>
+							<option value="3">Пункт </option>
+							<option value="4">Пункт </option>
+							<option value="5">Пункт </option>
+						</select>
+					</div>
+					<div class="modal__ta ta-box">
+						<label class="ta-box__label">Текст обращения</label>
+						<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+					</div>
+				</div>
+				<div class="modal__foot clearfix">
+					<div class="modal__actions">
+						<button class="modal__subaction">Отмена</button>
+						<button class="button button_first modal__main-action">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__head clearfix"><span class="modal__title">Восстановление пароля</span>
+					<div class="modal__close"></div>
+				</div>
+				<div class="modal__body"><span class="text">Информация по сбросу пароля отправлена на почту</span></div>
+				<div class="modal__foot clearfix">
+					<div class="modal__actions">
+						<button class="button button_first modal__main-action">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__head clearfix"><span class="modal__title">Неточность в описании</span>
+					<div class="modal__close"></div>
+				</div>
+				<div class="modal__body">
+					<div class="modal__ta ta-box">
+						<label class="ta-box__label">Что нужно исправить</label>
+						<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+					</div>
+				</div>
+				<div class="modal__foot clearfix">
+					<div class="modal__actions">
+						<button class="modal__subaction">Отмена</button>
+						<button class="button button_first modal__main-action">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__head clearfix"><span class="modal__title">Загрузка фотографий</span>
+					<div class="modal__close"></div>
+				</div>
+				<div class="modal__body"><span class="text">Вы хотите удалить добавленные фотографии</span></div>
+				<div class="modal__foot clearfix">
+					<div class="modal__actions">
+						<button class="modal__subaction">Отмена</button>
+						<button class="button button_first modal__main-action">Удалить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/loadCSS.js"></script>
+		<script src="js/vendor/loadCSS.polyfill.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/jquery.rateit.min.js"></script>
+		<script src="js/vendor/jquery.selectric.min.js"></script>
+		<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Photogallery</title>
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/photogallery.css">
+	</head>
+	<body>
+		<div style="background-color: rgba(0, 0, 0, .5);">
+			<div class="photogallery">
+				<div class="photogallery__close"></div>
+				<div class="photogallery__window">
+					<div class="photogallery__view">
+						<div class="photogallery__photo-container"><span class="photogallery__arrow photogallery__arrow_left"></span><span class="photogallery__arrow photogallery__arrow_right"></span><img src="http://placehold.it/344x382" class="photogallery__photo"></div>
+						<div class="photogallery__info"><span class="photogallery__category">Фотографии в Онегин</span><span class="photogallery__count">2 из 178</span><span data-modal="modal-report" class="photogallery__report">Пожаловаться на фотографию</span></div>
+						<div class="photogallery__main">
+							<div class="photogallery__head">
+								<div class="photogallery__avatar-container avatar avatar_48_woman"><img class="photogallery__avatar"></div>
+								<div class="photogallery__author"><span class="photogallery__name">Катериночка мяуковская</span>
+									<time datetime="2017-01-04T18:31" class="photogallery__date">4 января в 18:31</time>
+								</div>
+							</div>
+							<div class="photogallery__body">
+								<div class="photogallery__description text">Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt) получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа». (14pt)</div>
+							</div>
+							<div class="photogallery__foot">
+								<div class="photogallery__like">
+									<div class="photogallery__like-icon"></div><span class="photogallery__like-text">Мне нравится</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="photogallery">
+				<div class="photogallery__close"></div>
+				<div class="photogallery__window">
+					<div class="photogallery__view">
+						<div class="photogallery__photo-container"><span class="photogallery__arrow photogallery__arrow_left"></span><span class="photogallery__arrow photogallery__arrow_right"></span><img src="http://placehold.it/344x382" class="photogallery__photo"></div>
+						<div class="photogallery__info"><span class="photogallery__category">Фотографии в Онегин</span><span class="photogallery__count">2 из 178</span><span data-modal="modal-report" class="photogallery__report">Пожаловаться на фотографию</span></div>
+						<div class="photogallery__main">
+							<div class="photogallery__head">
+								<div class="photogallery__avatar-container avatar avatar_48_woman"><img class="photogallery__avatar"></div>
+								<div class="photogallery__author"><span class="photogallery__name">Катериночка мяуковская</span>
+									<time datetime="2017-01-04T18:31" class="photogallery__date">4 января в 18:31</time>
+								</div>
+							</div>
+							<div class="photogallery__body">
+								<div class="photogallery__description text">Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы </div>
+							</div>
+							<div class="photogallery__foot">
+								<div class="photogallery__like">
+									<div class="photogallery__like-icon"></div><span class="photogallery__like-text">Мне нравится</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="modal" data-id="modal-report" class="modal">
+				<div class="modal__window modal__window_wd">
+					<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+						<div id="modal-close" class="modal__close"></div>
+					</div>
+					<div class="modal__body">
+						<div class="modal__select select-box">
+							<label class="select-box__label">Выберите причину нарушения</label>
+							<select class="select select-box__select">
+								<option default data-disabled>Не выбрано</option>
+								<option>Это спам</option>
+								<option>Нарушение авторских прав</option>
+								<option>Порнографическое содержание</option>
+								<option>Оскорбительная фотография</option>
+							</select>
+						</div>
+						<div class="modal__ta ta-box">
+							<label class="ta-box__label">Текст обращения</label>
+							<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+						</div>
+					</div>
+					<div class="modal__foot clearfix">
+						<div class="modal__actions">
+							<button id="modal-sub" class="modal__subaction">Отмена</button>
+							<button class="button button_first modal__main-action">Отправить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/loadCSS.js"></script>
+		<script src="js/vendor/loadCSS.polyfill.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/jquery.rateit.min.js"></script>
+		<script src="js/vendor/jquery.selectric.min.js"></script>
+		<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
