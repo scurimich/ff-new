@@ -123,7 +123,7 @@ gulp.task('clear', function() {
 gulp.task('deploy', ['build'], function() {
   return gulp.src('./app/prod/**/*')
     .pipe(deploy({
-      branch: 'master',
+      branch: 'gh-pages',
       push: true
     }));
 });

@@ -7,6 +7,7 @@ $(function() {
       this.plugins();
       hideText();
       this.sidebarBehavior();
+      this.statusbars();
     },
 
     startValues: {
@@ -302,6 +303,15 @@ $(function() {
         }
       }
       this.startValues.windowPrevPosition = windowPosition;
+    },
+
+    statusbars: function() {
+      $('[data-statusbar]').each(function() {
+        var statusbar = $(this);
+        var require = statusbar.attr('data-statusbar');
+        var complete = statusbar.attr('data-complete');
+        statusbar.find('[class*=complete]').css('width', (complete / require) * 100 + '%');
+      });
     }
 
   };

@@ -1,3 +1,5 @@
+Установка: npm install
+
 Сборка проекта: gulp build
 Путь к папке с билдом app/prod
 

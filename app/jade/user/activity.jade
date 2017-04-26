@@ -1,11 +1,142 @@
 extends ../templates/user.jade
 
 block title
-  | Dummy
+  | Activity
 
 block content
-  .user-page__body.user-events#events
-    .user-events__title Закладки 
-      span.user-events__number 189
-    .user-dummy
-      .user-dummy__text Закладок нет
+  .user-page__body.user-activity#activity
+    .user-page__activity-block.activity-block
+      .activity-block__top.clearfix
+        .activity-block__status
+          .activity-block__lvl Уровень — новичок
+          span.activity-block__register Зарегистрирована 3 дня
+        .activity-block__points 150 баллов
+      .activity-block__bottom
+        ul.activity-block__activities
+          li.activity-block__activity
+            span.activity-block__count 7 
+            span.activity-block__type фотографии
+          li.activity-block__activity
+            span.activity-block__count 3 
+            span.activity-block__type подписчика
+          li.activity-block__activity
+            span.activity-block__count 7 
+            span.activity-block__type закладок
+          li.activity-block__activity
+            span.activity-block__count 13 
+            span.activity-block__type отзывов
+          li.activity-block__activity
+            span.activity-block__count 108 
+            span.activity-block__type подписок
+    .user-page__activity-block.tasks
+      .tasks__title Выполните задания от фокси и станьте экспертом
+      p.tasks__descr Избранным экспертам будет доверено написание полных обзоров заведений для нашего блога с компенсацией счета за ужин.
+      ul.tasks__list
+        li.tasks__item.task
+          .task__title Напишите 20 отзывов
+          .task__progress
+            .task__statusbar(data-statusbar='20', data-complete='12')
+              .task__complete
+            .task__status 12 из 20 отзывов
+        li.tasks__item.task
+          .task__title Добавьте 5 мест
+          .task__progress
+            .task__statusbar(data-statusbar='5', data-complete='5')
+              .task__complete
+            .task__status 5 из 5 мест
+        li.tasks__item.task
+          .task__title Наберите 4000 баллов
+          .task__progress
+            .task__statusbar(data-statusbar='4000', data-complete='150')
+              .task__complete
+            .task__status 150 из 4000 баллов
+        li.tasks__item.task
+          .task__title Один из ваших отзывов должен стать отзывом недели
+          .task__progress
+            .task__statusbar(data-statusbar='1', data-complete='0')
+              .task__complete
+            .task__status 0 из 1 отзывов
+    .user-page__activity-block.greeting-points
+      .greeting-points__title Приветственные баллы
+      ul.greeting-points__list
+        li.greeting-points__item.greeting-points__item_done.clearfix
+          span.greeting-points__name Фокси дарит вам баллы
+          span.greeting-points__points 100 баллов
+        li.greeting-points__item.clearfix
+          span.greeting-points__name Напишите первый отзыв
+          span.greeting-points__points 50 баллов
+    .user-page__activity-block.achievements
+      .achievements__title Достижение
+      .achievements__body
+        span.achievements__descr Когда откроете все бейджи, вы получите бонус — 500 баллов
+        ul.achievements__list
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/akula-pera.png')
+            .achievement__body
+              .achievement__title Акула пера
+              p.achievement__descr Ты спешишь дать пользователям как можно больше полезной информации о разных заведениях, чтобы помочь с выбором
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='100', data-complete='7')
+                  .achievement__complete
+                span.achievement__status 7/100 отзывов
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/kolumb.png')
+            .achievement__body
+              .achievement__title Колумб
+              p.achievement__descr Добавляя новые заведения на сайт, ты вносишь вклад в развитие нашего сообщества и помогаешь другим пользователям узнавать об интересных проектах
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='5', data-complete='1')
+                  .achievement__complete
+                span.achievement__status 1/5 проектов
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/pervoprohodec.png')
+            .achievement__body
+              .achievement__title Первопроходец
+              p.achievement__descr Пиши отзывы к местам, которые никто не оценил до тебя. Будь первым!
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='15', data-complete='2')
+                  .achievement__complete
+                span.achievement__status 2/15 отзывов
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/paparazzi.png')
+            .achievement__body
+              .achievement__title Папарацци
+              p.achievement__descr Добавляя фотографии к проектам, ты помогаешь пользователям нарисовать реальную картину происходящего в этом месте
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='70', data-complete='15')
+                  .achievement__complete
+                span.achievement__status 15/70 фото
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/blogger.png')
+            .achievement__body
+              .achievement__title Блогер
+              p.achievement__descr Чем интереснее ты пишешь, тем больше человек подписывается на тебя. Собери свою аудиторию.
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='25', data-complete='7')
+                  .achievement__complete
+                span.achievement__status 7/25 подписчиков
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/superphotographer.png')
+            .achievement__body
+              .achievement__title Суперфотограф
+              p.achievement__descr Ты умеешь подбирать свет и удачные ракурсы. Твои фотографии нравятся другим
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='100', data-complete='7')
+                  .achievement__complete
+                span.achievement__status 7/100 лайков фото
+          li.achievements__item.achievement
+            .achievement__pic-container
+              img.achievement__pic(src='../img/achievements/master-slova.png')
+            .achievement__body
+              .achievement__title Мастер слова
+              p.achievement__descr Твои отзывы полезны! Продолжай в том же духе!
+              .achievement__progress
+                .achievement__statusbar(data-statusbar='50', data-complete='7')
+                  .achievement__complete
+                span.achievement__status 7/50 лайков отзфвов
