@@ -11,8 +11,8 @@ $(function() {
     },
 
     startValues: {
-      sideOffset: $('aside').offset().top,
-      sideParentHeight: $('aside').parent().height(),
+      sideOffset: $('aside').length ? $('aside').offset().top : 0,
+      sideParentHeight: $('aside').length ? $('aside').parent().height() : 0,
       windowPrevPosition: $(window).scrollTop()
     },
 
@@ -224,6 +224,7 @@ $(function() {
 
     sidebarBehavior: function(e) {
       var sidebar = $('aside');
+      if (!sidebar.length) return;
       var next = sidebar.next();
       var footer = $('.footer');
       var windowHeight = $(window).height();

@@ -47,7 +47,7 @@ gulp.task('less', function() {
     .pipe(plumber())
     .pipe(less())
     .pipe(autoprefixer({
-      browsers: ['last 2 versions']
+      browsers: ['> 5%']
     }))
     .pipe(cleanCss())
     .pipe(gulp.dest(paths.prod + 'css/'))

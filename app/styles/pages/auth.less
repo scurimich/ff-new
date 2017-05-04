@@ -1,95 +1,98 @@
 .auth {
   padding-top: 19px;
-  padding-bottom: 20px;
+  padding-bottom: 44px;
 
   &__breadcrumbs {
-    margin-bottom: 21px;
+    margin-bottom: 45px;
+
+    &_login {
+      margin-bottom: 58px;
+    }
   }
 
   &__window {
     box-sizing: border-box;
-    .white-block;
-    padding: 54px 0 0 45px;
-
-    &_sm {
-      height: 496px;
-      background-image: url(../img/fox-on-grass.png);
-      background-position: right bottom;
-      background-repeat: no-repeat;
-    }
-
-    &_md {
-      height: 522px;
-      background-image: url(../img/fox-on-grass.png);
-      background-position: right bottom;
-      background-repeat: no-repeat;
-    }
-
-    &_lg {
-      height: 764px;
-      background-image: url(../img/fox-on-grass-and-ball.png);
-      background-position: right bottom;
-      background-repeat: no-repeat;
-
-    }
-  }
-
-  &__info {
-    width: 296px;
-    padding-left: 32px;
-
-    &_wd {
-      width: 363px;
-      padding-left: 0;
-    }
+    width: 380px;
+    padding: 36px 46px 40px 46px;
+    margin-bottom: 26px;
+    border-radius: 3px;
+    background-color: @white;
+    box-shadow: 0 4px 31px 0 rgba(69,69,69,0.19);
   }
 
   &__head {
-    width: 100%;
-    margin-bottom: 19px;
+    text-align: center;
   }
 
   &__title {
     display: block;
-    margin-bottom: 6px;
-    text-align: center;
-    font-family: @font;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 31px;
-    letter-spacing: -.7px;
-    color: @primary-orange;
-  }
-
-  &__description {
-    display: block;
-    padding-bottom: 10px;
     text-align: center;
     font-family: @font;
     font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -.15px;
+    color: @text-color;
+  }
+
+  &__socials {
+    .ib-top;
+    font-size: 0;
+    list-style: none;
+    margin-top: 32px;
+    margin-bottom: 22px;
+  }
+
+  &__social {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    .ib-top;
+
+    &-link {
+      display: block;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      &_gg {
+        .sprite-image(@gg40);
+        background-position: -50px 0;
+      }
+
+      &_fb {
+        .sprite-image(@fb40);
+        .sprite-position(@fb40);
+      }
+
+      &_vk {
+        .sprite-image(@vk40);
+        background-position: 0 -50px;
+      }
+    }
+  }
+
+  &__or {
+    display: flex;
+    margin-bottom: 18px;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: @font;
+    font-weight: 400;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 28px;
     color: @text-color;
 
-    &_reset {
-      font-weight: 600;
-      letter-spacing: -.4px;
+    &:before,
+    &:after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background-color: @border-color;
     }
 
-    &_short {
-      padding-bottom: 8px;
-    }
-
-    &_login {
-      font-weight: 600;
-      letter-spacing: -.4px;
-      padding-bottom: 0;
-    }
-
-    &_register {
-      font-weight: 600;
-      letter-spacing: -.4px;
-      padding-bottom: 10px;
+    &-text {
+      padding: 0 10px;
     }
   }
 
@@ -101,11 +104,6 @@
     letter-spacing: -.4px;
     color: @links-color;
     cursor: pointer;
-  }
-
-  &__body {
-    width: 296px;
-    margin: 0 auto;
   }
 
   &__back {
@@ -128,16 +126,40 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  &__acc {
+    display: block;
+    width: 380px;
+    text-align: center;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.1px;
+    color: @lighter-text;
+  }
+
+  &__register {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.1px;
+    color: @links-color;
+    cursor: pointer;
+  }
 }
 
 .reset-password {
+  margin-top: 24px;
+
   &__input {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   &__reset {
     width: 100%;
-    margin-bottom: 6px;
+    margin-top: 4px;
   }
 
   &__back {
@@ -152,6 +174,8 @@
 }
 
 .forgot-password {
+  margin-top: 24px;
+
   &__input {
     margin-bottom: 18px;
   }
@@ -169,7 +193,7 @@
     &-img {
       .ib-bot;
       box-sizing: border-box;
-      width: 120px;
+      width: 112px;
       height: 32px;
       border: 1px solid @border-color;
     }
@@ -177,7 +201,6 @@
 
   &__reset {
     width: 100%;
-    margin-bottom: 6px;
   }
 
   &__back {
@@ -193,42 +216,22 @@
 
 .login {
 
-  &__title {
-    display: block;
-    text-align: center;
-    margin-bottom: 6px;
-    font-family: @font;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 21px;
-    letter-spacing: -.4px;
-    color: @text-color;
-
-    &_center {
-      text-align: center;
-    }
-  }
-
   &__email {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     position: relative;
   }
 
-  &__help {
-    width: 146px;
-    position: absolute;
-    top: -9px;
-    right: -154px;
+  &__password {
+    margin-bottom: 14px;
   }
 
-  &__password {
-    margin-bottom: 4px;
+  &__remember {
+    float: left;
   }
 
   &__forgot {
     display: block;
-    margin-bottom: 14px;
-    text-align: right;
+    float: right;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -240,86 +243,38 @@
 
   &__in {
     width: 100%;
-    margin-bottom: 6px;
-  }
-
-  &__extra {
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
-    font-family: @font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -.1px;
-    color: @text-color;
-  }
-
-  &__register {
-    font-family: @font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -.1px;
-    color: @links-color;
-    cursor: pointer;
-  }
-
-  &__list {
-    list-style: none;
-    font-size: 0;
-    margin-right: -8px;
-  }
-
-  &__item {
-    .ib-top;
-    margin-right: 8px;
-  }
-
-  &__link {
-    display: block;
-    width: 32px;
-    height: 32px;
-
-    &_gg {
-
-    }
-
-    &_fb {
-
-    }
-
-    &_vk {
-
-    }
+    margin-top: 20px;
   }
 }
 
 .register {
   font-size: 0;
+  margin-top: 24px;
 
   &__input {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   &__address {
     display: block;
-    margin-top: 26px;
-    margin-bottom: 4px;
-    font-family: @font;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    color: @secondary-color;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-size: 0;
   }
 
-  &__select {
-    margin-bottom: 8px;
+  &__country {
+    .ib-top;
+    width: 124px;
+    margin-right: 12px;
+  }
+
+  &__city {
+    .ib-top;
+    width: 152px;
   }
 
   &__birth {
     display: block;
-    margin-top: 26px;
     margin-bottom: 4px;
     font-family: @font;
     font-weight: 400;
@@ -331,13 +286,13 @@
   &__date {
     .ib-top;
     width: 83px;
-    margin-right: 9px;
+    margin-right: 12px;
   }
 
   &__month {
     .ib-top;
-    width: 112px;
-    margin-right: 9px;
+    width: 98px;
+    margin-right: 12px;
   }
 
   &__year {
@@ -358,37 +313,31 @@
 
   &__radio {
     .ib-top;
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   &__captcha {
-    margin-top: 26px;
+    margin-top: 22px;
     margin-bottom: 24px;
+    font-size: 0;
+  }
+
+  &__captcha-field {
+    .ib-top;
+    width: 168px;
+    margin-right: 8px;
+  }
+
+  &__captcha-img {
+    .ib-bot;
+    box-sizing: border-box;
+    width: 112px;
+    height: 32px;
+    border: 1px solid @border-color;
+    border-radius: 2px;
   }
 
   &__create {
     width: 100%;
-    margin-bottom: 6px;
-  }
-
-  &__extra {
-    display: block;
-    text-align: right;
-    font-family: @font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -.1px;
-    color: @text-color;
-  }
-
-  &__login {
-    font-family: @font;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: -.1px;
-    color: @links-color;
-    cursor: pointer;
   }
 }

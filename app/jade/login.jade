@@ -6,39 +6,36 @@ block title
 block content
   .container
     main.auth
-      .auth__breadcrumbs
+      .auth__breadcrumbs.auth__breadcrumbs_login
         ul.breadcrumbs
           li.breadcrumbs__item
             a.breadcrumbs__link Главная
           li.breadcrumbs__item
             a.breadcrumbs__link Вход в аккаунт
-      .auth__window.auth__window_sm
-        .auth__info
-          .auth__head
-            h1.auth__title Войти в фокси
-            span.auth__description.auth__description_login
-              | Не знакомы с фокси? 
-              a.auth__register Зарегистрируйтесь
-          .auth__body
-            form.auth__login.login
-              h2.login__title Вход через электронную почту
-              .login__email.input-box
-                .login__help.help.help_small.help_light.help_right
-                  p.help__text Введите электронную почту
-                input.text-input.input-box__input(type='text', placeholder='e-mail', pattern=".*", required)
-              .login__password.input-box
-                input.text-input.input-box__input(type='text', placeholder='Пароль', pattern=".*", required)
-              a.login__forgot Забыли пароль?
-              button.button.button_first.login__in Войти
-              span.login__extra.clearfix
-                | Нет аккаунта? 
-                a.login__register Зарегистрируйтесь
-              .login__socials
-                h2.login__title.login__title_center Быстрый вход через соцсети
-                ul.login__list
-                  li.login__item
-                    a.login__link.login__link_gg
-                  li.login__item
-                    a.login__link.login__link_fb
-                  li.login__item
-                    a.login__link.login__link_vk
+      .auth__window
+        .auth__head
+          h1.auth__title Войти
+          ul.auth__socials
+            li.auth__social
+              a.auth__social-link.auth__social-link_gg
+            li.auth__social
+              a.auth__social-link.auth__social-link_fb
+            li.auth__social
+              a.auth__social-link.auth__social-link_vk
+        .auth__or
+          .auth__or-text или
+        .auth__body
+          form.auth__login.login.clearfix
+            .login__email.input-box
+              input.text-input.input-box__input(type='text', placeholder='e-mail', pattern=".*", required)
+            .login__password.input-box
+              input.text-input.input-box__input(type='text', placeholder='Пароль', pattern=".*", required)
+            .login__remember.checkbox-box
+              .checkbox.checkbox-box__checkbox
+                input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+                label.checkbox__label(for='checkbox2')
+              label.checkbox-box__label(for='checkbox2') Запомнить меня
+            a.login__forgot Забыли пароль?
+            button.button.button_first.login__in Войти
+      .auth__acc Нет аккаунта? 
+        a.auth__register Зарегистрируйтесь
