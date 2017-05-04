@@ -122,25 +122,25 @@
 							</ul>
 						</div>
 						<div class="auth__window auth__window_lg">
-							<div class="auth__info auth__info_wd">
-								<div class="auth__head">
-									<h1 class="auth__title">Впервые на фоллоуфокси?</h1><span class="auth__description auth__description_register">Зарегистрируйте новый аккаунт</span>
-								</div>
-								<div class="auth__body">
-									<form class="auth__registration register">
-										<div class="register__input input-box">
-											<input type="text" placeholder="Ваша электронная почта" pattern=".*" required class="text-input input-box__input">
-										</div>
-										<div class="register__input input-box">
-											<input type="text" placeholder="Ваше имя" pattern=".*" required class="text-input input-box__input">
-										</div>
-										<div class="register__input input-box">
-											<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
-										</div>
-										<div class="register__input input-box">
-											<input type="text" placeholder="Подтвердите пароль введя его еще раз" pattern=".*" required class="text-input input-box__input">
-										</div><span class="register__address">Страна и город, в которых вы находитесь</span>
-										<div class="register__select select-box">
+							<div class="auth__head">
+								<h1 class="auth__title">Регистрация</h1>
+							</div>
+							<div class="auth__body">
+								<form class="auth__registration register">
+									<div class="register__input input-box">
+										<input type="text" placeholder="Ваша электронная почта" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="register__input input-box">
+										<input type="text" placeholder="Ваше имя" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="register__input input-box">
+										<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="register__input input-box">
+										<input type="text" placeholder="Подтвердите пароль введя его еще раз" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="register__address">
+										<div class="register__country select-box">
 											<select class="select">
 												<option default data-disabled>Страна</option>
 												<option value="1">Пункт 1</option>
@@ -150,7 +150,7 @@
 												<option value="5">Пункт 5</option>
 											</select>
 										</div>
-										<div class="register__select select-box">
+										<div class="register__city select-box">
 											<select class="select">
 												<option default data-disabled>Город</option>
 												<option value="1">Пункт 1</option>
@@ -159,69 +159,70 @@
 												<option value="4">Пункт 4</option>
 												<option value="5">Пункт 5</option>
 											</select>
-										</div><span class="register__birth">Дата рождения</span>
-										<div class="register__date">
-											<div class="select-box">
-												<select class="select">
-													<option default data-disabled>День</option>
-													<option value="1">Пункт 1</option>
-													<option value="2">Пункт 2</option>
-													<option value="3">Пункт 3</option>
-													<option value="4">Пункт 4</option>
-													<option value="5">Пункт 5</option>
-												</select>
-											</div>
 										</div>
-										<div class="register__month">
-											<div class="select-box">
-												<select class="select">
-													<option default data-disabled>Месяц</option>
-													<option value="1">Пункт 1</option>
-													<option value="2">Пункт 2</option>
-													<option value="3">Пункт 3</option>
-													<option value="4">Пункт 4</option>
-													<option value="5">Пункт 5</option>
-												</select>
-											</div>
+									</div><span class="register__birth">Дата рождения</span>
+									<div class="register__date">
+										<div class="select-box">
+											<select class="select">
+												<option default data-disabled>День</option>
+												<option value="1">Пункт 1</option>
+												<option value="2">Пункт 2</option>
+												<option value="3">Пункт 3</option>
+												<option value="4">Пункт 4</option>
+												<option value="5">Пункт 5</option>
+											</select>
 										</div>
-										<div class="register__year">
-											<div class="select-box">
-												<select class="select">
-													<option default data-disabled>Год</option>
-													<option value="1">Пункт 1</option>
-													<option value="2">Пункт 2</option>
-													<option value="3">Пункт 3</option>
-													<option value="4">Пункт 4</option>
-													<option value="5">Пункт 5</option>
-												</select>
-											</div>
-										</div><span class="register__gender">Ваш пол</span>
-										<div class="register__radio radio-box">
-											<div class="radio radio-box__radio">
-												<input id="radio1" type="radio" name="radio" class="radio__input">
-												<label for="radio1" class="radio__label"></label>
-											</div>
-											<label for="radio1" class="radio-box__label">Мужской</label>
+									</div>
+									<div class="register__month">
+										<div class="select-box">
+											<select class="select">
+												<option default data-disabled>Месяц</option>
+												<option value="1">Пункт 1</option>
+												<option value="2">Пункт 2</option>
+												<option value="3">Пункт 3</option>
+												<option value="4">Пункт 4</option>
+												<option value="5">Пункт 5</option>
+											</select>
 										</div>
-										<div class="register__radio radio-box">
-											<div class="radio radio-box__radio">
-												<input id="radio2" type="radio" name="radio" class="radio__input">
-												<label for="radio2" class="radio__label"></label>
-											</div>
-											<label for="radio2" class="radio-box__label">Женский</label>
+									</div>
+									<div class="register__year">
+										<div class="select-box">
+											<select class="select">
+												<option default data-disabled>Год</option>
+												<option value="1">Пункт 1</option>
+												<option value="2">Пункт 2</option>
+												<option value="3">Пункт 3</option>
+												<option value="4">Пункт 4</option>
+												<option value="5">Пункт 5</option>
+											</select>
 										</div>
-										<div class="register__captcha">
-											<div class="register__captcha-field input-box">
-												<label class="input-box__label">Введите код с картинки</label>
-												<input type="text" pattern=".*" required class="text-input input-box__input">
-											</div>
-											<div class="register__captcha-img"></div>
+									</div><span class="register__gender">Ваш пол</span>
+									<div class="register__radio radio-box">
+										<div class="radio radio-box__radio">
+											<input id="radio1" type="radio" name="radio" class="radio__input">
+											<label for="radio1" class="radio__label"></label>
 										</div>
-										<button class="button button_first register__create">Создать аккаунт</button><span class="register__extra">Уже есть аккаунт? <a class="register__login">Авторизуйтесь</a></span>
-									</form>
-								</div>
+										<label for="radio1" class="radio-box__label">Мужской</label>
+									</div>
+									<div class="register__radio radio-box">
+										<div class="radio radio-box__radio">
+											<input id="radio2" type="radio" name="radio" class="radio__input">
+											<label for="radio2" class="radio__label"></label>
+										</div>
+										<label for="radio2" class="radio-box__label">Женский</label>
+									</div>
+									<div class="register__captcha">
+										<div class="register__captcha-field input-box">
+											<label class="input-box__label">Введите код с картинки</label>
+											<input type="text" pattern=".*" required class="text-input input-box__input">
+										</div>
+										<div class="register__captcha-img"></div>
+									</div>
+									<button class="button button_first register__create">Зарегистрироваться</button>
+								</form>
 							</div>
 						</div>
+						<div class="auth__acc">Уже есть аккаунт? <a class="auth__register">Войти</a></div>
 					</main>
 				</div>
 			</div>

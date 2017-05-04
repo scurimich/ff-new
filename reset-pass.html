@@ -122,22 +122,17 @@
 							</ul>
 						</div>
 						<div class="auth__window auth__window_md">
-							<div class="auth__info">
-								<div class="auth__head">
-									<h1 class="auth__title">Сброс пароля</h1><span class="auth__description auth__description_reset">Введите новый пароль к вашему аккаунту</span>
-								</div>
-								<div class="auth__body">
-									<form class="auth__reset-password reset-password">
-										<div class="reset-password__input input-box">
-											<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
-										</div>
-										<div class="reset-password__input input-box">
-											<input type="text" placeholder="Подтвердите пароль введя его еще раз" pattern=".*" required class="text-input input-box__input">
-										</div>
-										<button data-modal="modal-reset" class="button button_first reset-password__reset">Сбросить пароль</button>
-										<div class="reset-password__extra clearfix"><a class="reset-password__back">Обратно на страницу авторизации</a></div>
-									</form>
-								</div>
+							<h1 class="auth__title">Сброс пароля</h1>
+							<div class="auth__body">
+								<form class="auth__reset-password reset-password">
+									<div class="reset-password__input input-box">
+										<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="reset-password__input input-box">
+										<input type="text" placeholder="Подтвердите пароль введя его еще раз" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<button data-modal="modal-reset" class="button button_first reset-password__reset">Сбросить пароль</button>
+								</form>
 							</div>
 						</div>
 						<div id="modal" data-id="modal-reset" class="modal">
@@ -148,6 +143,7 @@
 								<div class="modal__body"><span class="text">На вашу электронную почту отправлена информация по восстановлению пароля</span></div>
 							</div>
 						</div>
+						<div class="auth__acc">Уже есть аккаунт? <a class="auth__register">Войти</a></div>
 					</main>
 				</div>
 			</div>

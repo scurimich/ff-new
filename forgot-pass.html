@@ -122,28 +122,24 @@
 							</ul>
 						</div>
 						<div class="auth__window auth__window_md">
-							<div class="auth__info">
-								<div class="auth__head">
-									<h1 class="auth__title">Забыли пароль</h1><span class="auth__description">Укажите электронную почту, которую вы использовали при регистрации</span>
-								</div>
-								<div class="auth__body">
-									<form class="auth__forgot-password forgot-password">
-										<div class="forgot-password__input input-box">
-											<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
+							<h1 class="auth__title">Забыли пароль</h1>
+							<div class="auth__body">
+								<form class="auth__forgot-password forgot-password">
+									<div class="forgot-password__input input-box">
+										<input type="text" placeholder="Придумайте пароль" pattern=".*" required class="text-input input-box__input">
+									</div>
+									<div class="forgot-password__captcha">
+										<div class="forgot-password__captcha-field input-box">
+											<label class="input-box__label">Введите код с картинки</label>
+											<input type="text" pattern=".*" required class="text-input input-box__input">
 										</div>
-										<div class="forgot-password__captcha">
-											<div class="forgot-password__captcha-field input-box">
-												<label class="input-box__label">Введите код с картинки</label>
-												<input type="text" pattern=".*" required class="text-input input-box__input">
-											</div>
-											<div class="forgot-password__captcha-img"></div>
-										</div>
-										<button class="button button_first forgot-password__reset">Сбросить пароль</button>
-										<div class="forgot-password__extra clearfix"><a class="forgot-password__back">Обратно на страницу авторизации</a></div>
-									</form>
-								</div>
+										<div class="forgot-password__captcha-img"></div>
+									</div>
+									<button class="button button_first forgot-password__reset">Сбросить пароль</button>
+								</form>
 							</div>
 						</div>
+						<div class="auth__acc">Уже есть аккаунт? <a class="auth__register">Войти</a></div>
 					</main>
 				</div>
 			</div>
