@@ -8,7 +8,6 @@ $(function() {
       hideText();
       this.sidebarBehavior();
       this.statusbars();
-
       setInterval(this.aboutViewportChanging, 5000);
     },
 
@@ -325,23 +324,22 @@ $(function() {
       var activeNav = viewport.find('.viewport__nav.active');
 
       activeNav.removeClass('active');
-      activeSlide.animate({'opacity': '0'}, 1000, function() {
+      activeSlide.animate({'opacity': '0'}, 600, function() {
         activeSlide.removeClass('active');
       });
 
-      if (activeSlide.next() === 0) {
-        activeNav.siblings('.viewport__nav:first-child').addClass('active');
-        activeSlide
-          .siblings('.viewport__slide:first-child')
-          .addClass('showing active')
-          .animate({'opacity': '1'}, 1000, function() {
-            slide.removeClass('showing');
-          });
+      if (activeSlide.next().length === 0) {
+        var nextNav = activeNav.siblings('.viewport__nav:first-child');
+        var nextSlide = activeSlide.siblings('.viewport__slide:first-child')
+        nextNav.addClass('active');
+        nextSlide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
+          nextSlide.removeClass('showing');
+        });
       } else {
         var nextSlide = activeSlide.next();
         var nextNav = activeNav.next();
         nextNav.addClass('active');
-        nextSlide.addClass('showing active').animate({'opacity': '1'}, 1000, function() {
+        nextSlide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
           nextSlide.removeClass('showing');
         });
       }
@@ -349,18 +347,19 @@ $(function() {
 
     aboutViewportNavClick: function() {
       var $nav = $(this);
+      var viewport = $nav.parents('.viewport');
+      if (viewport.find('.showing').length || $nav.is('.active')) return false;
       var activeNav = $nav.siblings('.active');
       var index = $nav.index() + 1;
-      var viewport = $nav.parents('.viewport');
       var slide = viewport.find('.viewport__slide:nth-child(' + index + ')');
       var activeSlide = viewport.find('.viewport__slide.active');
 
       activeNav.removeClass('active');
       $nav.addClass('active');
-      activeSlide.animate({'opacity': '0'}, 1000, function() {
+      activeSlide.animate({'opacity': '0'}, 600, function() {
         activeSlide.removeClass('active');
       });
-      slide.addClass('showing active').animate({'opacity': '1'}, 1000, function() {
+      slide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
         slide.removeClass('showing');
       });
     }

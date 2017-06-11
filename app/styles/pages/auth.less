@@ -1,6 +1,9 @@
 .auth {
   padding-top: 19px;
   padding-bottom: 44px;
+  flex-grow: 1;
+  background: url(../img/auth-back.jpg) no-repeat;
+  background-size: cover;
 
   &__breadcrumbs {
     margin-bottom: 45px;
@@ -11,6 +14,8 @@
   }
 
   &__window {
+    .ib-top;
+    margin-right: 50px;
     box-sizing: border-box;
     width: 380px;
     padding: 36px 46px 40px 46px;
@@ -147,6 +152,32 @@
     letter-spacing: -.1px;
     color: @links-color;
     cursor: pointer;
+  }
+
+  &__begin {
+    .ib-top;
+    width: 460px;
+    text-align: center;
+
+    &-title {
+      display: block;
+      margin-bottom: 26px;
+      font-family: @font;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 31px;
+      color: @text-color;
+      letter-spacing: -.4px;
+    }
+
+    &-text {
+      font-family: @font;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: @text-color;
+      letter-spacing: -.1px;
+    }
   }
 }
 

@@ -4,8 +4,8 @@ block title
   | Login
 
 block content
-  .container
-    main.auth
+  main.auth
+    .container
       .auth__breadcrumbs.auth__breadcrumbs_login
         ul.breadcrumbs
           li.breadcrumbs__item
@@ -37,5 +37,8 @@ block content
               label.checkbox-box__label(for='checkbox2') Запомнить меня
             a.login__forgot Забыли пароль?
             button.button.button_first.login__in Войти
+      .auth__begin
+        span.auth__begin-title Начни сегодня
+        p.auth__begin-text Пиши отзывы, добавляй фотографии к заведениям, зарабатывай баллы и становить экспертом. Получай задания на написание обзоров заведений для нашего блога с компенсацией счета — ешь бесплатно
       .auth__acc Нет аккаунта? 
         a.auth__register Зарегистрируйтесь

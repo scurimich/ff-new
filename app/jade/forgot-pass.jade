@@ -4,8 +4,8 @@ block title
   | Forgot password
 
 block content
-  .container
-    main.auth
+  main.auth
+    .container
       .auth__breadcrumbs
         ul.breadcrumbs
           li.breadcrumbs__item
@@ -24,5 +24,8 @@ block content
                 input.text-input.input-box__input(type='text', pattern=".*", required)
               .forgot-password__captcha-img
             button.button.button_first.forgot-password__reset Сбросить пароль
+      .auth__begin
+        span.auth__begin-title Начни сегодня
+        p.auth__begin-text Пиши отзывы, добавляй фотографии к заведениям, зарабатывай баллы и становить экспертом. Получай задания на написание обзоров заведений для нашего блога с компенсацией счета — ешь бесплатно
       .auth__acc Уже есть аккаунт? 
         a.auth__register Войти
