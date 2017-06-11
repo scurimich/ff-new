@@ -1,0 +1,103 @@
+extends ./templates/about-template.jade
+
+block title
+  | About
+
+block content
+  .about
+    .about__header.header
+      .container.container_960
+        a.header__logo(href='#')
+          img.header__logo-img(src='img/about/about-logo.svg')
+        h1.header__title Пиши рецензии на рестораны и ешь бесплатно
+        p.header__descr Рекомендательный сервис для туристов и местных жителей
+        a.register(href='#') Зарегистрироваться
+    .about__how.how
+      .container.container_960
+        h2.how__title Как ужинать за счет фокси?
+        p.how__descr Выполни 5 простых шагов и получи компенсацию за ресторанный счет
+        ul.how__list
+          li.how__item.step
+            p.step__text Напиши 20 отзывов
+          li.how__item.step
+            p.step__text Добавь 5 мест
+          li.how__item.step
+            p.step__text Набери 4000 баллов
+          li.how__item.step
+            p.step__text Попади в рубрику «Отзыв недели»
+          li.how__item.step
+            p.step__text Получи статус «Эксперт»
+        .reviews
+          .reviews__info
+            h2.reviews__title Пиши полные отзывы
+            p.reviews__descr Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Узнай как правильно писать отзывы.
+            a.reviews__how(href='#') Как писать отзывы?
+          .reviews__screen
+            img.reviews__img(src='img/about/review-window.jpg')
+        .accumulate.clearfix
+          .accumulate__info
+            h3.accumulate__title Накапливай баллы
+            p.accumulate__descr Активная жизнь на фокси поощрается бонусными баллами. Чем больше ты пишешь отзывов и загружаешь фотографий, тем больше зарабатываешь баллов
+          .accumulate__screen
+            img.accumulate__img(src='img/about/points-window.jpg')
+    .about__points.points
+      .container.container_960
+        span.points__soon скоро на followfoxy!
+        h3.points__title Обменивай баллы на фокси-флаеры
+        p.points__descr Это может быть бесплатный ужин в ресторане, скидка на посещение кафе или подарки от партнеров, участвующих в программе лояльности фокси
+        ul.points__stocks
+          li.points__stock.stock
+            .stock__img-container
+              img.stock__img(src='img/about/ticket-1.jpg')
+            .stock__info
+              a.stock__place(href='#') Кафе «шерлок»
+              p.stock__descr При заказе кортошки фри, гамбургер подается бесплатно.
+          li.points__stock.stock
+            .stock__img-container
+              img.stock__img(src='img/about/ticket-1.jpg')
+            .stock__info
+              a.stock__place(href='#') Кафе «шерлок»
+              p.stock__descr При заказе кортошки фри, гамбургер подается бесплатно.
+          li.points__stock.stock
+            .stock__img-container
+              img.stock__img(src='img/about/ticket-2.jpg')
+            .stock__info
+              a.stock__place(href='#') бакалея на двинской
+              p.stock__descr Фирменный салат от шеф-повара — со скидкой 50%.
+          li.points__stock.stock
+            .stock__img-container
+              img.stock__img(src='img/about/ticket-3.jpg')
+            .stock__info
+              a.stock__place(href='#') Ресторан «филонет»
+              p.stock__descr Бесплатный вход на вечеринку в честь дня всех влюбленных
+          li.points__stock.stock
+            .stock__img-container
+              img.stock__img(src='img/about/ticket-3.jpg')
+            .stock__info
+              a.stock__place(href='#') Кафе «шерлок»
+              p.stock__descr При заказе кортошки фри, гамбургер подается бесплатно.
+    .about__events.events
+      .container.container_960
+        h3.events__title Следи за событиями города
+        p.events__descr Из ленты активности узнавай новости, акции ресторанов и кафе своего города
+        .events__viewport.viewport
+          ul.viewport__slides
+            li.viewport__slide.active
+              img.viewport__img(src='img/about/slide-1.png')
+            li.viewport__slide
+              img.viewport__img(src='img/about/slide-2.png')
+            li.viewport__slide
+              img.viewport__img(src='img/about/slide-3.png')
+            li.viewport__slide
+              img.viewport__img(src='img/about/slide-4.png')
+          ul.viewport__navs
+            li.viewport__nav.active
+            li.viewport__nav
+            li.viewport__nav
+            li.viewport__nav
+    .about__signup.signup
+      .container.container_960
+        h4.signup__title Быть полезным просто
+        p.signup__descr Начни писать отзывы сейчас
+        .signup__register
+          a.register(href='#') Зарегистрироваться

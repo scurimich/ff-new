@@ -1,0 +1,22 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+      block title
+    //- link(rel='preload', href='css/vendor.css', as='style', onload="this.rel='stylesheet'")
+    link(rel='preload', href='css/about.css', as='style', onload="this.rel='stylesheet'")
+  body
+    .wrapper
+        .main
+            block content
+        include ../_common/footer.jade
+    script(src='js/vendor/loadCSS.js', async)
+    script(src='js/vendor/loadCSS.polyfill.js', async)
+    script(src='js/vendor/jquery.min.js')
+    script(src='js/vendor/jquery.rateit.min.js', async)
+    script(src='js/vendor/jquery.selectric.min.js', async)
+    script(src='js/vendor/jquery.mCustomScrollbar.concat.min.js', async)
+    block scripts
+    script(src='js/main.js', async)
