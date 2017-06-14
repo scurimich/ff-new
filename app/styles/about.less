@@ -41,14 +41,11 @@
   padding: 34px 0 168px;
   background: url(../img/about-header.jpg) no-repeat;
   background-size: cover;
+  background-position: center bottom;
 
   &__logo {
     .ib-top;
     margin-bottom: 118px;
-
-    &-img {
-
-    }
   }
 
   &__title {
@@ -60,6 +57,7 @@
     line-height: 58px;
     color: @black;
     letter-spacing: -.4px;
+    white-space: pre-wrap;
   }
 
   &__descr {
@@ -131,6 +129,30 @@
 
   &:after {
     content: '';
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    transform: translate(-50%, -50%);
+  }
+
+  &:first-child:after {
+    .svg-icon(21px, 18px, '../assets/about/review.svg');
+  }
+
+  &:nth-child(2):after {
+    .svg-icon(22px, 22px, '../assets/about/places.svg');
+  }
+
+  &:nth-child(3):after {
+    .svg-icon(17px, 21px, '../assets/about/points.svg');
+  }
+
+  &:nth-child(4):after {
+    .svg-icon(25px, 23px, '../assets/about/calendar.svg');
+  }
+
+  &:last-child:after {
+    .svg-icon(31px, 27px, '../assets/about/status.svg');
   }
 
   &__text {
@@ -299,32 +321,13 @@
     line-height: 24px;
     letter-spacing: .19px;
     color: @about-text;
+    white-space: pre-wrap;
   }
 }
 
 .events {
-  padding: 107px 0 103px;
+  padding: 107px 0 196px;
   border-bottom: 1px solid @about-border;
-
-  &__title {
-    .about-title;
-    text-align: center;
-    margin-bottom: 16px;
-    color: @text-color;
-  }
-
-  &__descr {
-    .descr;
-    text-align: center;
-    width: 384px;
-    margin: 0 auto -16px;
-    font-size: 14px;
-    letter-spacing: .16px;
-  }
-
-  &__viewport {
-
-  }
 }
 
 .viewport {
@@ -351,6 +354,30 @@
       top: 0;
       opacity: 0;
     }
+
+    &:nth-child(3) .viewport__descr {
+      width: 516px;
+    }
+  }
+
+  &__title {
+    .about-title;
+    text-align: center;
+    margin-bottom: 16px;
+    color: @text-color;
+  }
+
+  &__descr {
+    .descr;
+    text-align: center;
+    width: 384px;
+    margin: 0 auto;
+    font-size: 14px;
+    letter-spacing: .16px;
+  }
+
+  &__img {
+    margin-top: -14px;
   }
 
   &__navs {
@@ -399,8 +426,8 @@
     text-align: center;
     font-family: @roboto;
     font-weight: 100;
-    font-size: 52px;
-    line-height: 36px;
+    font-size: 40px;
+    line-height: 48px;
     letter-spacing: -1.42px;
     color: @text-color;
   }

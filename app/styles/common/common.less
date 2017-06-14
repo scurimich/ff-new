@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
 
   &_960 {
+    padding: 0 50px;
     width: 960px;
   }
 }
@@ -40,10 +41,15 @@ textarea {
 }
 
 .wrapper {
+  min-width: 940px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
+
+  &_960 {
+    min-width: 1060px;
+  }
 }
 
 .main {

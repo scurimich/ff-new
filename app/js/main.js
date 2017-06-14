@@ -8,7 +8,7 @@ $(function() {
       hideText();
       this.sidebarBehavior();
       this.statusbars();
-      setInterval(this.aboutViewportChanging, 5000);
+      this.aboutInterval = setInterval(this.aboutViewportChanging, 5000);
     },
 
     startValues: {
@@ -44,7 +44,7 @@ $(function() {
 
       $(window).scroll(this.sidebarBehavior.bind(this));
 
-      $(document).on('click', '.viewport__nav', this.aboutViewportNavClick)
+      $(document).on('click', '.viewport__nav', this.aboutViewportNavClick.bind(this))
     },
 
     plugins: function() {
@@ -345,10 +345,14 @@ $(function() {
       }
     },
 
-    aboutViewportNavClick: function() {
-      var $nav = $(this);
+    aboutViewportNavClick: function(e) {
+      var $nav = $(e.currentTarget);
       var viewport = $nav.parents('.viewport');
       if (viewport.find('.showing').length || $nav.is('.active')) return false;
+
+      clearInterval(this.aboutInterval)
+      this.aboutInterval = setInterval(this.aboutViewportChanging, 5000);
+
       var activeNav = $nav.siblings('.active');
       var index = $nav.index() + 1;
       var slide = viewport.find('.viewport__slide:nth-child(' + index + ')');

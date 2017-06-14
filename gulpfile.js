@@ -65,7 +65,7 @@ gulp.task('js', function() {
 
 gulp.task('server', function() {
   return browserSync({
-    port: 9000,
+    port: 9001,
     server: {
       baseDir: paths.prod
     }
