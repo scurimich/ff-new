@@ -339,6 +339,8 @@
   &__slides {
     list-style: none;
     position: relative;
+    width: 1000px;
+    height: 710px;
   }
 
   &__slide {
@@ -352,7 +354,15 @@
       position: absolute;
       left: 0;
       top: 0;
-      opacity: 0;
+      opacity: 1;
+      z-index: 0;
+    }
+
+    &.hidding {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
     }
 
     &:nth-child(3) .viewport__descr {
@@ -422,7 +432,7 @@
   padding: 110px 0 116px;
 
   &__title {
-    margin-bottom: 26px;
+    margin-bottom: 21px;
     text-align: center;
     font-family: @roboto;
     font-weight: 100;

@@ -322,27 +322,26 @@ $(function() {
       var viewport = $('.viewport');
       var activeSlide = viewport.find('.viewport__slide.active');
       var activeNav = viewport.find('.viewport__nav.active');
+      var nextNav, nextSlide;
 
       activeNav.removeClass('active');
-      activeSlide.animate({'opacity': '0'}, 600, function() {
-        activeSlide.removeClass('active');
-      });
 
       if (activeSlide.next().length === 0) {
-        var nextNav = activeNav.siblings('.viewport__nav:first-child');
-        var nextSlide = activeSlide.siblings('.viewport__slide:first-child')
+        nextNav = activeNav.siblings('.viewport__nav:first-child');
+        nextSlide = activeSlide.siblings('.viewport__slide:first-child')
         nextNav.addClass('active');
-        nextSlide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
-          nextSlide.removeClass('showing');
-        });
+        nextSlide.addClass('showing active').css('opacity', '1');
       } else {
-        var nextSlide = activeSlide.next();
-        var nextNav = activeNav.next();
+        nextSlide = activeSlide.next();
+        nextNav = activeNav.next();
         nextNav.addClass('active');
-        nextSlide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
-          nextSlide.removeClass('showing');
-        });
+        nextSlide.addClass('showing active').css('opacity', '1');
       }
+
+      activeSlide.addClass('hidding').animate({'opacity': '0'}, 1000, function() {
+        nextSlide.removeClass('showing');
+        activeSlide.removeClass('active hidding');
+      });
     },
 
     aboutViewportNavClick: function(e) {
@@ -360,10 +359,11 @@ $(function() {
 
       activeNav.removeClass('active');
       $nav.addClass('active');
-      activeSlide.animate({'opacity': '0'}, 600, function() {
-        activeSlide.removeClass('active');
-      });
-      slide.addClass('showing active').animate({'opacity': '1'}, 600, function() {
+
+      slide.addClass('showing active').css('opacity', '1');
+
+      activeSlide.addClass('hidding').animate({'opacity': '0'}, 1000, function() {
+        activeSlide.removeClass('active hidding');
         slide.removeClass('showing');
       });
     }
