@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/share-in-social</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="atimic_kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms" transform="translate(-311.000000, -1285.000000)" fill="#888B94">
+            <g id="icon/share-in-social" transform="translate(311.000000, 1285.000000)">
+                <path d="M12.8,4.7 C11.8232,4.7 10.96,5.1472 10.3728,5.8368 L6.3672,3.524 C6.5696,1.5352 5.0152,0 3.2,0 C1.4328,0 0,1.4328 0,3.2 C0,4.9672 1.4328,6.4 3.2,6.4 C4.2776,6.4 5.2256,5.8632 5.8056,5.0472 L9.6632,7.2744 C9.5768,7.7096 9.5792,8.1288 9.6704,8.5632 L5.7128,10.8408 C5.1272,10.0904 4.2248,9.6 3.2,9.6 C1.4328,9.6 0,11.0328 0,12.8 C0,14.5672 1.4328,16 3.2,16 C5.0896,16 6.6592,14.3424 6.3512,12.3192 L10.396,9.992 C10.9824,10.6656 11.8368,11.1 12.8,11.1 C14.5672,11.1 16,9.6672 16,7.9 C16,6.1328 14.5672,4.7 12.8,4.7" id="share-[#1100]-copy-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>
