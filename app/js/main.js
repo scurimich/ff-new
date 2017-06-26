@@ -8,7 +8,7 @@ $(function() {
       hideText();
       this.sidebarBehavior();
       this.statusbars();
-      this.aboutInterval = setInterval(this.aboutViewportChanging, 5000);
+      this.aboutInterval = setInterval(this.aboutViewportChanging.bind(this), 5000);
     },
 
     startValues: {
@@ -324,24 +324,15 @@ $(function() {
       var activeNav = viewport.find('.viewport__nav.active');
       var nextNav, nextSlide;
 
-      activeNav.removeClass('active');
-
       if (activeSlide.next().length === 0) {
         nextNav = activeNav.siblings('.viewport__nav:first-child');
         nextSlide = activeSlide.siblings('.viewport__slide:first-child')
-        nextNav.addClass('active');
-        nextSlide.addClass('showing active').css('opacity', '1');
       } else {
         nextSlide = activeSlide.next();
         nextNav = activeNav.next();
-        nextNav.addClass('active');
-        nextSlide.addClass('showing active').css('opacity', '1');
       }
 
-      activeSlide.addClass('hidding').animate({'opacity': '0'}, 1000, function() {
-        nextSlide.removeClass('showing');
-        activeSlide.removeClass('active hidding');
-      });
+      this.aboutSlidesSwitching(activeSlide, activeNav, nextSlide, nextNav);
     },
 
     aboutViewportNavClick: function(e) {
@@ -350,21 +341,36 @@ $(function() {
       if (viewport.find('.showing').length || $nav.is('.active')) return false;
 
       clearInterval(this.aboutInterval)
-      this.aboutInterval = setInterval(this.aboutViewportChanging, 5000);
+      this.aboutInterval = setInterval(this.aboutViewportChanging.bind(this), 5000);
 
       var activeNav = $nav.siblings('.active');
       var index = $nav.index() + 1;
       var slide = viewport.find('.viewport__slide:nth-child(' + index + ')');
       var activeSlide = viewport.find('.viewport__slide.active');
 
-      activeNav.removeClass('active');
-      $nav.addClass('active');
+      this.aboutSlidesSwitching(activeSlide, activeNav, slide, $nav);
+    },
 
-      slide.addClass('showing active').css('opacity', '1');
+    aboutSlidesSwitching: function(prevSlide, prevNav, nextSlide, nextNav) {
+      var prevImg = prevSlide.find('img');
+      var prevText = prevSlide.find('h3, p');
 
-      activeSlide.addClass('hidding').animate({'opacity': '0'}, 1000, function() {
-        activeSlide.removeClass('active hidding');
-        slide.removeClass('showing');
+      var nextImg = nextSlide.find('img');
+      var nextText = nextSlide.find('h3, p');
+
+      prevNav.removeClass('active');
+      nextNav.addClass('active');
+
+      prevSlide.addClass('hidding');
+      nextSlide.addClass('showing active');
+      nextImg.css('opacity', '1');
+
+      prevText.removeClass('active');
+      nextText.addClass('active');
+
+      prevImg.animate({'opacity': '0'}, 1000, function() {
+        nextSlide.removeClass('showing');
+        prevSlide.removeClass('hidding active');
       });
     }
 

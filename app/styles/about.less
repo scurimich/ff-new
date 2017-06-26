@@ -326,21 +326,20 @@
 }
 
 .events {
-  padding: 107px 0 196px;
+  padding: 107px 0 103px;
   border-bottom: 1px solid @about-border;
 }
 
 .viewport {
-  width: 1000px;
-  height: 600px;
+  width: 890px;
   margin-left: 50%;
   transform: translate(-50%);
 
   &__slides {
     list-style: none;
     position: relative;
-    width: 1000px;
-    height: 710px;
+    width: 890px;
+    height: 683px;
   }
 
   &__slide {
@@ -372,26 +371,35 @@
 
   &__title {
     .about-title;
+    opacity: 0;
     text-align: center;
     margin-bottom: 16px;
     color: @text-color;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   &__descr {
     .descr;
+    opacity: 0;
     text-align: center;
     width: 384px;
     margin: 0 auto;
     font-size: 14px;
     letter-spacing: .16px;
+
+    &.active {
+      opacity: 1;
+    }
   }
 
   &__img {
-    margin-top: -14px;
+    margin-top: 20px;
   }
 
   &__navs {
-    margin-top: -25px;
     list-style: none;
     font-size: 0;
     text-align: center;
