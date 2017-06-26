@@ -45,6 +45,9 @@ $(function() {
       $(window).scroll(this.sidebarBehavior.bind(this));
 
       $(document).on('click', '.viewport__nav', this.aboutViewportNavClick.bind(this))
+
+      $(document).on('mouseover mouseout', '.viewport__slides', this.aboutViewportStop.bind(this));
+      $(document).on('mouseout', '.viewport__slides', this.aboutViewportStart.bind(this));
     },
 
     plugins: function() {
@@ -372,6 +375,14 @@ $(function() {
         nextSlide.removeClass('showing');
         prevSlide.removeClass('hidding active');
       });
+    },
+
+    aboutViewportStop: function(e) {
+      clearInterval(this.aboutInterval);
+    },
+
+    aboutViewportStart: function(e) {
+      this.aboutInterval = setInterval(this.aboutViewportChanging.bind(this), 5000);
     }
 
   };
