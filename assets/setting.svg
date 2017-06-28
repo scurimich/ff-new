@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>setting_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="7" cy="7" r="5"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_components/placeheader-for-owner-place" transform="translate(-902.000000, -60.000000)">
+            <g id="setting_icon" transform="translate(902.000000, 61.000000)">
+                <path d="M7,0.958405421 L7,13" id="Line" stroke="#4B5063" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M13.0415946,7 L1,7" id="Line" stroke="#4B5063" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M11.2842353,11.2426407 L2.79895389,2.75735931" id="Line" stroke="#4B5063" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M11.2842353,11.2426407 L2.79895389,2.75735931" id="Line" stroke="#4B5063" stroke-width="2" stroke-linecap="square" transform="translate(7.041595, 7.000000) scale(-1, 1) translate(-7.041595, -7.000000) "></path>
+                <g id="Oval">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <circle stroke="#4B5063" stroke-width="2" cx="7" cy="7" r="4"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
