@@ -1,0 +1,37 @@
+extends ../templates/owner.jade
+
+block title
+  | Address
+
+block content
+  .owner__body.owner-address
+    .owner-address__title Адрес
+    form.owner-address__form
+      .owner-address__body
+        .owner-address__item
+          span.owner-address__term Страна
+          .select-box.owner-address__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .owner-address__item
+          span.owner-address__term Город
+          .select-box.owner-address__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .owner-address__item
+          span.owner-address__term Адрес
+          input.text-input.owner-address__input(type='text', placeholder='ул. Мира, 12', pattern=".*")
+        .owner-address__item
+          span.owner-address__term Почтовый индекс
+          input.text-input.owner-address__input(type='text', placeholder='400002', pattern=".*")
+        .owner-address__item
+          span.owner-address__term GPS-координаты
+          input.text-input.owner-address__input(type='text', placeholder='47.197620, 39.887428', pattern=".*")
+          .owner-address__map#address-map
+      .owner-address__footer
+        button.button.button_first.owner-address__save Сохранить
+        button.owner-address__cancel Отменить

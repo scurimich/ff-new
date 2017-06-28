@@ -1,0 +1,62 @@
+extends ./templates/main.jade
+
+block title
+  | New event
+
+block content
+  .container
+    main.new-event
+      .new-event__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Кафе и рестораны Волгограда
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Ресторан Волгоград
+      .new-event__window
+        h1.new-event__title Новое событие в Pasta Uno
+        form.new-event__form
+          .new-event__body
+            .new-event__name
+              span.new-event__term Название события
+              input.text-input.new-event__input(type='text', placeholder='', pattern=".*", required)
+            .new-event__descr
+              span.new-event__term.new-event__term_descr Описание события
+              textarea.textarea.new-event__textarea(placeholder='')
+            .new-event__begin
+              span.new-event__term.new-event__term_date Время начала
+              input.new-event__date(type='date', placeholder='', pattern=".*", required, value='2017-03-23')
+              span.new-event__text в
+              .new-event__hours.select-box
+                select.select
+                  option(default, data-disabled) 18
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') #{x}
+              span.new-event__text :
+              .new-event__minutes.select-box
+                select.select
+                  option(default, data-disabled) 00
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') #{x}
+            .new-event__end
+              span.new-event__term.new-event__term_date Время окончания
+              input.new-event__date(type='date', placeholder='', pattern=".*", required, value='2017-03-23')
+              span.new-event__text в
+              .new-event__hours.select-box
+                select.select
+                  option(default, data-disabled) 18
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') #{x}
+              span.new-event__text :
+              .new-event__minutes.select-box
+                select.select
+                  option(default, data-disabled) 00
+                  - for (var x = 1; x <= 5; x++)
+                    option(value='#{x}') #{x}
+            .new-event__cover
+              span.new-event__term.new-event__term_cover Обложка события
+              button.button.button_second.button_watch Добавить обложку
+          .new-event__footer
+            button.button.button_first.new-event__add Добавить событие
+            button.new-event__cancel Отменить

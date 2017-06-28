@@ -1,0 +1,32 @@
+extends ../templates/owner-admin.jade
+
+block title
+  | Events
+
+block content
+  .owner-admin__events.admin-events
+  .admin-page__body.admin-events
+    .admin-events__main
+      .admin-events__title События 
+        span.admin-events__number 9
+        a.button.button_first.admin-events__add(href='#') Создать событие
+      ul.tabs.admin-events__tabs
+        li.tabs__item
+          a.tabs__link.tabs__link_admin.tabs__link_active(href='#') Предстоящие
+        li.tabs__item
+          a.tabs__link.tabs__link_admin(href='events-past.html') Прошедшие 
+            span.tabs__number 118
+      ul.admin-events__list
+        - for (var i = 0; i < 3; i++)
+          li.admin-events__item.admin-event
+            .admin-event__photo-container
+              img.admin-event__photo(src='http://via.placeholder.com/120x80')
+            .admin-event__body
+              a.admin-event__link Готовим сырный завтрак в Гуакамоле
+              .admin-event__descr
+                a.admin-event__sublink Гуакамоле, 
+                time.admin-event__date(datetime='2016-02-23T18:00') 23 февраля 2016, сб 18:00
+              .admin-event__actions
+                a.admin-event__delete(href='#') Удалить
+                span.admin-event__splitter
+                a.admin-event__change(href='#') Изменить

@@ -1,0 +1,30 @@
+extends ../templates/owner.jade
+
+block title
+  | Main
+
+block content
+  .owner__body.owner-main
+    .owner-main__title Основная информация
+    form.owner-main__form
+      .owner-main__body
+        .owner-main__item
+          span.owner-main__term Название
+          input.text-input.owner-main__input(type='text', placeholder='Pasta Uno', pattern=".*")
+        .owner-main__item
+          span.owner-main__term Категория
+          .select-box.owner-main__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .owner-main__item
+          span.owner-main__term Подкатегория
+          .select-box.owner-main__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+      .owner-main__footer
+        button.button.button_first.owner-main__save Сохранить
+        button.owner-main__cancel Отменить

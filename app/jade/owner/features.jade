@@ -1,0 +1,53 @@
+extends ../templates/owner.jade
+
+block title
+  | Features
+
+block content
+  .owner__body.owner-features
+    .owner-features__title Особенности
+    form.owner-features__form
+      .owner-features__body
+        .owner-features__kitchen
+          span.owner-features__term Тип кухни
+          .select-box.owner-features__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .owner-features__draft
+          span.owner-features__term Средний чек
+          .select-box.owner-features__select
+            select.select
+              option(default, data-disabled) Не выбрано
+              - for (var x = 1; x <= 5; x++)
+                option(value='#{x}') Пункт #{x}
+        .owner-features__type
+          .checkbox-box.owner-features__check
+            .checkbox.checkbox-box__checkbox
+              input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+              label.checkbox__label(for='checkbox2')
+            label.checkbox-box__label(for='checkbox2') Летняя терраса
+          .checkbox-box.owner-features__check
+            .checkbox.checkbox-box__checkbox
+              input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+              label.checkbox__label(for='checkbox2')
+            label.checkbox-box__label(for='checkbox2') Безналичный расчет
+          .checkbox-box.owner-features__check
+            .checkbox.checkbox-box__checkbox
+              input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+              label.checkbox__label(for='checkbox2')
+            label.checkbox-box__label(for='checkbox2') Парковка
+          .checkbox-box.owner-features__check
+            .checkbox.checkbox-box__checkbox
+              input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+              label.checkbox__label(for='checkbox2')
+            label.checkbox-box__label(for='checkbox2') Вайфай
+          .checkbox-box.owner-features__check
+            .checkbox.checkbox-box__checkbox
+              input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+              label.checkbox__label(for='checkbox2')
+            label.checkbox-box__label(for='checkbox2') Безналичный расчет
+      .owner-features__footer
+        button.button.button_first.owner-features__save Сохранить
+        button.owner-features__cancel Отменить

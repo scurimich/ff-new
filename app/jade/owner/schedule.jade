@@ -1,0 +1,55 @@
+extends ../templates/owner.jade
+
+block title
+  | Schedule
+
+block content
+  .owner__body.owner-schedule
+    .owner-schedule__title Время работы
+    form.owner-schedule__form
+      .owner-schedule__body
+        .owner-schedule__item
+          span.owner-schedule__term Дни работы
+          ul.owner-schedule__week
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox1', type='checkbox')
+              label.owner-schedule__label(for='checkbox1') Пн
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox2', type='checkbox')
+              label.owner-schedule__label(for='checkbox2') Вт
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox3', type='checkbox')
+              label.owner-schedule__label(for='checkbox3') Ср
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox4', type='checkbox')
+              label.owner-schedule__label(for='checkbox4') Чт
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox5', type='checkbox')
+              label.owner-schedule__label(for='checkbox5') Пт
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox6', type='checkbox', disabled)
+              label.owner-schedule__label(for='checkbox6') Сб
+            li.owner-schedule__day
+              input.owner-schedule__check(id='checkbox7', type='checkbox', disabled)
+              label.owner-schedule__label(for='checkbox7') Вс
+        .owner-schedule__item
+          span.owner-schedule__term Время работы
+          .owner-schedule__inputs
+            input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required)
+            span.owner-schedule__splitter –
+            input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required)
+            a.owner-schedule__add(href='time-add') Добавить
+        .owner-schedule__item
+          span.owner-schedule__term.owner-schedule__term_schedule Расписание
+          ul.owner-schedule__times
+            li.owner-schedule__time.schedule-time
+              span.schedule-time__days Пн-пт
+              span.schedule-time__time 08:00–00:00
+              a.schedule-time__remove(href='time-remove')
+            li.owner-schedule__time.schedule-time
+              span.schedule-time__days Сб-вс
+              span.schedule-time__time 00:00–02:00
+              a.schedule-time__remove(href='time-remove')
+      .owner-schedule__footer
+        button.button.button_first.owner-schedule__save Сохранить
+        button.owner-schedule__cancel Отменить

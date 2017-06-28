@@ -1,0 +1,23 @@
+extends ../templates/owner-admin.jade
+
+block title
+  | Subscribers
+
+block content
+  .owner-admin__body.admin-follow
+    .admin-follow__title Подписчики 
+      span.admin-follow__number  189
+    .admin-follow__body
+      ul.admin-follow__list
+        - for (var i = 0; i < 7; i++)
+          li.admin-follow__item.af-item
+              .af-item__avatar-container.avatar.avatar_80_man
+                img.af-item__avatar(src='http://via.placeholder.com/80x80')
+              .af-item__body.af-item__body_follows
+                .af-item__name Эдуард Пирожников
+                .af-item__type Эксперт, г. Волгоград
+                .af-item__social
+                  |  73 подписчика 
+                  span.af-item__break
+                  |  183 отзыва
+      .admin-follow__more показать еще

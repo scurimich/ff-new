@@ -1,0 +1,102 @@
+@import 'owner/features.less';
+@import 'owner/contacts.less';
+@import 'owner/main.less';
+@import 'owner/address.less';
+@import 'owner/schedule.less';
+
+.owner {
+  padding-top: 18px;
+  padding-bottom: 20px;
+  font-size: 0;
+
+  &__breadcrumbs {
+    margin-bottom: 21px;
+  }
+
+  &__sidebar {
+    .ib-top;
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  &__body {
+    .ib-top;
+    width: 620px;
+    .white-block;
+  }
+}
+
+.owner-sidebar {
+  .white-block;
+  padding: 16px 0 8px;
+
+  &__head {
+    padding: 0 16px;
+    font-size: 0;
+    margin-bottom: 16px;
+  }
+
+  &__img-container {
+    .ib-top;
+    margin-right: 12px;
+  }
+
+  &__body {
+    .ib-top;
+  }
+
+  &__title {
+    margin-top: 6px;
+    display: block;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: @text-color;
+  }
+
+  &__link {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    color: @text-color;
+    line-height: 15px;
+    opacity: .5;
+    text-decoration: none;
+  }
+}
+
+.owner-menu {
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    
+  }
+
+  &__link {
+    display: block;
+    padding: 5px 20px 7px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @text-color;
+    background-color: @white;
+    border-left: 2px solid @white;
+    text-decoration: none;
+
+    &_active {
+      background-color: @background-color;
+      border-left: 2px solid @secondary-color;
+    }
+
+    &:hover {
+      background-color: @background-color;
+      border-left: 2px solid @secondary-color;
+    }
+  }
+}

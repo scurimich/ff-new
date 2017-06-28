@@ -1,0 +1,30 @@
+extends ./templates/main.jade
+
+block title
+  | Owner cabinet
+
+block content
+  .container
+    main.owner
+      .owner__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Кафе и рестораны Волгограда
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Ресторан Волгоград
+      aside.owner__sidebar.owner-sidebar
+        .owner-sidebar__head
+          .owner-sidebar__img-container.place.place_48
+            img.owner-sidebar__img(src='http://via.placeholder.com/48x48')
+          .owner-sidebar__body
+            span.owner-sidebar__title Pasta Uno
+            a.owner-sidebar__link(href='#') вернуться на страницу
+        .owner-sidebar__nav.owner-menu
+          ul.owner-menu__list
+            - var menuItem = ["Основная информация", "Адрес", "Время работы", "Контакты и соцсети", "Особенности"]
+            - var menuLink = ["main", "address", "schedule", "contacts", "features"]
+            - for (var i = 0; i < 5; i++)
+              li.owner-menu__item
+                a.owner-menu__link(href='owner/#{menuLink[i]}.html')= menuItem[i]

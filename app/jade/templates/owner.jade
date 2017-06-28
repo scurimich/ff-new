@@ -1,0 +1,48 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+      block title
+    link(rel='preload', href='../css/vendor.css', as='style', onload="this.rel='stylesheet'")
+    link(rel='preload', href='../css/main.css', as='style', onload="this.rel='stylesheet'")
+  body
+    .wrapper
+      include ../_common/special-header.jade
+      .main
+        .container
+          main.owner
+            .owner__breadcrumbs
+              ul.breadcrumbs
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Главная
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Кафе и рестораны Волгограда
+                li.breadcrumbs__item
+                  a.breadcrumbs__link Ресторан Волгоград
+            aside.owner__sidebar.owner-sidebar
+              .owner-sidebar__head
+                .owner-sidebar__img-container
+                  img.owner-sidebar__img(src='http://via.placeholder.com/48x48')
+                .owner-sidebar__body
+                  span.owner-sidebar__title Pasta Uno
+                  a.owner-sidebar__link(href='#') вернуться на страницу
+              .owner-sidebar__nav.owner-menu
+                ul.owner-menu__list
+                  - var menuItem = ["Основная информация", "Адрес", "Время работы", "Контакты и соцсети"]
+                  - var menuLink = ["main", "address", "schedule", "contacts"]
+                  - for (var i = 0; i < 4; i++)
+                    li.owner-menu__item
+                      a.owner-menu__link(href='#{menuLink[i]}.html')= menuItem[i]
+                  li.owner-menu__item
+                    a.owner-menu__link.owner-menu__link_active(href='features.html') Особенности
+            block content
+      include ../_common/footer.jade
+    script(src='../js/vendor/loadCSS.js', async)
+    script(src='../js/vendor/loadCSS.polyfill.js', async)
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/vendor/jquery.rateit.min.js', async)
+    script(src='../js/vendor/jquery.selectric.min.js', async)
+    script(src='../js/vendor/jquery.mCustomScrollbar.concat.min.js', async)
+    script(src='../js/main.js', async)

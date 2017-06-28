@@ -1,0 +1,28 @@
+extends ../templates/owner.jade
+
+block title
+  | Contacts
+
+block content
+  .owner__body.owner-contacts
+    .owner-features__title Контакты и соцсети
+    form.owner-contacts__form
+      ul.owner-contacts__body
+        li.owner-contacts__item
+          span.owner-contacts__term Номер телефона
+          input.text-input.owner-contacts__input(type='text', placeholder='', pattern=".*")
+        li.owner-contacts__item
+          span.owner-contacts__term Адрес сайта
+          input.text-input.owner-contacts__input(type='text', placeholder='', pattern=".*")
+        li.owner-contacts__item
+          span.owner-contacts__term Vkontakte
+          input.text-input.owner-contacts__input(type='text', placeholder='vk.com/username', pattern=".*")
+        li.owner-contacts__item
+          span.owner-contacts__term Facebook
+          input.text-input.owner-contacts__input(type='text', placeholder='facebook.com/username', pattern=".*")
+        li.owner-contacts__item
+          span.owner-contacts__term Instagram
+          input.text-input.owner-contacts__input(type='text', placeholder='@username', pattern=".*")
+      .owner-contacts__footer
+        button.button.button_first.owner-contacts__save Сохранить
+        button.owner-contacts__cancel Отменить

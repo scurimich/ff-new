@@ -1,0 +1,50 @@
+extends ./templates/main.jade
+
+block title
+  | Owner admin
+
+block content
+  .container
+    main.owner-admin
+      .owner-admin__breadcrumbs
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Главная
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Кафе и рестораны Волгограда
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href='#') Ресторан Волгоград
+      .owner-admin__header.admin-descr
+        .admin-descr__head Администрирование страницы
+        .admin-descr__body
+          .admin-descr__type Кафе, ресторан, бар, хинкальная
+          .admin-descr__actions
+            button.button.button_second.button_watch.admin-descr__user В режиме пользователя
+            a.admin-descr__settings(href='#')
+          .admin-descr__title Pasta Uno
+          .admin-descr__rating
+            .admin-descr__rating-stars
+               span.rating
+            .admin-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
+      .owner-admin__body
+        .owner-admin__tabs
+          ul.tabs
+            li.tabs__item
+              a.tabs__link.tabs__link_admin.tabs__link_active(href='#') Активность
+            li.tabs__item
+              a.tabs__link.tabs__link_admin(href='owner-admin/reviews.html') Отзывы 
+            li.tabs__item
+              a.tabs__link.tabs__link_admin(href='owner-admin/photos.html') Фотографии 
+                span.tabs__pro pro
+            li.tabs__item
+              a.tabs__link.tabs__link_admin(href='owner-admin/events.html') События 
+                span.tabs__pro pro
+            li.tabs__item
+              a.tabs__link.tabs__link_admin(href='owner-admin/shares.html') Акции 
+                span.tabs__pro pro
+            li.tabs__item
+              a.tabs__link.tabs__link_admin(href='owner-admin/subscribers.html') Подписчики
+      aside.owner-admin__sidebar.admin-sidebar
+        span.admin-sidebar__title PRO-аккаунт на 1 год
+        p.admin-sidebar__descr Добавляйте события и акции, управляйте фотографиями
+        span.admin-sidebar__soon Скоро!

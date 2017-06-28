@@ -1,0 +1,66 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+      block title
+    link(rel='preload', href='../css/vendor.css', as='style', onload="this.rel='stylesheet'")
+    link(rel='preload', href='../css/main.css', as='style', onload="this.rel='stylesheet'")
+  body
+    .wrapper
+      include ../_common/special-header.jade
+      .main
+        .container
+          main.owner-admin
+            .owner-admin__breadcrumbs
+              ul.breadcrumbs
+                li.breadcrumbs__item
+                  a.breadcrumbs__link(href='#') Главная
+                li.breadcrumbs__item
+                  a.breadcrumbs__link(href='#') Кафе и рестораны Волгограда
+                li.breadcrumbs__item
+                  a.breadcrumbs__link(href='#') Ресторан Волгоград
+            .owner-admin__header.admin-descr
+              .admin-descr__head Администрирование страницы
+              .admin-descr__body
+                .admin-descr__type Кафе, ресторан, бар, хинкальная
+                .admin-descr__actions
+                  button.button.button_second.button_watch.admin-descr__user В режиме пользователя
+                  .admin-descr__settings
+                .admin-descr__title Pasta Uno
+                .admin-descr__rating
+                  .admin-descr__rating-stars
+                    span.rating
+                  .admin-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
+            .owner-admin__body
+              .owner-admin__tabs
+                ul.tabs
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin.tabs__link_active(href='#') Активность
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin(href='reviews.html') Отзывы 
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin(href='photos.html') Фотографии 
+                      span.tabs__pro pro
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin(href='events.html') События 
+                      span.tabs__pro pro
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin(href='shares.html') Акции 
+                      span.tabs__pro pro
+                  li.tabs__item
+                    a.tabs__link.tabs__link_admin(href='subscribers.html') Подписчики
+              block content
+            aside.owner-admin__sidebar.admin-sidebar
+              span.admin-sidebar__title PRO-аккаунт на 1 год
+              p.admin-sidebar__descr Добавляйте события и акции, управляйте фотографиями
+              span.admin-sidebar__soon Скоро!
+      include ../_common/footer.jade
+    script(src='../js/vendor/loadCSS.js', async)
+    script(src='../js/vendor/loadCSS.polyfill.js', async)
+    script(src='../js/vendor/jquery.min.js')
+    script(src='../js/vendor/jquery.rateit.min.js', async)
+    script(src='../js/vendor/jquery.selectric.min.js', async)
+    script(src='../js/vendor/jquery.mCustomScrollbar.concat.min.js', async)
+    script(src='../js/main.js', async)

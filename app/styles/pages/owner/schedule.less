@@ -1,0 +1,212 @@
+.owner-schedule {
+
+  &__title {
+    display: block;
+    padding: 27px 20px 23px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: -.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__body {
+    padding: 32px 24px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__term {
+    .ib-mid;
+    text-align: right;
+    width: 126px;
+    margin-right: 12px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: @secondary-color;
+
+    &_schedule {
+      line-height: 22px;
+    }
+  }
+
+  &__week {
+    .ib-mid;
+    font-size: 0;
+    border-radius: 2px;
+    border: 1px solid rgba(208,211,217,0.35);
+    overflow: hidden;
+  }
+
+  &__day {
+    .ib-top;
+
+    &:not(:last-child) {
+      border-right: 1px solid #D0D3D9;
+    }
+  }
+
+  &__label {
+    box-sizing: border-box;
+    display: block;
+    width: 35px;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+    background-color: rgba(238,239,240,0.50);
+    cursor: pointer;
+
+    &:hover {
+      background-color: @background-color;
+    }
+  }
+
+  &__check {
+    display: none;
+
+    &:checked+label {
+      background-color: @primary-orange;
+      color: @white;
+    }
+
+    &:disabled+label,
+    &:disabled:hover+label {
+      cursor: default;
+      color: rgba(28, 26, 24, .2);
+      background-color: rgba(238,239,240,0.50);
+    }
+  }
+
+  &__inputs {
+    .ib-mid;
+    font-size: 0;
+  }
+
+  &__input {
+    .ib-mid;
+    width: 64px;
+    height: 32px;
+  }
+
+  &__splitter {
+    .ib-mid;
+    margin: 0 7px 5px 9px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.05px;
+    color: @text-color;
+  }
+
+  &__add {
+    .ib-mid;
+    margin-left: 16px;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @links-color;
+    letter-spacing: -.05px;
+    text-decoration: none;
+    border-bottom: 1px solid #1557c7;
+    text-decoration: none;
+  }
+
+  &__times {
+    .ib-top;
+    list-style: none;
+    width: 434px;
+  }
+
+  &__time:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__footer {
+    margin: 0 24px;
+    padding: 23px 0 24px;
+    border-top: 1px solid @border-color;
+  }
+
+  &__save {
+    margin-left: 138px;
+    margin-right: 14px;
+  }
+
+  &__cancel {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -.09px;
+    color: @secondary-color;
+    border: none;
+    background-color: @white;
+    cursor: pointer;
+  }
+}
+
+.schedule-time {
+  box-sizing: border-box;
+  background-color: @background-color;
+  border-radius: 4px;
+  height: 28px;
+  padding: 4px 7px 0 10px;
+
+  &__days {
+    .ib-top;
+    width: 20px;
+    margin-right: 8px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @text-color;
+    letter-spacing: -.1px;
+  }
+
+  &__time {
+    .ib-top;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: @text-color;
+    letter-spacing: -.1px;
+  }
+
+  &__remove {
+    float: right;
+    margin-top: 3px;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      .svg-icon(7px, 7px, '../assets/close/close-FFFFFF.svg');
+      transform: translate(-50%, -50%);
+    }
+  }
+}

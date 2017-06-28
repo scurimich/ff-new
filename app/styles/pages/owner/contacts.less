@@ -1,0 +1,63 @@
+.owner-contacts {
+
+  &__title {
+    display: block;
+    padding: 27px 20px 23px 20px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: -.14px;
+    color: @text-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  &__body {
+    padding: 32px 79px 32px 42px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__term {
+    .ib-mid;
+    margin-bottom: 5px;
+    width: 107px;
+    margin-right: 12px;
+    text-align: right;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: @secondary-color;
+  }
+
+  &__input {
+    .ib-mid;
+    width: 380px;
+  }
+
+  &__footer {
+    margin: 0 24px;
+    padding: 23px 0 24px;
+    border-top: 1px solid @border-color;
+  }
+
+  &__save {
+    margin-left: 138px;
+    margin-right: 14px;
+  }
+
+  &__cancel {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -.09px;
+    color: @secondary-color;
+    border: none;
+    background-color: @white;
+    cursor: pointer;
+  }
+}
