@@ -175,14 +175,14 @@
 									</div>
 									<div class="owner-schedule__item"><span class="owner-schedule__term">Время работы</span>
 										<div class="owner-schedule__inputs">
-											<input type="text" placeholder="" pattern=".*" required class="text-input owner-schedule__input"><span class="owner-schedule__splitter">–</span>
-											<input type="text" placeholder="" pattern=".*" required class="text-input owner-schedule__input"><a href="time-add" class="owner-schedule__add">Добавить</a>
+											<input type="number" placeholder="" pattern=".*" required min="0" max="23" class="text-input owner-schedule__input"><span class="owner-schedule__splitter">–</span>
+											<input type="number" placeholder="" pattern=".*" required min="0" max="59" class="text-input owner-schedule__input"><a href="time-add" class="owner-schedule__add">Добавить</a>
 										</div>
 									</div>
 									<div class="owner-schedule__item"><span class="owner-schedule__term owner-schedule__term_schedule">Расписание</span>
 										<ul class="owner-schedule__times">
-											<li class="owner-schedule__time schedule-time"><span class="schedule-time__days">Пн-пт</span><span class="schedule-time__time">08:00–00:00</span><a href="time-remove" class="schedule-time__remove"></a></li>
-											<li class="owner-schedule__time schedule-time"><span class="schedule-time__days">Сб-вс</span><span class="schedule-time__time">00:00–02:00</span><a href="time-remove" class="schedule-time__remove"></a></li>
+											<li class="owner-schedule__time schedule-time"><span class="schedule-time__days">Пн-пт</span><span class="schedule-time__time">08:00–00:00</span><a href="#time-remove" class="schedule-time__remove"></a></li>
+											<li class="owner-schedule__time schedule-time"><span class="schedule-time__days">Сб-вс</span><span class="schedule-time__time">00:00–02:00</span><a href="#time-remove" class="schedule-time__remove"></a></li>
 										</ul>
 									</div>
 								</div>
@@ -250,6 +250,7 @@
 				</div>
 			</footer>
 		</div>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4"></script>
 		<script src="../js/vendor/loadCSS.js" async></script>
 		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
 		<script src="../js/vendor/jquery.min.js"></script>

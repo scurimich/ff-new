@@ -172,7 +172,7 @@
 										<input type="text" placeholder="400002" pattern=".*" class="text-input owner-address__input">
 									</div>
 									<div class="owner-address__item"><span class="owner-address__term">GPS-координаты</span>
-										<input type="text" placeholder="47.197620, 39.887428" pattern=".*" class="text-input owner-address__input">
+										<input id="owner-coords" type="text" value="47.197620, 39.887428" pattern=".*" disabled class="text-input owner-address__input owner-address__input_coords">
 										<div id="address-map" class="owner-address__map"></div>
 									</div>
 								</div>
@@ -240,6 +240,7 @@
 				</div>
 			</footer>
 		</div>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4"></script>
 		<script src="../js/vendor/loadCSS.js" async></script>
 		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
 		<script src="../js/vendor/jquery.min.js"></script>
