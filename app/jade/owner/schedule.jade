@@ -35,9 +35,9 @@ block content
         .owner-schedule__item
           span.owner-schedule__term Время работы
           .owner-schedule__inputs
-            input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required)
+            input.text-input.owner-schedule__input(type='number', placeholder='', pattern=".*", required, min='0', max='23')
             span.owner-schedule__splitter –
-            input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required)
+            input.text-input.owner-schedule__input(type='number', placeholder='', pattern=".*", required, min='0', max='59')
             a.owner-schedule__add(href='time-add') Добавить
         .owner-schedule__item
           span.owner-schedule__term.owner-schedule__term_schedule Расписание
@@ -45,11 +45,11 @@ block content
             li.owner-schedule__time.schedule-time
               span.schedule-time__days Пн-пт
               span.schedule-time__time 08:00–00:00
-              a.schedule-time__remove(href='time-remove')
+              a.schedule-time__remove(href='#time-remove')
             li.owner-schedule__time.schedule-time
               span.schedule-time__days Сб-вс
               span.schedule-time__time 00:00–02:00
-              a.schedule-time__remove(href='time-remove')
+              a.schedule-time__remove(href='#time-remove')
       .owner-schedule__footer
         button.button.button_first.owner-schedule__save Сохранить
         button.owner-schedule__cancel Отменить

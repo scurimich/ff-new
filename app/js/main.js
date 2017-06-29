@@ -48,6 +48,8 @@ $(function() {
 
       $(document).on('mouseover mouseout', '.viewport__slides', this.aboutViewportStop.bind(this));
       $(document).on('mouseout', '.viewport__slides', this.aboutViewportStart.bind(this));
+
+      $(document).on('click', '[href="#time-remove"]', this.scheduleRemover);
     },
 
     plugins: function() {
@@ -383,6 +385,14 @@ $(function() {
 
     aboutViewportStart: function(e) {
       this.aboutInterval = setInterval(this.aboutViewportChanging.bind(this), 5000);
+    },
+
+    scheduleRemover: function(e) {
+      e.preventDefault();
+      var remove = $(this);
+      var list = remove.parents('.owner-schedule__times');
+      remove.parents('.schedule-time').remove();
+      if (!list.find('.schedule-time').length) list.parent().remove();
     }
 
   };

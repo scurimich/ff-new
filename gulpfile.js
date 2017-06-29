@@ -74,11 +74,11 @@ gulp.task('server', function() {
 
 
 gulp.task('watch', function() {
-  gulp.watch([
-    paths.prod + '/**/*.html',
-    paths.prod + '/**/*.js',
-    paths.prod + '/**/*.css'
-  ]).on('change', browserSync.reload);
+  // gulp.watch([
+  //   paths.prod + '/**/*.html',
+  //   paths.prod + '/**/*.js',
+  //   paths.prod + '/**/*.css'
+  // ]).on('change', browserSync.reload);
   watch(paths.styles, function() {
     gulp.start('less');
   });

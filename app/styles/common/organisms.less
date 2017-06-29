@@ -3,6 +3,10 @@
 .content-photo {
   .organism-block;
 
+  &_wf {
+    padding-bottom: 5px;
+  }
+
   &__header {
     margin-bottom: 24px;
   }
@@ -12,7 +16,6 @@
     margin-right: 16px;
     width: 48px;
     height: 48px;
-    border-radius: 4px;
     overflow: hidden;
   }
 
@@ -20,6 +23,11 @@
     float: left;
     width: 320px;
     padding-top: 3px;
+
+    &_wf {
+      width: auto;
+      padding-top: 5px;
+    }
   }
 
   &__title {
@@ -31,6 +39,43 @@
     line-height: 20px;
     letter-spacing: -.11px;
     color: @text-color;
+  }
+
+  // &__title {
+  //   display: block;
+  //   margin-bottom: 5px;
+  //   font-family: @font;
+  //   font-weight: 600;
+  //   font-size: 13px;
+  //   line-height: 20px;
+  //   letter-spacing: -.11px;
+  //   color: @text-color;
+  // }
+
+  &__author {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+    text-decoration: none;
+  }
+
+  &__place {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+    text-decoration: none;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
   }
 
   &__link {
@@ -275,6 +320,10 @@
 .new-review {
   .organism-block;
 
+  &_wf {
+    padding-bottom: 4px;
+  }
+
   &__header {
     margin-bottom: 21px;
     font-size: 0;
@@ -292,6 +341,10 @@
   &__description {
     .ib-top;
     width: 516px;
+
+    &_wf {
+      padding-top: 5px;
+    }
   }
 
   &__title {
@@ -336,6 +389,10 @@
   &__review {
     margin: 0;
     margin-bottom: 4px;
+
+    &_wf {
+      margin-bottom: 8px;
+    }
   }
 
   &__rating {
@@ -1117,5 +1174,62 @@
         background-color: @text-color;
       }
     }
+  }
+}
+
+.new-subscribe {
+  .organism-block;
+  padding-bottom: 16px;
+
+  &__avatar-container {
+    .ib-top;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    overflow: hidden;
+  }
+
+  &__description {
+    .ib-top;
+    width: 516px;
+    padding-top: 5px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.11px;
+    color: @text-color;
+  }
+
+  &__author {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+    text-decoration: none;
+  }
+
+  &__place {
+    font-family: @font;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -.11px;
+    color: @links-color;
+    text-decoration: none;
+  }
+
+  &__date {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
   }
 }

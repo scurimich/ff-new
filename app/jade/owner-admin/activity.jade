@@ -1,0 +1,13 @@
+extends ../templates/owner-admin.jade
+
+block title
+  | Activity
+
+block content
+  .owner-admin__activity.admin-feed
+    section.admin-feed__unit
+      include ../organisms/without-footer/new-review.jade
+    section.admin-feed__unit
+      include ../organisms/without-footer/subscribe.jade
+    section.admin-feed__unit
+      include ../organisms/without-footer/content-photo2.jade

@@ -30,7 +30,7 @@ block content
           input.text-input.owner-address__input(type='text', placeholder='400002', pattern=".*")
         .owner-address__item
           span.owner-address__term GPS-координаты
-          input.text-input.owner-address__input(type='text', placeholder='47.197620, 39.887428', pattern=".*")
+          input.text-input.owner-address__input.owner-address__input_coords#owner-coords(type='text', value='47.197620, 39.887428', pattern=".*", disabled)
           .owner-address__map#address-map
       .owner-address__footer
         button.button.button_first.owner-address__save Сохранить
