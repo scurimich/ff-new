@@ -26,9 +26,9 @@ function googleMapInit() {
 
   var googleMap = new google.maps.Map(document.getElementById('address-map'), {
     center: coords,
-    zoom: coords.lat ? 8 : 2,
-    cursor: 'default'
+    zoom: coords.lat ? 8 : 2
   });
+  
   if (coords.lat && coords.lng) {
     marker= new google.maps.Marker({
       position: coords,
