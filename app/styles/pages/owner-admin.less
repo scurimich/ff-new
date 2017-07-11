@@ -15,7 +15,7 @@
   }
 
   &__header {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   &__body {
@@ -25,7 +25,7 @@
   }
 
   &__tabs {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     .white-block;
     padding-top: 20px;
     height: 48px;
@@ -41,12 +41,13 @@
 
 .admin-descr {
   .white-block;
+  overflow: hidden;
 
   &__head {
     display: block;
     padding-left: 20px;
     box-sizing: border-box;
-    height: 31px;
+    height: 32px;
     background-color: @primary-green;
     font-family: @font;
     font-weight: 600;
@@ -56,20 +57,37 @@
 
     &:before {
       content: '';
-      .ib-mid;
+      .ib-base;
       width: 16px;
+      margni-top: 3px;
       margin-right: 5px;
+      .svg-icon(16px, 13px, '../assets/admin.svg');
     }
   }
 
+  &__exit {
+    float: right;
+    margin-top:8px;
+    margin-right: 25px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: @white;
+    opacity: .6;
+    border-bottom: 1px solid @white;
+    text-decoration: none;
+  }
+
   &__body {
-    padding: 25px 18px 24px 20px;
+    padding: 24px 16px 24px 20px;
     position: relative;
   }
 
   &__type {
     .ib-top;
-    margin-bottom: 9px;
+    margin-top: 1px;
+    margin-bottom: 8px;
     font-family: @font;
     font-weight: 400;
     font-size: 13px;
@@ -80,6 +98,7 @@
   &__title {
     display: block;
     margin-bottom: 14px;
+    witdh: 800px;
     font-family: @font;
     font-weight: 400;
     font-size: 28px;
@@ -113,15 +132,14 @@
 
   &__user {
     .ib-top;
-    margin-right: 8px;
-  }
-
-  &__settings {
-    .ib-top;
     box-sizing: border-box;
-    width: 30px;
-    height: 24px;
+    padding: 2px 8px 2px 27px;
     position: relative;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: @secondary-color;
     border-radius: 2px;
     border: 1px solid @border-color;
     background-color: rgba(238, 239, 240, .5);
@@ -142,10 +160,10 @@
       content: '';
       position: absolute;
       top: 50%;
-      left: 50%;
+      left: 8px;
       display: block;
       .svg-icon(15px, 15px, '../assets/setting.svg');
-      transform: translate(-50%, -50%);
+      transform: translate(0, -50%);
     }
   }
 }

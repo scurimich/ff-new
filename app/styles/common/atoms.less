@@ -339,7 +339,7 @@
 
     &_admin {
       font-size: 13px;
-      padding: 0 0 12px 0;
+      padding: 0 0 11px 0;
 
       &:first-child {
         margin-left: 22px;
@@ -348,6 +348,10 @@
       &:hover:not(&_active) {
         border-color: rgba(67, 160, 15, .4);
       }
+    }
+
+    &_events {
+      border-width: 3px;
     }
 
     &_unavailable {
@@ -762,7 +766,7 @@
 .select-box .selectric {
   box-sizing: border-box;
   padding: 5px 30px 5px 10px;
-  background-color: @select-back;
+  background-color: rgba(238,239,240,0.50);
   border-radius: 2px;
   border: 1px solid @select-border;
   box-shadow: 0 1px 0 0 @select-shadow;

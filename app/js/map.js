@@ -20,11 +20,15 @@ function mapInit() {
 
 function googleMapInit() {
   var input = $('#owner-coords');
-  var inputCoords = input.val();
+  var inputCoords = input.val() || '1 1';
   var marker;
-  var coords = {lat: Number(inputCoords.substring(0, inputCoords.indexOf(','))), lng: Number(inputCoords.substring(inputCoords.indexOf(' ')))};
+  var coords = {
+    lat: Number(inputCoords.substring(0, inputCoords.indexOf(','))),
+    lng: Number(inputCoords.substring(inputCoords.indexOf(' ')))
+  };
 
-  var googleMap = new google.maps.Map(document.getElementById('address-map'), {
+  if (!$('#address-map').length) return;
+  var googleMap = new google.maps.Map($('#address-map'), {
     center: coords,
     zoom: coords.lat ? 8 : 2
   });

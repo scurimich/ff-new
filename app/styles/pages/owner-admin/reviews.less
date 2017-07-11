@@ -21,6 +21,7 @@
     line-height: 21px;
     letter-spacing: -.11px;
     color: @secondary-color;
+    opacity: .5;
   }
 
   &__body {
@@ -141,6 +142,10 @@
     color: @primary-orange;
     letter-spacing: -.11px;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__social {
@@ -156,6 +161,7 @@
     height: 14px;
     background: url(../assets/like-disable.svg) no-repeat;
     background-size: 17px 14px;
+    cursor: pointer;
   }
 
   &__share {
@@ -164,6 +170,7 @@
     height: 13px;
     background: url(../assets/share.svg) no-repeat;
     background-size: 13px 13px;
+    cursor: pointer;
   }
 
   &__answer {
@@ -179,25 +186,30 @@
     margin-bottom: 10px;
     padding-top: 1px;
     position: relative;
+  }
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: 26px;
-      width: 10px;
-      height: 10px;
-      border-top: 1px solid @border-color;
-      border-left: 1px solid @border-color;
-      z-index: 2;
-      background-color: @white;
-      transform: rotate(45deg);
-    }
+  &__triangle {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 26px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid @border-color;
+    border-left: 1px solid @border-color;
+    z-index: 2;
+    background-color: @white;
+    transform: rotate(45deg);
   }
 
   &__textarea {
     width: 517px;
     height: 127px;
+
+    &:focus+span {
+      border-color: @ta-active-border;
+    }
   }
 
   &__actions {
@@ -283,5 +295,10 @@
     font-size: 13px;
     color: @lighter-text;
     letter-spacing: -.11px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

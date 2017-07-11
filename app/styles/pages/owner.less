@@ -47,15 +47,21 @@
 
   &__title {
     margin-top: 6px;
-    display: block;
+    .ib-top;
+    width: 208px;
     font-family: @font;
     font-weight: 600;
     font-size: 13px;
     line-height: 18px;
     color: @text-color;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &__link {
+    display: block;
     font-family: @font;
     font-weight: 400;
     font-size: 12px;
@@ -70,10 +76,6 @@
 
   &__list {
     list-style: none;
-  }
-
-  &__item {
-    
   }
 
   &__link {
@@ -96,7 +98,7 @@
 
     &:hover {
       background-color: @background-color;
-      border-left: 2px solid @secondary-color;
+      border-left: 2px solid transparent;
     }
   }
 }

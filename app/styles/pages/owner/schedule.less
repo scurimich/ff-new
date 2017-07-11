@@ -48,7 +48,7 @@
     .ib-top;
 
     &:not(:last-child) {
-      border-right: 1px solid #D0D3D9;
+      border-right: 1px solid rgba(208,211,217,.35);
     }
   }
 
@@ -93,8 +93,16 @@
     font-size: 0;
   }
 
-  &__input {
+  &__input-box {
     .ib-mid;
+    width: 64px;
+
+    .input-box__error {
+      display: none;
+    }
+  }
+
+  &__input {
     width: 64px;
     height: 32px;
   }
@@ -121,8 +129,12 @@
     color: @links-color;
     letter-spacing: -.05px;
     text-decoration: none;
-    border-bottom: 1px solid #1557c7;
+    border-bottom: 1px solid rgba(21, 87, 199, .15);
     text-decoration: none;
+
+    &:hover {
+      border-color: rgba(21, 87, 199, 1);
+    }
   }
 
   &__times {

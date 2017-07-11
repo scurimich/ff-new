@@ -23,6 +23,7 @@
     line-height: 21px;
     letter-spacing: -.11px;
     color: @secondary-color;
+    opacity: .5;
   }
 
   &__add {
@@ -84,6 +85,11 @@
     font-size: 13px;
     line-height: 18px;
     color: @links-color;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__date {
@@ -102,6 +108,10 @@
     color: @lighter-text;
     opacity: .9;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__splitter {
@@ -120,5 +130,9 @@
     color: @lighter-text;
     opacity: .9;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

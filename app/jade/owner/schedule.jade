@@ -35,9 +35,13 @@ block content
         .owner-schedule__item
           span.owner-schedule__term Время работы
           .owner-schedule__inputs
-            input.text-input.owner-schedule__input(type='number', placeholder='', pattern=".*", required, min='0', max='23')
+            .input-box.owner-schedule__input-box
+              input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
+              span.input-box__error Некорректное время
             span.owner-schedule__splitter –
-            input.text-input.owner-schedule__input(type='number', placeholder='', pattern=".*", required, min='0', max='59')
+            .input-box.owner-schedule__input-box
+              input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
+              span.input-box__error Текст ошибки
             a.owner-schedule__add(href='time-add') Добавить
         .owner-schedule__item
           span.owner-schedule__term.owner-schedule__term_schedule Расписание

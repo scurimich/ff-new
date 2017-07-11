@@ -50,6 +50,9 @@ $(function() {
       $(document).on('mouseout', '.viewport__slides', this.aboutViewportStart.bind(this));
 
       $(document).on('click', '[href="#time-remove"]', this.scheduleRemover);
+
+      $(document).on('focusout', '[data-valid=time]', this.timeValidation.bind(this));
+      $(document).on('focus', '[data-valid=time]', this.timeValidationHide.bind(this));
     },
 
     plugins: function() {
@@ -95,9 +98,9 @@ $(function() {
         starheight: 14
       });
 
-      $('.photogallery__body').mCustomScrollbar({
-        scrollInertia: 0
-      });
+      // $('.photogallery__body').mCustomScrollbar({
+      //   scrollInertia: 0
+      // });
     },
     
     selectricOnChange: function(select) {
@@ -393,6 +396,33 @@ $(function() {
       var list = remove.parents('.owner-schedule__times');
       remove.parents('.schedule-time').remove();
       if (!list.find('.schedule-time').length) list.parent().remove();
+    },
+
+    timeValidation: function(e) {
+      var input = $(e.target);
+      var value = input.val();
+      if (!value) return;
+      var splitter = value.search(/['.:;]{1}/);
+      var hours = parseInt(value.substring(0, splitter + 1 ? splitter : value.length).trim());
+      var minutes = splitter + 1 ? parseInt(value.substring(splitter + 1, value.length)) : undefined;
+      var hoursValid = Boolean(hours >= 0 && hours < 24);
+      var minutesValid = Boolean(minutes >= 0 && minutes < 60);
+      if (hours && minutes && hoursValid && minutesValid) {
+        return input.val(hours + ':' + minutes);
+      }
+      if (hours && !minutes && hoursValid) {
+        return input.val(hours + ':00');
+      }
+      input.next().show();
+    },
+
+    timeValidationHide: function(e) {
+      var input = $(e.target);
+      input.next().hide();
+    },
+
+    addNull: function(minutes) {
+      return minutes.length === 0 ? '00': minutes.length > 1 ? '0' + minutes: minutes;
     }
 
   };

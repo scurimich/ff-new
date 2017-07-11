@@ -20,11 +20,11 @@ block content
                 option(value='#{x}') Пункт #{x}
         .owner-main__item
           span.owner-main__term Подкатегория
-          .select-box.owner-main__select
-            select.select
+          .select-box.select-box_multiple.owner-main__select
+            select.select-box__select.select(multiple)
               option(default, data-disabled) Не выбрано
               - for (var x = 1; x <= 5; x++)
-                option(value='#{x}') Пункт #{x}
+                option(value='#{x}') Пункт #{X}
       .owner-main__footer
         button.button.button_first.owner-main__save Сохранить
         button.owner-main__cancel Отменить
