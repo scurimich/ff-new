@@ -175,8 +175,12 @@
 									</div>
 									<div class="owner-schedule__item"><span class="owner-schedule__term">Время работы</span>
 										<div class="owner-schedule__inputs">
-											<input type="number" placeholder="" pattern=".*" required min="0" max="23" class="text-input owner-schedule__input"><span class="owner-schedule__splitter">–</span>
-											<input type="number" placeholder="" pattern=".*" required min="0" max="59" class="text-input owner-schedule__input"><a href="time-add" class="owner-schedule__add">Добавить</a>
+											<div class="input-box owner-schedule__input-box">
+												<input type="text" placeholder="" pattern=".*" required data-valid="time" class="text-input owner-schedule__input"><span class="input-box__error">Некорректное время</span>
+											</div><span class="owner-schedule__splitter">–</span>
+											<div class="input-box owner-schedule__input-box">
+												<input type="text" placeholder="" pattern=".*" required data-valid="time" class="text-input owner-schedule__input"><span class="input-box__error">Текст ошибки</span>
+											</div><a href="time-add" class="owner-schedule__add">Добавить</a>
 										</div>
 									</div>
 									<div class="owner-schedule__item"><span class="owner-schedule__term owner-schedule__term_schedule">Расписание</span>
