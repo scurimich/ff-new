@@ -16,13 +16,13 @@ block content
           input.text-input.owner-contacts__input(type='text', placeholder='', pattern=".*")
         li.owner-contacts__item
           span.owner-contacts__term Vkontakte
-          input.text-input.owner-contacts__input(type='text', placeholder='vk.com/username', pattern=".*")
+          input.text-input.owner-contacts__input(type='text', placeholder='vk.com/username', pattern=".*", data-mask='vk.com/')
         li.owner-contacts__item
           span.owner-contacts__term Facebook
-          input.text-input.owner-contacts__input(type='text', placeholder='facebook.com/username', pattern=".*")
+          input.text-input.owner-contacts__input(type='text', placeholder='facebook.com/username', pattern=".*", data-mask='facebook.com/')
         li.owner-contacts__item
           span.owner-contacts__term Instagram
-          input.text-input.owner-contacts__input(type='text', placeholder='@username', pattern=".*")
+          input.text-input.owner-contacts__input(type='text', placeholder='@username', pattern=".*", data-mask='@')
       .owner-contacts__footer
         button.button.button_first.owner-contacts__save Сохранить
         button.owner-contacts__cancel Отменить

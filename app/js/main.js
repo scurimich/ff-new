@@ -3,8 +3,8 @@ $(function() {
   var app = {
 
     initialize: function() {
-      this.listeners();
       this.plugins();
+      this.listeners();
       hideText();
       this.sidebarBehavior();
       this.statusbars();
@@ -53,12 +53,14 @@ $(function() {
 
       $(document).on('focusout', '[data-valid=time]', this.timeValidation.bind(this));
       $(document).on('focus', '[data-valid=time]', this.timeValidationHide.bind(this));
+
+      $(document).on('mousedown keydown change focus focusout', 'input[data-mask]', this.inputMask);
     },
 
     plugins: function() {
       $('.select').selectric({
         onChange: this.selectricOnChange,
-        onInit: this.selectricOnChange,
+        onInit: this.selectricOnInit,
         multiple: {
           separator: ', ',
           keepMenuOpen: true,
@@ -102,11 +104,50 @@ $(function() {
       //   scrollInertia: 0
       // });
     },
+
+    selectricOnInit: function(select) {
+      var $select = $(select);
+      var disabled = $select.find('option[data-disabled]').text();
+      var selectric = $select.parents('.selectric-select');
+      var labelParent = selectric.find('.selectric');
+      var label = selectric.find('.selectric .label');
+      label.removeClass('disabled');
+      if(label.text() === disabled) label.addClass('disabled');
+      if($select.attr('multiple') && $select.val().length) {
+        labelParent.addClass('active');
+        if (!labelParent.find('.cancel').length) {
+          labelParent.append('<div class="cancel"><span></span></div>');
+        }
+      } else {
+        labelParent.removeClass('active');
+        labelParent.find('.cancel').remove();
+      }
+    },
     
     selectricOnChange: function(select) {
       var $select = $(select);
       var disabled = $select.find('option[data-disabled]').text();
       var selectric = $select.parents('.selectric-select');
+      if ($select.parents('.owner-main__select')) {
+        var options = $select.find('option');
+        var items = selectric.find('.selectric-items .selected');
+        if (items.length >= 3) {
+          options.prop('disabled', true);
+          selectric.find('.selectric-items li.selected').each(function() {
+            var li = $(this);
+            var index = li.index();
+            $select
+              .find('option:nth-child('+ (index + 1) +')')
+              .prop('disabled', false);
+          });
+          $select.selectric('refresh').click();
+          selectric.click();
+        } else if (items.length == 2 && $select.find('option:disabled').length){
+          selectric.find('.selectric-items li')
+          options.attr('disabled', false);
+          $select.selectric('refresh').click();
+        }
+      }
       var labelParent = selectric.find('.selectric');
       var label = selectric.find('.selectric .label');
       label.removeClass('disabled');
@@ -419,6 +460,23 @@ $(function() {
     timeValidationHide: function(e) {
       var input = $(e.target);
       input.next().hide();
+    },
+
+    inputMask: function(e) {
+      var input = $(this);
+      var value = input.val();
+      var valueLength = value.length;
+      var mask = input.attr('data-mask');
+      var maskLength = mask.length;
+
+      if (valueLength <= maskLength || value.indexOf(mask) !== 0) {
+        if (e.type === 'keydown' && e.keyCode === 8)
+          e.preventDefault();
+        return input.val(mask);
+      }
+      if (e.type === 'focusout' && valueLength <= maskLength) {
+        return input.val('');
+      }
     },
 
     addNull: function(minutes) {
