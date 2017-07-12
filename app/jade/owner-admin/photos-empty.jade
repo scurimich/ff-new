@@ -1,0 +1,17 @@
+extends ../templates/owner-admin.jade
+
+block title
+  | Photos
+
+block content
+  .owner-admin__photos.admin-photos
+    .admin-photos__main
+      .admin-photos__title Фотографии 
+        span.admin-photos__number 189
+      .admin-photos__body
+        form.admin-photos__add-files.add-photos
+          span.add-photos__add-back
+          .add-photos__add
+            button.button.button_second Загрузите файлы
+          span.add-photos__add-string или перетащите их мышью
+        p.admin-photos__empty Еще никто не загрузил фотографии вашего заведения

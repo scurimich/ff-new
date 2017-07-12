@@ -1,0 +1,19 @@
+extends ../templates/owner-admin.jade
+
+block title
+  | Events
+
+block content
+  .owner-admin__events.admin-events
+  .admin-page__body.admin-events
+    .admin-events__main
+      .admin-events__title События 
+        span.admin-events__number 9
+        a.button.button_first.admin-events__add(href='#') Создать событие
+      ul.tabs.admin-events__tabs
+        li.tabs__item
+          a.tabs__link.tabs__link_events.tabs__link_admin.tabs__link_active(href='#') Предстоящие
+        li.tabs__item
+          a.tabs__link.tabs__link_events.tabs__link_admin(href='events-past.html') Прошедшие 
+            span.tabs__number 118
+      p.admin-events__empty Пока не создано ни одного события
