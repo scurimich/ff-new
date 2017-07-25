@@ -133,7 +133,10 @@
 										<textarea placeholder="" class="textarea new-event__textarea"></textarea>
 									</div>
 									<div class="new-event__begin"><span class="new-event__term new-event__term_date">Время начала</span>
-										<input type="date" placeholder="" pattern=".*" required value="2017-03-23" class="new-event__date"><span class="new-event__text">в</span>
+										<label class="new-event__label">
+											<input type="date" value="2017-03-23" class="new-event__date">
+										</label>
+										<input type="text" readonly class="new-event__fake-input"><span class="new-event__text">в</span>
 										<div class="new-event__hours select-box">
 											<select class="select">
 												<option default data-disabled>0</option>
@@ -180,7 +183,10 @@
 										</div>
 									</div>
 									<div class="new-event__end"><span class="new-event__term new-event__term_date">Время окончания</span>
-										<input type="date" placeholder="" pattern=".*" required value="2017-03-23" class="new-event__date"><span class="new-event__text">в</span>
+										<label class="new-event__label">
+											<input type="date" value="2017-03-23" class="new-event__date">
+										</label>
+										<input type="text" readonly class="new-event__fake-input"><span class="new-event__text">в</span>
 										<div class="new-event__hours select-box">
 											<select class="select">
 												<option default data-disabled>0</option>
