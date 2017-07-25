@@ -43,6 +43,14 @@
 
   &__body {
     .ib-top;
+
+    &:hover {
+      cursor: pointer;
+
+      .owner-sidebar__title {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__title {
@@ -54,7 +62,6 @@
     font-size: 13px;
     line-height: 18px;
     color: @text-color;
-    cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

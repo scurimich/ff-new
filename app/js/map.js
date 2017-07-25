@@ -4,9 +4,10 @@ $(function() {
     ymaps.ready(mapInit);
     var myMap;
   }
-  if (window.google) {
-    googleMapInit();
-  }
+
+    if (window.google) {
+      google.maps.event.addDomListener(window, "load", googleMapInit);
+    }
 
 });
 
@@ -20,6 +21,7 @@ function mapInit() {
 
 function googleMapInit() {
   var input = $('#owner-coords');
+  var box = document.getElementById('address-map');
   var inputCoords = input.val() || '1 1';
   var marker;
   var coords = {
@@ -27,8 +29,8 @@ function googleMapInit() {
     lng: Number(inputCoords.substring(inputCoords.indexOf(' ')))
   };
 
-  if (!$('#address-map').length) return;
-  var googleMap = new google.maps.Map($('#address-map'), {
+  if (!box) return;
+  var googleMap = new google.maps.Map(box, {
     center: coords,
     zoom: coords.lat ? 8 : 2
   });

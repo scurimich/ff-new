@@ -306,7 +306,7 @@
   border-bottom: 1px solid @tabs-border-bottom;
 
   &__item {
-    display: inline-block;
+    .ib-bot;
     margin-bottom: -1px;
     margin-right: 18px;
   }
@@ -344,14 +344,14 @@
       &:first-child {
         margin-left: 22px;
       }
+    }
 
-      &:hover:not(&_active) {
-        border-color: rgba(67, 160, 15, .4);
-      }
+    &_admin:hover:not(&_active) {
+      border-color: rgba(67, 160, 15, .4);
     }
 
     &_events {
-      border-width: 3px;
+      // border-width: 3px;
     }
 
     &_unavailable {

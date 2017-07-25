@@ -24,7 +24,7 @@ block content
           .admin-descr__title Pasta Uno
           .admin-descr__rating
             .admin-descr__rating-stars
-               span.rating
+               span.rating(data-rateit-readonly='true', data-rateit-value='4.5')
             .admin-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
       .owner-admin__body
         .owner-admin__tabs
@@ -35,13 +35,10 @@ block content
               a.tabs__link.tabs__link_admin(href='owner-admin/reviews.html') Отзывы 
             li.tabs__item
               a.tabs__link.tabs__link_unavailable.tabs__link_admin(href='owner-admin/photos.html') Фотографии 
-                span.tabs__pro pro
             li.tabs__item
               a.tabs__link.tabs__link_unavailable.tabs__link_admin(href='owner-admin/events.html') События 
-                span.tabs__pro pro
             li.tabs__item
               a.tabs__link.tabs__link_unavailable.tabs__link_admin(href='owner-admin/shares.html') Акции 
-                span.tabs__pro pro
             li.tabs__item
               a.tabs__link.tabs__link_admin(href='owner-admin/subscribers.html') Подписчики
       aside.owner-admin__sidebar.admin-sidebar

@@ -64,6 +64,10 @@
   &__input {
     display: block;
     width: 100%;
+
+    &_excl {
+      .ib-top;
+    }
   }
 
   &__error {
@@ -75,6 +79,14 @@
     line-height: 18px;
     letter-spacing: -.11px;
     color: @error-color;
+
+    &_excl {
+      .ib-top;
+      margin-left: 6px;
+      margin-top: 3px;
+      .svg-icon(18px, 18px, '../assets/info/info-EB433D.svg');
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -149,6 +161,7 @@
     font-size: 12px;
     line-height: 18px;
     color: @lighter-text;
+    cursor: pointer;
 
     &_disabled {
       opacity: .5;
@@ -265,6 +278,8 @@
 
   .selectric-items {
     top: 120%;
+    border-radius: 2px;
+    overflow: hidden;
 
     li {
       position: relative;

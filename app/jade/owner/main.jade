@@ -15,14 +15,12 @@ block content
           span.owner-main__term Категория
           .select-box.owner-main__select
             select.select
-              option(default, data-disabled) Не выбрано
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         .owner-main__item
           span.owner-main__term Подкатегория
           .select-box.select-box_multiple.owner-main__select
             select.select-box__select.select(multiple)
-              option(default, data-disabled) Не выбрано
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{X}
       .owner-main__footer

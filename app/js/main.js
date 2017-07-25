@@ -14,7 +14,8 @@ $(function() {
     startValues: {
       sideOffset: $('aside').length ? $('aside').offset().top : 0,
       sideParentHeight: $('aside').length ? $('aside').parent().height() : 0,
-      windowPrevPosition: $(window).scrollTop()
+      windowPrevPosition: $(window).scrollTop(),
+      multipleSelectricValues: []
     },
 
     listeners: function() {
@@ -54,7 +55,9 @@ $(function() {
       $(document).on('focusout', '[data-valid=time]', this.timeValidation.bind(this));
       $(document).on('focus', '[data-valid=time]', this.timeValidationHide.bind(this));
 
-      $(document).on('mousedown keydown change focus focusout', 'input[data-mask]', this.inputMask);
+      $(document).on('change focusout', 'input[data-mask]', this.socialsValidationShow);
+      $(document).on('focus', 'input[data-mask]', this.socialsValidationHide);
+      $('.select').on('selectric-before-change', this.selectricBeforeChange);
     },
 
     plugins: function() {
@@ -132,20 +135,19 @@ $(function() {
         var options = $select.find('option');
         var items = selectric.find('.selectric-items .selected');
         if (items.length >= 3) {
-          options.prop('disabled', true);
-          selectric.find('.selectric-items li.selected').each(function() {
+          selectric.find('.selectric-items li:not(.selected)').each(function() {
             var li = $(this);
             var index = li.index();
+            li.addClass('disabled');
             $select
               .find('option:nth-child('+ (index + 1) +')')
-              .prop('disabled', false);
+              .prop('disabled', true);
           });
-          $select.selectric('refresh').click();
-          selectric.click();
+
         } else if (items.length == 2 && $select.find('option:disabled').length){
-          selectric.find('.selectric-items li')
-          options.attr('disabled', false);
-          $select.selectric('refresh').click();
+          // selectric.find('.selectric-items li')
+          // options.attr('disabled', false);
+          // $select.selectric('refresh').click();
         }
       }
       var labelParent = selectric.find('.selectric');
@@ -161,6 +163,10 @@ $(function() {
         labelParent.removeClass('active');
         labelParent.find('.cancel').remove();
       }
+    },
+
+    selectricBeforeChange: function(event, element, selectric) {
+      // console.log(event)
     },
 
     clearMultiselect: function(e) {
@@ -442,8 +448,9 @@ $(function() {
     timeValidation: function(e) {
       var input = $(e.target);
       var value = input.val();
+      var error = false;
       if (!value) return;
-      var splitter = value.search(/['.:;]{1}/);
+      var splitter = value.search(/['.:;\/]{1}/);
       var hours = parseInt(value.substring(0, splitter + 1 ? splitter : value.length).trim());
       var minutes = splitter + 1 ? parseInt(value.substring(splitter + 1, value.length)) : undefined;
       var hoursValid = Boolean(hours >= 0 && hours < 24);
@@ -454,29 +461,32 @@ $(function() {
       if (hours && !minutes && hoursValid) {
         return input.val(hours + ':00');
       }
-      input.next().show();
+      input.addClass('text-input_error');
+      input.next().css('display', 'inline-block');
     },
 
     timeValidationHide: function(e) {
       var input = $(e.target);
+      input.removeClass('text-input_error');
       input.next().hide();
     },
 
-    inputMask: function(e) {
+    socialsValidationShow: function() {
       var input = $(this);
       var value = input.val();
-      var valueLength = value.length;
       var mask = input.attr('data-mask');
-      var maskLength = mask.length;
+      
+      if (!value) return;
+      if (value.indexOf(mask) !== 0) {
+        input.next().show();
+        input.addClass('text-input_error');
+      }
+    },
 
-      if (valueLength <= maskLength || value.indexOf(mask) !== 0) {
-        if (e.type === 'keydown' && e.keyCode === 8)
-          e.preventDefault();
-        return input.val(mask);
-      }
-      if (e.type === 'focusout' && valueLength <= maskLength) {
-        return input.val('');
-      }
+    socialsValidationHide: function() {
+      var input = $(this);
+      input.next().hide();
+      input.removeClass('text-input_error');
     },
 
     addNull: function(minutes) {

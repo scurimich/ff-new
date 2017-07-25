@@ -12,14 +12,12 @@ block content
           span.owner-address__term Страна
           .select-box.owner-address__select
             select.select
-              option(default, data-disabled) Не выбрано
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         .owner-address__item
           span.owner-address__term Город
           .select-box.owner-address__select
             select.select
-              option(default, data-disabled) Не выбрано
               - for (var x = 1; x <= 5; x++)
                 option(value='#{x}') Пункт #{x}
         .owner-address__item

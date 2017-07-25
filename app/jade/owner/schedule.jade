@@ -36,12 +36,12 @@ block content
           span.owner-schedule__term Время работы
           .owner-schedule__inputs
             .input-box.owner-schedule__input-box
-              input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
-              span.input-box__error Некорректное время
+              input.text-input.text-input_excl.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
+              div.input-box__error.input-box__error_excl
             span.owner-schedule__splitter –
             .input-box.owner-schedule__input-box
-              input.text-input.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
-              span.input-box__error Текст ошибки
+              input.text-input.text-input_excl.owner-schedule__input(type='text', placeholder='', pattern=".*", required, data-valid='time')
+              div.input-box__error.input-box__error_excl
             a.owner-schedule__add(href='time-add') Добавить
         .owner-schedule__item
           span.owner-schedule__term.owner-schedule__term_schedule Расписание

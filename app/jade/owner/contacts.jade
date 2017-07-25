@@ -16,13 +16,19 @@ block content
           input.text-input.owner-contacts__input(type='text', placeholder='', pattern=".*")
         li.owner-contacts__item
           span.owner-contacts__term Vkontakte
-          input.text-input.owner-contacts__input(type='text', placeholder='vk.com/username', pattern=".*", data-mask='vk.com/')
+          .input-box.owner-contacts__input-box
+            input.text-input.owner-contacts__input(type='text', placeholder='vk.com/username', pattern=".*", data-mask='vk.com/')
+            span.input-box__error(style='display: none') Текст ошибки
         li.owner-contacts__item
           span.owner-contacts__term Facebook
-          input.text-input.owner-contacts__input(type='text', placeholder='facebook.com/username', pattern=".*", data-mask='facebook.com/')
+          .input-box.owner-contacts__input-box
+            input.text-input.owner-contacts__input(type='text', placeholder='facebook.com/username', pattern=".*", data-mask='facebook.com/')
+            span.input-box__error(style='display: none') Текст ошибки
         li.owner-contacts__item
           span.owner-contacts__term Instagram
-          input.text-input.owner-contacts__input(type='text', placeholder='@username', pattern=".*", data-mask='@')
+          .input-box.owner-contacts__input-box
+            input.text-input.owner-contacts__input(type='text', placeholder='@username', pattern=".*", data-mask='@')
+            span.input-box__error(style='display: none') Текст ошибки
       .owner-contacts__footer
         button.button.button_first.owner-contacts__save Сохранить
         button.owner-contacts__cancel Отменить

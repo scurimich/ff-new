@@ -26,7 +26,9 @@ block content
               textarea.textarea.new-event__textarea(placeholder='')
             .new-event__begin
               span.new-event__term.new-event__term_date Время начала
-              input.new-event__date(type='date', placeholder='', pattern=".*", required, value='2017-03-23')
+              label.new-event__label
+                input.new-event__date(type='date' value='2017-03-23')
+              input.new-event__fake-input(type='text', readonly)
               span.new-event__text в
               .new-event__hours.select-box
                 select.select
@@ -42,7 +44,9 @@ block content
                     option(value='#{x}') #{x}
             .new-event__end
               span.new-event__term.new-event__term_date Время окончания
-              input.new-event__date(type='date', placeholder='', pattern=".*", required, value='2017-03-23')
+              label.new-event__label
+                input.new-event__date(type='date', value='2017-03-23')
+              input.new-event__fake-input(type='text', readonly)
               span.new-event__text в
               .new-event__hours.select-box
                 select.select
