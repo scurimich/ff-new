@@ -12,22 +12,9 @@ var del = require('del');
 var deploy = require('gulp-gh-pages');
 
 var sprites = require('./gulpfiles/sprites.js');
-
-
-var paths = {
-  styles: './app/styles/**/*.less',
-  mainLess: './app/styles/*.less',
-  jade: ['./app/jade/**/*.jade', '!./app/jade/organisms/*', '!./app/jade/_common/*', '!./app/jade/atoms/*', '!./app/jade/molecules/*', '!./app/jade/templates/*'],
-  jadeWatch: './app/jade/**/*.jade',
-  js: './app/js/**/*.js',
-  jsVendors: './app/js/vendor/*.js',
-  fonts: './app/fonts/*',
-  img: './app/assets/**/*',
-  prod: 'app/prod/',
-  watch: {
-    jade: './app/jade/**/*.jade'
-  }
-};
+var fonts = require('./gulpfiles/fonts.js');
+var fonts = require('./gulpfiles/aboutpage.js');
+var paths = require('./gulpfiles/paths.js');
 
 
 gulp.task('jade', function() {
@@ -52,6 +39,7 @@ gulp.task('less', function() {
     .pipe(cleanCss())
     .pipe(gulp.dest(paths.prod + 'css/'))
 });
+
 
 
 gulp.task('js', function() {

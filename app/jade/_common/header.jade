@@ -78,8 +78,22 @@ header.header
               .head-user__title Алексей
               .head-user__address Волгоград, Россия
           ul.head-user__menu
-            - var usermenu = ['Моя страница', 'Закладки', 'Редактировать'];
-            each menu in usermenu
-              li.head-user__menu-item
-                a.head-user__action= menu
+            li.head-user__menu-item.head-user__menu-item_projects
+              a.head-user__action(href='#')
+                | Проекты
+              ul.head-user__projects
+                li.head-user__project
+                  a.head-user__project-link(href='#') Онегин
+                li.head-user__project
+                  a.head-user__project-link(href='#') BellevilleCafe
+                li.head-user__project
+                  a.head-user__project-link(href='#') Гуакамоле
+                li.head-user__project
+                  a.head-user__project-link(href='#') RedWood
+            li.head-user__menu-item
+              a.head-user__action(href='#') Моя страница
+            li.head-user__menu-item
+              a.head-user__action(href='#') Закладки
+            li.head-user__menu-item
+              a.head-user__action(href='#') Редактировать
           a.head-user__quit Выйти

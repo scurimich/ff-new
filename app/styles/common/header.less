@@ -668,7 +668,7 @@
   }
 
   &__menu-item {
-
+    position: relative;
   }
 
   &__action {
@@ -679,6 +679,51 @@
     font-size: 13px;
     line-height: 20px;
     color: @text-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: @background-color;
+    }
+
+    &_projects {
+
+      &:after {
+        content: '';
+        float: right;
+        display: block;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__projects {
+    opacity: 0;
+    .white-block;
+    padding: 4px 0;
+    position: absolute;
+    left: 220px;
+    top: -4px;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__project {
+
+  }
+
+  &__project-link {
+    box-sizing: border-box;
+    display: block;
+    width: 220px;
+    padding: 5px 12px 7px 12px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: @text-color;
+    text-decoration: none;
 
     &:hover {
       background-color: @background-color;

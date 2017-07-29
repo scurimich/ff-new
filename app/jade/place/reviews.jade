@@ -19,10 +19,12 @@ block content
         ul.placepage-reviews__list
           - for (var i = 0; i < 5; i++)
             li.placepage-reviews__item.placepage-review
-              .placepage-review__avatar-container.avatar.avatar_48
+              .placepage-review__avatar-container.avatar.avatar_48_man
                 img.placepage-review__avatar
               .placepage-review__body
-                .placepage-review__other
+                .placepage-review__other#review-other
+                  .placepage-review__support.help.help_small.help_light.help_down.help_support#review-tooltip
+                    a.help__link(data-modal='modal-support') Пожаловаться
                 .placepage-review__name Катериночка Мяуковская
                 .placepage-review__info
                   span.placepage-review__subs 73 подписчика

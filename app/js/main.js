@@ -57,7 +57,8 @@ $(function() {
 
       $(document).on('change focusout', 'input[data-mask]', this.socialsValidationShow);
       $(document).on('focus', 'input[data-mask]', this.socialsValidationHide);
-      $('.select').on('selectric-before-change', this.selectricBeforeChange);
+
+      $('.head-user__menu-item_projects').hover(this.headerMenuHover);
     },
 
     plugins: function() {
@@ -184,15 +185,17 @@ $(function() {
       var time = 100;
       if (click.is('[data-popup=click]') || click.parents('[data-popup=click]').length) {
         var href = click.attr('data-href') || click.parents('[data-popup=click]').attr('data-href');
-        $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active');
-        var hidden = $(href);
-        if (hidden.is('.active')) {
-          hidden.stop().animate({'opacity': '0'}, time, function() {
-            hidden.removeClass('active');
-          });
-        } else {
-          hidden.addClass('active').stop().animate({'opacity': '1'}, time);
-        }
+        $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active', function() {
+          var hidden = $(href);
+          if (hidden.is('.active')) {
+            hidden.stop().animate({'opacity': '0'}, time, function() {
+              hidden.removeClass('active');
+            });
+          } else {
+            hidden.addClass('active').stop().animate({'opacity': '1'}, time);
+          }
+        });
+
         return;
       }
       if (!click.is('[data-popup=window]') && !click.parents('[data-popup=window]').length) {
@@ -487,6 +490,25 @@ $(function() {
       var input = $(this);
       input.next().hide();
       input.removeClass('text-input_error');
+    },
+
+    headerMenuHover: function(e) {
+      var ref = $(this);
+      var ul = ref.find('ul');
+      var ulPosition = ul.offset().left + ul.outerWidth();
+      var windowWidth = $(window).innerWidth();
+      if (windowWidth <= ulPosition) {
+        ul.css({
+          'right': '220px',
+          'left': 'auto'
+        });
+      } else {
+        ul.css({
+          'left': '220px',
+          'right': 'auto'
+        });
+      }
+      ul.toggleClass('active');
     },
 
     addNull: function(minutes) {
