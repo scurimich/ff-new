@@ -103,9 +103,17 @@
 									</div>
 								</div>
 								<ul class="head-user__menu">
-									<li class="head-user__menu-item"><a class="head-user__action">Моя страница</a></li>
-									<li class="head-user__menu-item"><a class="head-user__action">Закладки</a></li>
-									<li class="head-user__menu-item"><a class="head-user__action">Редактировать</a></li>
+									<li class="head-user__menu-item head-user__menu-item_projects"><a href="#" class="head-user__action">Проекты</a>
+										<ul class="head-user__projects">
+											<li class="head-user__project"><a href="#" class="head-user__project-link">Онегин</a></li>
+											<li class="head-user__project"><a href="#" class="head-user__project-link">BellevilleCafe</a></li>
+											<li class="head-user__project"><a href="#" class="head-user__project-link">Гуакамоле</a></li>
+											<li class="head-user__project"><a href="#" class="head-user__project-link">RedWood</a></li>
+										</ul>
+									</li>
+									<li class="head-user__menu-item"><a href="#" class="head-user__action">Моя страница</a></li>
+									<li class="head-user__menu-item"><a href="#" class="head-user__action">Закладки</a></li>
+									<li class="head-user__menu-item"><a href="#" class="head-user__action">Редактировать</a></li>
 								</ul><a class="head-user__quit">Выйти</a>
 							</div>
 						</div>
@@ -139,9 +147,9 @@
 								<ul class="tabs">
 									<li class="tabs__item"><a href="activity.html" class="tabs__link tabs__link_admin tabs__link_active">Активность</a></li>
 									<li class="tabs__item"><a href="reviews.html" class="tabs__link tabs__link_admin">Отзывы </a></li>
-									<li class="tabs__item"><a href="photos.html" class="tabs__link tabs__link_admin">Фотографии <span class="tabs__pro">pro</span></a></li>
-									<li class="tabs__item"><a href="events.html" class="tabs__link tabs__link_admin">События <span class="tabs__pro">pro</span></a></li>
-									<li class="tabs__item"><a href="shares.html" class="tabs__link tabs__link_admin">Акции <span class="tabs__pro">pro</span></a></li>
+									<li class="tabs__item"><a href="photos.html" class="tabs__link tabs__link_admin">Фотографии </a></li>
+									<li class="tabs__item"><a href="events.html" class="tabs__link tabs__link_admin">События </a></li>
+									<li class="tabs__item"><a href="shares.html" class="tabs__link tabs__link_admin">Акции </a></li>
 									<li class="tabs__item"><a href="subscribers.html" class="tabs__link tabs__link_admin">Подписчики</a></li>
 								</ul>
 							</div>
@@ -152,7 +160,9 @@
 										<li class="admin-reviews__item admin-review">
 											<div class="admin-review__avatar-container avatar avatar_48"><img src="http://via.placeholder.com/48x48" class="admin-review__avatar"></div>
 											<div class="admin-review__body">
-												<div class="admin-review__other"></div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
+												<div id="review-other" class="admin-review__other">
+													<div id="review-tooltip" class="admin-review__support help help_small help_light help_down help_support"><a data-modal="modal-support" class="help__link">Пожаловаться</a></div>
+												</div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
 												<div class="admin-review__info"><span class="admin-review__subs">73 подписчика</span><span class="admin-review__point"></span><span class="admin-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="4.5" class="admin-review__rating rating"></span>
 												<p class="admin-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
 												<div class="admin-review__extra clearfix">
@@ -173,7 +183,9 @@
 										<li class="admin-reviews__item admin-review">
 											<div class="admin-review__avatar-container avatar avatar_48"><img src="http://via.placeholder.com/48x48" class="admin-review__avatar"></div>
 											<div class="admin-review__body">
-												<div class="admin-review__other"></div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
+												<div id="review-other" class="admin-review__other">
+													<div id="review-tooltip" class="admin-review__support help help_small help_light help_down help_support"><a data-modal="modal-support" class="help__link">Пожаловаться</a></div>
+												</div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
 												<div class="admin-review__info"><span class="admin-review__subs">73 подписчика</span><span class="admin-review__point"></span><span class="admin-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="4.5" class="admin-review__rating rating"></span>
 												<p class="admin-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
 												<div class="admin-review__extra clearfix">
@@ -188,7 +200,9 @@
 										<li class="admin-reviews__item admin-review">
 											<div class="admin-review__avatar-container avatar avatar_48"><img src="http://via.placeholder.com/48x48" class="admin-review__avatar"></div>
 											<div class="admin-review__body">
-												<div class="admin-review__other"></div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
+												<div id="review-other" class="admin-review__other">
+													<div id="review-tooltip" class="admin-review__support help help_small help_light help_down help_support"><a data-modal="modal-support" class="help__link">Пожаловаться</a></div>
+												</div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
 												<div class="admin-review__info"><span class="admin-review__subs">73 подписчика</span><span class="admin-review__point"></span><span class="admin-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="4.5" class="admin-review__rating rating"></span>
 												<p class="admin-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
 												<div class="admin-review__extra clearfix">
@@ -209,7 +223,9 @@
 										<li class="admin-reviews__item admin-review">
 											<div class="admin-review__avatar-container avatar avatar_48"><img src="http://via.placeholder.com/48x48" class="admin-review__avatar"></div>
 											<div class="admin-review__body">
-												<div class="admin-review__other"></div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
+												<div id="review-other" class="admin-review__other">
+													<div id="review-tooltip" class="admin-review__support help help_small help_light help_down help_support"><a data-modal="modal-support" class="help__link">Пожаловаться</a></div>
+												</div><a href="#" class="admin-review__name">Катериночка Мяуковская</a>
 												<div class="admin-review__info"><span class="admin-review__subs">73 подписчика</span><span class="admin-review__point"></span><span class="admin-review__reviews-number">183 отзыва</span></div><span data-rateit-readonly="true" data-rateit-value="4.5" class="admin-review__rating rating"></span>
 												<p class="admin-review__text text">Итальянское кафе , по мне одна из самых вкусных кухонь нашего города, летом всегда можно посидеть на летней веранде с друзьями или же наедине с кальяном, отдельный плюс за прекрасные десерты и выпечку хлеба которую делают своими руками, просто объедение!  …</p>
 												<div class="admin-review__extra clearfix">
