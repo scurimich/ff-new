@@ -495,7 +495,8 @@ $(function() {
     headerMenuHover: function(e) {
       var ref = $(this);
       var ul = ref.find('ul');
-      var ulPosition = ul.offset().left + ul.outerWidth();
+      var ulWidth = 220;
+      var ulPosition = (ref.offset().left + ulWidth) + ulWidth;
       var windowWidth = $(window).innerWidth();
       if (windowWidth <= ulPosition) {
         ul.css({
