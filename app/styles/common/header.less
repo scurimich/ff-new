@@ -478,11 +478,27 @@
 
 .head-notifs {
   position: relative;
-  padding: 12px 10px 5px 7px;
   margin-right: 6px;
-  .notification;
-  background-position: 7px 12px;
   cursor: pointer;
+  z-index: 1;
+
+  &__icon {
+    .notification;
+    padding: 12px 10px 5px 7px;
+    background-position: 7px 12px;
+  }
+
+  &:hover:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    top: 8px;
+    background-color: #db7c00;
+    z-index: -1;
+  }
 
   &__number {
     box-sizing: border-box;
@@ -578,18 +594,19 @@
 .head-user {
   position: relative;
   cursor: pointer;
-  margin-right: -20px;
-  padding-right: 20px;
+  z-index: 1;
 
-  &:after {
+  &:hover:after {
     content: '';
     position: absolute;
-    right: 7px;
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    left: 50%;
     top: 50%;
-    border-top: 5px solid @white;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    opacity: .8;
+    background-color: #db7c00;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 
   &__photo-container {
