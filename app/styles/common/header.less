@@ -669,6 +669,16 @@
 
   &__menu-item {
     position: relative;
+
+    &_projects:hover {
+      .head-user__action:hover:after {
+        content: '';
+        float: right;
+        display: block;
+        margin-top: 7px;
+        .svg-icon(5px, 8px, '../assets/arrow_dropdown.svg');
+      }
+    }
   }
 
   &__action {
@@ -683,16 +693,6 @@
 
     &:hover {
       background-color: @background-color;
-    }
-
-    &_projects {
-
-      &:after {
-        content: '';
-        float: right;
-        display: block;
-        margin-right: 5px;
-      }
     }
   }
 
