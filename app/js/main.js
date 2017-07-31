@@ -52,9 +52,6 @@ $(function() {
 
       $(document).on('click', '[href="#time-remove"]', this.scheduleRemover);
 
-      $(document).on('focusout', '[data-valid=time]', this.timeValidation.bind(this));
-      $(document).on('focus', '[data-valid=time]', this.timeValidationHide.bind(this));
-
       $(document).on('change focusout', 'input[data-mask]', this.socialsValidationShow);
       $(document).on('focus', 'input[data-mask]', this.socialsValidationHide);
 
@@ -103,6 +100,11 @@ $(function() {
         starwidth: 16,
         starheight: 14
       });
+
+      $.mask.definitions['h'] = '[0-2]';
+      $.mask.definitions['e'] = '[0-9]';
+      $.mask.definitions['m'] = '[0-5]';
+      $('[data-valid=time]').mask('he:m9');
 
       // $('.photogallery__body').mCustomScrollbar({
       //   scrollInertia: 0
@@ -446,32 +448,6 @@ $(function() {
       var list = remove.parents('.owner-schedule__times');
       remove.parents('.schedule-time').remove();
       if (!list.find('.schedule-time').length) list.parent().remove();
-    },
-
-    timeValidation: function(e) {
-      var input = $(e.target);
-      var value = input.val();
-      var error = false;
-      if (!value) return;
-      var splitter = value.search(/['.:;\/]{1}/);
-      var hours = parseInt(value.substring(0, splitter + 1 ? splitter : value.length).trim());
-      var minutes = splitter + 1 ? parseInt(value.substring(splitter + 1, value.length)) : undefined;
-      var hoursValid = Boolean(hours >= 0 && hours < 24);
-      var minutesValid = Boolean(minutes >= 0 && minutes < 60);
-      if (hours && minutes && hoursValid && minutesValid) {
-        return input.val(hours + ':' + minutes);
-      }
-      if (hours && !minutes && hoursValid) {
-        return input.val(hours + ':00');
-      }
-      input.addClass('text-input_error');
-      input.next().css('display', 'inline-block');
-    },
-
-    timeValidationHide: function(e) {
-      var input = $(e.target);
-      input.removeClass('text-input_error');
-      input.next().hide();
     },
 
     socialsValidationShow: function() {
