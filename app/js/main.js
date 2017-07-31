@@ -50,6 +50,8 @@ $(function() {
       $(document).on('mouseover mouseout', '.viewport__slides', this.aboutViewportStop.bind(this));
       $(document).on('mouseout', '.viewport__slides', this.aboutViewportStart.bind(this));
 
+      $(document).on('keyup', '[data-valid=time]', this.timeValidation);
+
       $(document).on('click', '[href="#time-remove"]', this.scheduleRemover);
 
       $(document).on('change focusout', 'input[data-mask]', this.socialsValidationShow);
@@ -109,6 +111,15 @@ $(function() {
       // $('.photogallery__body').mCustomScrollbar({
       //   scrollInertia: 0
       // });
+    },
+
+    timeValidation: function() {
+      var input = $(this);
+      var value = input.val();
+      if (value[0] === '2' && value[1] > 3) {
+        input.val(value[0]+'_:__');
+        input[0].setSelectionRange(1,2);
+      }
     },
 
     selectricOnInit: function(select) {
