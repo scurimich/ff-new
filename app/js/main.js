@@ -107,10 +107,6 @@ $(function() {
       $.mask.definitions['e'] = '[0-9]';
       $.mask.definitions['m'] = '[0-5]';
       $('[data-valid=time]').mask('he:m9');
-
-      // $('.photogallery__body').mCustomScrollbar({
-      //   scrollInertia: 0
-      // });
     },
 
     timeValidation: function() {
@@ -196,22 +192,37 @@ $(function() {
     popup: function(e) {
       var click = $(e.target);
       var time = 100;
+      $('[data-popup=click]').removeClass('active');
+
+      if (click.is('.head-user__menu-item_projects') || click.parent().is('.head-user__menu-item_projects')) {
+        e.preventDefault();
+        return;
+      }
+      
       if (click.is('[data-popup=click]') || click.parents('[data-popup=click]').length) {
         var href = click.attr('data-href') || click.parents('[data-popup=click]').attr('data-href');
-        $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active', function() {
-          var hidden = $(href);
-          if (hidden.is('.active')) {
-            hidden.stop().animate({'opacity': '0'}, time, function() {
-              hidden.removeClass('active');
-            });
-          } else {
-            hidden.addClass('active').stop().animate({'opacity': '1'}, time);
-          }
-        });
+        var clicked;
+        if (click.is('[data-popup=click]')) clicked = click;
+        else clicked = click.parents('[data-popup=click]');
+
+        $('[data-popup=window].active:not(' + href + ')').css('opacity', 0).removeClass('active');
+
+        var hidden = $(href);
+        if (hidden.is('.active')) {
+          clicked.removeClass('active');
+          hidden.stop().animate({'opacity': '0'}, time, function() {
+            hidden.removeClass('active');
+          });
+        } else {
+          clicked.addClass('active');
+          hidden.addClass('active').stop().animate({'opacity': '1'}, time);
+        }
 
         return;
       }
+
       if (!click.is('[data-popup=window]') && !click.parents('[data-popup=window]').length) {
+
         var more = $('[data-popup=window]');
         var time = 100;
         more.stop().animate({'opacity': '0'}, time);

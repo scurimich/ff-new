@@ -489,7 +489,8 @@
     background-position: 7px 12px;
   }
 
-  &:hover:after {
+  &:hover:after,
+  &.active:after {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -597,7 +598,8 @@
   cursor: pointer;
   z-index: 1;
 
-  &:hover:after {
+  &:hover:after,
+  &.active:after {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -630,7 +632,7 @@
       content: '';
       position: absolute;
       top: -5px;
-      right: 47px;
+      right: 29px;
       border-bottom: 5px solid @white;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
