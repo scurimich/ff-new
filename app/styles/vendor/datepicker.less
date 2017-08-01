@@ -10,7 +10,7 @@
 .datepicker-container {
   font-family: 'open_sans';
   font-size: 12px;
-  line-height: 30px;
+  line-height: 28px;
 
   position: fixed;
   z-index: -1;
@@ -151,6 +151,7 @@
 
 .datepicker-panel > ul > li {
   float: left;
+  box-sizing: border-box;
 
   width: 30px;
   height: 30px;
@@ -158,6 +159,7 @@
   padding: 0;
 
   list-style: none;
+  border: 1px solid transparent;
 
   cursor: pointer;
   text-align: center;
@@ -167,7 +169,7 @@
 }
 
 .datepicker-panel > ul > li:hover {
-  background-color: #EEEFF0;
+  background-color: rgba(238, 239, 240, .5);
 }
 
 .datepicker-panel > ul > li.muted,
@@ -176,19 +178,19 @@
 }
 
 .datepicker-panel > ul > li.highlighted {
-  color: #1557C7;
+  color: #1C1A18;
   font-weight: 900;
 }
 
 .datepicker-panel > ul > li.highlighted:hover {
-  color: #1557C7;
+  color: #1C1A18;
   font-weight: 900;
 }
 
 .datepicker-panel > ul > li.picked,
 .datepicker-panel > ul > li.picked:hover {
   background-color: #EEEFF0;
-  font-weight: 900;
+  border: 1px solid #D0D3D9;
 }
 
 .datepicker-panel > ul > li.disabled,

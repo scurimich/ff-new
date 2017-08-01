@@ -121,7 +121,7 @@ $(function() {
       $('[data-toggle="datepicker"]').datepicker({
         autoPick: true,
         format: 'yyyy-MM-dd',
-        date: new Date(),
+        date: new Date(new Date().setDate(new Date().getDate() + 1)),
         weekStart: 1,
         language: 'ru-RU',
         daysMin: this.constants.DAYS_MIN,
