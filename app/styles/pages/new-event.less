@@ -78,6 +78,7 @@
   &__date {
     box-sizing: border-box;
     .ib-top;
+    padding: 0 7px;
     width: 157px;
     height: 32px;
     margin-right: 8px;
@@ -87,9 +88,29 @@
     line-height: 20px;
     color: @text-color;
     cursor: pointer;
+    border: 1px solid @border-color;
+    border-radius: 2px;
+  }
+
+  &__fake {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    top: 22px;
+    left: 0;
   }
 
   &__label {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 8px;
+      right: 17px;
+      .svg-icon(15px, 15px, '../assets/calendar_icon.svg');
+    }
   }
 
   &__fake-input {

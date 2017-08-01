@@ -15,7 +15,14 @@ $(function() {
       sideOffset: $('aside').length ? $('aside').offset().top : 0,
       sideParentHeight: $('aside').length ? $('aside').parent().height() : 0,
       windowPrevPosition: $(window).scrollTop(),
-      multipleSelectricValues: []
+      multipleSelectricValues: [],
+    },
+
+    constants: {
+      DAYS_MIN: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      DAYS: ['Воскресеньe', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+      MONTHS_SHORT: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+      MONTHS: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
     },
 
     listeners: function() {
@@ -58,6 +65,9 @@ $(function() {
       $(document).on('focus', 'input[data-mask]', this.socialsValidationHide);
 
       $('.head-user__menu-item_projects').hover(this.headerMenuHover.bind(this));
+
+      $('[data-toggle=datepicker]').on('pick.datepicker', this.datepickerClose.bind(this));
+      $(document).on('click', '[data-datepicker=trigger]', this.datepickerShow);
     },
 
     plugins: function() {
@@ -107,6 +117,32 @@ $(function() {
       $.mask.definitions['e'] = '[0-9]';
       $.mask.definitions['m'] = '[0-5]';
       $('[data-valid=time]').mask('he:m9');
+
+      $('[data-toggle="datepicker"]').datepicker({
+        autoPick: true,
+        format: 'yyyy-MM-dd',
+        date: new Date(),
+        weekStart: 1,
+        language: 'ru-RU',
+        daysMin: this.constants.DAYS_MIN,
+        days: this.constants.DAYS,
+        monthsShort: this.constants.MONTHS_SHORT
+      });
+    },
+
+    datepickerClose: function(e) {
+      var that = this;
+      $('[data-toggle="datepicker"]').datepicker('hide');
+      setTimeout((function() {
+        var date = $(e.target);
+        var dateValues = date.val().split('-');
+        var input = date.prev();
+        input.val(dateValues[2] + ' ' + this.constants.MONTHS[parseInt(dateValues[1]) - 1] + ' ' + dateValues[0]);
+      }).bind(that), 0);
+    },
+
+    datepickerShow: function() {
+      $(this).next().datepicker('show');
     },
 
     timeValidation: function() {
@@ -173,10 +209,6 @@ $(function() {
         labelParent.removeClass('active');
         labelParent.find('.cancel').remove();
       }
-    },
-
-    selectricBeforeChange: function(event, element, selectric) {
-      // console.log(event)
     },
 
     clearMultiselect: function(e) {
@@ -507,7 +539,6 @@ $(function() {
           'right': 'auto'
         });
       }
-      // ul.toggleClass('active');
       if (e.type === 'mouseenter') {
         clearTimeout(this.hoverTimeout);
         ul.addClass('active');

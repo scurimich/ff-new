@@ -27,8 +27,8 @@ block content
             .new-event__begin
               span.new-event__term.new-event__term_date Время начала
               label.new-event__label
-                input.new-event__date(type='date' value='2017-03-23')
-              input.new-event__fake-input(type='text', readonly)
+                input.new-event__date(type='text', readonly, data-datepicker='trigger')
+                input.new-event__fake(type='date', data-toggle='datepicker', readonly)
               span.new-event__text в
               .new-event__hours.select-box
                 select.select
@@ -45,8 +45,8 @@ block content
             .new-event__end
               span.new-event__term.new-event__term_date Время окончания
               label.new-event__label
-                input.new-event__date(type='date', value='2017-03-23')
-              input.new-event__fake-input(type='text', readonly)
+                input.new-event__date(type='text', readonly, data-datepicker='trigger')
+                input.new-event__fake(type='date', data-toggle='datepicker', readonly)
               span.new-event__text в
               .new-event__hours.select-box
                 select.select
