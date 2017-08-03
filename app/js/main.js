@@ -28,8 +28,6 @@ $(function() {
     listeners: function() {
       $('.expand-text').click(expandText);
 
-      $('.select-box_multiple').on('click', '.cancel', this.clearMultiselect);
-
       $(document).click(this.popup);
 
       $('[id=commenting-input]').focus(this.npWrite);
@@ -71,14 +69,13 @@ $(function() {
     },
 
     plugins: function() {
-      $('.select').selectric({
+      $('.select:not([multiple])').selectric({
         onChange: this.selectricOnChange,
         onInit: this.selectricOnInit,
-        multiple: {
-          separator: ', ',
-          keepMenuOpen: true,
-          maxLabelEntries: false
-        }
+      });
+
+      $('.select[multiple]').multiselect({
+        maxSize: 6
       });
 
       $('.rating').rateit({
@@ -142,7 +139,14 @@ $(function() {
     },
 
     datepickerShow: function() {
-      $(this).next().datepicker('show');
+      var $this = $(this);
+      if($this.is('.showed')) {
+        $this.next().datepicker('hide');
+        $this.removeClass('showed');
+      } else {
+        $this.next().datepicker('show');
+        $this.addClass('showed');
+      }
     },
 
     timeValidation: function() {
@@ -177,25 +181,7 @@ $(function() {
       var $select = $(select);
       var disabled = $select.find('option[data-disabled]').text();
       var selectric = $select.parents('.selectric-select');
-      if ($select.parents('.owner-main__select')) {
-        var options = $select.find('option');
-        var items = selectric.find('.selectric-items .selected');
-        if (items.length >= 3) {
-          selectric.find('.selectric-items li:not(.selected)').each(function() {
-            var li = $(this);
-            var index = li.index();
-            li.addClass('disabled');
-            $select
-              .find('option:nth-child('+ (index + 1) +')')
-              .prop('disabled', true);
-          });
 
-        } else if (items.length == 2 && $select.find('option:disabled').length){
-          // selectric.find('.selectric-items li')
-          // options.attr('disabled', false);
-          // $select.selectric('refresh').click();
-        }
-      }
       var labelParent = selectric.find('.selectric');
       var label = selectric.find('.selectric .label');
       label.removeClass('disabled');
@@ -211,15 +197,17 @@ $(function() {
       }
     },
 
-    clearMultiselect: function(e) {
-      e.preventDefault();
-      var button = $(this);
-      var select = button.parents('.selectric-select').find('.selectric-items li.selected');
-      select.each(function() {
-        $(this).click();
-      });
-      $(this).remove();
-    },
+    // clearMultiselect: function(e) {
+    //   e.preventDefault();
+    //   var button = $(this);
+    //   var parent = button.parents('.selectric-wrapper');
+    //   var select = button.parents('.selectric-select').find('.selectric-items li.selected');
+    //   select.each(function() {
+    //     $(this).removeClass('selected');
+    //   });
+    //   parent.find('select option').each(function() {$(this).prop('selected', false)})
+    //   $(this).remove();
+    // },
 
     popup: function(e) {
       var click = $(e.target);
