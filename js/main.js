@@ -118,7 +118,8 @@ $(function() {
       });
 
       $('.select[multiple]').multiselect({
-        maxSize: 6
+        scrollSize: 6,
+        separator: ', '
       });
 
       $('.rating').rateit({
@@ -641,8 +642,8 @@ function googleMapInit() {
   $.fn.multiselect = function(settings) {
 
   	var $this = $(this);
-
   	var $options = $this.find('option');
+
   	var firstLabelText = $($options[0]).val();
 
     var wrapper = $('<div/>', {'class': 'selectric-wrapper selectric-select'});
@@ -671,21 +672,22 @@ function googleMapInit() {
 
     $this.wrap(wrapper).wrap(hide);
     var $wrapper = $this.parents('.selectric-wrapper');
+
     $wrapper.append(selectric.append(label, button));
     $wrapper.append(items.append(scroll.append(ul)));
     $wrapper.find('ul').append(listItems);
 
     var $selectric = $wrapper.find('.selectric');
+    var $label = $wrapper.find('.label');
     var $items = $wrapper.find('.selectric-items');
     var li = $items.find('li')[0];
     var $li = $(li);
-    var $label = $wrapper.find('.label');
 
     var itemHeight =
       (parseInt($li.css('padding-top')) +
       parseInt($li.css('padding-bottom')) +
       parseInt($li.css('line-height'))) *
-      parseInt(listItems.length < settings.maxSize ? listItems.length : settings.maxSize);
+      parseInt(listItems.length < settings.scrollSize ? listItems.length : settings.scrollSize);
 
     var selectedItems = [];
 
@@ -741,7 +743,7 @@ function googleMapInit() {
             $selectric.append('<div class="cancel"><span></span></div>');
           }
           $label.html(selectedItems.map(function(el, ndx) {
-            return ndx === 0 ? el.text : ', ' + el.text;
+            return ndx === 0 ? el.text : settings.separator + el.text;
           }));
 
           if (selectedItems.length === 3) {
@@ -763,6 +765,7 @@ function googleMapInit() {
         $wrapper.removeClass('selectric-open');
         $items.hide();
       }
+      
     });
 
   }
