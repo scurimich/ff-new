@@ -658,6 +658,7 @@ function googleMapInit() {
 
     $options.map(function(ndx, option) {
     	var option = $(option);
+      if (option.attr('data-disabled') !== undefined) return;
     	var selected = option.prop('selected') ? 'selected' : '';
     	var disabled = option.prop('disabled') ? ' disabled' : '';
     	var value = option.attr('value');
