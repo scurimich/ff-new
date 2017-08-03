@@ -2,8 +2,8 @@
   $.fn.multiselect = function(settings) {
 
   	var $this = $(this);
-
   	var $options = $this.find('option');
+
   	var firstLabelText = $($options[0]).val();
 
     var wrapper = $('<div/>', {'class': 'selectric-wrapper selectric-select'});
@@ -32,30 +32,31 @@
 
     $this.wrap(wrapper).wrap(hide);
     var $wrapper = $this.parents('.selectric-wrapper');
+
     $wrapper.append(selectric.append(label, button));
     $wrapper.append(items.append(scroll.append(ul)));
     $wrapper.find('ul').append(listItems);
 
     var $selectric = $wrapper.find('.selectric');
+    var $label = $wrapper.find('.label');
     var $items = $wrapper.find('.selectric-items');
     var li = $items.find('li')[0];
     var $li = $(li);
-    var $label = $wrapper.find('.label');
 
     var itemHeight =
       (parseInt($li.css('padding-top')) +
       parseInt($li.css('padding-bottom')) +
-      parseInt($li.css('line-height'))) * parseInt(settings.maxSize);
+      parseInt($li.css('line-height'))) *
+      parseInt(listItems.length < settings.scrollSize ? listItems.length : settings.scrollSize);
 
     var selectedItems = [];
 
     $(document).on('click', function(e) {
       var $el = $(e.target);
-      console.log($el)
 
       if ($el.parents('.select-box_multiple').length) {
 
-        if ($el.is('.selectric') || $el.parent().is('.selectric')) {
+        if (($el.is('.selectric') || $el.parent().is('.selectric')) && !$el.is('.cancel')) {
           if ($wrapper.is('.selectric-open')) {
             $wrapper.removeClass('selectric-open');
             $items.hide();
@@ -91,6 +92,9 @@
           selectedItems = [];
           $options.each(function() {$(this).prop('selected', false);})
           $items.find('li').removeClass('selected');
+          $items.find('li.off').each(function() {
+            $(this).removeClass('off');
+          });
         }
 
         if (selectedItems.length) {
@@ -99,7 +103,7 @@
             $selectric.append('<div class="cancel"><span></span></div>');
           }
           $label.html(selectedItems.map(function(el, ndx) {
-            return ndx === 0 ? el.text : ', ' + el.text;
+            return ndx === 0 ? el.text : settings.separator + el.text;
           }));
 
           if (selectedItems.length === 3) {
@@ -121,6 +125,7 @@
         $wrapper.removeClass('selectric-open');
         $items.hide();
       }
+      
     });
 
   }

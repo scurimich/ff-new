@@ -75,7 +75,8 @@ $(function() {
       });
 
       $('.select[multiple]').multiselect({
-        maxSize: 6
+        scrollSize: 6,
+        separator: ', '
       });
 
       $('.rating').rateit({
