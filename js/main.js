@@ -694,7 +694,7 @@ function googleMapInit() {
 
       if ($el.parents('.select-box_multiple').length) {
 
-        if ($el.is('.selectric') || $el.parent().is('.selectric')) {
+        if (($el.is('.selectric') || $el.parent().is('.selectric')) && !$el.is('.cancel')) {
           if ($wrapper.is('.selectric-open')) {
             $wrapper.removeClass('selectric-open');
             $items.hide();
@@ -730,6 +730,9 @@ function googleMapInit() {
           selectedItems = [];
           $options.each(function() {$(this).prop('selected', false);})
           $items.find('li').removeClass('selected');
+          $items.find('li.off').each(function() {
+            $(this).removeClass('off');
+          });
         }
 
         if (selectedItems.length) {
