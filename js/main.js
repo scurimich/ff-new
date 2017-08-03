@@ -684,13 +684,13 @@ function googleMapInit() {
     var itemHeight =
       (parseInt($li.css('padding-top')) +
       parseInt($li.css('padding-bottom')) +
-      parseInt($li.css('line-height'))) * parseInt(settings.maxSize);
+      parseInt($li.css('line-height'))) *
+      parseInt(listItems.length < settings.maxSize ? listItems.length : settings.maxSize);
 
     var selectedItems = [];
 
     $(document).on('click', function(e) {
       var $el = $(e.target);
-      console.log($el)
 
       if ($el.parents('.select-box_multiple').length) {
 
