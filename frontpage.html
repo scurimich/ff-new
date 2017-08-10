@@ -12,6 +12,9 @@
 			<header class="front-header">
 				<div class="front-header__back-container"><img src="img/frontback.jpg" class="front-header__back"></div>
 				<div class="container">
+					<div class="front-header__adaptive-menu adaptive-menu"><a class="adaptive-menu__burger"><span class="adaptive-menu__burger-icon"></span></a>
+						<div class="adaptive-menu__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="70px" class="logo__img"></a></div><a class="adaptive-menu__lens"></a>
+					</div>
 					<div class="front-header__top clearfix">
 						<ul class="front-header__menu">
 							<li class="front-header__menu-item"><a class="front-header__menu-link">События и акции</a></li>
@@ -22,8 +25,11 @@
 					<div class="front-header__body">
 						<div class="front-header__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="180" class="logo__img"></a></div>
 						<h1 class="front-header__title">Поиск компаний и услуг в @cityname</h1>
+						<h1 class="front-header__title front-header__title_mobile">Cообщество путешественников, рестранных критиков и любителей вкусной еды</h1>
 						<form class="front-header__search clearfix">
-							<input type="text" value="Кафе, хинкальная или spa-салон" class="front-header__input">
+							<div class="front-header__input-container"><span class="front-header__lens"></span>
+								<input type="text" value="Кафе, хинкальная или spa-салон" class="front-header__input">
+							</div>
 							<ul class="front-header__input-popup search-popup">
 								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
 								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
@@ -75,7 +81,7 @@
 								<div class="content-photo">
 									<div class="content-photo__header clearfix">
 										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
-										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено <span class="content-photo__count">@? фотографий</span></span>
 											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
 										</div>
 										<div class="content-photo__subscribe">
@@ -91,13 +97,16 @@
 									</div>
 									<div class="content-photo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -116,13 +125,16 @@
 									</div>
 									<div class="new-review__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -146,13 +158,16 @@
 									</div>
 									<div class="new-place__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -184,13 +199,16 @@
 									</div>
 									<div class="new-promo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -246,7 +264,7 @@
 								<div class="content-photo">
 									<div class="content-photo__header clearfix">
 										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
-										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено <span class="content-photo__count">@? фотографий</span></span>
 											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
 										</div>
 										<div class="content-photo__subscribe">
@@ -265,13 +283,16 @@
 									</div>
 									<div class="content-photo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -281,7 +302,7 @@
 								<div class="content-photo">
 									<div class="content-photo__header clearfix">
 										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
-										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено <span class="content-photo__count">@? фотографий</span></span>
 											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
 										</div>
 										<div class="content-photo__subscribe">
@@ -305,13 +326,16 @@
 									</div>
 									<div class="content-photo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -321,7 +345,7 @@
 								<div class="content-photo">
 									<div class="content-photo__header clearfix">
 										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
-										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено <span class="content-photo__count">@? фотографий</span></span>
 											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
 										</div>
 										<div class="content-photo__subscribe">
@@ -350,13 +374,16 @@
 									</div>
 									<div class="content-photo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -366,7 +393,7 @@
 								<div class="content-photo">
 									<div class="content-photo__header clearfix">
 										<div class="content-photo__image-container place place_48"><img class="content-photo__image"></div>
-										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено @? фотографий</span>
+										<div class="content-photo__description"><span class="content-photo__title"><a class="content-photo__link">Название места: </a>загружено <span class="content-photo__count">@? фотографий</span></span>
 											<time datetime="2017-01-04T18:31" class="content-photo__date">4 января в 18:31</time>
 										</div>
 										<div class="content-photo__subscribe">
@@ -399,13 +426,16 @@
 									</div>
 									<div class="content-photo__footer">
 										<div class="activity clearfix">
-											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div><a id="activity-share" class="activity__share"></a>
-											<div id="activity-socials" class="activity__socials help help_small help_light help_down">
-												<ul class="help__socials">
-													<li class="help__social"><a class="help__social-link help__social-link_g"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_fb"></a></li>
-													<li class="help__social"><a class="help__social-link help__social-link_vk"></a></li>
-												</ul>
+											<div class="activity__likes"><a class="activity__like"></a><span class="activity__number">138</span></div>
+											<div class="activity__share-container clearfix"><a id="activity-share" class="activity__share"></a>
+												<div id="activity-socials" class="activity__socials help help_small help_light help_down">
+													<ul class="help__socials">
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_g">Google+</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_fb">Facebook</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_vk">Вконтакте</a></li>
+														<li class="help__social"><a href="#" class="help__social-link help__social-link_share">Копировать ссылку</a></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -414,7 +444,7 @@
 							<div class="front-main__other">
 								<button class="front-main__other-button button button_other">К предыдущим записям</button>
 							</div>
-							<section class="front-main__entry new-places">
+							<section class="front-main__entry front-main__entry_new-places new-places">
 								<div class="new-places__topic topic"><span class="topic__name">новые места на foxy</span></div>
 								<ul class="new-places__list">
 									<li class="new-places__item"><a class="new-places__photo-container"><img class="new-places__photo"></a>
@@ -576,6 +606,7 @@
 							</ul>
 						</div>
 						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+						<div class="footer__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="77px" class="logo__img"></a></div>
 					</div>
 					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
 				</div>
@@ -617,6 +648,7 @@
 		<script src="js/vendor/jquery.rateit.min.js" async></script>
 		<script src="js/vendor/jquery.selectric.min.js" async></script>
 		<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js" async></script>
+		<script src="js/vendor/jquery.maskedInput.min.js" async></script>
 		<script src="js/vendor/datepicker.min.js" async></script>
 		<script src="js/main.js" async></script>
 	</body>
