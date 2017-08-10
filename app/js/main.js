@@ -14,8 +14,7 @@ $(function() {
     startValues: {
       sideOffset: $('aside').length ? $('aside').offset().top : 0,
       sideParentHeight: $('aside').length ? $('aside').parent().height() : 0,
-      windowPrevPosition: $(window).scrollTop(),
-      multipleSelectricValues: [],
+      windowPrevPosition: $(window).scrollTop()
     },
 
     constants: {
@@ -197,18 +196,6 @@ $(function() {
         labelParent.find('.cancel').remove();
       }
     },
-
-    // clearMultiselect: function(e) {
-    //   e.preventDefault();
-    //   var button = $(this);
-    //   var parent = button.parents('.selectric-wrapper');
-    //   var select = button.parents('.selectric-select').find('.selectric-items li.selected');
-    //   select.each(function() {
-    //     $(this).removeClass('selected');
-    //   });
-    //   parent.find('select option').each(function() {$(this).prop('selected', false)})
-    //   $(this).remove();
-    // },
 
     popup: function(e) {
       var click = $(e.target);

@@ -2,6 +2,13 @@ header.front-header
   .front-header__back-container
     img.front-header__back(src='img/frontback.jpg')
   .container
+    .front-header__adaptive-menu.adaptive-menu
+      a.adaptive-menu__burger
+        span.adaptive-menu__burger-icon
+      .adaptive-menu__logo.logo
+        a.logo__link
+          img.logo__img(src='img/logo-foxy.svg', width='70px')
+      a.adaptive-menu__lens
     .front-header__top.clearfix
       ul.front-header__menu
         li.front-header__menu-item
@@ -16,8 +23,11 @@ header.front-header
         a.logo__link
           img.logo__img(src='img/logo-foxy.svg', width='180')
       h1.front-header__title Поиск компаний и услуг в @cityname
+      h1.front-header__title.front-header__title_mobile Cообщество путешественников, рестранных критиков и любителей вкусной еды
       form.front-header__search.clearfix
-        input.front-header__input(type='text', value="Кафе, хинкальная или spa-салон")
+        .front-header__input-container
+          span.front-header__lens
+          input.front-header__input(type='text', value="Кафе, хинкальная или spa-салон")
         ul.front-header__input-popup.search-popup
           - var search = ['Слиffки Общества', 'Онегин', 'Маруся'];
           each item in search

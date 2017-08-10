@@ -5,22 +5,73 @@
   padding-top: 27px;
   background-color: @text-color;
 
+  @media screen {
+    @media (max-width: 900px) {
+      text-align: center;
+      padding: 28px 28px 32px;
+    }
+  }
+
   &__top {
     padding-bottom: 13px;
     border-bottom: 1px solid @border-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        padding-bottom: 34px;
+      }
+    }
   }
 
   &__content {
     float: left;
+
+    @media screen {
+      @media (max-width: 900px) {
+        float: none;
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__menu {
     list-style: none;
     font-size: 0;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-bottom: 14px;
+      }
+    }
   
     &-item {
       .ib-top;
       margin-right: 20px;
+      position: relative;
+
+      &:not(:last-child) {
+        @media screen {
+          @media (max-width: 900px) {
+            margin-right: 11px;
+          }
+        }
+
+        &:after {
+          @media screen {
+            @media (max-width: 900px) {
+              content: '';
+              opacity: .7;
+              display: block;
+              position: absolute;
+              top: 12px;
+              right: -7px;
+              width: 2px;
+              height: 2px;
+              background-color: @white;
+            }
+          }
+        }
+      }
     }
 
     &-link {
@@ -40,6 +91,31 @@
     &-item {
       .ib-top;
       margin-right: 20px;
+      position: relative;
+
+      &:not(:last-child) {
+        @media screen {
+          @media (max-width: 900px) {
+            margin-right: 14px;
+          }
+        }
+
+        &:after {
+          @media screen {
+            @media (max-width: 900px) {
+              content: '';
+              opacity: .4;
+              display: block;
+              position: absolute;
+              top: 12px;
+              right: -8px;
+              width: 2px;
+              height: 2px;
+              background-color: @white;
+            }
+          }
+        }
+      }
     }
 
     &-link {
@@ -57,10 +133,32 @@
   &__support {
     float: right;
     margin-top: 10px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
   }
 
   &__bottom {
     padding: 9px 0 10px 0;
+
+    @media screen {
+      @media (max-width: 900px) {
+        padding: 11px 0 0;
+      }
+    }
   }
 
   &__copyright {

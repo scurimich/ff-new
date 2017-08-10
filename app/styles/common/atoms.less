@@ -731,34 +731,59 @@
 
   &__socials {
     list-style: none;
+    width: 172px;
     font-size: 0;
-    margin: 0 8px 0 7px;
   }
 
   &__social {
-    .ib-top;
 
     &:not(:last-child) {
-      margin-right: 8px;
     }
   }
 
   &__social-link {
+    box-sizing: border-box;
     display: block;
-    width: 16px;
-    height: 16px;
+    padding: 5px 12px 5px 35px;
+    position: relative;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -.09px;
     cursor: pointer;
+    color: @text-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #eeeff0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 7px;
+      left: 12px;
+    }
 
     &_g {
-      .sprite(@google);
+      &:before {
+        .sprite(@google);
+      }
     }
 
     &_fb {
-      .sprite(@facebook);
+      &:before {
+        .sprite(@facebook);
+      }
     }
 
     &_vk {
-      .sprite(@vkontakte);
+      &:before {
+        .sprite(@vkontakte);
+      }
     }
   }
 }

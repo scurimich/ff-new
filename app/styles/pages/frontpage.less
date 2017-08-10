@@ -5,12 +5,27 @@
   padding-top: 21px;
   padding-bottom: 20px;
 
+
+  @media screen {
+    @media (max-width: 900px) {
+      padding: 16px 8px 337px;
+      display: flex;
+    }
+  }
+
   &__tabs-box {
     .white-block;
     overflow: hidden;
     width: 620px;
     margin-bottom: 18px;
     padding-top: 15px;
+
+
+    @media screen {
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
   }
 
   &__tabs {
@@ -21,10 +36,34 @@
     .ib-top;
     width: 620px;
     margin-right: 20px;
+
+
+    @media screen {
+      @media (max-width: 900px) {
+        flex-grow: 1;
+        margin-right: 0;
+        width: auto;
+      }
+    }
   }
 
   &__entry {
     margin-bottom: 20px;
+
+
+    @media screen {
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
+
+    &_new-places {
+      @media screen {
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__other {
@@ -35,6 +74,15 @@
     &-button {
       .ib-top;
       width: 460px;
+
+      @media screen {
+        @media (max-width: 900px) {
+          box-sizing: border-box;
+          width: 300px;
+          padding: 5px 0 7px;
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -42,6 +90,13 @@
 .front-sidebar {
   .ib-top;
   width: 300px;
+
+
+  @media screen {
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
 
   &__month-place {
     margin-bottom: 41px;
