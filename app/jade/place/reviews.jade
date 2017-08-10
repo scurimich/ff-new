@@ -36,7 +36,18 @@ block content
                   time.placepage-review__date(datetime='2017-01-04T18:31') 4 января в 18:31
                   .placepage-review__actions
                     .placepage-review__like
-                    .placepage-review__share
+                    .placepage-review__share-container
+                      .placepage-review__share#activity-share
+                      .activity__socials.help.help_small.help_light.help_down#activity-socials
+                        ul.help__socials
+                          li.help__social
+                            a.help__social-link.help__social-link_g Google+
+                          li.help__social
+                            a.help__social-link.help__social-link_fb Facebook
+                          li.help__social
+                            a.help__social-link.help__social-link_vk Вконтакте
+                          li.help__social
+                            a.help__social-link.help__social-link_share(data-ref='http://followfoxy.ru') Скопировать ссылку
         span.placepage-reviews__more Показать ещё
     section.place-reviews__new-places
       include ../organisms/new-places

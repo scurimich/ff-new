@@ -65,6 +65,8 @@ $(function() {
 
       $('[data-toggle=datepicker]').on('pick.datepicker', this.datepickerClose.bind(this));
       $(document).on('click', '[data-datepicker=trigger]', this.datepickerShow);
+
+      $(document).on('click', '[data-ref]', this.refCopy);
     },
 
     plugins: function() {
@@ -303,7 +305,7 @@ $(function() {
     },
 
     hideShare: function(e) {
-      if (!$(e.target).is('#activity-share') && !$(e.target).is('#activity-socials'))
+      if (!$(e.target).is('#activity-share') && !$(e.target).is('#activity-socials') && !$(e.target).is('[data-ref]'))
         $('[id=activity-socials]').removeClass('active');
     },
 
@@ -520,6 +522,35 @@ $(function() {
         ul.addClass('active');
       } else {
         this.hoverTimeout = setTimeout(function() {ul.removeClass('active')}, 400);
+      }
+    },
+
+    refCopy: function() {
+      var el = $(this);
+      var text = el.html();
+      var ref = el.attr('data-ref');
+      var tempInput = document.createElement('input');
+      var focus = document.activeElement;
+
+      tempInput.value = ref;
+
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      focus.focus();
+
+      el.html('Ссылка скопирована');
+
+      var textTimeout = setTimeout(resetText, 3000, text);
+
+      el.on('mouseleave', function() {
+        clearTimeout(textTimeout);
+        textTimeout = setTimeout(resetText, 500, text);
+      });
+
+      function resetText(text) {
+        el.html(text);
       }
     },
 
