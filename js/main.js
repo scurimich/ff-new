@@ -57,7 +57,8 @@ $(function() {
     startValues: {
       sideOffset: $('aside').length ? $('aside').offset().top : 0,
       sideParentHeight: $('aside').length ? $('aside').parent().height() : 0,
-      windowPrevPosition: $(window).scrollTop()
+      windowPrevPosition: $(window).scrollTop(),
+      dragUlPosition:  $('.cat-filter__list_all').length ? $('.cat-filter__list_all').position().left : 0
     },
 
     constants: {
@@ -110,6 +111,11 @@ $(function() {
       $(document).on('click', '[data-datepicker=trigger]', this.datepickerShow);
 
       $(document).on('click', '[data-ref]', this.refCopy);
+
+      $(document).on('mousedown', '.cat-filter__list_all', this.categoriesDrag.bind(this));
+
+      $(document).on('click', '.cat-filter__filter', this.catFilterShow);
+      $(document).on('click', '.filter-page__back', this.catFilterHide);
     },
 
     plugins: function() {
@@ -170,6 +176,8 @@ $(function() {
         days: this.constants.DAYS,
         monthsShort: this.constants.MONTHS_SHORT
       });
+
+      $('.photogallery__body').mCustomScrollbar();
     },
 
     datepickerClose: function(e) {
@@ -344,12 +352,12 @@ $(function() {
     },
 
     showShare: function() {
-      $(this).siblings('#activity-socials').toggleClass('active');
+      $(this).siblings('#activity-socials').fadeToggle('fast').toggleClass('active');
     },
 
     hideShare: function(e) {
       if (!$(e.target).is('#activity-share') && !$(e.target).is('#activity-socials') && !$(e.target).is('[data-ref]'))
-        $('[id=activity-socials]').removeClass('active');
+        $('[id=activity-socials]').fadeOut('fast').removeClass('active');
     },
 
     switchCats: function() {
@@ -597,6 +605,53 @@ $(function() {
       }
     },
 
+    categoriesDrag: function(e) {
+      e.preventDefault();
+      var ul = $(e.currentTarget);
+      var parent = ul.parents('.cat-filter');
+      var ulWidth = ul.width();
+      var containerWidth = parent.innerWidth() - (parseInt(parent.css('padding-left')) + parseInt(parent.css('padding-right')));
+      var startUlPosition = this.startValues.dragUlPosition;
+      var prevUlPosition = ul.position().left;
+      var prevCursorPosition = e.pageX;
+
+      ul.on('dragstart', function(e) {
+        e.preventDefault();
+      });
+
+      $(document).on('mousemove', function(e) {
+        e.preventDefault();
+        var cursorPosition = e.pageX;
+        var difference = cursorPosition - prevCursorPosition;
+        var ulPosition = prevUlPosition + difference;
+        if (ulPosition >= startUlPosition) {
+          ulPosition = startUlPosition;
+        }
+        if (ulPosition + ulWidth <= startUlPosition + containerWidth) {
+          ulPosition = startUlPosition + containerWidth - ulWidth;
+        }
+        ul.css('left', ulPosition);
+        prevUlPosition = ulPosition;
+        prevCursorPosition = cursorPosition;
+      });
+
+      $(document).on('mouseup', function() {
+        $(document).off('mousemove');
+        ul.off('mouseup');
+      });
+    },
+
+    catFilterShow: function() {
+      if (!$('.filter-page').length) return;
+      $('.content').addClass('filter');
+      $('body').css('overflow', 'hidden');
+    },
+
+    catFilterHide: function() {
+      $('.content').removeClass('filter');
+      $('body').css('overflow', 'auto');
+    },
+
     addNull: function(minutes) {
       return minutes.length === 0 ? '00': minutes.length > 1 ? '0' + minutes: minutes;
     }
@@ -607,12 +662,8 @@ $(function() {
 });
 $(function() {
 
-  if (window.ymaps) {
-    ymaps.ready(mapInit);
-    var myMap;
-  }
-
     if (window.google) {
+      google.maps.event.addDomListener(window, "load", mapInit);
       google.maps.event.addDomListener(window, "load", googleMapInit);
     }
 
@@ -620,9 +671,12 @@ $(function() {
 
 
 function mapInit() {
-  myMap = new ymaps.Map('map', {
-    center: [48.70, 44.51],
-    zoom: 9
+  var box = $('[id=map]');
+  box.each(function() {
+    var map = new google.maps.Map(this, {
+      center: {lat: 25, lng: 25},
+      zoom: 2
+    });
   });
 }
 
@@ -643,7 +697,7 @@ function googleMapInit() {
   });
   
   if (coords.lat && coords.lng) {
-    marker= new google.maps.Marker({
+    marker = new google.maps.Marker({
       position: coords,
       map: googleMap
     })

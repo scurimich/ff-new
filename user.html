@@ -9,212 +9,217 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" class="logo__img"></a></div>
-					<div class="header__body">
-						<form class="header__search">
-							<input type="text" value="Кафе, хинкальная или spa-салон" class="header__input">
-							<ul class="header__input-popup search-popup">
-								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
-								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
-								<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
-							</ul><span class="header__world"></span>
-							<input type="text" value="Днепропетровск" class="header__city">
-							<ul class="header__city-popup city-popup">
-								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Ростов</span></a></li>
-								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Россия</span></a></li>
-								<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Рукавишниково</span></a></li>
-							</ul>
-							<button class="header__button"></button>
-						</form>
-						<div class="header__categories head-cats">
-							<ul class="head-cats__list">
-								<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
-								<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
-								<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
-								<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
-								<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
-									<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
-										<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
-									</ul>
-								</li>
-							</ul>
+			<div class="content">
+				<header class="header">
+					<div class="container">
+						<div class="header__adaptive-menu adaptive-menu"><a class="adaptive-menu__burger"><span class="adaptive-menu__burger-icon"></span></a>
+							<div class="adaptive-menu__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="70px" class="logo__img"></a></div><a class="adaptive-menu__lens"></a>
 						</div>
-					</div>
-					<div class="header__social">
-						<div data-popup="click" data-href="#head-notifs" class="header__notifications head-notifs">
-							<div class="head-notifs__icon"></div><span class="head-notifs__number">5</span>
-							<div id="head-notifs" data-popup="window" class="head-notifs__popup">
-								<h5 class="head-notifs__title">Уведомления</h5>
-								<ul class="head-notifs__list">
-									<li class="head-notifs__item user-notif user-notif_popup">
-										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
-										<div class="user-notif__body">
-											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
-											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
-										</div>
-									</li>
-									<li class="head-notifs__item user-notif user-notif_popup">
-										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
-										<div class="user-notif__body">
-											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
-											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
-										</div>
-									</li>
-									<li class="head-notifs__item user-notif user-notif_popup">
-										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
-										<div class="user-notif__body">
-											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
-											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
-										</div>
-									</li>
-									<li class="head-notifs__item user-notif user-notif_popup">
-										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
-										<div class="user-notif__body">
-											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
-											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
-										</div>
-									</li>
-									<li class="head-notifs__item user-notif user-notif_popup">
-										<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
-										<div class="user-notif__body">
-											<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
-											<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
-										</div>
-									</li>
+						<div class="header__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" class="logo__img"></a></div>
+						<div class="header__body">
+							<form class="header__search">
+								<input type="text" value="Кафе, хинкальная или spa-салон" class="header__input">
+								<ul class="header__input-popup search-popup">
+									<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Слиffки Общества</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+									<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Онегин</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+									<li class="search-popup__item"><a class="search-popup__link"><span class="search-popup__name">Маруся</span><span class="search-popup__address">Волгоград, ул. Мира, 2</span></a></li>
+								</ul><span class="header__world"></span>
+								<input type="text" value="Днепропетровск" class="header__city">
+								<ul class="header__city-popup city-popup">
+									<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Ростов</span></a></li>
+									<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Россия</span></a></li>
+									<li class="city-popup__item"><a class="city-popup__link"><span class="city-popup__name">Рукавишниково</span></a></li>
 								</ul>
-								<div class="head-notifs__more">Показать всё</div>
-							</div>
-						</div>
-						<div data-popup="click" data-href="#head-profile" class="header__user head-user">
-							<div class="head-user__photo-container avatar avatar_36_man"><img class="head-user__photo"></div>
-							<div id="head-profile" data-popup="window" class="head-user__profile">
-								<div class="head-user__user">
-									<div class="head-user__photo-container avatar avatar_48_man"><img class="head-user__photo"></div>
-									<div class="head-user__info">
-										<div class="head-user__title">Алексей</div>
-										<div class="head-user__address">Волгоград, Россия</div>
-									</div>
-								</div>
-								<ul class="head-user__menu">
-									<li class="head-user__menu-item head-user__menu-item_projects"><a href="#" class="head-user__action">Проекты</a>
-										<ul class="head-user__projects">
-											<li class="head-user__project"><a href="#" class="head-user__project-link">Онегин</a></li>
-											<li class="head-user__project"><a href="#" class="head-user__project-link">BellevilleCafe</a></li>
-											<li class="head-user__project"><a href="#" class="head-user__project-link">Гуакамоле</a></li>
-											<li class="head-user__project"><a href="#" class="head-user__project-link">RedWood</a></li>
+								<button class="header__button"></button>
+							</form>
+							<div class="header__categories head-cats">
+								<ul class="head-cats__list">
+									<li class="head-cats__item"><a class="head-cats__link head-cats__link_rests">Кафе и рестораны</a></li>
+									<li class="head-cats__item"><a class="head-cats__link head-cats__link_night">Ночная жизнь</a></li>
+									<li class="head-cats__item"><a class="head-cats__link head-cats__link_hotels">Отели</a></li>
+									<li class="head-cats__item"><a class="head-cats__link head-cats__link_ease">Развлечения и досуг</a></li>
+									<li class="head-cats__item head-cats__item_more"><a data-popup="click" data-href="#head-subcats" class="head-cats__link head-cats__link_more"> Еще</a>
+										<ul id="head-subcats" data-popup="window" class="head-cats__sublist">
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_delivery">Доставка</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_stores">Магазины</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_presents">Торжество и подарки</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_fitness">Фитнес</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_beauty">Красота и СПА</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_medicine">Медицина</a></li>
+											<li class="head-cats__subitem head-subitem"><a class="head-subitem__link head-subitem__link_animals">Животные</a></li>
 										</ul>
 									</li>
-									<li class="head-user__menu-item"><a href="#" class="head-user__action">Моя страница</a></li>
-									<li class="head-user__menu-item"><a href="#" class="head-user__action">Закладки</a></li>
-									<li class="head-user__menu-item"><a href="#" class="head-user__action">Редактировать</a></li>
-								</ul><a class="head-user__quit">Выйти</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<div class="main">
-				<div class="container"> 
-					<main class="user-page">
-						<div class="user-page__bread">
-							<ul class="breadcrumbs">
-								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
-								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Мероприятия Волгограда</a></li>
-							</ul>
-						</div>
-						<aside class="user-page__sidebar user-sidebar">
-							<div class="user-sidebar__head">
-								<div class="user-sidebar__status">Эксперт</div>
-								<div class="user-sidebar__avatar-container avatar avatar_120_man"><img class="user-sidebar__avatar"></div>
-							</div>
-							<div class="user-sidebar__body">
-								<h1 class="user-sidebar__user">Катериночка Мяуковская</h1>
-								<div class="user-sidebar__city">Россия, Волгоград</div>
-								<div class="user-sidebar__subscribe">
-									<div class="sticker-button">
-										<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
-									</div>
-								</div>
-							</div>
-							<div class="user-sidebar__menu user-menu">
-								<ul class="user-menu__list">
-									<li class="user-menu__item"><a href="user/activity.html" class="user-menu__link">Активность</a></li>
-									<li class="user-menu__item"><a href="user/reviews.html" class="user-menu__link">Отзыв</a></li>
-									<li class="user-menu__item"><a href="user/photos.html" class="user-menu__link">Фотографии</a></li>
-									<li class="user-menu__item"><a href="user/follow.html" class="user-menu__link">Подписчики</a></li>
-									<li class="user-menu__item"><a href="user/ifollow.html" class="user-menu__link">Я подписан</a></li>
-									<li class="user-menu__item"><a href="user/events.html" class="user-menu__link">События и акции</a></li>
-									<li class="user-menu__item"><a href="user/favorites.html" class="user-menu__link">Закладки</a></li>
-									<li class="user-menu__item"><a href="user/notifications.html" class="user-menu__link">Уведомления <span class="user-menu__new">+12 новых</span></a></li>
 								</ul>
 							</div>
-						</aside>
-					</main>
+						</div>
+						<div class="header__social">
+							<div data-popup="click" data-href="#head-notifs" class="header__notifications head-notifs">
+								<div class="head-notifs__icon"></div><span class="head-notifs__number">5</span>
+								<div id="head-notifs" data-popup="window" class="head-notifs__popup">
+									<h5 class="head-notifs__title">Уведомления</h5>
+									<ul class="head-notifs__list">
+										<li class="head-notifs__item user-notif user-notif_popup">
+											<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+											<div class="user-notif__body">
+												<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+												<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+											</div>
+										</li>
+										<li class="head-notifs__item user-notif user-notif_popup">
+											<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+											<div class="user-notif__body">
+												<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+												<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+											</div>
+										</li>
+										<li class="head-notifs__item user-notif user-notif_popup">
+											<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+											<div class="user-notif__body">
+												<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+												<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+											</div>
+										</li>
+										<li class="head-notifs__item user-notif user-notif_popup">
+											<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+											<div class="user-notif__body">
+												<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+												<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+											</div>
+										</li>
+										<li class="head-notifs__item user-notif user-notif_popup">
+											<div class="user-notif__avatar-container avatar avatar_48_man"><img class="user-notif__avatar"></div>
+											<div class="user-notif__body">
+												<div class="user-notif__title">Эдуард Пирожков <span class="user-notif__action">оценил ваш отзыв о </span>BellevilleCafe</div>
+												<time datetime="2017-01-17" class="user-notif__date">17 января 2017</time><span class="user-notif__status user-notif__status_popup"></span>
+											</div>
+										</li>
+									</ul>
+									<div class="head-notifs__more">Показать всё</div>
+								</div>
+							</div>
+							<div data-popup="click" data-href="#head-profile" class="header__user head-user">
+								<div class="head-user__photo-container avatar avatar_36_man"><img class="head-user__photo"></div>
+								<div id="head-profile" data-popup="window" class="head-user__profile">
+									<div class="head-user__user">
+										<div class="head-user__photo-container avatar avatar_48_man"><img class="head-user__photo"></div>
+										<div class="head-user__info">
+											<div class="head-user__title">Алексей</div>
+											<div class="head-user__address">Волгоград, Россия</div>
+										</div>
+									</div>
+									<ul class="head-user__menu">
+										<li class="head-user__menu-item head-user__menu-item_projects"><a href="#" class="head-user__action">Проекты</a>
+											<ul class="head-user__projects">
+												<li class="head-user__project"><a href="#" class="head-user__project-link">Онегин</a></li>
+												<li class="head-user__project"><a href="#" class="head-user__project-link">BellevilleCafe</a></li>
+												<li class="head-user__project"><a href="#" class="head-user__project-link">Гуакамоле</a></li>
+												<li class="head-user__project"><a href="#" class="head-user__project-link">RedWood</a></li>
+											</ul>
+										</li>
+										<li class="head-user__menu-item"><a href="#" class="head-user__action">Моя страница</a></li>
+										<li class="head-user__menu-item"><a href="#" class="head-user__action">Закладки</a></li>
+										<li class="head-user__menu-item"><a href="#" class="head-user__action">Редактировать</a></li>
+									</ul><a class="head-user__quit">Выйти</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="main">
+					<div class="container"> 
+						<main class="user-page">
+							<div class="user-page__bread">
+								<ul class="breadcrumbs">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link">Мероприятия Волгограда</a></li>
+								</ul>
+							</div>
+							<aside class="user-page__sidebar user-sidebar">
+								<div class="user-sidebar__head">
+									<div class="user-sidebar__status">Эксперт</div>
+									<div class="user-sidebar__avatar-container avatar avatar_120_man"><img class="user-sidebar__avatar"></div>
+								</div>
+								<div class="user-sidebar__body">
+									<h1 class="user-sidebar__user">Катериночка Мяуковская</h1>
+									<div class="user-sidebar__city">Россия, Волгоград</div>
+									<div class="user-sidebar__subscribe">
+										<div class="sticker-button">
+											<button class="button button_subscr sticker-button__button">Подписаться</button><span class="sticker">667</span>
+										</div>
+									</div>
+								</div>
+								<div class="user-sidebar__menu user-menu">
+									<ul class="user-menu__list">
+										<li class="user-menu__item"><a href="user/activity.html" class="user-menu__link">Активность</a></li>
+										<li class="user-menu__item"><a href="user/reviews.html" class="user-menu__link">Отзыв</a></li>
+										<li class="user-menu__item"><a href="user/photos.html" class="user-menu__link">Фотографии</a></li>
+										<li class="user-menu__item"><a href="user/follow.html" class="user-menu__link">Подписчики</a></li>
+										<li class="user-menu__item"><a href="user/ifollow.html" class="user-menu__link">Я подписан</a></li>
+										<li class="user-menu__item"><a href="user/events.html" class="user-menu__link">События и акции</a></li>
+										<li class="user-menu__item"><a href="user/favorites.html" class="user-menu__link">Закладки</a></li>
+										<li class="user-menu__item"><a href="user/notifications.html" class="user-menu__link">Уведомления <span class="user-menu__new">+12 новых</span></a></li>
+									</ul>
+								</div>
+							</aside>
+						</main>
+					</div>
 				</div>
+				<footer class="footer">
+					<div class="container">
+						<div class="footer__top clearfix">
+							<div class="footer__content">
+								<ul class="footer__menu">
+									<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
+									<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
+									<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
+									<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
+									<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
+								</ul>
+								<ul class="footer__submenu">
+									<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
+									<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
+									<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
+									<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
+									<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
+								</ul>
+							</div>
+							<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
+							<div class="footer__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="77px" class="logo__img"></a></div>
+						</div>
+						<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
+					</div>
+					<div id="modal" data-id="modal-support" class="modal">
+						<div class="modal__window">
+							<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
+								<div id="modal-close" class="modal__close"></div>
+							</div>
+							<div class="modal__body">
+								<div class="modal__select select-box">
+									<label class="select-box__label">Выберите причину нарушения</label>
+									<select class="select select-box__select">
+										<option default data-disabled>Не выбрано</option>
+										<option value="1">Пункт </option>
+										<option value="2">Пункт </option>
+										<option value="3">Пункт </option>
+										<option value="4">Пункт </option>
+										<option value="5">Пункт </option>
+									</select>
+								</div>
+								<div class="modal__ta ta-box">
+									<label class="ta-box__label">Текст обращения</label>
+									<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
+								</div>
+							</div>
+							<div class="modal__foot clearfix">
+								<div class="modal__actions">
+									<button id="modal-sub" class="modal__subaction">Отмена</button>
+									<button class="button button_first modal__main-action">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
 			</div>
-			<footer class="footer">
-				<div class="container">
-					<div class="footer__top clearfix">
-						<div class="footer__content">
-							<ul class="footer__menu">
-								<li class="footer__menu-item"><a class="footer__menu-link">О сервисе</a></li>
-								<li class="footer__menu-item"><a class="footer__menu-link">Бонусная программа</a></li>
-								<li class="footer__menu-item"><a class="footer__menu-link">Для бизнеса</a></li>
-								<li class="footer__menu-item"><a class="footer__menu-link">Добавить место</a></li>
-								<li class="footer__menu-item"><a class="footer__menu-link">Блог фоллоуфокси</a></li>
-							</ul>
-							<ul class="footer__submenu">
-								<li class="footer__submenu-item"><a class="footer__submenu-link">Конфиденциальность</a></li>
-								<li class="footer__submenu-item"><a class="footer__submenu-link">Условия использования</a></li>
-								<li class="footer__submenu-item"><a class="footer__submenu-link">Как написать отзыв?</a></li>
-								<li class="footer__submenu-item"><a class="footer__submenu-link">Контакты</a></li>
-								<li class="footer__submenu-item"><a class="footer__submenu-link">Карта сайта</a></li>
-							</ul>
-						</div>
-						<button data-modal="modal-support" class="footer__support button button_first">Написать в поддержку</button>
-						<div class="footer__logo logo"><a class="logo__link"><img src="img/logo-foxy.svg" width="77px" class="logo__img"></a></div>
-					</div>
-					<div class="footer__bottom"><span class="footer__copyright">Авторское право © 2017, Followfoxy. Design by MADE</span></div>
-				</div>
-				<div id="modal" data-id="modal-support" class="modal">
-					<div class="modal__window">
-						<div class="modal__head clearfix"><span class="modal__title">Обращение в техподдержку</span>
-							<div id="modal-close" class="modal__close"></div>
-						</div>
-						<div class="modal__body">
-							<div class="modal__select select-box">
-								<label class="select-box__label">Выберите причину нарушения</label>
-								<select class="select select-box__select">
-									<option default data-disabled>Не выбрано</option>
-									<option value="1">Пункт </option>
-									<option value="2">Пункт </option>
-									<option value="3">Пункт </option>
-									<option value="4">Пункт </option>
-									<option value="5">Пункт </option>
-								</select>
-							</div>
-							<div class="modal__ta ta-box">
-								<label class="ta-box__label">Текст обращения</label>
-								<textarea placeholder="Ваш текст" class="textarea ta-box__ta"></textarea>
-							</div>
-						</div>
-						<div class="modal__foot clearfix">
-							<div class="modal__actions">
-								<button id="modal-sub" class="modal__subaction">Отмена</button>
-								<button class="button button_first modal__main-action">Отправить</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
 		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4"></script>
 		<script src="js/vendor/loadCSS.js" async></script>
