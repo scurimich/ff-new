@@ -1492,6 +1492,48 @@
   .white-block;
   box-sizing: border-box;
   padding: 26px 22px 0 18px;
+  position: relative;
+
+  @media screen {
+    @media (max-width: 900px) {
+      min-width: 360px;
+      padding: 19px 20px 44px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+    }
+  }
+
+  &:before {
+    @media screen {
+      @media (max-width: 900px) {
+        content: '';
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        width: 20px;
+        height: 43px;
+        background-image: linear-gradient(-90deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
+        z-index: 1;
+      }
+    }
+  }
+
+  &:after {
+    @media screen {
+      @media (max-width: 900px) {
+        content: '';
+        position: absolute;
+        bottom: 16px;
+        right: 0;
+        width: 20px;
+        height: 43px;
+        background-image: linear-gradient(90deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
+        z-index: 1;
+      }
+    }
+  }
   
   &__title {
     margin-bottom: 23px;
@@ -1504,6 +1546,32 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    @media screen {
+      @media (max-width: 900px) {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 19px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shring: 1;
+        white-space: normal;
+      }
+    }
+  }
+
+  &__filter {
+    display: none;
+    flex-shring: 0;
+    cursor: pointer;
+    .svg-icon(22px, 20px, '../assets/filter-icon.svg');
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
   }
 
   &__list {
@@ -1515,10 +1583,35 @@
 
     &.active {
       display: block;
+
+      @media screen {
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
     }
 
     &_all {
       columns: 4;
+
+      @media screen {
+        @media (max-width: 900px) {
+          display: block;
+          display: flex;
+          flex-wrap: nowrap;
+          margin-bottom: 0;
+          margin-right: -4px;
+          position: absolute;
+        }
+      }
+    }
+
+    &_all.active {
+      @media screen {
+        @media (max-width: 900px) {
+          display: block;
+        }
+      }
     }
   }
 
@@ -1526,6 +1619,13 @@
     .ib-top;
     margin-right: 10px;
     margin-bottom: 12px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-bottom: 0;
+        margin-right: 4px;
+      }
+    }
 
     &_all {
       display: block;
@@ -1544,6 +1644,12 @@
     text-transform: uppercase;
     border-top: 1px solid @border-color;
     cursor: pointer;
+    
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -1555,10 +1661,32 @@
     line-height: 18px;
     color: @lighter-text;
     cursor: pointer;
+    
+    @media screen {
+      @media (max-width: 900px) {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 4px 13px 5px 12px;
+        opacity: .8;
+        font-size: 11px;
+        line-height: 18px;
+        background-color: @background-color;
+        border-radius: 100px;
+        color: @lighter-text;
+      }
+    }
 
     &_active, &:hover {
       padding-left: 0;
       color: @text-color;
+    
+      @media screen {
+        @media (max-width: 900px) {
+          padding-left: 12px;
+          background-color: @primary-orange;
+          color: @white;
+        }
+      }
 
       &:before {
         content: '';
@@ -1568,6 +1696,32 @@
         margin-right: 8px;
         border-radius: 50%;
         background-color: @text-color;
+
+        @media screen {
+          @media (max-width: 900px) {
+            content: none;
+          }
+        }
+      }
+
+      & .cat-filter__count {
+        color: @white;
+      }
+    }
+  }
+
+  &__count {
+    display: none;
+    margin-left: 9px;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 18px;
+    color: @lighter-text;
+    
+    @media screen {
+      @media (max-width: 900px) {
+        .ib-base;
       }
     }
   }

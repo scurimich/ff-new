@@ -1,11 +1,7 @@
 $(function() {
 
-  if (window.ymaps) {
-    ymaps.ready(mapInit);
-    var myMap;
-  }
-
     if (window.google) {
+      google.maps.event.addDomListener(window, "load", mapInit);
       google.maps.event.addDomListener(window, "load", googleMapInit);
     }
 
@@ -13,9 +9,12 @@ $(function() {
 
 
 function mapInit() {
-  myMap = new ymaps.Map('map', {
-    center: [48.70, 44.51],
-    zoom: 9
+  var box = $('[id=map]');
+  box.each(function() {
+    var map = new google.maps.Map(this, {
+      center: {lat: 25, lng: 25},
+      zoom: 2
+    });
   });
 }
 
@@ -36,7 +35,7 @@ function googleMapInit() {
   });
   
   if (coords.lat && coords.lng) {
-    marker= new google.maps.Marker({
+    marker = new google.maps.Marker({
       position: coords,
       map: googleMap
     })

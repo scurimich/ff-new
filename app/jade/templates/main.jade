@@ -9,10 +9,11 @@ html
     link(rel='preload', href='css/main.css', as='style', onload="this.rel='stylesheet'")
   body
     .wrapper
-        include ../_common/header.jade
-        .main
-            block content
-        include ../_common/footer.jade
+        .content
+            include ../_common/header.jade
+            .main
+                block content
+            include ../_common/footer.jade
     script(async, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4')
     script(src='js/vendor/loadCSS.js', async)
     script(src='js/vendor/loadCSS.polyfill.js', async)

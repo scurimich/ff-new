@@ -6,6 +6,7 @@ block title
 block content
   .container
     main.categories
+      .categories__header-map#map
       .categories__breadcrumbs
         ul.breadcrumbs
           li.breadcrumbs__item
@@ -41,7 +42,6 @@ block content
             .top-places__info
               span.top-places__name Ресторан Волгоград
               span.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-
       .categories__categories
         include ./organisms/categories
       .categories__main
@@ -60,12 +60,16 @@ block content
                     span.placecard__prices 500-800 руб
                     span.placecard__menu Европейская, азиатская, русская, украинская ...
                   .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                  span.placecard__adaptive-address Волгоград, ул. Мира, 12
                   .placecard__footer.clearfix
                     .placecard__social
                       span.placecard__rating-text 17 из 238
                       span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                      a.placecard__reviews 18 отзывов
-                    span.placecard__schedule Ежедневно с 08:00 до 23:00
+                      a.placecard__reviews 18
+                        span.placecard__reviews-text отзывов
+                    span.placecard__schedule 
+                      span.placecard__schedule-text Ежедневно 
+                      | с 08:00 до 23:00
               li.places__item.placecard
                 .placecard__photo-container
                   img.placecard__photo
@@ -77,6 +81,7 @@ block content
                   .placecard__offers
                   .placecard__review
                     button.placecard__review-button.button.button_second.button_watch Написать первый отзыв
+                  span.placecard__adaptive-address Волгоград, ул. Мира, 12
                   .placecard__footer.clearfix
                     .placecard__social
                       span.placecard__rating-text 17 из 238
@@ -96,14 +101,18 @@ block content
                       span.placecard__prices 500-800 руб
                       span.placecard__menu Европейская, азиатская, русская, украинская ...
                     .placecard__review … отлично для своей ценовой категории. Уютно, тихо. Вкусные завтраки в кафе внизу …
+                    span.placecard__adaptive-address Волгоград, ул. Мира, 12
                     .placecard__footer.clearfix
                       .placecard__social
                         span.placecard__rating-text 17 из 238
                         span.placecard__rating.rating_13(data-rateit-readonly='true', data-rateit-value='3.5')
-                        a.placecard__reviews 18 отзывов
-                      span.placecard__schedule Ежедневно с 08:00 до 23:00
+                        a.placecard__reviews 18
+                          span.placecard__reviews-text отзывов
+                      span.placecard__schedule 
+                        span.placecard__schedule-text Ежедневно 
+                        | с 08:00 до 23:00
           .categories__other
-            button.button.button_other Показать больше мест
+            button.categories__other-button.button.button_other Показать больше мест
           .categories__info
             h2.categories__info-title Заголовок
             p.categories__info-text.text Мы поощряем активность наших пользователей баллами, которые в дальнейшем можно будет обменивать на бонусы и скидки от партнеров программы. Как их получить? Для полу- чения подробной информации перейдите в наш раздел «Бонусная программа».
@@ -169,6 +178,56 @@ block content
             include ./organisms/blog
           .categories__discussions
             include ./organisms/discussions
+  form.filter-page
+    .filter-page__header
+      .filter-page__back(href='#') Назад
+      span.filter-page__title Фильтры
+      button.filter-page__confirm Применить
+    .filter-page__body
+      .filter-page__select
+        .select-box
+          label.select-box__label Услуги
+          select.select.select-box__select
+            option(default, data-disabled) Список
+            - for (var x = 1; x <= 5; x++)
+              option(value='#{x}') Пункт #{X}
+      .filter-page__select
+        .select-box
+          label.select-box__label Типы кухни
+          select.select.select-box__select
+            option(default, data-disabled) Список
+            - for (var x = 1; x <= 5; x++)
+              option(value='#{x}') Пункт #{X}
+      .filter-page__check
+        .checkbox-box
+          .checkbox.checkbox-box__checkbox
+            input.checkbox__input#checkbox1(type='checkbox', name='checkbox')
+            label.checkbox__label(for='checkbox1')
+          label.checkbox-box__label(for='checkbox1') Работает круглосуточно
+      .filter-page__check
+        .checkbox-box
+          .checkbox.checkbox-box__checkbox
+            input.checkbox__input#checkbox2(type='checkbox', name='checkbox')
+            label.checkbox__label(for='checkbox2')
+          label.checkbox-box__label(for='checkbox2') Только новые места
+      .filter-page__check
+        .checkbox-box
+          .checkbox.checkbox-box__checkbox
+            input.checkbox__input#checkbox3(type='checkbox', name='checkbox')
+            label.checkbox__label(for='checkbox3')
+          label.checkbox-box__label(for='checkbox3') Оплата картой
+      .filter-page__check
+        .checkbox-box
+          .checkbox.checkbox-box__checkbox
+            input.checkbox__input#checkbox4(type='checkbox', name='checkbox')
+            label.checkbox__label(for='checkbox4')
+          label.checkbox-box__label(for='checkbox4') Парковка
+      .filter-page__check
+        .checkbox-box
+          .checkbox.checkbox-box__checkbox
+            input.checkbox__input#checkbox5(type='checkbox', name='checkbox')
+            label.checkbox__label(for='checkbox5')
+          label.checkbox-box__label(for='checkbox5') Wi-fi
 
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', async)
