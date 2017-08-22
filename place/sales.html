@@ -11,6 +11,9 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="container">
+					<div class="header__adaptive-menu adaptive-menu"><a class="adaptive-menu__burger"><span class="adaptive-menu__burger-icon"></span></a>
+						<div class="adaptive-menu__logo logo"><a class="logo__link"><img src="../img/logo-foxy.svg" width="70px" class="logo__img"></a></div><a class="adaptive-menu__lens"></a>
+					</div>
 					<div class="header__logo logo"><a class="logo__link"><img src="../img/logo-foxy.svg" class="logo__img"></a></div>
 					<div class="header__body">
 						<form class="header__search">
@@ -124,6 +127,7 @@
 			<div class="main">
 				<div class="container">
 					<main class="place-page">
+						<div id="map" class="place-page__header-map"></div>
 						<div class="place-page__breadcrumbs">
 							<ul class="breadcrumbs">
 								<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная</a></li>
@@ -142,7 +146,10 @@
 								</div>
 							</div>
 							<h1 class="place-descr__name">Ресторан «Онегин»</h1>
-							<div class="place-descr__rating"><span data-rateit-readonly="true" data-rateit-value="3.5" class="place-descr__rating-stars rating"></span><span class="place-descr__rating-text">№13 из 289 в категории Кафе и рестораны Волгограда</span></div>
+							<div class="place-descr__rating"><span data-rateit-readonly="true" data-rateit-value="3.5" class="place-descr__rating-stars rating"></span><span class="place-descr__rating-text">
+									 
+									№13 из 289<span class="place-descr__rating-descr">в категории Кафе и рестораны Волгограда</span></span></div>
+							<div class="place-descr__adaptive-actions"><a href="#" class="place-descr__adaptive-subscrive">Подписаться</a><a href="#" class="place-descr__adaptive-review">Оставить отзыв</a><a href="#" class="place-descr__adaptive-favorites"></a></div>
 							<div class="place-descr__menu clearfix">
 								<ul class="place-descr__tabs tabs">
 									<li class="tabs__item"><a href="overview.html" class="tabs__link tabs__link_active">Обзор</a></li>
@@ -401,6 +408,7 @@
 				</div>
 			</footer>
 		</div>
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4"></script>
 		<script src="../js/vendor/loadCSS.js" async></script>
 		<script src="../js/vendor/loadCSS.polyfill.js" async></script>
 		<script src="../js/vendor/jquery.min.js"></script>
