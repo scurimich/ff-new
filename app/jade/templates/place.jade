@@ -13,6 +13,7 @@ html
       .main
         .container
           main.place-page
+            .place-page__header-map#map
             .place-page__breadcrumbs
               ul.breadcrumbs
                 li.breadcrumbs__item
@@ -36,7 +37,13 @@ html
               h1.place-descr__name Ресторан «Онегин»
               .place-descr__rating
                 span.place-descr__rating-stars.rating(data-rateit-readonly='true', data-rateit-value='3.5')
-                span.place-descr__rating-text №13 из 289 в категории Кафе и рестораны Волгограда
+                span.place-descr__rating-text 
+                  | №13 из 289
+                  span.place-descr__rating-descr в категории Кафе и рестораны Волгограда
+              .place-descr__adaptive-actions
+                a.place-descr__adaptive-subscrive(href='#') Подписаться
+                a.place-descr__adaptive-review(href='#') Оставить отзыв
+                a.place-descr__adaptive-favorites(href='#')
               .place-descr__menu.clearfix
                 ul.place-descr__tabs.tabs
                   li.tabs__item
@@ -94,6 +101,7 @@ html
                     button.modal__subaction#modal-sub Отмена
                     button.button.button_first.modal__main-action Отправить
       include ../_common/footer.jade
+    script(async, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB2ZYobtMQvOCPnMpFPPC6ROJSlDfGrcf4')
     script(src='../js/vendor/loadCSS.js', async)
     script(src='../js/vendor/loadCSS.polyfill.js', async)
     script(src='../js/vendor/jquery.min.js')
