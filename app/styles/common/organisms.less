@@ -1081,6 +1081,19 @@
     list-style: none;
     font-size: 0;
     margin: 0 -10px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 652px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 
   &__item {
@@ -1089,6 +1102,12 @@
     height: 195px;
     margin: 0 10px;
     position: relative;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-bottom: 12px;
+      }
+    }
   }
 
   &__photo-container {
