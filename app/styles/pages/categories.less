@@ -50,12 +50,19 @@
       @media (max-width: 900px) {
         width: 100%;
         margin: 0;
+        background-color: @white;
       }
     }
   }
 
   &__places {
     margin-bottom: 40px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        border-bottom: 1px solid @border-color;
+      }
+    }
   }
 
   &__other {
@@ -92,7 +99,7 @@
 
   &__header-map {
     display: none;
-    height: 146px;
+    height: 144px;
     width: 100%;
 
     @media screen {
@@ -240,6 +247,12 @@
 
   &__list {
     margin-bottom: -16px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__item {

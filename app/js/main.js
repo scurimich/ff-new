@@ -118,6 +118,14 @@ $(function() {
         starheight: 14
       });
 
+      $('.rating_29').rateit({
+        min: 0,
+        max: 5,
+        resetable: false,
+        starwidth: 29,
+        starheight: 27
+      });
+
       $.mask.definitions['h'] = '[0-2]';
       $.mask.definitions['e'] = '[0-9]';
       $.mask.definitions['m'] = '[0-5]';

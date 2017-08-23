@@ -45,11 +45,26 @@
     .ib-top;
     width: 620px;
     margin-right: 20px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        width: 100%;
+        min-width: 344px;
+        margin-right: 0;
+        padding: 0 8px;
+      }
+    }
   }
   
   &__sidebar {
     .ib-top;
     width: 300px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   &__contacts {
@@ -221,6 +236,7 @@
 
   &__adaptive-actions {
     display: none;
+    font-size: 0;
     height: 36px;
     margin-top: 24px;
     border: 1px solid rgba(136, 139, 148, .15);
@@ -235,25 +251,38 @@
   }
 
   &__adaptive-subscrive {
+    .ib-top;
+    padding: 8px 23px 8px 24px;
     font-family: @font;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12px;
+    line-height: 20px;
     color: @lighter-text;
     text-decoration: none;
     border-right: 1px solid rgba(136, 139, 148, .15);
   }
 
   &__adaptive-review {
+    .ib-top;
+    padding: 8px 24px;
     font-family: @font;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 12px;
+    line-height: 20px;
     color: @lighter-text;
     text-decoration: none;
     border-right: 1px solid rgba(136, 139, 148, .15);
   }
 
   &__adaptive-favorites {
+    .ib-top;
+    padding: 11px 14px 10px;
 
+    &:before {
+      content: '';
+      .ib-top;
+      .svg-icon(10px, 15px, '../assets/favorites.png');
+    }
   }
 
   &__menu {
@@ -394,6 +423,14 @@
   .white-block;
   padding: 27px 20px 24px 20px;
 
+  @media screen {
+    @media (max-width: 900px) {
+      box-shadow: none;
+      border-radius: 2px 2px 0 0;
+      border-bottom: 1px solid @border-color;
+    }
+  }
+
   &__title {
     display: block;
     margin-bottom: 16px;
@@ -403,6 +440,38 @@
     line-height: 21px;
     letter-spacing: -.14px;
     color: @text-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  &__adaptive-rating {
+    display: none;
+    text-align: center;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: block;
+      }
+    }
+  }
+
+  &__adaptive-rstars {
+    .ib-top;
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  &__adaptive-rtext {
+    .ib-top;
+    width: 100%;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 13px;
+    color: @icons-color;
   }
 
   &__rating {
@@ -414,6 +483,12 @@
 
     &.active {
       border-color: @icons-color;
+    }
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
     }
 
 
@@ -437,6 +512,12 @@
     width: 100%;
     height: 77px;
     border-radius: 0 0 2px 2px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   &__button {
@@ -453,6 +534,13 @@
 .placepage-reviews {
   .white-block;
 
+  @media screen {
+    @media (max-width: 900px) {
+      padding: 18px 16px 15px;
+      box-shadow: none;
+    }
+  }
+
   &__title {
     display: block;
     padding: 27px 20px 22px 20px;
@@ -463,6 +551,16 @@
     letter-spacing: -.14px;
     color: @text-color;
     border-bottom: 1px solid @border-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        opacity: .5;
+        font-size: 0;
+        padding: 0;
+        margin-bottom: 17px;
+        border-bottom: none;
+      }
+    }
   }
 
   &__number {
@@ -473,19 +571,66 @@
     line-height: 21px;
     letter-spacing: -.11px;
     color: @secondary-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__reviews {
+    display: none;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -.11px;
+    color: @secondary-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        .ib-base;
+        font-size: 12px;
+      }
+    }
   }
 
   &__body {
     padding: 0 20px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        padding: 0;
+        text-align: center;
+      }
+    }
   }
 
   &__list {
     padding-top: 8px;
     list-style: none;
+
+    @media screen {
+      @media (max-width: 900px) {
+        padding: 0;
+        margin-top: -24px;
+        text-align: left;
+      }
+    }
   }
 
   &__item {
     padding: 24px 0 22px 0;
+
+    &:last-child {
+      @media screen {
+        @media (max-width: 900px) {
+          border-bottom: none;
+          padding-bottom: 24px;
+        }
+      }
+    }
   }
 
   &__more {
@@ -499,6 +644,20 @@
     color: @secondary-color;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media screen {
+      @media (max-width: 900px) {
+        .ib-top;
+        width: 312px;
+        padding: 4px 0 6px;
+        font-size: 13px;
+        line-height: 20px;
+        color: @secondary-color;
+        border: 1px solid @border-color;
+        background-color: rgba(238, 239, 240, .5);
+        text-transform: none;
+      }
+    }
   }
 }
 
@@ -510,11 +669,23 @@
   &__avatar-container {
     .ib-top;
     margin-right: 15px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        position: absolute;
+      }
+    }
   }
 
   &__body {
     .ib-top;
     width: 516px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        width: auto;
+      }
+    }
   }
 
   &__other {
@@ -526,6 +697,12 @@
     background: url(../assets/dots.svg) no-repeat;
     background-size: 18px 4px;
     cursor: pointer;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   &__support {
@@ -548,6 +725,13 @@
     font-size: 15px;
     letter-spacing: -.11px;
     color: @text-color;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-left: 64px;
+        margin-bottom: 3px;
+      }
+    }
   }
 
   &__info {
@@ -558,6 +742,12 @@
     line-height: 18px;
     letter-spacing: -.05px;
     color: @lighter-text;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   &__subs {
@@ -578,10 +768,23 @@
 
   &__rating {
     margin-bottom: 9px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-left: 64px;
+        margin-bottom: 17px;
+      }
+    }
   }
 
   &__text {
     margin-bottom: 9px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        margin-bottom: 13px;
+      }
+    }
   }
 
   &__date {
@@ -628,6 +831,27 @@
   .white-block;
   padding: 8px;
 
+  @media screen {
+    @media (max-width: 900px) {
+      margin-bottom: 16px;
+      padding: 0;
+      box-shadow: none;
+      padding-bottom: 27px;
+    }
+  }
+
+  &__title {
+    padding: 13px 16px;
+    font-family: @font;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: @lighter-text;
+    letter-spacing: .3px;
+    border-bottom: 1px solid @border-color;
+    text-transform: uppercase;
+  }
+
   &__map {
     display: block;
     height: 384px;
@@ -636,6 +860,12 @@
 
   &__body {
     margin-bottom: 8px;
+
+    @media screen {
+      @media (max-width: 900px) {
+        padding: 25px 16px 0;
+      }
+    }
   }
 
   &__main {
@@ -650,6 +880,13 @@
       left: -27px;
       top: 0;
       .mark;
+    }
+
+    @media screen {
+      @media (max-width: 900px) {
+        border: none;
+        margin-left: 26px;
+      }
     }
   }
 
@@ -690,6 +927,13 @@
       .time;
     }
 
+    @media screen {
+      @media (max-width: 900px) {
+        border: none;
+        margin-left: 26px;
+      }
+    }
+
     &-link {
       font-family: @font;
       font-weight: 400;
@@ -718,6 +962,13 @@
       top: 0;
       .mobile;
     }
+
+    @media screen {
+      @media (max-width: 900px) {
+        border: none;
+        margin-left: 26px;
+      }
+    }
   }
 
   &__site {
@@ -732,6 +983,20 @@
       left: -26px;
       top: 0;
       .globe;
+
+      @media screen {
+        @media (max-width: 900px) {
+          top: 1px;
+        }
+      }
+    }
+
+    @media screen {
+      @media (max-width: 900px) {
+        border: none;
+        margin-bottom: 19px;
+        margin-left: 26px;
+      }
     }
 
     &-link {
@@ -754,6 +1019,17 @@
     letter-spacing: -.1px;
     color: @links-color;
     cursor: pointer;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: block;
+        margin-bottom: 12px;
+        margin-left: 41px;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
   }
 
   &__fix {
@@ -766,5 +1042,16 @@
     letter-spacing: -.1px;
     color: @links-color;
     cursor: pointer;
+
+    @media screen {
+      @media (max-width: 900px) {
+        display: block;
+        margin-bottom: 0;
+        margin-left: 41px;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
   }
 }

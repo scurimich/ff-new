@@ -5,6 +5,19 @@ block title
 
 block content
   .place-page__body.place-overview
+    section.place-overview__description.place-contacts
+      .place-contacts__title О компании
+      .place-contacts__body
+        .place-contacts__main
+          .place-contacts__name Ресторан Волгоград
+          p.place-contacts__address Пр-т им. В.И. Ленина, 59, Волгоград, Волгоградская обл.
+        .place-contacts__schedule Пт-сб 08:00-24:00 
+          a.place-contacts__schedule-link Все расписание
+        .place-contacts__phone +7 988 025 14 61
+        .place-contacts__site 
+          a.place-contacts__site-link datasite.ru
+      a.place-contacts__owners Для владельцев
+      a.place-contacts__fix(data-modal='modal-error') Исправить неточность
     section.place-overview__gallery.place-overview-gallery
       .place-overview-gallery__back-container
         img.place-overview-gallery__back
@@ -43,6 +56,7 @@ block content
               each menu in menus
                 li.place-overview-info__menu
                   a.place-overview-info__menu-link= menu
+      span.place-overview-info__socials-term Мы в соцсетях
       ul.place-overview-info__socials
         li.place-overview-info__social
           a.place-overview-info__social-link.place-overview-info__social-link_vk ВКонтакте
@@ -64,6 +78,9 @@ block content
     section.place-overview__add-review.placepage-add-review
       h2.placepage-add-review__title Оставьте отзыв
       form.placepage-add-review__form.clearfix#add-review
+        .placepage-add-review__adaptive-rating
+          .placepage-add-review__adaptive-rstars.rating_29
+          span.placepage-add-review__adaptive-rtext Вам понравилось? Оцените это место
         .placepage-add-review__rating
           .placepage-add-review__rating-text Оцените это место
           span.placepage-add-review__rating-stars.rating
@@ -71,7 +88,8 @@ block content
         button.placepage-add-review__button.button.button_first#add-review-button Отправить
     section.place-overview__reviews.placepage-reviews
       .placepage-reviews__title Отзывы 
-        span.placepage-reviews__number 189
+        span.placepage-reviews__number 189 
+        span.placepage-reviews__reviews отзывов
       .placepage-reviews__body
         ul.placepage-reviews__list
           - for (var i = 0; i < 5; i++)
@@ -107,28 +125,34 @@ block content
                             a.help__social-link.help__social-link_share(data-ref='http://followfoxy.ru') Скопировать ссылку
         span.placepage-reviews__more Показать ещё
     section.place-overview__events.place-overview-events
-      .place-overview-events__title Мероприятия 
+      .place-overview-events__title События 
         span.place-overview-events__number 189
+        a.place-overview-events__full(href='#') еще
       .place-overview-events__body
         ul.place-overview-events__list
           - for (var i = 0; i < 3; i++)
             li.place-overview-events__item
               .place-overview-events__image-container
                 img.place-overview-events__image
-              .place-overview-events__name Открытие памятника Пушкину в Онегине
-              time.place-overview-events__date(datetime='2016-03-28') 28 мар 2016
+              .place-overview-events__info
+                .place-overview-events__name Открытие памятника Пушкину в Онегине
+                span.place-overview-events__category Гуакамоле
+                time.place-overview-events__date(datetime='2016-03-28') 28 мар 2016
         .place-overview-events__more показать ещё
     section.place-overview__stocks.place-overview-stocks
       .place-overview-stocks__title Акции 
         span.place-overview-stocks__number 189
+        a.place-overview-stocks__full(href='#') еще
       .place-overview-stocks__body
         ul.place-overview-stocks__list
           - for (var i = 0; i < 3; i++)
             li.place-overview-stocks__item
               .place-overview-stocks__image-container
                 img.place-overview-stocks__image
-              .place-overview-stocks__name Открытие памятника Пушкину в Онегине
-              time.place-overview-stocks__date(datetime='2016-03-28') 28 мар 2016
+              .place-overview-stocks__info
+                .place-overview-stocks__name Открытие памятника Пушкину в Онегине
+                span.place-overview-stocks__category Гуакамоле
+                time.place-overview-stocks__date(datetime='2016-03-28') 28 мар 2016
         .place-overview-stocks__more показать ещё
     section.place-overview__new-places
       include ../organisms/new-places
